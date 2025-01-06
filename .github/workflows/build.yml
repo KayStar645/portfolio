@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -17,12 +16,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: package-lock.json
+
     - run: npm ci
 
     - name: Run tests
@@ -30,6 +31,11 @@ jobs:
 
     - name: Build Angular App
       run: npm run build
+
+    - name: Move build files
+      run: |
+        mv ./dist/portfolio/browser/* ./dist/portfolio/
+        rm -rf ./dist/portfolio/browser
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
