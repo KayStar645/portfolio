@@ -1,5 +1,4 @@
-<h1>{{ title }}  - Portfolio</h1>
+<button (click)="translateText('vi-VN')">Tiếng Việt</button>
+<button (click)="translateText('en-US')">English</button>
 
-<div id="content">{{ content }}</div>
-
-<router-outlet />
+<div>{{ 'title' | translate }}</div>
