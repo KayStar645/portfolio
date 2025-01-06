@@ -8,5 +8,6 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'portfolio';
+  title = 'KayStar';
+  content = 'I am testing auto build!'
 }
