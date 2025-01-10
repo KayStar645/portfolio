@@ -1,5 +1,6 @@
 @use "bootstrap/scss/bootstrap" as *;
-
-
-
 @use './assets/params/css/reset.css';
+
+body {
+  font-family: "Gill Sans", sans-serif;
+}
