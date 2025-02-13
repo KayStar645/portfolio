@@ -1,0 +1,32 @@
+[
+  {
+    "label": "Skills",
+    "icon": "fas fa-book-dead",
+    "link": "/skill"
+  },
+  {
+    "label": "Projects",
+    "icon": "fas fa-project-diagram",
+    "link": "/project"
+  },
+  {
+    "label": "Experience",
+    "icon": "fas fa-tasks",
+    "link": "/experience"
+  },
+  {
+    "label": "Education",
+    "icon": "fas fa-university",
+    "link": "/education"
+  },
+  {
+    "label": "Achievement",
+    "icon": "fas fa-trophy",
+    "link": "/achievement"
+  },
+  {
+    "label": "Resume",
+    "icon": "fas fa-address-card",
+    "link": "/resume"
+  }
+]

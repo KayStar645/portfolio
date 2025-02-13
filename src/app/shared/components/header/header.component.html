@@ -3,16 +3,16 @@
 
     <div class="d-flex align-items-center">
       <a routerLink="/" class="nav-link d-flex align-items-center h-100 ps-2 pe-5">
-        <img [src]="user.avatar" class="rounded-circle me-3" width="36">
-        <span>{{ user.name }}</span>
+        <img [src]="user?.avatar" class="rounded-circle me-3" width="36">
+        <span>{{ user?.name }}</span>
       </a>
     </div>
 
     <div class="d-flex align-items-center">
-      <a *ngFor="let item of items" [routerLink]="item.link"
+      <a *ngFor="let menu of menus" [routerLink]="menu?.link"
       class="nav-link d-flex align-items-center text-decoration-none text-light px-4 h-100">
-        <i [class]="item.icon + ' me-2'"></i>
-        <span>{{ item.name | translate }}</span>
+        <i [class]="menu?.icon + ' me-2'"></i>
+        <span>{{ menu?.label }}</span>
       </a>
     </div>
 
