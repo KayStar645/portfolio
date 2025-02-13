@@ -1,0 +1,32 @@
+[
+  {
+    "label": "Kỹ năng",
+    "icon": "fas fa-book-dead",
+    "link": "/skill"
+  },
+  {
+    "label": "Dự án",
+    "icon": "fas fa-project-diagram",
+    "link": "/project"
+  },
+  {
+    "label": "Kinh nghiệm",
+    "icon": "fas fa-tasks",
+    "link": "/experience"
+  },
+  {
+    "label": "Học vấn",
+    "icon": "fas fa-university",
+    "link": "/education"
+  },
+  {
+    "label": "Thành tích",
+    "icon": "fas fa-trophy",
+    "link": "/achievement"
+  },
+  {
+    "label": "Sơ yếu lý lịch",
+    "icon": "fas fa-address-card",
+    "link": "/resume"
+  }
+]
