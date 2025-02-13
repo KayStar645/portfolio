@@ -1,0 +1,1 @@
+import{Sa as n,hb as o,ib as l,qb as i}from"./chunk-SRPTFF4P.js";var s=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-skill"]],decls:2,vars:0,consts:[[1,"text-primary"]],template:function(e,p){e&1&&(o(0,"p",0),i(1,"skill works!"),l())},encapsulation:2})};export{s as SkillComponent};
