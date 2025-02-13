@@ -32,9 +32,9 @@ export const routes: Routes = [
       .then(mod => mod.SkillComponent)
   },
   {
-    path: 'summary',
-    loadComponent: () => import('./features/general/summary/summary.component')
-      .then(mod => mod.SummaryComponent)
+    path: 'resume',
+    loadComponent: () => import('./features/general/resume/resume.component')
+      .then(mod => mod.ResumeComponent)
   },
 
   {
