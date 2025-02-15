@@ -1,32 +1,68 @@
-<div class="header">
-  <div class="container d-flex justify-content-between w-100 h-100">
+<div id="header">
+  <div
+    class="container-lg d-flex justify-content-between position-relative px-0">
 
     <div class="d-flex align-items-center">
-      <a routerLink="/" class="nav-link d-flex align-items-center h-100 ps-2 pe-5">
+      <a routerLink="/"
+        class="nav-link d-flex align-items-center text-nowrap px-lg-4 px-2 py-2 w-100 d-block">
         <img [src]="user?.avatar" class="rounded-circle me-3" width="36">
-        <span>{{ user?.name }}</span>
+        <span class="d-none d-md-flex fw-bold fs-5">{{ user?.name }}</span>
       </a>
+      <div style="z-index: -1;"
+        class="d-inline-block d-md-none text-center text-nowrap fw-bold fs-5 position-absolute min-vw-100">
+        {{ user?.name }}
+      </div>
     </div>
 
-    <div class="d-flex align-items-center">
+    <div class="d-none d-md-flex align-items-center">
       <a *ngFor="let menu of menus" [routerLink]="menu?.link"
-      class="nav-link d-flex align-items-center text-decoration-none text-light px-4 h-100">
-        <i [class]="menu?.icon + ' me-2'"></i>
-        <span>{{ menu?.label }}</span>
+        class="nav-link d-flex align-items-center text-decoration-none h-100 text-nowrap px-md-4">
+        <i [class]="menu?.icon + ' me-lg-2 me-md-0'"></i>
+        <span class="d-none d-lg-flex">{{ menu?.label }}</span>
       </a>
     </div>
 
-
     <div class="d-flex align-items-center">
-      <a (click)="translateText('en-US')" class="nav-link d-flex align-items-center h-100">
-        <i class="fas fa-globe-asia px-3 fa-lg"></i>
+      <a href="javascript:void(0);"
+        (click)="translateText()"
+        class="nav-link d-flex align-items-center h-100 px-md-3 px-2 text-nowrap">
+        <img class="rounded-circle"
+          style="width:26px"
+          *ngIf="currentLang != 'en-US'"
+          src="./../../../../assets/params/images/lang/english.png" />
+        <img class="rounded-circle"
+          style="width:26px"
+          *ngIf="currentLang != 'vi-VN'"
+          src="./../../../../assets/params/images/lang/viet-nam.png" />
       </a>
-      <a (click)="translateText('en-US')" class="nav-link d-flex align-items-center h-100">
-        <i class="far fa-moon px-3 fa-lg"></i>
+
+      <a href="javascript:void(0);"
+        (click)="toggleTheme()"
+        class="nav-link d-flex align-items-center h-100">
+        <i *ngIf="currentTheme == 'light'"
+          class="far fa-moon px-md-3 px-2 fa-lg"></i>
+        <i *ngIf="currentTheme == 'dark'"
+          class="fas fa-sun px-md-3 px-2 fa-lg"></i>
       </a>
-      <a (click)="translateText('vi-VN')" class="nav-link d-flex align-items-center h-100">
-        <i class="fas fa-sun px-3 fa-lg"></i>
+
+      <a href="javascript:void(0);"
+        (click)="isMenuVisible = !isMenuVisible"
+        style="width: 40px"
+        class="nav-link d-flex d-md-none align-items-center h-100">
+        <i *ngIf="!isMenuVisible" class="fas fa-bars px-sm-2 fa-lg"></i>
+        <i *ngIf="isMenuVisible" class="fas fa-times px-sm-2 fa-lg"></i>
       </a>
     </div>
   </div>
+
+</div>
+
+<div id="nav-menu-mobile" *ngIf="isMenuVisible" style="margin-top: 1px;"
+  class="position-fixed w-100 h-100 top-20">
+  <a *ngFor="let menu of menus" [routerLink]="menu?.link"
+      (click)="isMenuVisible = !isMenuVisible"
+      class="nav-link text-decoration-none px-4 py-3 text-nowrap">
+      <i [class]="menu?.icon + ' me-4'" style="width: 10px"></i>
+      <span>{{ menu?.label }}</span>
+    </a>
 </div>
