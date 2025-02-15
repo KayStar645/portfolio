@@ -16,7 +16,7 @@
 
     <div class="d-none d-md-flex align-items-center">
       <a *ngFor="let menu of menus" [routerLink]="menu?.link"
-        class="nav-link d-flex align-items-center text-decoration-none h-100 text-nowrap px-lg-4 px-md-3">
+        class="nav-link d-flex align-items-center text-decoration-none h-100 text-nowrap px-md-4">
         <i [class]="menu?.icon + ' me-lg-2 me-md-0'"></i>
         <span class="d-none d-lg-flex">{{ menu?.label }}</span>
       </a>
