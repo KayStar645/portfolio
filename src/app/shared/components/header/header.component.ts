@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { User, UserService } from './services/user.service';
 import { Menu, MenusService } from './services/menus.service';
-import { LangService } from '../../../lang.service';
+import { LangService } from '../../services/lang.service';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-header',
   imports: [
-    TranslateModule,
     RouterLink,
     CommonModule
   ],
@@ -19,31 +18,42 @@ import { LangService } from '../../../lang.service';
 export class HeaderComponent implements OnInit {
   user: User | null = null;
   menus: Menu[] = [];
+  currentLang: string = '';
+  currentTheme: string = '';
+  isMenuVisible: boolean = false;
 
   constructor(
     private langService: LangService,
+    private themeService: ThemeService,
     private menusService: MenusService,
     private userService: UserService,
-  ) {}
+  ) { }
 
   async ngOnInit(): Promise<void> {
     try {
       await this.loadData();
     } catch (error) {
-      console.error('Error initializing HeaderComponent:', error);
       this.user = null;
       this.menus = [];
     }
   }
 
   async loadData(): Promise<void> {
+    this.currentLang = this.langService.getLang();
+    this.currentTheme = this.themeService.getCurrentTheme();
     this.user = await this.userService.getItem();
     this.menus = await this.menusService.getItems();
   }
 
-  translateText(lang: string): void {
-    console.log(lang)
+  translateText(): void {
+    let lang = this.currentLang == 'en-US' ? 'vi-VN' : 'en-US';
     this.langService.setLang(lang);
+    this.currentLang = this.langService.getLang();
     this.loadData();
+  }
+
+  toggleTheme() {
+    this.themeService.toggleTheme();
+    this.currentTheme = this.themeService.getCurrentTheme();
   }
 }
