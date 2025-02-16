@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
   menus: Menu[] = [];
   currentLang: string = '';
   currentTheme: string = '';
-  isMenuVisible: boolean = false;
+  isMenuVisible: boolean = true;
 
   constructor(
     private langService: LangService,
