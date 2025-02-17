@@ -1,1 +1,33 @@
-<p>home works!</p>
+<div id="home" class="h-100 d-flex align-items-center">
+  <div class="container-lg px-sm-5 px-0 pt-2">
+    <div class="row">
+      <div class="col-lg-7 d-flex align-items-center">
+        <img [src]="home?.image" width="900" class="img-fluid rounded"
+          alt="Home image">
+      </div>
+      <div class="col-lg-5">
+        <h2 class="fw-bold text-center fs-1 my-4">{{ user?.name }}</h2>
+        <p
+          style="color: var(--tertiary-text); text-align: justify;line-height: 2.5 !important;"
+          [innerHTML]="home?.description">
+        </p>
+      </div>
+
+      <div class="col-12 my-5">
+        <swiper-container #swiper loop="true" slides-per-view="4" speed="500"
+          css-mode="false" autoplay-delay="3000" grab-cursor="true"
+          free-mode="true" init="false">
+          <swiper-slide class="text-center" *ngFor="let skill of skills">
+            <a [href]="skill.url" target="_blank" rel="noopener noreferrer"
+              class="swiper-slide text-center text-decoration-none d-inline-block px-4 py-2">
+              <img [src]="skill.icon" class="d-block mx-auto" width="140"
+                alt="{{ skill.name }}">
+              <span class="py-3 d-inline-block">{{ skill.name }}</span>
+            </a>
+          </swiper-slide>
+        </swiper-container>
+      </div>
+
+    </div>
+  </div>
+</div>
