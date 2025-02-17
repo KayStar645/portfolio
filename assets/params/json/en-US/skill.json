@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Angular",
+    "icon": "assets/params/images/home/tech/angular.png",
+    "url": "https://angular.dev/",
+    "is_main": true
+  },
+  {
+    "name": "BitBucket",
+    "icon": "assets/params/images/home/tech/bit-bucket.png",
+    "url": "https://bitbucket.org/product/",
+    "is_main": true
+  },
+  {
+    "name": "Git",
+    "icon": "assets/params/images/home/tech/git.png",
+    "url": "https://git-scm.com/",
+    "is_main": true
+  },
+  {
+    "name": "GitHub",
+    "icon": "assets/params/images/home/tech/github.png",
+    "url": "https://github.com/",
+    "is_main": true
+  },
+  {
+    "name": "Laravel",
+    "icon": "assets/params/images/home/tech/laravel.png",
+    "url": "https://laravel.com/",
+    "is_main": true
+  },
+  {
+    "name": ".Net Core",
+    "icon": "assets/params/images/home/tech/net-core.png",
+    "url": "https://dotnet.microsoft.com/en-us/apps/aspnet",
+    "is_main": true
+  },
+  {
+    "name": "Vue",
+    "icon": "assets/params/images/home/tech/vue.png",
+    "url": "https://vuejs.org/",
+    "is_main": true
+  }
+]

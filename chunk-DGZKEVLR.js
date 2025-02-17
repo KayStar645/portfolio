@@ -1,1 +1,0 @@
-import{Sa as o,hb as n,ib as p,rb as r}from"./chunk-NTKH2B3E.js";var c=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=o({type:t,selectors:[["app-project"]],decls:2,vars:0,template:function(e,s){e&1&&(n(0,"p"),r(1,"project works!"),p())},encapsulation:2})};export{c as ProjectComponent};
