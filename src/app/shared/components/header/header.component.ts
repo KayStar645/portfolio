@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { User, UserService } from './services/user.service';
-import { Menu, MenusService } from './services/menus.service';
+import { User, UserService } from '../../../services/user.service';
+import { Menu, MenusService } from '../../../services/menus.service';
 import { LangService } from '../../services/lang.service';
 import { ThemeService } from '../../services/theme.service';
 
@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
   menus: Menu[] = [];
   currentLang: string = '';
   currentTheme: string = '';
-  isMenuVisible: boolean = true;
+  isMenuVisible: boolean = false;
 
   constructor(
     private langService: LangService,
@@ -31,25 +31,20 @@ export class HeaderComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     try {
-      await this.loadData();
+      this.currentLang = this.langService.getLang();
+      this.currentTheme = this.themeService.getCurrentTheme();
+      this.user = await this.userService.getItem();
+      this.menus = await this.menusService.getItems();
     } catch (error) {
       this.user = null;
       this.menus = [];
     }
   }
 
-  async loadData(): Promise<void> {
-    this.currentLang = this.langService.getLang();
-    this.currentTheme = this.themeService.getCurrentTheme();
-    this.user = await this.userService.getItem();
-    this.menus = await this.menusService.getItems();
-  }
-
   translateText(): void {
     let lang = this.currentLang == 'en-US' ? 'vi-VN' : 'en-US';
     this.langService.setLang(lang);
     this.currentLang = this.langService.getLang();
-    this.loadData();
   }
 
   toggleTheme() {

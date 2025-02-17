@@ -31,7 +31,7 @@ export const appConfig: ApplicationConfig = {
           useFactory: createTranslateLoader,
           deps: [HttpClient],
         },
-        defaultLanguage: 'vi-VN',
+        defaultLanguage: 'en-US',
       }),
     ]),
   ],

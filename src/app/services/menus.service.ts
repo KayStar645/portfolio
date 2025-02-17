@@ -1,23 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../../../environments/environment';
+import { environment } from '../environments/environment';
+import { LangService } from '../shared/services/lang.service';
 import { firstValueFrom } from 'rxjs';
-import { LangService } from '../../../services/lang.service';
 import { ToastrService } from 'ngx-toastr';
 
-export interface User {
-  name: string;
-  avatar: string;
+export interface Menu {
+  label: string;
+  icon: string;
   link: string;
 }
-
 
 @Injectable({
   providedIn: 'root',
 })
-export class UserService {
+export class MenusService {
   private jsonUrl: string = environment.config.jsonUrl;
-  private fileName: string = 'user.json';
+  private fileName: string = 'menu.json';
 
   constructor(
     private http: HttpClient,
@@ -26,13 +25,18 @@ export class UserService {
   ) {
   }
 
-  async getItem(): Promise<User> {
+
+
+  async getItems(): Promise<Menu[]> {
     const lang = this.langService.getLang();
     const url = `${this.jsonUrl}/${lang}/${this.fileName}`;
-    const user = await firstValueFrom(this.http.get<User>(url));
-    if (!user) {
-      this.toast.error('Đọc dữ liệu thất bại!', 'User');
+    const menus = await firstValueFrom(this.http.get<Menu[]>(url));
+
+    if (!menus || !Array.isArray(menus)) {
+      this.toast.error('Đọc dữ liệu thất bại!', 'Menu');
     }
-    return user;
+
+    return menus;
   }
 }
+
