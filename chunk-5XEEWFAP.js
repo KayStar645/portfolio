@@ -1,1 +1,0 @@
-import{Ta as n,ib as o,jb as a,wb as i}from"./chunk-K7ODD4IB.js";var c=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-education"]],decls:2,vars:0,template:function(e,s){e&1&&(o(0,"p"),i(1,"education works!"),a())},encapsulation:2})};export{c as EducationComponent};

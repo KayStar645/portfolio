@@ -1,8 +1,11 @@
 {
-  "Skills": "Skills",
-  "Projects": "Projects",
-  "Experience": "Experience",
-  "Education": "Education",
-  "Achievements": "Achievements",
-  "Resume": "Resume"
+  "common": {
+    "theme": {
+      "dark": "Theme Dark",
+      "light": "Theme Light"
+    },
+    "title": {
+      "main_tech": "MAIN TECHNOLOGY"
+    }
+  }
 }
