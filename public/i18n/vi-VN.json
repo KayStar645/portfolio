@@ -1,8 +1,11 @@
 {
-  "Skills": "Kỹ năng",
-  "Projects": "Dự án",
-  "Experience": "Kinh nghiệm",
-  "Education": "Học vấn",
-  "Achievements": "Thành tích",
-  "Resume": "Bản tóm tắt"
+  "common": {
+    "theme": {
+      "dark": "Chế độ tối",
+      "light": "Chế độ sáng"
+    },
+    "title": {
+      "main_tech": "CÔNG NGHỆ CHÍNH"
+    }
+  }
 }

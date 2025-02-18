@@ -2,13 +2,14 @@
   <div class="container-lg px-sm-5 px-0 pt-2">
     <div class="row">
       <div class="col-lg-7 d-flex align-items-center">
-        <img [src]="home?.image" width="900" class="img-fluid rounded"
+        <img [src]="home?.image" width="900" class="img-fluid rounded px-3 px-sm-0"
           alt="Home image">
       </div>
       <div class="col-lg-5">
         <h2 class="fw-bold text-center fs-1 my-4">{{ user?.name }}</h2>
         <p
           style="color: var(--tertiary-text); text-align: justify;line-height: 2.5 !important;"
+          class="px-3 px-sm-0"
           [innerHTML]="home?.description">
         </p>
       </div>
