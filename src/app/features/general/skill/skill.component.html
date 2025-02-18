@@ -1,1 +1,37 @@
-<p class="text-primary">skill works!</p>
+<div id="skill" class="h-100">
+  <div class="container-lg">
+
+    <h1 class="text-center py-5"
+      style="font-size: 4.4rem; font-weight: 800">
+      {{ 'modules.skill' | translate }}
+    </h1>
+
+    <div class="w-100 d-flex flex-column">
+      <div *ngFor="let item of groupedSkills" class="col mt-2 g-5 mb-5">
+        <div class="position-relative py-2">
+          <div class="position-absolute top-50 start-0 w-100"
+            style="background-color: var(--secondary); height: 1px;"></div>
+          <p class="fs-4 d-inline-block px-3 position-relative ms-4"
+            style="color: var(--main-close); background-color: var(--bg-color);">
+            {{ item.group_name }}
+          </p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div *ngFor="let skill of item.items; let i = index"
+            class="pt-3">
+            <a [href]="skill.url"
+              class="item-skill text-decoration-none rounded-4 d-flex align-items-center justify-content-between px-3 py-2"
+              target="_blank">
+              <p style="color: var(--secondary-text)" class="fs-6 fw-medium">{{
+                skill.name }}</p>
+              <img [src]="skill.icon" width="80" alt="{{ skill.name }}">
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

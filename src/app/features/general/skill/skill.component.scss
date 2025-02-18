@@ -1,0 +1,12 @@
+.item-skill {
+  border: 1px solid var(--secondary);
+  background: linear-gradient(to right, var(--from-bg-color), var(--to-bg-color));
+  transition: all ease 0.5s;
+}
+
+.item-skill:hover {
+  box-shadow: 1px 1px 6px var(--to-bg-color);
+  z-index: 100;
+  position: relative;
+  transform: scale(1.05);
+}

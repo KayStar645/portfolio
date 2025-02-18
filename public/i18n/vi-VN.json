@@ -7,5 +7,13 @@
     "title": {
       "main_tech": "CÔNG NGHỆ CHÍNH"
     }
+  },
+  "modules": {
+    "skill": "Kỹ năng",
+    "project": "Dự án",
+    "experience": "Kinh nghiệm",
+    "education": "Học vấn",
+    "achievement": "Thành tích",
+    "resume": "Tóm tắt"
   }
 }

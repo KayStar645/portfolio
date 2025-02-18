@@ -32,9 +32,7 @@ export class HomeComponent implements OnInit {
       this.homeService.home$.subscribe(home => {
         this.home = home;
       });
-      this.skillService.skills$.subscribe(skills => {
-        this.skills = skills;
-      });
+      this.skills = await this.skillService.getItems(true);
     } catch (error) {
       this.user = null;
       this.home = null;
