@@ -26,9 +26,15 @@ export class HomeComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     try {
-      this.user = await this.userService.getItem();
-      this.home = await this.homeService.getItem();
-      this.skills = await this.skillService.getItems();
+      this.userService.user$.subscribe(user => {
+        this.user = user;
+      });
+      this.homeService.home$.subscribe(home => {
+        this.home = home;
+      });
+      this.skillService.skills$.subscribe(skills => {
+        this.skills = skills;
+      });
     } catch (error) {
       this.user = null;
       this.home = null;

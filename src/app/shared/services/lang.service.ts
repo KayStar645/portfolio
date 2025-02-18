@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -9,6 +10,8 @@ export class LangService {
   private readonly langKey = 'app-lang';
   private defaultLang: string = 'en-US';
   private lang: string = this.getLang();
+
+  public langChanged$ = new BehaviorSubject<string>(this.lang);
 
   constructor(private translate: TranslateService) {
     this.loadLang();
@@ -34,7 +37,8 @@ export class LangService {
       this.lang = lang;
       localStorage.setItem(this.langKey, lang);
       this.translate.use(lang);
-      window.location.reload();
+
+      this.langChanged$.next(lang);
     } else {
       console.error(`Invalid language: ${lang}. Please use 'vi-VN' or 'en-US'.`);
     }

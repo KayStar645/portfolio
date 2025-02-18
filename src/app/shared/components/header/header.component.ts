@@ -36,8 +36,12 @@ export class HeaderComponent implements OnInit {
     try {
       this.currentLang = this.langService.getLang();
       this.currentTheme = this.themeService.getCurrentTheme();
-      this.user = await this.userService.getItem();
-      this.menus = await this.menusService.getItems();
+      this.userService.user$.subscribe(user => {
+        this.user = user;
+      });
+      this.menusService.menus$.subscribe(menus => {
+        this.menus = menus;
+      });
     } catch (error) {
       this.user = null;
       this.menus = [];
