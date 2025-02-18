@@ -1,44 +1,138 @@
 [
   {
-    "name": "Angular",
-    "icon": "assets/params/images/home/tech/angular.png",
-    "url": "https://angular.dev/",
-    "is_main": true
+    "group_id": 1,
+    "group_name": "Database",
+    "name": "MySQL",
+    "icon": "assets/params/images/skills/database/my-sql.png",
+    "url": "https://www.mysql.com/",
+    "is_main": false
   },
   {
-    "name": "BitBucket",
-    "icon": "assets/params/images/home/tech/bit-bucket.png",
-    "url": "https://bitbucket.org/product/",
-    "is_main": true
+    "group_id": 1,
+    "group_name": "Database",
+    "name": "SQL Server",
+    "icon": "assets/params/images/skills/database/sql-server.png",
+    "url": "https://www.microsoft.com/en-us/sql-server",
+    "is_main": false
   },
   {
-    "name": "Git",
-    "icon": "assets/params/images/home/tech/git.png",
-    "url": "https://git-scm.com/",
-    "is_main": true
+    "group_id": 2,
+    "group_name": "Frameworks",
+    "name": "Bootstrap",
+    "icon": "assets/params/images/skills/frameworks/bootstrap.png",
+    "url": "https://getbootstrap.com/",
+    "is_main": false
   },
   {
-    "name": "GitHub",
-    "icon": "assets/params/images/home/tech/github.png",
-    "url": "https://github.com/",
-    "is_main": true
-  },
-  {
+    "group_id": 2,
+    "group_name": "Frameworks",
     "name": "Laravel",
-    "icon": "assets/params/images/home/tech/laravel.png",
+    "icon": "assets/params/images/skills/frameworks/laravel.png",
     "url": "https://laravel.com/",
     "is_main": true
   },
   {
+    "group_id": 2,
+    "group_name": "Frameworks",
     "name": ".Net Core",
-    "icon": "assets/params/images/home/tech/net-core.png",
+    "icon": "assets/params/images/skills/frameworks/net-core.png",
     "url": "https://dotnet.microsoft.com/en-us/apps/aspnet",
     "is_main": true
   },
   {
+    "group_id": 3,
+    "group_name": "IDE",
+    "name": "PhpStorm",
+    "icon": "assets/params/images/skills/ide/php-storm.png",
+    "url": "https://www.jetbrains.com/phpstorm/",
+    "is_main": false
+  },
+  {
+    "group_id": 3,
+    "group_name": "IDE",
+    "name": "Visual Studio",
+    "icon": "assets/params/images/skills/ide/visual-studio.png",
+    "url": "https://visualstudio.microsoft.com/",
+    "is_main": false
+  },
+  {
+    "group_id": 3,
+    "group_name": "IDE",
+    "name": "Visual Studio Code",
+    "icon": "assets/params/images/skills/ide/vs-code.png",
+    "url": "https://code.visualstudio.com/",
+    "is_main": false
+  },
+  {
+    "group_id": 4,
+    "group_name": "Programming Languages",
+    "name": "C#",
+    "icon": "assets/params/images/skills/language/c-sharp.png",
+    "url": "https://learn.microsoft.com/en-us/dotnet/csharp/",
+    "is_main": false
+  },
+  {
+    "group_id": 4,
+    "group_name": "Programming Languages",
+    "name": "PHP",
+    "icon": "assets/params/images/skills/language/php.png",
+    "url": "https://www.php.net/",
+    "is_main": false
+  },
+  {
+    "group_id": 4,
+    "group_name": "Programming Languages",
+    "name": "JavaScript",
+    "icon": "assets/params/images/skills/language/java-script.png",
+    "url": "https://www.javascript.com/",
+    "is_main": false
+  },
+  {
+    "group_id": 4,
+    "group_name": "Programming Languages",
+    "name": "TypeScript",
+    "icon": "assets/params/images/skills/language/type-script.png",
+    "url": "https://www.typescriptlang.org/",
+    "is_main": false
+  },
+  {
+    "group_id": 5,
+    "group_name": "Libraries",
+    "name": "Angular",
+    "icon": "assets/params/images/skills/libraries/angular.png",
+    "url": "https://angular.dev/",
+    "is_main": true
+  },
+  {
+    "group_id": 5,
+    "group_name": "Libraries",
     "name": "Vue",
-    "icon": "assets/params/images/home/tech/vue.png",
+    "icon": "assets/params/images/skills/libraries/vue.png",
     "url": "https://vuejs.org/",
+    "is_main": true
+  },
+  {
+    "group_id": 7,
+    "group_name": "Tools",
+    "name": "Git",
+    "icon": "assets/params/images/skills/tools/git.png",
+    "url": "https://git-scm.com/",
+    "is_main": true
+  },
+  {
+    "group_id": 7,
+    "group_name": "Tools",
+    "name": "BitBucket",
+    "icon": "assets/params/images/skills/tools/bit-bucket.png",
+    "url": "https://bitbucket.org/thesisfinal/workspace/repositories/",
+    "is_main": true
+  },
+  {
+    "group_id": 7,
+    "group_name": "Tools",
+    "name": "Github",
+    "icon": "assets/params/images/skills/tools/github.png",
+    "url": "https://github.com/KayStar645",
     "is_main": true
   }
 ]
