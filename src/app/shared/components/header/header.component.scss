@@ -1,6 +1,7 @@
-#header {
-  border-bottom: 1px solid var(--secondary);
+#header > div:first-child {
+  background-color: var(--bg-color);
   color: var(--secondary-text);
+  border-bottom: 1px solid var(--secondary);
 }
 
 .nav-link:hover {

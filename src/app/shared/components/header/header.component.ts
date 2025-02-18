@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import {TranslateModule, TranslateService} from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { User, UserService } from '../../../services/user.service';
 import { Menu, MenusService } from '../../../services/menus.service';
@@ -10,12 +11,14 @@ import { ThemeService } from '../../services/theme.service';
   selector: 'app-header',
   imports: [
     RouterLink,
-    CommonModule
+    CommonModule,
+    TranslateModule
   ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  translate: TranslateService = inject(TranslateService);
   user: User | null = null;
   menus: Menu[] = [];
   currentLang: string = '';
@@ -33,15 +36,19 @@ export class HeaderComponent implements OnInit {
     try {
       this.currentLang = this.langService.getLang();
       this.currentTheme = this.themeService.getCurrentTheme();
-      this.user = await this.userService.getItem();
-      this.menus = await this.menusService.getItems();
+      this.userService.user$.subscribe(user => {
+        this.user = user;
+      });
+      this.menusService.menus$.subscribe(menus => {
+        this.menus = menus;
+      });
     } catch (error) {
       this.user = null;
       this.menus = [];
     }
   }
 
-  translateText(): void {
+  switchLanguage(): void {
     let lang = this.currentLang == 'en-US' ? 'vi-VN' : 'en-US';
     this.langService.setLang(lang);
     this.currentLang = this.langService.getLang();
