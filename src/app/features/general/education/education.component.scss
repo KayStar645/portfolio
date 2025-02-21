@@ -1,0 +1,10 @@
+.zoom-effect {
+  cursor: zoom-in;
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(3.5);
+  z-index: 9999999999999;
+  position: relative;
+}

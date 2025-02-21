@@ -6,6 +6,9 @@
     },
     "title": {
       "main_tech": "MAIN TECHNOLOGY"
+    },
+    "message": {
+      "fail": "Reading data failed!"
     }
   },
   "modules": {

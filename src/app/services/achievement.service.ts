@@ -6,7 +6,7 @@ import { LangService } from '../shared/services/lang.service';
 import { ToastrService } from 'ngx-toastr';
 import { firstValueFrom } from 'rxjs';
 
-export interface Menu {
+export interface Achievement {
   label: string;
   icon: string;
   link: string;
@@ -15,12 +15,12 @@ export interface Menu {
 @Injectable({
   providedIn: 'root',
 })
-export class MenusService {
+export class AchievementsService {
   private jsonUrl: string = environment.config.jsonUrl;
-  private fileName: string = 'menu.json';
+  private fileName: string = 'achievement.json';
 
-  private menusSubject = new BehaviorSubject<Menu[]>([]);
-  public menus$ = this.menusSubject.asObservable();
+  private achievementsSubject = new BehaviorSubject<Achievement[]>([]);
+  public achievements$ = this.achievementsSubject.asObservable();
 
   constructor(
     private http: HttpClient,
@@ -28,27 +28,27 @@ export class MenusService {
     private toast: ToastrService,
   ) {
     this.langService.langChanged$.subscribe(() => {
-      this.reloadMenus();
+      this.reloadAchievements();
     });
 
-    this.reloadMenus();
+    this.reloadAchievements();
   }
 
-  private async reloadMenus(): Promise<void> {
+  private async reloadAchievements(): Promise<void> {
     try {
       const lang = this.langService.getLang();
       const url = `${this.jsonUrl}/${lang}/${this.fileName}`;
-      const menus = await firstValueFrom(this.http.get<Menu[]>(url));
+      const achievements = await firstValueFrom(this.http.get<Achievement[]>(url));
 
-      if (menus && Array.isArray(menus)) {
-        this.menusSubject.next(menus);
+      if (achievements && Array.isArray(achievements)) {
+        this.achievementsSubject.next(achievements);
       } else {
-        this.toast.error('Đọc dữ liệu thất bại!', 'Menu');
-        this.menusSubject.next([]);
+        this.toast.error('Đọc dữ liệu thất bại!', 'Achievement');
+        this.achievementsSubject.next([]);
       }
     } catch (error) {
-      this.toast.error('Đọc dữ liệu thất bại!', 'Menu');
-      this.menusSubject.next([]);
+      this.toast.error('Đọc dữ liệu thất bại!', 'Achievement');
+      this.achievementsSubject.next([]);
     }
   }
 }

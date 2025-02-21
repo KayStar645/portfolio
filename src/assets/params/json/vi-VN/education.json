@@ -1,0 +1,23 @@
+[
+  {
+    "label": "Bằng Cử nhân",
+    "name": "Cử nhân Công nghệ thông tin",
+    "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
+    "time": "09/2020 - 12/2023",
+    "image": "assets/params/images/educations/bachelor.jpg"
+  },
+  {
+    "label": "Bằng Kỹ sư",
+    "name": "Kỹ sư Công nghệ thông tin",
+    "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
+    "time": "01/2024 - 06/2024",
+    "image": "assets/params/images/educations/engineer.jpg"
+  },
+  {
+    "label": "Học bổng 50%",
+    "name": "Thạc sĩ Công nghệ thông tin",
+    "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
+    "time": "01/2025 - Nay",
+    "image": "assets/params/images/educations/master.jpg"
+  }
+]

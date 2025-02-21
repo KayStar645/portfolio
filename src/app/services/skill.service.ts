@@ -13,6 +13,7 @@ export interface Skill {
   icon: string;
   url: string;
   is_main: boolean;
+  is_hidden: boolean;
 }
 
 export interface GroupedSkill {
@@ -55,6 +56,7 @@ export class SkillService {
 
     if (is_main)
       skills = skills.filter(item => item.is_main === is_main);
+    skills = skills.filter(item => item.is_hidden === false);
     return skills;
   }
 
@@ -79,7 +81,7 @@ export class SkillService {
     try {
       const lang = this.langService.getLang();
       const url = `${this.jsonUrl}/${lang}/${this.fileName}`;
-      const skills = await this.http.get<Skill[]>(url).toPromise();
+      const skills = await firstValueFrom(this.http.get<Skill[]>(url));
 
       if (skills && Array.isArray(skills)) {
         this.skillsSubject.next(skills);
