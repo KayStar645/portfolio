@@ -4,6 +4,7 @@ import { environment } from '../environments/environment';
 import { BehaviorSubject } from 'rxjs';
 import { LangService } from '../shared/services/lang.service';
 import { ToastrService } from 'ngx-toastr';
+import { firstValueFrom } from 'rxjs';
 
 export interface Home {
   image: string;
@@ -36,7 +37,7 @@ export class HomeService {
     try {
       const lang = this.langService.getLang();
       const url = `${this.jsonUrl}/${lang}/${this.fileName}`;
-      const home = await this.http.get<Home>(url).toPromise();
+      const home = await firstValueFrom(this.http.get<Home>(url));
       if (home) {
         this.homeSubject.next(home);
       } else {

@@ -6,21 +6,21 @@ import { LangService } from '../shared/services/lang.service';
 import { ToastrService } from 'ngx-toastr';
 import { firstValueFrom } from 'rxjs';
 
-export interface User {
-  name: string;
-  avatar: string;
+export interface Experience {
+  label: string;
+  icon: string;
   link: string;
 }
 
 @Injectable({
   providedIn: 'root',
 })
-export class UserService {
+export class ExperiencesService {
   private jsonUrl: string = environment.config.jsonUrl;
-  private fileName: string = 'user.json';
+  private fileName: string = 'experience.json';
 
-  private userSubject = new BehaviorSubject<User | null>(null);
-  public user$ = this.userSubject.asObservable();
+  private experiencesSubject = new BehaviorSubject<Experience[]>([]);
+  public experiences$ = this.experiencesSubject.asObservable();
 
   constructor(
     private http: HttpClient,
@@ -28,27 +28,27 @@ export class UserService {
     private toast: ToastrService,
   ) {
     this.langService.langChanged$.subscribe(() => {
-      this.reloadUser();
+      this.reloadExperiences();
     });
 
-    this.reloadUser();
+    this.reloadExperiences();
   }
 
-  private async reloadUser(): Promise<void> {
+  private async reloadExperiences(): Promise<void> {
     try {
       const lang = this.langService.getLang();
       const url = `${this.jsonUrl}/${lang}/${this.fileName}`;
-      const user = await firstValueFrom(this.http.get<User>(url));
+      const experiences = await firstValueFrom(this.http.get<Experience[]>(url));
 
-      if (user) {
-        this.userSubject.next(user);
+      if (experiences && Array.isArray(experiences)) {
+        this.experiencesSubject.next(experiences);
       } else {
-        this.toast.error('Đọc dữ liệu thất bại!', 'User');
-        this.userSubject.next(null);
+        this.toast.error('Đọc dữ liệu thất bại!', 'Experience');
+        this.experiencesSubject.next([]);
       }
     } catch (error) {
-      this.toast.error('Đọc dữ liệu thất bại!', 'User');
-      this.userSubject.next(null);
+      this.toast.error('Đọc dữ liệu thất bại!', 'Experience');
+      this.experiencesSubject.next([]);
     }
   }
 }

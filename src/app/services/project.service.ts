@@ -4,23 +4,22 @@ import { environment } from '../environments/environment';
 import { BehaviorSubject } from 'rxjs';
 import { LangService } from '../shared/services/lang.service';
 import { ToastrService } from 'ngx-toastr';
-import { firstValueFrom } from 'rxjs';
 
-export interface User {
-  name: string;
-  avatar: string;
+export interface Project {
+  label: string;
+  icon: string;
   link: string;
 }
 
 @Injectable({
   providedIn: 'root',
 })
-export class UserService {
+export class ProjectsService {
   private jsonUrl: string = environment.config.jsonUrl;
-  private fileName: string = 'user.json';
+  private fileName: string = 'project.json';
 
-  private userSubject = new BehaviorSubject<User | null>(null);
-  public user$ = this.userSubject.asObservable();
+  private projectsSubject = new BehaviorSubject<Project[]>([]);
+  public projects$ = this.projectsSubject.asObservable();
 
   constructor(
     private http: HttpClient,
@@ -28,27 +27,27 @@ export class UserService {
     private toast: ToastrService,
   ) {
     this.langService.langChanged$.subscribe(() => {
-      this.reloadUser();
+      this.reloadProjects();
     });
 
-    this.reloadUser();
+    this.reloadProjects();
   }
 
-  private async reloadUser(): Promise<void> {
+  private async reloadProjects(): Promise<void> {
     try {
       const lang = this.langService.getLang();
       const url = `${this.jsonUrl}/${lang}/${this.fileName}`;
-      const user = await firstValueFrom(this.http.get<User>(url));
+      const projects = await this.http.get<Project[]>(url).toPromise();
 
-      if (user) {
-        this.userSubject.next(user);
+      if (projects && Array.isArray(projects)) {
+        this.projectsSubject.next(projects);
       } else {
-        this.toast.error('Đọc dữ liệu thất bại!', 'User');
-        this.userSubject.next(null);
+        this.toast.error('Đọc dữ liệu thất bại!', 'Project');
+        this.projectsSubject.next([]);
       }
     } catch (error) {
-      this.toast.error('Đọc dữ liệu thất bại!', 'User');
-      this.userSubject.next(null);
+      this.toast.error('Đọc dữ liệu thất bại!', 'Project');
+      this.projectsSubject.next([]);
     }
   }
 }
