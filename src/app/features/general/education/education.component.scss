@@ -4,7 +4,13 @@
 }
 
 .zoom-effect:hover {
-  transform: scale(3.5);
+  transform: scale(4);
   z-index: 9999999999999;
   position: relative;
+}
+
+@media (max-width: 767px) {
+  .zoom-effect:hover {
+    transform: scale(2) !important;
+  }
 }
