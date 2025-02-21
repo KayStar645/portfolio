@@ -6,6 +6,9 @@
     },
     "title": {
       "main_tech": "CÔNG NGHỆ CHÍNH"
+    },
+    "message": {
+      "fail": "Đọc dữ liệu thất bại!"
     }
   },
   "modules": {
