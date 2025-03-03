@@ -23,7 +23,7 @@
     "@ngx-translate/http-loader": "^16.0.1",
     "bootstrap": "^5.3.3",
     "ngx-toastr": "^19.0.0",
-    "rxjs": "~7.8.0",
+    "rxjs": "~7.8.2",
     "swiper": "^11.2.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
