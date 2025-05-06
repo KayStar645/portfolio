@@ -8,8 +8,14 @@ import { firstValueFrom } from 'rxjs';
 
 export interface Achievement {
   label: string;
-  icon: string;
-  link: string;
+  name: string;
+  role: string;
+  team: string;
+  result: string;
+  address: string;
+  time: string;
+  image: string;
+  type: string;
 }
 
 @Injectable({
