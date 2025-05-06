@@ -1,10 +1,17 @@
 [
   {
-    "label": "Bằng Cử nhân",
-    "name": "Cử nhân Công nghệ thông tin",
+    "label": "Học bổng 50%",
+    "name": "Thạc sĩ Công nghệ thông tin",
     "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
-    "time": "09/2020 - 12/2023",
-    "image": "assets/params/images/educations/bachelor.jpg"
+    "time": "01/2025 - Nay",
+    "image": "assets/params/images/educations/master.jpg"
+  },
+  {
+    "label": "Chứ chỉ ngoại ngữ",
+    "name": "Bài kiểm tra trình độ tiếng Anh chuẩn của Việt Nam - Bậc 3 (B1)",
+    "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
+    "time": "03/2024",
+    "image": "assets/params/images/educations/english-b1.jpg"
   },
   {
     "label": "Bằng Kỹ sư",
@@ -14,10 +21,10 @@
     "image": "assets/params/images/educations/engineer.jpg"
   },
   {
-    "label": "Học bổng 50%",
-    "name": "Thạc sĩ Công nghệ thông tin",
+    "label": "Bằng Cử nhân",
+    "name": "Cử nhân Công nghệ thông tin",
     "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
-    "time": "01/2025 - Nay",
-    "image": "assets/params/images/educations/master.jpg"
+    "time": "09/2020 - 12/2023",
+    "image": "assets/params/images/educations/bachelor.jpg"
   }
 ]
