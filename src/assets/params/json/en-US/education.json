@@ -1,10 +1,17 @@
 [
   {
-    "label": "The Degree of Bachelor",
-    "name": "The Degree of Bachelor Information Technology",
+    "label": "50% scholarship",
+    "name": "Master of Information Technology",
     "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
-    "time": "09/2020 - 12/2023",
-    "image": "assets/params/images/educations/bachelor.jpg"
+    "time": "01/2025 - Nay",
+    "image": "assets/params/images/educations/master.jpg"
+  },
+  {
+    "label": "Certificate of Proficiency",
+    "name": "Vietnamese Standardized Test of English Proficiency - Level 3 (B1)",
+    "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+    "time": "03/2024",
+    "image": "assets/params/images/educations/english-b1.jpg"
   },
   {
     "label": "The Degree of Engineer",
@@ -14,10 +21,10 @@
     "image": "assets/params/images/educations/engineer.jpg"
   },
   {
-    "label": "50% scholarship",
-    "name": "Master of Information Technology",
+    "label": "The Degree of Bachelor",
+    "name": "The Degree of Bachelor Information Technology",
     "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
-    "time": "01/2025 - Nay",
-    "image": "assets/params/images/educations/master.jpg"
+    "time": "09/2020 - 12/2023",
+    "image": "assets/params/images/educations/bachelor.jpg"
   }
 ]
