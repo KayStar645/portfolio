@@ -1,3 +1,73 @@
 [
+    {
+      "name": "University-level Student Scientific Research Competition, Academic Year 2023 - 2024",
+      "role": "Team Leader",
+      "team": "Phạm Tấn Thuận, Khúc Hồng Nhung, Trần Ngọc Hiếu Thảo",
+      "result": "First Prize",
+      "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+      "time": "05/2024",
+      "image": "assets/params/images/achievements/prize-1.jpg",
+      "type": "prize"
+    },
+    {
+      "name": "Faculty-level Student Scientific Research Competition, Academic Year 2023 - 2024",
+      "role": "Team Leader",
+      "team": "Phạm Tấn Thuận, Khúc Hồng Nhung, Trần Ngọc Hiếu Thảo",
+      "result": "Second Prize",
+      "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+      "time": "04/2024",
+      "image": "assets/params/images/achievements/prize-2.jpg",
+      "type": "prize"
+    },
+    {
+      "name": "IT Talent Search 2023",
+      "role": "Team Leader",
+      "team": "Phạm Tấn Thuận, Ngô Văn Sơn",
+      "result": "Consolation Prize",
+      "address": "Ho Chi Minh City University of Technology (HUTECH)",
+      "time": "12/2023",
+      "image": "assets/params/images/achievements/prize-3.jpg",
+      "type": "prize"
+    },
+    {
+      "name": "Faculty-level Student Scientific Research Competition, Academic Year 2022 - 2023",
+      "role": "Team Leader",
+      "team": "Phạm Tấn Thuận, Ngô Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
+      "result": "First Prize",
+      "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+      "time": "04/2023",
+      "image": "assets/params/images/achievements/prize-4.jpg",
+      "type": "prize"
+    },
+    {
+      "name": "IT Innovation and Talent Search in the Digital Era",
+      "role": "Team Leader",
+      "team": "Phạm Tấn Thuận, Nguyễn Nương Hồng Thắm, Nguyễn Tấn Phát, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
+      "result": "Consolation Prize",
+      "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+      "time": "06/2022",
+      "image": "assets/params/images/achievements/prize-5.jpg",
+      "type": "prize"
+    },
+    {
+      "name": "University-level Research Project – Mining Cross-Level High Utility Itemsets on Dynamic Transaction Databases with Negative Utility",
+      "role": "Principal Investigator",
+      "team": "Phạm Tấn Thuận",
+      "result": "In Progress",
+      "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+      "time": "06/2025 - 05/2026",
+      "image": "assets/params/images/achievements/science-1.jpg",
+      "type": "science"
+    },
+    {
+      "name": "University-level Research Project – Graduation Thesis Management System",
+      "role": "Principal Investigator",
+      "team": "Phạm Tấn Thuận, Ngô Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
+      "result": "Score: 80/100 – Good",
+      "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+      "time": "12/2022 - 06/2023",
+      "image": "assets/params/images/achievements/science-2.jpg",
+      "type": "science"
+    }
+  ]
   
-]
