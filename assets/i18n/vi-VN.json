@@ -5,7 +5,9 @@
       "light": "Chế độ sáng"
     },
     "title": {
-      "main_tech": "CÔNG NGHỆ CHÍNH"
+      "main_tech": "CÔNG NGHỆ CHÍNH",
+      "prize": "🎖️ Giải thưởng",
+      "science": "📚 Công trình nghiên cứu"
     },
     "message": {
       "fail": "Đọc dữ liệu thất bại!"

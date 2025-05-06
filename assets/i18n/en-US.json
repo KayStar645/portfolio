@@ -5,7 +5,9 @@
       "light": "Theme Light"
     },
     "title": {
-      "main_tech": "MAIN TECHNOLOGY"
+      "main_tech": "MAIN TECHNOLOGY",
+      "prize": "🎖️ Prize",
+      "science": "📚 Research work"
     },
     "message": {
       "fail": "Reading data failed!"
