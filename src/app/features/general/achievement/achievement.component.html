@@ -6,7 +6,7 @@
       <!-- {{ 'modules.achievement' | translate }} -->
     </h1>
 
-    <div class="row g-5 pb-5">
+    <div class="row g-5 pb-5 mb-5">
       <ng-container *ngFor="let group of groupedAchievements">
         <div class="col-12">
           <h2 class="fw-bold border-bottom pb-2 mb-4 fs-1">
@@ -36,7 +36,12 @@
                 <!-- Ảnh trái nếu i lẻ -->
                 <div *ngIf="i % 2 === 1" class="me-3 d-none d-md-flex flex-column align-items-center"
                   style="flex: 0 0 35%;">
-                  <img [src]="item.image" alt="Logo" class="rounded w-100 zoom-effect">
+                  <!-- ảnh nhỏ -->
+                  <img [src]="item.image" alt="Logo" class="rounded w-100 zoom-effect" (click)="openZoom(item.image)">
+                  <!-- ảnh phóng to -->
+                  <div *ngIf="zoomedImage" class="zoom-overlay" (click)="zoomedImage = null">
+                    <img [src]="zoomedImage" alt="Zoomed image">
+                  </div>
                   <p class="text-center fst-italic text-secondary">
                     {{ item.label }}
                   </p>
@@ -56,7 +61,12 @@
                 <!-- Ảnh phải nếu i chẵn -->
                 <div *ngIf="i % 2 === 0" class="ms-3 d-none d-md-flex flex-column align-items-center"
                   style="flex: 0 0 35%;">
-                  <img [src]="item.image" alt="Logo" class="rounded w-100 zoom-effect">
+                  <!-- ảnh nhỏ -->
+                  <img [src]="item.image" alt="Logo" class="rounded w-100 zoom-effect" (click)="openZoom(item.image)">
+                  <!-- ảnh phóng to -->
+                  <div *ngIf="zoomedImage" class="zoom-overlay" (click)="zoomedImage = null">
+                    <img [src]="zoomedImage" alt="Zoomed image">
+                  </div>
                   <p class="text-center fst-italic text-secondary">
                     {{ item.label }}
                   </p>

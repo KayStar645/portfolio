@@ -16,6 +16,7 @@ import { Achievement, AchievementsService } from './../../../services/achievemen
 export class AchievementComponent implements OnInit {
   translate: TranslateService = inject(TranslateService);
   achievements: Achievement[] = [];
+  zoomedImage: string | null = null;
 
   groupedAchievements: { type: string, items: Achievement[] }[] = [];
 
@@ -36,5 +37,9 @@ export class AchievementComponent implements OnInit {
         items
       }));
     });
+  }
+
+  openZoom(imageUrl: string) {
+    this.zoomedImage = imageUrl;
   }
 }
