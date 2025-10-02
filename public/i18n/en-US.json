@@ -13,12 +13,250 @@
       "fail": "Reading data failed!"
     }
   },
+  "home": {
+    "greeting": "Hello, I'm",
+    "title": "Pham Tan Thuan",
+    "description": "Full-stack developer with 2+ years of experience building CRM, ERP systems and modern web applications. Passionate about technology and always seeking the most optimal solutions.",
+    "view_portfolio": "View Portfolio",
+    "download_cv": "Download CV",
+    "tech_title": "Technical Expertise",
+    "tech_subtitle": "Technologies and tools I use daily",
+    "nav": {
+      "skills": "Skills",
+      "skills_desc": "Technologies and frameworks I master",
+      "experience": "Experience",
+      "experience_desc": "My professional development journey",
+      "projects": "Projects",
+      "projects_desc": "Real-world projects I've completed",
+      "achievements": "Achievements",
+      "achievements_desc": "Awards and scientific research"
+      }
+  },
+  "skill": {
+    "title_prefix": "My Work",
+    "title_suffix": "Skills",
+    "description": "The technologies and tools I use to create high-quality software solutions.",
+    "subtitle": "Professional technologies and tools",
+    "core": {
+      "title": "CORE COMPETENCIES",
+      "subtitle": "Primary and specialized skills",
+      "backend": "Backend Development",
+      "frontend": "Frontend Development", 
+      "database": "Database Management"
+    },
+    "support": {
+      "title": "Supporting Technologies"
+    },
+    "categories": {
+      "backend": "Backend Technologies",
+      "frontend": "Frontend Technologies",
+      "database": "Database Systems",
+      "architecture": "Architecture & APIs",
+      "tools": "Advanced Tools"
+    },
+    "summary": {
+      "title": "Technical Summary",
+      "experience": "2.5+ Years",
+      "title_detail": "Full-Stack Development Experience",
+      "focus": "Primary Focus",
+      "focus_detail": "Enterprise Backend (.NET & Laravel)",
+      "specialties": "Specialties",
+      "specialties_detail": "Clean Architecture, Microservices, Database Optimization",
+      "latest": "Latest",
+      "latest_detail": "AI Integration, Power BI, Advanced Data Systems"
+    },
+    "descriptions": {
+      "backend": "Enterprise Backend Solutions",
+      "frontend": "Modern Web Applications",
+      "database": "Data Management Systems",
+      "architecture": "Scalable System Design",
+      "tools": "Professional Development Tools"
+    }
+  },
   "modules": {
     "skill": "Skills",
     "project": "Projects",
     "experience": "Experience",
     "education": "Education",
-    "achievement": "Achievement",
+    "achievement": "Achievements",
     "resume": "Resume"
+  },
+  "achievement": {
+    "title_prefix": "Research",
+    "title_suffix": "Achievements",
+    "subtitle": "Research projects and awards during my academic journey",
+    "research": {
+      "title": "Scientific Research Projects",
+      "subtitle": "University-level research projects and participation",
+      "project1": {
+        "name": "Mining High Utility Cross-Itemsets from Dynamic Transaction Databases with Negative Utility",
+        "description": "Research and develop algorithms for mining high utility cross-itemsets from dynamic transaction databases with negative utility.",
+        "role": "Project Leader",
+        "team_lead": "Pham Tan Thuan (Project Leader)",
+        "team_members": "Tran Duong Gia Bao, Tran Gia Bao",
+        "time": "07/2025 - 06/2026"
+      },
+      "project2": {
+          "name": "Building Aspect-based Sentiment Analysis System using Knowledge Graph",
+          "description": "Develop detailed sentiment analysis system from different aspects using Knowledge Graph.",
+          "role": "Core Member",
+          "team_lead": "Nguyen Thi Hong Quyen (Project Leader)",
+          "team_members": "Pham Tan Thuan, Doan Tan Minh Tan, Nguyen Huu Thang",
+          "time": "07/2025 - 06/2026"
+      },
+      "project3": {
+        "name": "Building Graduation Thesis Process Management System",
+        "description": "Develop system for managing and tracking graduation thesis progress for students.",
+        "role": "Project Leader",
+        "team_lead": "Pham Tan Thuan (Project Leader)",
+        "team_members": "Ngo Van Son, Vu Tran Minh Hoang, Nguyen Ngoc Thach",
+        "result": "80/100 - Good",
+        "time": "12/2022 - 06/2023"
+      }
+    },
+    "awards": {
+      "title": "Awards & Achievements",
+      "subtitle": "Awards from scientific research competitions",
+      "award1": {
+        "name": "University Student Science Research Competition",
+        "event": "Ho Chi Minh City University of Industry and Trade",
+        "role": "Team Leader",
+        "team_leader": "Pham Tan Thuan (Team Leader)",
+        "team_members": "Khuc Hong Nhung, Tran Nguyen Hieu Thao",
+        "time": "05/2024"
+      },
+      "award2": {
+        "name": "IT Faculty Science Research Competition",
+        "event": "Ho Chi Minh City University of Industry and Trade",
+        "role": "Team Leader",
+        "team_leader": "Pham Tan Thuan (Team Leader)",
+        "team_members": "Khuc Hong Nhung, Tran Nguyen Hieu Thao",
+        "time": "04/2024"
+      },
+      "award3": {
+        "name": "IT Faculty Science Research Competition (Previous)",
+        "event": "Ho Chi Minh City University of Industry and Trade",
+        "role": "Team Leader",
+        "team_leader": "Pham Tan Thuan (Team Leader)",
+        "team_members": "Pham Tan Thuan, Ngo Van Son, Vu Tran Minh Hoang, Nguyen Ngoc Thach",
+        "time": "04/2023"
+      },
+      "award4": {
+        "name": "IT Talent Search and Creative Products in Digital Age",
+        "event": "Ho Chi Minh City University of Industry and Trade",
+        "role": "Team Leader",
+        "team_leader": "Pham Tan Thuan (Team Leader)",
+        "team_members": "Pham Tan Thuan, Nguyen Nuong Hong Tham, Nguyen Tan Phat, Vu Tran Minh Hoang, Nguyen Ngoc Thach",
+        "time": "06/2022"
+      },
+      "award5": {
+        "name": "IT Talent Search Competition - Website",
+        "event": "Ho Chi Minh City University of Technology",
+        "role": "Team Leader",
+        "team_leader": "Pham Tan Thuan (Team Leader)",
+        "team_members": "Pham Tan Thuan, Ngo Van Son",
+        "time": "12/2023"
+      }
+    },
+    "status": {
+      "current": "In Progress",
+      "completed": "Completed"
+    }
+  },
+  "project": {
+    "title_prefix": "Real-world",
+    "title_suffix": "Projects",
+    "subtitle": "Personal projects and real-world development experience",
+    "chatbot": {
+      "title": "Developer – Chatbot",
+      "company": "TURBO Technology Solutions Corporation",
+      "time": "09/2025 – 10/2025",
+      "role": "Developer",
+      "responsibility1": "Develop marketing Landing Page",
+      "responsibility2": "Build chat widget, integrate & operate Chatwoot (open source), connect Dify API (RAG demo)",
+      "responsibility3": "Integrate chatbot with machine learning and natural language processing",
+      "responsibility4": "Integrate multi-channel communication (Web, Zalo, Facebook, Instagram,...)",
+      "responsibility5": "Deploy using Docker & CI/CD, deploy UAT and production versions"
+    },
+    "status": {
+      "completed": "Completed",
+      "in_progress": "In Progress",
+      "planned": "Planned"
+    }
+  },
+  "experience": {
+    "title_prefix": "Work",
+    "title_suffix": "Experience", 
+    "subtitle": "Professional journey and contributions to various projects",
+    "job1": {
+      "title": "Developer",
+      "company": "COGAIN Corporation",
+      "time": "03/2025 – Present",
+      "responsibility1": "Lead development of CRM, ERP systems (R&D, Purchasing, Warehouse, Production, Sales) with data integration between 2 systems, building features for both Backend and Frontend",
+      "responsibility2": "Design Database structure and API for complex business modules",
+      "responsibility3": "Build authorization features and automated approval workflow",
+      "responsibility4": "Support UI/UX design on Figma based on described business requirements",
+      "responsibility5": "Develop leave management and attendance systems with Power BI report integration via API",
+      "responsibility6": "Develop issue/problem management system with internal chat and OpenAI integration",
+      "responsibility7": "Implement data crawling for analysis and automated processing support",
+      "responsibility8": "Write SQL Server stored procedures for complex business logic and query performance optimization",
+      "responsibility9": "Backend: build BaseController, BaseService standardized CRUD, approval, routing and reusability",
+      "responsibility10": "Frontend: build base component library (Input, Select, Compact, DatePicker...) for reuse and interface standardization"
+    },
+    "job2": {
+      "title": "Developer",
+      "company": "GOSOFT Technology Company Limited", 
+      "time": "04/2023 – 03/2025",
+      "responsibility1": "Develop e-commerce systems: design Database and API, build web admin, handle commercial product and training course data flow",
+      "responsibility3": "Develop API for mobile apps in social network field (social interaction, data management)",
+      "responsibility4": "Build ERP modules: purchasing, warehouse and master data",
+      "responsibility5": "Develop reusable Menu package for all new and existing projects",
+      "responsibility6": "Develop additional base Frontend components for company library (Select, Price, TreeViewTable...), reuse and standardize interface",
+      "responsibility7": "Upgrade and develop internal code generator tools (console mode to pre-generate code), optimize to reduce development time",
+      "responsibility8": "Work with Agile/Scrum methodology, use Jira for task management and team coordination"
+    },
+    "status": {
+      "current": "Currently Working",
+      "completed": "Completed"
+    }
+  },
+  "education": {
+    "placeholder": "Updating...",
+    "title_prefix": "My Academic",
+    "title_suffix": "Profession",
+    "subtitle": "My educational journey and professional development",
+    "master": {
+      "label": "master's",
+      "name": "Master of Information Technology",
+      "specialization": "Application-Oriented",
+      "university": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+      "time": "01/2025 - Present",
+      "scholarship": "50% Scholarship",
+      "gpa": "Excellent GPA"
+    },
+    "language": {
+      "label": "Bachelor of Language",
+      "name": "Bachelor of English Language",
+      "specialization": "Business English Specialization",
+      "university": "University of Economics Ho Chi Minh City (UEH)",
+      "time": "10/2025 - Present",
+      "focus": "Business English"
+    },
+    "engineer": {
+      "label": "Engineer",
+      "name": "Bachelor of Information Technology",
+      "specialization": "Software Technology Specialization",
+      "university": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+      "time": "01/2024 - 06/2024",
+      "gpa": "Graduated with Good Honours"
+    },
+    "bachelor": {
+      "label": "Bachelor",
+      "name": "Bachelor of Information Technology",
+      "specialization": "Software Technology Specialization",
+      "university": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+      "time": "09/2020 - 12/2023",
+      "gpa": "Graduated with Good Honours"
+    }
   }
 }

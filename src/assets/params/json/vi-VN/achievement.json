@@ -1,72 +1,82 @@
 [
-    {
-      "name": "Cuộc thi Sinh viên NCKH cấp Trường năm học 2023 - 2024",
-      "role": "Trưởng nhóm",
-      "team": "Phạm Tấn Thuận, Khúc Hồng Nhung, Trần Ngọc Hiếu Thảo",
-      "result": "Giải nhất",
-      "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
-      "time": "05/2024",
-      "image": "assets/params/images/achievements/prize-1.jpg",
-      "type": "prize"
-    },
-    {
-      "name": "Cuộc thi Sinh viên NCKH cấp Khoa CNTT năm học 2023 - 2024",
-      "role": "Trưởng nhóm",
-      "team": "Phạm Tấn Thuận, Khúc Hồng Nhung, Trần Ngọc Hiếu Thảo",
-      "result": "Giải nhì",
-      "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
-      "time": "04/2024",
-      "image": "assets/params/images/achievements/prize-2.jpg",
-      "type": "prize"
-    },
-    {
-      "name": "Tìm kiếm tài năng Công nghệ thông tin 2023 - Bảng C: Ứng dụng Website",
-      "role": "Trưởng nhóm",
-      "team": "Phạm Tấn Thuận, Ngô Văn Sơn",
-      "result": "Giải khuyến khích",
-      "address": "Trường Đại Học Công Nghệ TP.HCM (HUTECH)",
-      "time": "12/2023",
-      "image": "assets/params/images/achievements/prize-3.jpg",
-      "type": "prize"
-    },
-    {
-      "name": "Cuộc thi Sinh viên NCKH cấp Khoa CNTT năm học 2022 - 2023",
-      "role": "Trưởng nhóm",
-      "team": "Phạm Tấn Thuận, Ngô Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
-      "result": "Giải nhất",
-      "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
-      "time": "04/2023",
-      "image": "assets/params/images/achievements/prize-4.jpg",
-      "type": "prize"
-    },
-    {
-      "name": "Tìm kiếm tài năng và sản phẩm sáng tạo Công nghệ thông tin trong kỷ nguyên số",
-      "role": "Trưởng nhóm",
-      "team": "Phạm Tấn Thuận, Nguyễn Nương Hồng Thắm, Nguyễn Tấn Phát, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
-      "result": "Giải nhì",
-      "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
-      "time": "06/2022",
-      "image": "assets/params/images/achievements/prize-5.jpg",
-      "type": "prize"
-    },
-    {
-        "name": "Đề tài cấp trường - Khai thác tập hữu ích cao chéo trên cơ sở dữ liệu giao dịch động có lợi ích âm",
-        "role": "Chủ nhiệm đề tài",
-        "team": "Phạm Tấn Thuận",
-        "result": "Đang thực hiện",
-        "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
-        "time": "06/2025 - 05/2026",
-        "image": "assets/params/images/achievements/science-1.jpg",
-        "type": "science"
-    },
-    {
-        "name": "Đề tài cấp trường - Xây dựng hệ thống xử lý tiến trình khóa luận tốt nghiệp",
-        "role": "Chủ nhiệm đề tài",
-        "team": "Phạm Tấn Thuận, Ngô Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
-        "result": "80/100 - Tốt",
-        "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
-        "time": "12/2022 - 06/2023",
-        "image": "assets/params/images/achievements/science-2.jpg",
-        "type": "science"
-    }
+  {
+    "name": "Cuộc thi Sinh viên NCKH cấp Trường năm học 2023 - 2024",
+    "role": "Trưởng nhóm",
+    "team": "Phạm Tấn Thuận, Khúc Hồng Nhung, Trần Ngọc Hiếu Thảo",
+    "result": "Giải nhất",
+    "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
+    "time": "05/2024",
+    "image": "assets/params/images/achievements/prize-1.jpg",
+    "type": "prize"
+  },
+  {
+    "name": "Cuộc thi Sinh viên NCKH cấp Khoa CNTT năm học 2023 - 2024",
+    "role": "Trưởng nhóm",
+    "team": "Phạm Tấn Thuận, Khúc Hồng Nhung, Trần Ngọc Hiếu Thảo",
+    "result": "Giải nhì",
+    "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
+    "time": "04/2024",
+    "image": "assets/params/images/achievements/prize-2.jpg",
+    "type": "prize"
+  },
+  {
+    "name": "Tìm kiếm tài năng Công nghệ thông tin 2023 - Bảng C: Ứng dụng Website",
+    "role": "Trưởng nhóm",
+    "team": "Phạm Tấn Thuận, Ngô Văn Sơn",
+    "resource": "Giải khuyến khích",
+    "address": "Trường Đại Học Công Nghệ TP.HCM (HUTECH)",
+    "time": "12/2023",
+    "image": "assets/params/images/achievements/prize-3.jpg",
+    "type": "prize"
+  },
+  {
+    "name": "Cuộc thi Sinh viên NCKH cấp Khoa CNTT năm học 2022 - 2023",
+    "role": "Trưởng nhóm",
+    "team": "Phạm Tấn Thuận, Ngô Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
+    "result": "Giải nhất",
+    "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
+    "time": "04/2023",
+    "image": "assets/params/images/achievements/prize-4.jpg",
+    "type": "prize"
+  },
+  {
+    "name": "Tìm kiếm tài năng và sản phẩm sáng tạo Công nghệ thông tin trong kỷ nguyên số",
+    "role": "Trưởng nhóm",
+    "team": "Phạm Tấn Thuận, Nguyễn Nương Hồng Thắm, Nguyễn Tấn Phát, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
+    "result": "Giải nhì",
+    "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
+    "time": "06/2022",
+    "image": "assets/params/images/achievements/prize-5.jpg",
+    "type": "prize"
+  },
+  {
+    "name": "Đề tài cấp trường - Khai thác tập hữu ích cao chéo trên cơ sở dữ liệu giao dịch động có lợi ích âm",
+    "role": "Chủ nhiệm đề tài",
+    "team": "Phạm Tấn Thuận, Trần Dương Gia Bảo, Trần Gia Bảo",
+    "result": "Đang thực hiện",
+    "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
+    "time": "07/2025 - 06/2026",
+    "image": "assets/params/images/achievements/science-1.jpg",
+    "type": "science"
+  },
+  {
+    "name": "Đề tài cấp trường - Xây dựng hệ thống phân tích cảm xúc theo khía cạnh sử dụng Knowledge Graph",
+    "role": "Thành viên chính",
+    "team": "Nguyễn Thị Hồng Quyên, Phạm Tấn Thuận, Đoàn Tấn Minh Tân, Nguyễn Hữu Thắng",
+    "result": "Đang thực hiện",
+    "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
+    "time": "01/2025 - 12/2025",
+    "image": "assets/params/images/achievements/science-3.jpg",
+    "type": "science"
+  },
+  {
+    "name": "Đề tài cấp trường - Xây dựng hệ thống xử lý tiến trình khóa luận tốt nghiệp",
+    "role": "Chủ nhiệm đề tài",
+    "team": "Phạm Tấn Thuận, Ngô Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
+    "resource": "80/100 - Tốt",
+    "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
+    "time": "12/2022 - 06/2023",
+    "image": "assets/params/images/achievements/science-2.jpg",
+    "type": "science"
+  }
 ]

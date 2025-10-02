@@ -1,16 +1,38 @@
 {
-  "common": {
-    "theme": {
-      "dark": "Chế độ tối",
-      "light": "Chế độ sáng"
+  "home": {
+    "greeting": "Xin chào, tôi là",
+    "title": "Phạm Tấn Thuận",
+    "description": "Lập trình viên full-stack với 2+ năm kinh nghiệm phát triển hệ thống CRM, ERP và ứng dụng web hiện đại. Đam mê công nghệ và luôn tìm kiếm những giải pháp tối ưu nhất.",
+    "view_portfolio": "Xem Portfolio",
+    "download_cv": "Tải CV",
+    "tech_title": "Công nghệ chuyên môn",
+    "tech_subtitle": "Những công nghệ và công cụ mà tôi sử dụng hàng ngày",
+    "nav": {
+      "skills": "Kỹ năng",
+      "skills_desc": "Các công nghệ và framework mà tôi thành thạo",
+      "experience": "Kinh nghiệm",
+      "experience_desc": "Hành trình phát triển nghề nghiệp của tôi",
+      "projects": "Dự án",
+      "projects_desc": "Các dự án thực tế đã thực hiện",
+      "achievements": "Thành tích",
+      "achievements_desc": "Giải thưởng và nghiên cứu khoa học"
+    }
+  },
+  "skill": {
+    "title_prefix": "Kỹ năng",
+    "title_suffix": "Chuyên môn",
+    "description": "Các công nghệ và kỹ năng mà tôi thành thạo trong phát triển phần mềm",
+    "expertise": {
+      "title": "Tôi thành thạo đa dạng công nghệ",
+      "backend": "Công nghệ Backend mạnh mẽ",
+      "frontend": "Giao diện người dùng hiện đại"
     },
-    "title": {
-      "main_tech": "CÔNG NGHỆ CHÍNH",
-      "prize": "🎖️ Giải thưởng",
-      "science": "📚 Công trình nghiên cứu"
-    },
-    "message": {
-      "fail": "Đọc dữ liệu thất bại!"
+    "categories": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "database": "Hệ thống quản lý dữ liệu",
+      "architecture": "Thiết kế hệ thống mở rộng",
+      "tools": "Công cụ phát triển chuyên nghiệp"
     }
   },
   "modules": {
@@ -20,5 +42,183 @@
     "education": "Học vấn",
     "achievement": "Thành tích",
     "resume": "Tóm tắt"
+  },
+  "achievement": {
+    "title_prefix": "Thành tựu",
+    "title_suffix": "Nghiên cứu",
+    "subtitle": "Các công trình nghiên cứu và giải thưởng trong quá trình học tập",
+    "research": {
+      "title": "Công trình nghiên cứu khoa học",
+      "subtitle": "Đề tài NCKH cấp trường và tham gia nghiên cứu",
+      "project1": {
+        "name": "Khai thác tập hữu ích cao chéo trên cơ sở dữ liệu giao dịch động có lợi ích âm",
+        "confidence": "Nghiên cứu phát triển thuật toán khai thác tập hữu ích cao chéo từ database giao dịch động với lợi ích âm.",
+        "role": "Chủ nhiệm đề tài",
+        "team_lead": "Phạm Tấn Thuận (Chủ nhiệm đề tài)",
+        "team_members": "Trần Dương Gia Bảo, Trần Gia Bảo",
+        "time": "07/2025 - 06/2026"
+      },
+      "project2": {
+        "name": "Xây dựng hệ thống phân tích cảm xúc theo khía cạnh sử dụng Knowledge Graph",
+        "confidence": "Phát triển hệ thống phân tích cảm xúc chi tiết từ các khía cạnh khác nhau bằng cách sử dụng Knowledge Graph.",
+        "role": "Thành viên chính",
+        "team_lead": "Nguyễn Thị Hồng Quyên (Chủ nhiệm đề tài)",
+        "team_members": "Phạm Tấn Thuận, Đoàn Tấn Minh Tân, Nguyễn Hữu Thắng",
+        "time": "07/2025 - 06/2026"
+      },
+      "project3": {
+        "name": "Xây dựng hệ thống xử lý tiến trình khóa luận tốt nghiệp",
+        "confidence": "Phát triển hệ thống quản lý và theo dõi tiến trình thực hiện khóa luận tốt nghiệp cho sinh viên.",
+        "role": "Chủ nhiệm đề tài",
+        "team_lead": "Phạm Tấn Thuận (Chủ nhiệm đề tài)",
+        "team_members": "Ngô Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
+        "result": "80/100 - Tốt",
+        "time": "12/2022 - 06/2023"
+      }
+    },
+    "awards": {
+      "title": "Giải thưởng & Thành tích",
+      "subtitle": "Các giải thưởng từ cuộc thi nghiên cứu khoa học",
+      "award1": {
+        "name": "Cuộc thi sinh viên NCKH cấp Trường",
+        "event": "Trường Đại học Công Thương TP.HCM",
+        "role": "Trưởng nhóm",
+        "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
+        "team_members": "Khúc Hồng Nhung, Trần Ngọc Hiếu Thảo",
+        "time": "05/2024"
+      },
+      "award2": {
+        "name": "Cuộc thi NCKH cấp Khoa CNTT",
+        "event": "Trường Đại học Công Thương TP.HCM",
+        "role": "Trưởng nhóm",
+        "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
+        "team_members": "Khúc Hồng Nhung, Trần Ngọc Hiếu Thảo",
+        "time": "04/2024"
+      },
+      "award3": {
+        "name": "Cuộc thi sinh viên NCKH cấp Khoa CNTT",
+        "event": "Trường Đại học Công Thương TP.HCM",
+        "role": "Trưởng nhóm",
+        "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
+        "team_members": "Phạm Tấn Thuận, Ngô Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
+        "time": "04/2023"
+      },
+      "award4": {
+        "name": "Tìm kiếm tài năng và sản phẩm sáng tạo CNTT trong kỷ nguyên số",
+        "event": "Trường Đại học Công Thương TP.HCM",
+        "role": "Trưởng nhóm",
+        "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
+        "team_members": "Phạm Tấn Thuận, Nguyễn Nương Hồng Thắm, Nguyễn Tấn Phát, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
+        "time": "06/2022"
+      },
+      "award5": {
+        "name": "Tìm kiếm tài năng CNTT - Website",
+        "event": "Trường Đại học Công Nghệ TP.HCM (HUTECH)",
+        "role": "Trưởng nhóm",
+        "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
+        "team_members": "Phạm Tấn Thuận, Ngô Văn Sơn",
+        "time": "12/2023"
+      }
+    },
+    "status": {
+      "current": "Đang thực hiện",
+      "completed": "Đã hoàn thành"
+    }
+  },
+  "project": {
+    "title_prefix": "Dự án",
+    "title_suffix": "Thực tế",
+    "subtitle": "Các dự án cá nhân và phiên dịch kinh nghiệm thực tế",
+    "chatbot": {
+      "title": "Lập trình viên – Chatbot",
+      "company": "Công ty Cổ phần Giải pháp Công nghệ TURBO",
+      "time": "09/2025 – 10/2025",
+      "role": "Developer",
+      "responsibility1": "Phát triển Landing Page marketing",
+      "responsibility2": "Xây dựng widget chat, tích hợp & vận hành Chatwoot (mã nguồn mở), kết nối Dify API (RAG demo)",
+      "responsibility3": "Tích hợp chatbot với machine learning và natural language processing",
+      "responsibility4": "Tích hợp đa kênh giao tiếp (Web, Zalo, Facebook, Instagram,…)",
+      "responsibility5": "Triển khai bằng Docker & CI/CD, deploy bản uat, production"
+    },
+    "status": {
+      "completed": "Hoàn thành",
+      "in_progress": "Đang phát triển",
+      "planned": "Dự kiến"
+    }
+  },
+  "experience": {
+    "title_prefix": "Kinh nghiệm",
+    "title_suffix": "Làm việc",
+    "subtitle": "Hành trình phát triển nghề nghiệp và đóng góp trong các dự án",
+    "job1": {
+      "title": "Lập trình viên",
+      "company": "Công ty Cổ phần COGAIN",
+      "time": "03/2025 – Hiện tại",
+      "responsibility1": "Tham gia phát triển và chịu trách nhiệm chính hệ thống CRM, ERP (R&D, Mua hàng, Kho, Sản xuất, Bán hàng) liên kết dữ liệu giữa 2 hệ thống, xây dựng tính năng cho cả Backend và Frontend",
+      "responsibility2": "Thiết kế cấu trúc Database và API cho các module nghiệp vụ phức tạp",
+      "responsibility3": "Xây dựng tính năng phân quyền và workflow phê duyệt tự động",
+      "responsibility4": "Tham gia hỗ trợ thiết kế UI/UX trên Figma dựa trên nghiệp vụ được mô tả",
+      "responsibility5": "Tham gia hỗ trợ phát triển hệ thống nghỉ phép, chấm công tích hợp báo cáo từ Power BI thông qua API",
+      "responsibility6": "Phát triển hệ thống quản lý sự cố/vấn đề có chat nội bộ với tích hợp OpenAI",
+      "responsibility7": "Thực hiện crawl data phục vụ phân tích và hỗ trợ xử lý tự động",
+      "responsibility8": "Thực hiện viết stored procedures trên SQL Server để xử lý nghiệp vụ phức tạp và tối ưu hiệu năng truy vấn dữ liệu",
+      "responsibility9": "Backend: xây dựng BaseController, BaseService chuẩn hóa CRUD, phê duyệt, điều hướng và tái sử dụng",
+      "responsibility10": "Frontend: xây dựng 1 bộ base components (Input, Select, Compact, DatePicker...) phục vụ tái sử dụng và chuẩn hóa giao diện"
+    },
+    "job2": {
+      "title": "Lập trình viên", 
+      "company": "Công ty TNHH Công nghệ GOSOFT",
+      "time": "04/2023 – 03/2025",
+      "responsibility1": "Tham gia phát triển hệ thống e-commerce: thiết kế Database và API, xây dựng web admin, xử lý luồng dữ liệu sản phẩm thương mại và khóa học đào tạo",
+      "responsibility3": "Phát triển API cho mobile app trong lĩnh vực social network (tương tác xã hội, quản lý dữ liệu)",
+      "responsibility4": "Tham gia xây dựng phân hệ ERP: mua hàng, kho và master data",
+      "responsibility5": "Xây dựng package Menu để tái sử dụng cho tất cả các dự án mới và cũ",
+      "responsibility6": "Phát triển thêm vào thư viện công ty một số base components cho Frontend (Select, Price, TreeViewTable,…), tái sử dụng và chuẩn hóa giao diện",
+      "responsibility7": "Nâng cấp và phát triển công cụ code generator nội bộ (chạy console để sinh code sẵn), tối ưu để rút ngắn thời gian phát triển",
+      "responsibility8": "Làm việc theo Agile/Scrum, sử dụng Jira để quản lý công việc và phối hợp nhóm"
+    },
+    "status": {
+      "current": "Đang làm việc",
+      "completed": "Hoàn thành"
+    }
+  },
+  "education": {
+    "placeholder": "Đang cập nhật...",
+    "title_prefix": "Học vấn",
+    "title_suffix": "Chuyên môn",
+    "subtitle": "Hành trình học vấn và phát triển chuyên môn của tôi",
+    "master": {
+      "confidence": "Thạc sĩ",
+      "name": "Thạc sĩ Công nghệ thông tin",
+      "specialization": "Định hướng Ứng dụng",
+      "university": "Trường Đại học Công Thương TP.HCM (HUIT)",
+      "time": "01/2025 - Nay",
+      "scholarship": "Học bổng 50%",
+      "gpa": "Điểm xuất sắc (Excellent)"
+    },
+    "language": {
+      "label": "Cử nhân ngôn ngữ",
+      "name": "Cử nhân Ngôn ngữ Anh",
+      "specialization": "Chuyên ngành Tiếng Anh thương mại",
+      "university": "Trường Đại học Kinh tế TP.HCM (UEH)",
+      "time": "10/2025 - Nay",
+      "focus": "Tiếng Anh thương mại"
+    },
+    "engineer": {
+      "label": "Kỹ sư",
+      "name": "Kỹ sư Công nghệ thông tin",
+      "specialization": "Chuyên ngành Công nghệ phần mềm",
+      "university": "Trường Đại học Công Thương TP.HCM (HUIT)",
+      "time": "01/2024 - 06/2024",
+      "gpa": "Tốt nghiệp loại Giỏi (Good)*"
+    },
+    "bachelor": {
+      "label": "Cử nhân",
+      "name": "Cử nhân Công nghệ thông tin",
+      "specialization": "Chuyên ngành Công nghệ phần mềm",
+      "university": "Trường Đại học Công Thương TP.HCM (HUIT)",
+      "time": "09/2020 - 12/2023",
+      "gpa": "Tốt nghiệp loại Giỏi (Good)*"
+    }
   }
 }

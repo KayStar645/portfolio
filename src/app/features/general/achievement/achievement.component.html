@@ -1,81 +1,291 @@
-<div id="achievement" class="h-100">
-  <div class="container-lg">
-
-    <h1 class="text-center py-5"
-      style="font-size: 4.4rem; font-weight: 800">
-      <!-- {{ 'modules.achievement' | translate }} -->
+<div id="achievement" class="achievement-modern">
+  <div class="container-xl">
+    
+    <!-- Header -->
+    <div class="achievement-header text-center mb-5">
+      <h1 class="achievement-title">
+        <span class="title-text">{{ 'achievement.title_prefix' | translate }}</span>
+        <span class="title-highlight">{{ 'achievement.title_suffix' | translate }}</span>
     </h1>
+      <p class="achievement-subtitle">{{ 'achievement.subtitle' | translate }}</p>
+    </div>
 
-    <div class="row g-5 pb-5 mb-5">
-      <ng-container *ngFor="let group of groupedAchievements">
-        <div class="col-12">
-          <h2 class="fw-bold border-bottom pb-2 mb-4 fs-1">
-            {{ 'common.title.' + group.type | translate }}
-            
-          </h2>
+    <!-- Achievement Sections -->
+    <div class="achievement-sections">
+      
+      <!-- Scientific Research Section -->
+      <div class="achievement-section" id="research-section">
+        <div class="section-header">
+          <div class="section-icon">
+            <i class="fas fa-flask"></i>
+          </div>
+          <h2 class="section-title">{{ 'achievement.research.title' | translate }}</h2>
+          <p class="section-subtitle">{{ 'achievement.research.subtitle' | translate }}</p>
         </div>
     
-        <ng-container *ngFor="let item of group.items; let i = index">
-          <div class="col-lg-6">
-            <div class="card p-3 rounded-4"
-              style="background-color: var(--bg-color); border: 1px solid var(--secondary)">
-              
-              <div class="d-flex align-items-center"
-                  style=" color: var(--secondary-text); line-height: 1.5;">
-                <h5 class="fw-bold fs-5">
-                  <span class="text-warning">
-                    <i class="fas fa-trophy"></i>
-                    {{ item.result }}
-                  </span> -
-                  <span class="fst-italic">{{ item.name }}</span>
-                </h5>
+        <div class="achievement-timeline">
+          <!-- Research Projects (Current and Completed) -->
+          <div class="achievement-item research-current">
+            <div class="achievement-card">
+              <div class="achievement-badge current-badge">
+                <i class="fas fa-play-circle me-2"></i>
+                {{ 'achievement.status.current' | translate }}
               </div>
-              <div class="border-top my-2"></div>
-
-              <div class="d-md-flex">
-                <!-- Ảnh trái nếu i lẻ -->
-                <div *ngIf="i % 2 === 1" class="me-3 d-none d-md-flex flex-column align-items-center"
-                  style="flex: 0 0 35%;">
-                  <!-- ảnh nhỏ -->
-                  <img [src]="item.image" alt="Logo" class="rounded w-100 zoom-effect" (click)="openZoom(item.image)">
-                  <!-- ảnh phóng to -->
-                  <div *ngIf="zoomedImage" class="zoom-overlay" (click)="zoomedImage = null">
-                    <img [src]="zoomedImage" alt="Zoomed image">
+              <div class="achievement-content">
+                <h3 class="achievement-name">{{ 'achievement.research.project1.name' | translate }}</h3>
+                <div class="achievement-meta">
+                  <div class="role-info">
+                    <i class="fas fa-user-tie me-2"></i>
+                    <span>{{ 'achievement.research.project1.role' | translate }}</span>
                   </div>
-                  <p class="text-center fst-italic text-secondary">
-                    {{ item.label }}
-                  </p>
-                </div>
-    
-                <div style="flex: 1; color: var(--secondary-text); line-height: 1.5;">
-    
-                  <div>
-                    <p class="pt-2"><i class="fas fa-user-tag me-1"></i> {{ item.role }}</p>
-                    <p><i class="fas fa-users me-1"></i> {{ item.team }}</p>
-                    <div class="border-top my-2"></div>
-                    <p class="pt-2"><i class="fas fa-clock me-2"></i> {{ item.time }}</p>
-                    <p><i class="fas fa-map-marker-alt me-2"></i> {{ item.address }}</p>
+                  <div class="team-lead-info">
+                    <i class="fas fa-crown me-2"></i>
+                    <span>{{ 'achievement.research.project1.team_lead' | translate }}</span>
+                  </div>
+                  <div class="team-info">
+                    <i class="fas fa-users me-2"></i>
+                    <span>{{ 'achievement.research.project1.team_members' | translate }}</span>
+                  </div>
+                  <div class="time-info">
+                    <i class="fas fa-calendar me-2"></i>
+                    <span>{{ 'achievement.research.project1.time' | translate }}</span>
                   </div>
                 </div>
+              </div>
+            </div>
+                </div>
     
-                <!-- Ảnh phải nếu i chẵn -->
-                <div *ngIf="i % 2 === 0" class="ms-3 d-none d-md-flex flex-column align-items-center"
-                  style="flex: 0 0 35%;">
-                  <!-- ảnh nhỏ -->
-                  <img [src]="item.image" alt="Logo" class="rounded w-100 zoom-effect" (click)="openZoom(item.image)">
-                  <!-- ảnh phóng to -->
-                  <div *ngIf="zoomedImage" class="zoom-overlay" (click)="zoomedImage = null">
-                    <img [src]="zoomedImage" alt="Zoomed image">
+          <div class="achievement-item research-current">
+            <div class="achievement-card">
+              <div class="achievement-badge current-badge">
+                <i class="fas fa-play-circle me-2"></i>
+                {{ 'achievement.status.current' | translate }}
+              </div>              
+              <div class="achievement-content">
+                <h3 class="achievement-name">{{ 'achievement.research.project2.name' | translate }}</h3>
+                <div class="achievement-meta">
+                  <div class="role-info">
+                    <i class="fas fa-user-tie me-2"></i>
+                    <span>{{ 'achievement.research.project2.role' | translate }}</span>
                   </div>
-                  <p class="text-center fst-italic text-secondary">
-                    {{ item.label }}
-                  </p>
+                  <div class="team-lead-info">
+                    <i class="fas fa-crown me-2"></i>
+                    <span>{{ 'achievement.research.project2.team_lead' | translate }}</span>
+                  </div>
+                  <div class="team-info">
+                    <i class="fas fa-users me-2"></i>
+                    <span>{{ 'achievement.research.project2.team_members' | translate }}</span>
+                  </div>
+                  <div class="time-info">
+                    <i class="fas fa-calendar me-2"></i>
+                    <span>{{ 'achievement.research.project2.time' | translate }}</span>
+                  </div>
+                </div>
+              </div>
+                  </div>
+                </div>
+    
+          <!-- Completed Research Project -->
+          <div class="achievement-item research-completed">
+            <div class="achievement-card">
+              <div class="achievement-badge completed-badge">
+                <i class="fas fa-check-circle me-2"></i>
+                {{ 'achievement.status.completed' | translate }}
+              </div>
+              <div class="achievement-content">
+                <h3 class="achievement-name">{{ 'achievement.research.project3.name' | translate }}</h3>
+                <div class="achievement-result">
+                  <i class="fas fa-medal me-2"></i>
+                  <span>{{ 'achievement.research.project3.result' | translate }}</span>
+                </div>
+                <div class="achievement-meta">
+                  <div class="role-info">
+                    <i class="fas fa-user-tie me-2"></i>
+                    <span>{{ 'achievement.research.project3.role' | translate }}</span>
+                  </div>
+                  <div class="team-lead-info">
+                    <i class="fas fa-crown me-2"></i>
+                    <span>{{ 'achievement.research.project3.team_lead' | translate }}</span>
+                  </div>
+                  <div class="team-info">
+                    <i class="fas fa-users me-2"></i>
+                    <span>{{ 'achievement.research.project3.team_members' | translate }}</span>
+                  </div>
+                  <div class="time-info">
+                    <i class="fas fa-calendar me-2"></i>
+                    <span>{{ 'achievement.research.project3.time' | translate }}</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </ng-container>
-      </ng-container>
+        </div>
+      </div>
+
+      <!-- Awards Section -->
+      <div class="achievement-section" id="awards-section">
+        <div class="section-header">
+          <div class="section-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h2 class="section-title">{{ 'achievement.awards.title' | translate }}</h2>
+          <p class="section-subtitle">{{ 'achievement.awards.subtitle' | translate }}</p>
+        </div>
+        
+        <div class="awards-grid">
+          <!-- Awards will be hardcoded below -->
+          <!-- Award 1 - NCKH cấp Trường -->
+          <div class="award-card first-place">
+            <div class="award-icon" aria-label="Trophy Icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="award-content">
+              <div class="award-rank">Giải nhất</div>
+              <div class="role-info">
+                <i class="fas fa-user-tie me-2"></i>
+                <span>{{ 'achievement.awards.award1.role' | translate }}</span>
+              </div>
+              <h3 class="award-name">{{ 'achievement.awards.award1.name' | translate }}</h3>
+              <p class="award-event">{{ 'achievement.awards.award1.event' | translate }}</p>
+              <div class="award-meta">
+                <div class="team-lead-info">
+                  <i class="fas fa-crown me-1"></i>
+                  <span>{{ 'achievement.awards.award1.team_leader' | translate }}</span>
+                </div>
+                <div class="team-info">
+                  <i class="fas fa-users me-1"></i>
+                  <span>{{ 'achievement.awards.award1.team_members' | translate }}</span>
+                </div>
+                <div class="time-info">
+                  <i class="fas fa-calendar me-1"></i>
+                  <span>{{ 'achievement.awards.award1.time' | translate }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Award 2 - NCKH cấp Khoa -->
+          <div class="award-card second-place">
+            <div class="award-icon" aria-label="Medal Icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="award-content">
+              <div class="award-rank">Giải nhì</div>
+              <div class="role-info">
+                <i class="fas fa-user-tie me-2"></i>
+                <span>{{ 'achievement.awards.award2.role' | translate }}</span>
+              </div>
+              <h3 class="award-name">{{ 'achievement.awards.award2.name' | translate }}</h3>
+              <p class="award-event">{{ 'achievement.awards.award2.event' | translate }}</p>
+              <div class="award-meta">
+                <div class="team-lead-info">
+                  <i class="fas fa-crown me-1"></i>
+                  <span>{{ 'achievement.awards.award2.team_leader' | translate }}</span>
+                </div>
+                <div class="team-info">
+                  <i class="fas fa-users me-1"></i>
+                  <span>{{ 'achievement.awards.award2.team_members' | translate }}</span>
+                </div>
+                <div class="time-info">
+                  <i class="fas fa-calendar me-1"></i>
+                  <span>{{ 'achievement.awards.award2.time' | translate }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Award 4 - Tài năng sáng tạo -->
+          <div class="award-card second-place">
+            <div class="award-icon" aria-label="Medal Icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="award-content">
+              <div class="award-rank">Giải nhì</div>
+              <div class="role-info">
+                <i class="fas fa-user-tie me-2"></i>
+                <span>{{ 'achievement.awards.award4.role' | translate }}</span>
+              </div>
+              <h3 class="award-name">{{ 'achievement.awards.award4.name' | translate }}</h3>
+              <p class="award-event">{{ 'achievement.awards.award4.event' | translate }}</p>
+              <div class="award-meta">
+                <div class="team-lead-info">
+                  <i class="fas fa-crown me-1"></i>
+                  <span>{{ 'achievement.awards.award4.team_leader' | translate }}</span>
+                </div>
+                <div class="team-info">
+                  <i class="fas fa-users me-1"></i>
+                  <span>{{ 'achievement.awards.award4.team_members' | translate }}</span>
+                </div>
+                <div class="time-info">
+                  <i class="fas fa-calendar me-1"></i>
+                  <span>{{ 'achievement.awards.award4.time' | translate }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Award 3 - NCKH năm trước -->
+          <div class="award-card first-place">
+            <div class="award-icon" aria-label="Trophy Icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="award-content">
+              <div class="award-rank">Giải nhất</div>
+              <div class="role-info">
+                <i class="fas fa-user-tie me-2"></i>
+                <span>{{ 'achievement.awards.award3.role' | translate }}</span>
+              </div>
+              <h3 class="award-name">{{ 'achievement.awards.award3.name' | translate }}</h3>
+              <p class="award-event">{{ 'achievement.awards.award3.event' | translate }}</p>
+              <div class="award-meta">
+                <div class="team-lead-info">
+                  <i class="fas fa-crown me-1"></i>
+                  <span>{{ 'achievement.awards.award3.team_leader' | translate }}</span>
+                </div>
+                <div class="team-info">
+                  <i class="fas fa-users me-1"></i>
+                  <span>{{ 'achievement.awards.award3.team_members' | translate }}</span>
+                </div>
+                <div class="time-info">
+                  <i class="fas fa-calendar me-1"></i>
+                  <span>{{ 'achievement.awards.award3.time' | translate }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Award 5 - Tài năng Website -->
+          <div class="award-card third-place">
+            <div class="award-icon" aria-label="Award Icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <div class="award-content">
+              <div class="award-rank">Giải khuyến khích</div>
+              <div class="role-info">
+                <i class="fas fa-user-tie me-2"></i>
+                <span>{{ 'achievement.awards.award5.role' | translate }}</span>
+              </div>
+              <h3 class="award-name">{{ 'achievement.awards.award5.name' | translate }}</h3>
+              <p class="award-event">{{ 'achievement.awards.award5.event' | translate }}</p>
+              <div class="award-meta">
+                <div class="team-lead-info">
+                  <i class="fas fa-crown me-1"></i>
+                  <span>{{ 'achievement.awards.award5.team_leader' | translate }}</span>
+                </div>
+                <div class="team-info">
+                  <i class="fas fa-users me-1"></i>
+                  <span>{{ 'achievement.awards.award5.team_members' | translate }}</span>
+                </div>
+                <div class="time-info">
+                  <i class="fas fa-calendar me-1"></i>
+                  <span>{{ 'achievement.awards.award5.time' | translate }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </div>

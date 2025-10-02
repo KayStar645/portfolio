@@ -1,35 +1,132 @@
-<div id="skill" class="h-100">
+<div id="skill" class="skills-modern">
   <div class="container-lg">
-
-    <h1 class="text-center py-5"
-      style="font-size: 4.4rem; font-weight: 800">
-      {{ 'modules.skill' | translate }}
+    
+    <!-- Header -->
+    <div class="skills-header text-center mb-5">
+      <h1 class="skills-title">
+        <span class="title-text">{{ 'skill.title_prefix' | translate }}</span>
+        <span class="title-highlight">{{ 'skill.title_suffix' | translate }}</span>
     </h1>
+      <p class="skills-description">{{ 'skill.description' | translate }}</p>
+    </div>
 
-    <div class="w-100 d-flex flex-column">
-      <div *ngFor="let item of groupedSkills" class="col mt-2 g-5 mb-5">
-        <div class="position-relative py-2">
-          <div class="position-absolute top-50 start-0 w-100"
-            style="background-color: var(--secondary); height: 1px;"></div>
-          <p class="fs-4 d-inline-block px-3 position-relative ms-4"
-            style="color: var(--main-close); background-color: var(--bg-color);">
-            {{ item.group_name }}
-          </p>
+    <!-- Backend Row -->
+    <div class="skill-row backend-row">
+      <div class="skill-card backend">
+        <div class="skill-icon">
+          <i class="fas fa-server"></i>
         </div>
-
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          <div *ngFor="let skill of item.items; let i = index"
-            class="pt-3">
-            <a [href]="skill.url"
-              class="item-skill text-decoration-none rounded-4 d-flex align-items-center justify-content-between px-3 py-2"
-              target="_blank">
-              <p style="color: var(--secondary-text)" class="fs-6 fw-medium">{{
-                skill.name }}</p>
-              <img [src]="skill.icon" width="80" alt="{{ skill.name }}">
-            </a>
+        <h4 class="skill-name">.NET Core</h4>
+        <div class="skill-content">
+          <div class="tech-section">
+            <span class="tech-tag">Clean Architecture</span>
+            <span class="tech-tag">RESTful API</span>
+            <span class="tech-tag">Microservices</span>
+            <span class="tech-tag">gRPC</span>
+          </div>
+          <div class="tech-section">
+            <span class="tech-tag">SQL Server</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">EF Core</span>
           </div>
         </div>
+      </div>
 
+      <div class="skill-card backend">
+        <div class="skill-icon">
+          <i class="fab fa-laravel"></i>
+        </div>
+        <h4 class="skill-name">Laravel</h4>
+        <div class="skill-content">
+          <div class="tech-section">
+            <span class="tech-tag">RESTful API</span>
+            <span class="tech-tag">MVC</span>
+            <span class="tech-tag">Package Architecture</span>
+          </div>
+          <div class="tech-section">
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Eloquent</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Frontend Row -->
+    <div class="skill-row frontend-row">
+      <div class="skill-card frontend">
+        <div class="skill-icon">
+          <i class="fab fa-react"></i>
+        </div>
+        <h4 class="skill-name">React</h4>
+        <div class="skill-content">
+          <div class="tech-section">
+            <span class="tech-tag">Redux</span>
+            <span class="tech-tag">Hooks</span>
+            <span class="tech-tag">JSX</span>
+            <span class="tech-tag">Components</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card frontend">
+        <div class="skill-icon">
+          <i class="fab fa-angular"></i>
+        </div>
+        <h4 class="skill-name">Angular</h4>
+        <div class="skill-content">
+          <div class="tech-section">
+            <span class="tech-tag">Services</span>
+            <span class="tech-tag">RxJS</span>
+            <span class="tech-tag">Modules</span>
+            <span class="tech-tag">Dependency Injection</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card frontend">
+        <div class="skill-icon">
+          <i class="fab fa-vuejs"></i>
+        </div>
+        <h4 class="skill-name">Vue.js</h4>
+        <div class="skill-content">
+          <div class="tech-section">
+            <span class="tech-tag">Vuex</span>
+            <span class="tech-tag">Composition API</span>
+            <span class="tech-tag">Template</span>
+            <span class="tech-tag">Directives</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools Row -->
+    <div class="skill-row tools-row">
+      <div class="skill-card tools">
+        <div class="skill-icon">
+          <i class="fab fa-git-alt"></i>
+        </div>
+        <h4 class="skill-name">Git & GitHub</h4>
+      </div>
+
+      <div class="skill-card tools">
+        <div class="skill-icon">
+          <i class="fab fa-docker"></i>
+        </div>
+        <h4 class="skill-name">Docker</h4>
+      </div>
+
+      <div class="skill-card tools">
+        <div class="skill-icon">
+          <i class="fas fa-code-branch"></i>
+        </div>
+        <h4 class="skill-name">CI/CD</h4>
+      </div>
+
+      <div class="skill-card tools">
+        <div class="skill-icon">
+          <i class="fas fa-robot"></i>
+        </div>
+        <h4 class="skill-name">OpenAI API</h4>
       </div>
     </div>
 

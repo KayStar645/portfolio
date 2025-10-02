@@ -1,28 +1,28 @@
 [
   {
-    "label": "50% scholarship",
+    "label": "Language Bachelor",
+    "name": "Bachelor of English Language - Business English Specialization",
+    "address": "University of Economics Ho Chi Minh City (UEH)",
+    "time": "10/2025 - Present",
+    "image": "assets/params/images/educations/bachelor.jpg"
+  },
+  {
+    "label": "50% Scholarship",
     "name": "Master of Information Technology",
     "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
-    "time": "01/2025 - Nay",
+    "time": "01/2025 - Present",
     "image": "assets/params/images/educations/master.jpg"
   },
   {
-    "label": "Certificate of Proficiency",
-    "name": "Vietnamese Standardized Test of English Proficiency - Level 3 (B1)",
-    "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
-    "time": "03/2024",
-    "image": "assets/params/images/educations/english-b1.jpg"
-  },
-  {
-    "label": "The Degree of Engineer",
-    "name": "The Degree of Engineer Information Technology",
+    "label": "Engineering Degree",
+    "name": "Bachelor of Information Technology Engineering",
     "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
     "time": "01/2024 - 06/2024",
     "image": "assets/params/images/educations/engineer.jpg"
   },
   {
-    "label": "The Degree of Bachelor",
-    "name": "The Degree of Bachelor Information Technology",
+    "label": "Bachelor Degree",
+    "name": "Bachelor of Information Technology",
     "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
     "time": "09/2020 - 12/2023",
     "image": "assets/params/images/educations/bachelor.jpg"
