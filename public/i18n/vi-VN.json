@@ -1,4 +1,23 @@
 {
+  "home": {
+    "greeting": "Xin chào, tôi là",
+    "title": "Phạm Tấn Thuận",
+    "description": "Lập trình viên full-stack với 2+ năm kinh nghiệm phát triển hệ thống CRM, ERP và ứng dụng web hiện đại. Đam mê công nghệ và luôn tìm kiếm những giải pháp tối ưu nhất.",
+    "view_portfolio": "Xem Portfolio",
+    "download_cv": "Tải CV",
+    "tech_title": "Công nghệ chuyên môn",
+    "tech_subtitle": "Những công nghệ và công cụ mà tôi sử dụng hàng ngày",
+    "nav": {
+      "skills": "Kỹ năng",
+      "skills_desc": "Các công nghệ và framework mà tôi thành thạo",
+      "experience": "Kinh nghiệm",
+      "experience_desc": "Hành trình phát triển nghề nghiệp của tôi",
+      "projects": "Dự án",
+      "projects_desc": "Các dự án thực tế đã thực hiện",
+      "achievements": "Thành tích",
+      "achievements_desc": "Giải thưởng và nghiên cứu khoa học"
+    }
+  },
   "skill": {
     "title_prefix": "Kỹ năng",
     "title_suffix": "Chuyên môn",

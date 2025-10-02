@@ -15,7 +15,22 @@
   },
   "home": {
     "greeting": "Hello, I'm",
-    "view_portfolio": "View Portfolio"
+    "title": "Pham Tan Thuan",
+    "description": "Full-stack developer with 2+ years of experience building CRM, ERP systems and modern web applications. Passionate about technology and always seeking the most optimal solutions.",
+    "view_portfolio": "View Portfolio",
+    "download_cv": "Download CV",
+    "tech_title": "Technical Expertise",
+    "tech_subtitle": "Technologies and tools I use daily",
+    "nav": {
+      "skills": "Skills",
+      "skills_desc": "Technologies and frameworks I master",
+      "experience": "Experience",
+      "experience_desc": "My professional development journey",
+      "projects": "Projects",
+      "projects_desc": "Real-world projects I've completed",
+      "achievements": "Achievements",
+      "achievements_desc": "Awards and scientific research"
+      }
   },
   "skill": {
     "title_prefix": "My Work",

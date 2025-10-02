@@ -1,55 +1,155 @@
-<div id="home" class="home-hero">
-  <div class="container-lg px-sm-5 px-4">
-    <!-- Hero Section -->
-    <div class="row align-items-center min-vh-75">
-      <div class="col-12 col-lg-6 order-lg-2 mb-5 mb-lg-0">
-        <div class="hero-image-container">
-          <img [src]="home?.image" class="hero-image img-fluid rounded-4 shadow-lg" alt="Home image">
-          <div class="image-decoration"></div>
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-background">
+    <div class="hero-particles"></div>
+    <div class="hero-gradient"></div>
+  </div>
+  
+  <div class="container-xl">
+    <div class="hero-content">
+      <!-- Profile Card -->
+      <div class="profile-card">
+        <div class="profile-image">
+          <img src="assets/params/images/info/avatar.jpg" alt="Phạm Tấn Thuận" class="avatar">
+          <div class="profile-badge">
+            <i class="fas fa-code"></i>
+          </div>
         </div>
-      </div>
-      
-      <div class="col-12 col-lg-6 order-lg-1">
-        <div class="hero-content">
-          <h1 class="hero-title mb-4">
-            {{ 'home.greeting' | translate }} <span class="highlight">{{ user?.name }}</span>
-          </h1>
-          <div class="hero-description" [innerHTML]="home?.description"></div>
-          <div class="hero-actions mt-4">
-            <a [href]="user?.link" target="_blank" rel="noopener noreferrer" 
-               class="btn btn-primary btn-lg me-3 rounded-pill">
-              <i class="fas fa-external-link-alt me-2"></i>
+        <div class="profile-info">
+          <h1 class="profile-name">{{ 'home.greeting' | translate }}</h1>
+          <h2 class="profile-title">{{ 'home.title' | translate }}</h2>
+          <p class="profile-description">{{ 'home.description' | translate }}</p>
+          
+          <!-- Action Buttons -->
+          <div class="action-buttons">
+            <button class="btn-primary" [routerLink]="['/skill']">
+              <i class="fas fa-rocket me-2"></i>
               {{ 'home.view_portfolio' | translate }}
-            </a>
-            <a href="#experience" class="btn btn-outline-primary btn-lg rounded-pill">
-              <i class="fas fa-briefcase me-2"></i>
-              {{ 'modules.experience' | translate }}
-            </a>
+            </button>
+            <button class="btn-secondary" [routerLink]="['/resume']">
+              <i class="fas fa-download me-2"></i>
+              {{ 'home.download_cv' | translate }}
+            </button>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Technologies Strip -->
-    <div class="tech-strip-container mt-5">
-      <div class="tech-strip-label text-center mb-4">
-        <h3 class="section-title">{{ 'common.title.main_tech' | translate }}</h3>
-      </div>
-      <div class="tech-strip-wrapper">
-        <swiper-container #swiper class="tech-swiper" loop="true" slides-per-view="6" speed="3000"
-          css-mode="false" autoplay-delay="200" grab-cursor="true"
-          free-mode="true" centered-slides="false" init="false">
-          <swiper-slide *ngFor="let skill of skills">
-            <div class="tech-item" [class.has-link]="skill.url">
-              <a [href]="skill.url" target="_blank" rel="noopener noreferrer"
-                class="tech-link" [style.pointer-events]="skill.url ? 'auto' : 'none'">
-                <img [src]="skill.icon" class="tech-icon" alt="{{ skill.name }}">
-                <span class="tech-name">{{ skill.name }}</span>
-              </a>
-            </div>
-          </swiper-slide>
-        </swiper-container>
+      <!-- Floating Elements -->
+      <div class="floating-elements">
+        <div class="floating-card skill-card">
+          <div class="card-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <div class="card-text">DevOps</div>
+        </div>
+        <div class="floating-card skill-card">
+          <div class="card-icon">
+            <i class="fab fa-microsoft"></i>
+          </div>
+          <div class="card-text">.NET Core</div>
+        </div>
+        <div class="floating-card skill-card">
+          <div class="card-icon">
+            <i class="fas fa-sitemap"></i>
+          </div>
+          <div class="card-text">Architecture</div>
+        </div>
+        <div class="floating-card skill-card">
+          <div class="card-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="card-text">AI Integration</div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- Tech Strip Section -->
+<section class="tech-strip-section">
+  <div class="container-xl">
+    <div class="tech-strip-header">
+      <h3 class="tech-title">{{ 'home.tech_title' | translate }}</h3>
+      <p class="tech-subtitle">{{ 'home.tech_subtitle' | translate }}</p>
+    </div>
+    
+    <div class="tech-strip">
+      <div class="tech-strip-content">
+        <!-- Technology Icons -->
+        <div class="tech-item">React</div>
+        <div class="tech-item">Angular</div>
+        <div class="tech-item">Vue.js</div>
+        <div class="tech-item">TypeScript</div>
+        <div class="tech-item">JavaScript</div>
+        <div class="tech-item">Node.js</div>
+        <div class="tech-item">Laravel</div>
+        <div class="tech-item">ASP.NET</div>
+        <div class="tech-item">SQL Server</div>
+        <div class="tech-item">MySQL</div>
+        <div class="tech-item">PostgreSQL</div>
+        <div class="tech-item">Docker</div>
+        <div class="tech-item">CI/CD</div>
+        <div class="tech-item">Git</div>
+        <div class="tech-item">Figma</div>
+        <div class="tech-item">Power BI</div>
+        
+        <!-- Repeat for seamless scroll -->
+        <div class="tech-item">React</div>
+        <div class="tech-item">Angular</div>
+        <div class="tech-item">Vue.js</div>
+        <div class="tech-item">TypeScript</div>
+        <div class="tech-item">JavaScript</div>
+        <div class="tech-item">Node.js</div>
+        <div class="tech-item">Laravel</div>
+        <div class="tech-item">ASP.NET</div>
+        <div class="tech-item">SQL Server</div>
+        <div class="tech-item">MySQL</div>
+        <div class="tech-item">PostgreSQL</div>
+        <div class="tech-item">Docker</div>
+        <div class="tech-item">CI/CD</div>
+        <div class="tech-item">Git</div>
+        <div class="tech-item">Figma</div>
+        <div class="tech-item">Power BI</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quick Navigation -->
+<section class="quick-nav-section">
+  <div class="container-xl">
+    <div class="quick-nav-grid">
+      <a [routerLink]="['/skill']" class="nav-card skill-nav">
+        <div class="nav-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <h4>{{ 'home.nav.skills' | translate }}</h4>
+        <p>{{ 'home.nav.skills_desc' | translate }}</p>
+      </a>
+      
+      <a [routerLink]="['/experience']" class="nav-card experience-nav">
+        <div class="nav-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <h4>{{ 'home.nav.experience' | translate }}</h4>
+        <p>{{ 'home.nav.experience_desc' | translate }}</p>
+      </a>
+      
+      <a [routerLink]="['/project']" class="nav-card project-nav">
+        <div class="nav-icon">
+          <i class="fas fa-project-diagram"></i>
+        </div>
+        <h4>{{ 'home.nav.projects' | translate }}</h4>
+        <p>{{ 'home.nav.projects_desc' | translate }}</p>
+      </a>
+      
+      <a [routerLink]="['/achievement']" class="nav-card achievement-nav">
+        <div class="nav-icon">
+          <i class="fas fa-trophy"></i>
+        </div>
+        <h4>{{ 'home.nav.achievements' | translate }}</h4>
+        <p>{{ 'home.nav.achievements_desc' | translate }}</p>
+      </a>
+    </div>
+  </div>
+</section>
