@@ -148,6 +148,42 @@
       "completed": "Completed"
     }
   },
+  "experience": {
+    "title_prefix": "Work",
+    "title_suffix": "Experience", 
+    "subtitle": "Professional journey and contributions to various projects",
+    "job1": {
+      "title": "Developer",
+      "company": "COGAIN Corporation",
+      "time": "03/2025 – Present",
+      "responsibility1": "Lead development of CRM, ERP systems (R&D, Purchasing, Warehouse, Production, Sales) with data integration between 2 systems, building features for both Backend and Frontend",
+      "responsibility2": "Design Database structure and API for complex business modules",
+      "responsibility3": "Build authorization features and automated approval workflow",
+      "responsibility4": "Support UI/UX design on Figma based on described business requirements",
+      "responsibility5": "Develop leave management and attendance systems with Power BI report integration via API",
+      "responsibility6": "Develop issue/problem management system with internal chat and OpenAI integration",
+      "responsibility7": "Implement data crawling for analysis and automated processing support",
+      "responsibility8": "Write SQL Server stored procedures for complex business logic and query performance optimization",
+      "responsibility9": "Backend: build BaseController, BaseService standardized CRUD, approval, routing and reusability",
+      "responsibility10": "Frontend: build base component library (Input, Select, Compact, DatePicker...) for reuse and interface standardization"
+    },
+    "job2": {
+      "title": "Developer",
+      "company": "GOSOFT Technology Company Limited", 
+      "time": "04/2023 – 03/2025",
+      "responsibility1": "Develop e-commerce systems: design Database and API, build web admin, handle commercial product and training course data flow",
+      "responsibility3": "Develop API for mobile apps in social network field (social interaction, data management)",
+      "responsibility4": "Build ERP modules: purchasing, warehouse and master data",
+      "responsibility5": "Develop reusable Menu package for all new and existing projects",
+      "responsibility6": "Develop additional base Frontend components for company library (Select, Price, TreeViewTable...), reuse and standardize interface",
+      "responsibility7": "Upgrade and develop internal code generator tools (console mode to pre-generate code), optimize to reduce development time",
+      "responsibility8": "Work with Agile/Scrum methodology, use Jira for task management and team coordination"
+    },
+    "status": {
+      "current": "Currently Working",
+      "completed": "Completed"
+    }
+  },
   "education": {
     "placeholder": "Updating...",
     "title_prefix": "My Academic",

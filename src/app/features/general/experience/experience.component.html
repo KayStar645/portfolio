@@ -1,11 +1,150 @@
-<div id="experience" class="h-100">
-  <div class="container-lg">
+<div id="experience" class="experience-modern">
+  <div class="container-xl">
+    
+    <!-- Header -->
+    <div class="experience-header text-center mb-5">
+      <h1 class="experience-title">
+        <span class="title-text">{{ 'experience.title_prefix' | translate }}</span>
+        <span class="title-highlight">{{ 'experience.title_suffix' | translate }}</span>
+      </h1>
+      <p class="experience-subtitle">{{ 'experience.subtitle' | translate }}</p>
+    </div>
 
-    <h1 class="text-center"
-      style="font-size: 4.4rem; font-weight: 800">
-      {{ 'modules.experience' | translate }}
-    </h1>
+    <!-- Experience Timeline -->
+    <div class="experience-timeline">
+      
+      <!-- Current Job -->
+      <div class="experience-item current-job">
+        <div class="experience-card">
+          <div class="company-logo">
+            <i class="fas fa-building"></i>
+          </div>
+          <div class="experience-content">
+            <div class="job-header">
+              <div class="job-title">{{ 'experience.job1.title' | translate }}</div>
+              <div class="job-timerange">
+                <i class="fas fa-calendar-alt me-2"></i>
+                {{ 'experience.job1.time' | translate }}
+              </div>
+            </div>
+            <div class="company-name">{{ 'experience.job1.company' | translate }}</div>
+            <div class="job-description">
+              <div class="description-section">
+                <h4 class="section-title">Hệ thống CRM & ERP</h4>
+                <ul class="job-responsibilities">
+                  <li>{{ 'experience.job1.responsibility1' | translate }}</li>
+                  <li>{{ 'experience.job1.responsibility2' | translate }}</li>
+                  <li>{{ 'experience.job1.responsibility3' | translate }}</li>
+                </ul>
+              </div>
+              
+              <div class="description-section">
+                <h4 class="section-title">UI/UX Design</h4>
+                <ul class="job-responsibilities">
+                  <li>{{ 'experience.job1.responsibility4' | translate }}</li>
+                </ul>
+              </div>
+              
+              <div class="description-section">
+                <h4 class="section-title">Hệ thống nội bộ</h4>
+                <ul class="job-responsibilities">
+                  <li>{{ 'experience.job1.responsibility5' | translate }}</li>
+                  <li>{{ 'experience.job1.responsibility6' | translate }}</li>
+                  <li>{{ 'experience.job1.responsibility7' | translate }}</li>
+                </ul>
+              </div>
+              
+              <div class="description-section">
+                <h4 class="section-title">Database & Optimization</h4>
+                <ul class="job-responsibilities">
+                  <li>{{ 'experience.job1.responsibility8' | translate }}</li>
+                </ul>
+              </div>
+              
+              <div class="description-section">
+                <h4 class="section-title">Code Refactoring</h4>
+                <ul class="job-responsibilities">
+                  <li>{{ 'experience.job1.responsibility9' | translate }}</li>
+                  <li>{{ 'experience.job1.responsibility10' | translate }}</li>
+                </ul>
+              </div>
+            </div>
+            <div class="job-status current">
+              <i class="fas fa-handshake me-1"></i>
+              {{ 'experience.status.current' | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <!-- Previous Job -->
+      <div class="experience-item previous-job">
+        <div class="experience-card">
+          <div class="company-logo">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="experience-content">
+            <div class="job-header">
+              <div class="job-title">{{ 'experience.job2.title' | translate }}</div>
+              <div class="job-timerange">
+                <i class="fas fa-calendar-alt me-2"></i>
+                {{ 'experience.job2.time' | translate }}
+              </div>
+            </div>
+            <div class="company-name">{{ 'experience.job2.company' | translate }}</div>
+            <div class="job-description">
+              <div class="description-section">
+                <h4 class="section-title">E-commerce Development</h4>
+                <ul class="job-responsibilities">
+                  <li>{{ 'experience.job2.responsibility1' | translate }}</li>
+                </ul>
+              </div>
+              
+              <div class="description-section">
+                <h4 class="section-title">API Development</h4>
+                <ul class="job-responsibilities">
+                  <li>{{ 'experience.job2.responsibility3' | translate }}</li>
+                </ul>
+              </div>
+              
+              <div class="description-section">
+                <h4 class="section-title">ERP Modules</h4>
+                <ul class="job-responsibilities">
+                  <li>{{ 'experience.job2.responsibility4' | translate }}</li>
+                </ul>
+              </div>
+              
+              <div class="description-section">
+                <h4 class="section-title">Package Development</h4>
+                <ul class="job-responsibilities">
+                  <li>{{ 'experience.job2.responsibility5' | translate }}</li>
+                </ul>
+              </div>
+              
+              <div class="description-section">
+                <h4 class="section-title">Frontend Components</h4>
+                <ul class="job-responsibilities">
+                  <li>{{ 'experience.job2.responsibility6' | translate }}</li>
+                </ul>
+              </div>
+              
+              <div class="description-section">
+                <h4 class="section-title">Tools & Methodology</h4>
+                <ul class="job-responsibilities">
+                  <li>{{ 'experience.job2.responsibility7' | translate }}</li>
+                  <li>{{ 'experience.job2.responsibility8' | translate }}</li>
+                </ul>
+              </div>
+            </div>
+            <div class="job-status completed">
+              <i class="fas fa-check-circle me-1"></i>
+              {{ 'experience.status.completed' | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
   </div>
 </div>

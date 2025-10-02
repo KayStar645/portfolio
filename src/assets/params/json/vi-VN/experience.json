@@ -1,1 +1,40 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "Lập trình viên",
+    "company": "CÔNG TY CỔ PHẦN COGAIN",
+    "time": "03/2025 – Hiện tại",
+    "location": "Hồ Chí Minh",
+    "type": "full-time",
+    "status": "current",
+    "description": "Tham gia phát triển hệ thống CRM, ERP và các phần mềm nội bộ",
+    "responsibilities": [
+      "Tham gia phát triển và chịu trách nhiệm chính hệ thống CRM, ERP",
+      "Thiết kế UI/UX trên Figma",
+      "Phát triển các phần mềm nội bộ với Power BI và OpenAI",
+      "Viết stored procedures trên SQL Server",
+      "Tái cấu trúc mã nguồn Backend và Frontend"
+    ],
+    "technologies": ["ASP.NET Core", "Laravel", "React", "SQL Server", "Power BI", "OpenAI API"]
+  },
+  {
+    "id": 2,
+    "title": "Lập trình viên",
+    "company": "CÔNG TY TNHH CÔNG NGHỆ GOSOFT",
+    "time": "04/2023 – 03/2025",
+    "location": "Hồ Chí Minh",
+    "type": "full-time",
+    "status": "completed",
+    "description": "Phát triển hệ thống e-commerce, API mobile và ERP modules",
+    "responsibilities": [
+      "Phát triển hệ thống e-commerce với Database và API",
+      "Phát triển API cho mobile app social network",
+      "Xây dựng phân hệ ERP",
+      "Xây dựng package Menu để tái sử dụng",
+      "Phát triển base components Frontend",
+      "Nâng cấp công cụ code generator",
+      "Làm việc theo Agile/Scrum với Jira"
+    ],
+    "technologies": ["PHP", "Laravel", "MySQL", "React", "JavaScript", "Agile", "Jira"]
+  }
+]

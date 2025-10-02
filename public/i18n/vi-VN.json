@@ -106,6 +106,42 @@
       "completed": "Đã hoàn thành"
     }
   },
+  "experience": {
+    "title_prefix": "Kinh nghiệm",
+    "title_suffix": "Làm việc",
+    "subtitle": "Hành trình phát triển nghề nghiệp và đóng góp trong các dự án",
+    "job1": {
+      "title": "Lập trình viên",
+      "company": "Công ty Cổ phần COGAIN",
+      "time": "03/2025 – Hiện tại",
+      "responsibility1": "Tham gia phát triển và chịu trách nhiệm chính hệ thống CRM, ERP (R&D, Mua hàng, Kho, Sản xuất, Bán hàng) liên kết dữ liệu giữa 2 hệ thống, xây dựng tính năng cho cả Backend và Frontend",
+      "responsibility2": "Thiết kế cấu trúc Database và API cho các module nghiệp vụ phức tạp",
+      "responsibility3": "Xây dựng tính năng phân quyền và workflow phê duyệt tự động",
+      "responsibility4": "Tham gia hỗ trợ thiết kế UI/UX trên Figma dựa trên nghiệp vụ được mô tả",
+      "responsibility5": "Tham gia hỗ trợ phát triển hệ thống nghỉ phép, chấm công tích hợp báo cáo từ Power BI thông qua API",
+      "responsibility6": "Phát triển hệ thống quản lý sự cố/vấn đề có chat nội bộ với tích hợp OpenAI",
+      "responsibility7": "Thực hiện crawl data phục vụ phân tích và hỗ trợ xử lý tự động",
+      "responsibility8": "Thực hiện viết stored procedures trên SQL Server để xử lý nghiệp vụ phức tạp và tối ưu hiệu năng truy vấn dữ liệu",
+      "responsibility9": "Backend: xây dựng BaseController, BaseService chuẩn hóa CRUD, phê duyệt, điều hướng và tái sử dụng",
+      "responsibility10": "Frontend: xây dựng 1 bộ base components (Input, Select, Compact, DatePicker...) phục vụ tái sử dụng và chuẩn hóa giao diện"
+    },
+    "job2": {
+      "title": "Lập trình viên", 
+      "company": "Công ty TNHH Công nghệ GOSOFT",
+      "time": "04/2023 – 03/2025",
+      "responsibility1": "Tham gia phát triển hệ thống e-commerce: thiết kế Database và API, xây dựng web admin, xử lý luồng dữ liệu sản phẩm thương mại và khóa học đào tạo",
+      "responsibility3": "Phát triển API cho mobile app trong lĩnh vực social network (tương tác xã hội, quản lý dữ liệu)",
+      "responsibility4": "Tham gia xây dựng phân hệ ERP: mua hàng, kho và master data",
+      "responsibility5": "Xây dựng package Menu để tái sử dụng cho tất cả các dự án mới và cũ",
+      "responsibility6": "Phát triển thêm vào thư viện công ty một số base components cho Frontend (Select, Price, TreeViewTable,…), tái sử dụng và chuẩn hóa giao diện",
+      "responsibility7": "Nâng cấp và phát triển công cụ code generator nội bộ (chạy console để sinh code sẵn), tối ưu để rút ngắn thời gian phát triển",
+      "responsibility8": "Làm việc theo Agile/Scrum, sử dụng Jira để quản lý công việc và phối hợp nhóm"
+    },
+    "status": {
+      "current": "Đang làm việc",
+      "completed": "Hoàn thành"
+    }
+  },
   "education": {
     "placeholder": "Đang cập nhật...",
     "title_prefix": "Học vấn",
