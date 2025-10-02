@@ -13,6 +13,51 @@
       "fail": "Reading data failed!"
     }
   },
+  "home": {
+    "greeting": "Hello, I'm",
+    "view_portfolio": "View Portfolio"
+  },
+  "skill": {
+    "title_prefix": "My Work",
+    "title_suffix": "Skills",
+    "description": "The technologies and tools I use to create high-quality software solutions.",
+    "subtitle": "Professional technologies and tools",
+    "core": {
+      "title": "CORE COMPETENCIES",
+      "subtitle": "Primary and specialized skills",
+      "backend": "Backend Development",
+      "frontend": "Frontend Development", 
+      "database": "Database Management"
+    },
+    "support": {
+      "title": "Supporting Technologies"
+    },
+    "categories": {
+      "backend": "Backend Technologies",
+      "frontend": "Frontend Technologies",
+      "database": "Database Systems",
+      "architecture": "Architecture & APIs",
+      "tools": "Advanced Tools"
+    },
+    "summary": {
+      "title": "Technical Summary",
+      "experience": "2.5+ Years",
+      "title_detail": "Full-Stack Development Experience",
+      "focus": "Primary Focus",
+      "focus_detail": "Enterprise Backend (.NET & Laravel)",
+      "specialties": "Specialties",
+      "specialties_detail": "Clean Architecture, Microservices, Database Optimization",
+      "latest": "Latest",
+      "latest_detail": "AI Integration, Power BI, Advanced Data Systems"
+    },
+    "descriptions": {
+      "backend": "Enterprise Backend Solutions",
+      "frontend": "Modern Web Applications",
+      "database": "Data Management Systems",
+      "architecture": "Scalable System Design",
+      "tools": "Professional Development Tools"
+    }
+  },
   "modules": {
     "skill": "Skills",
     "project": "Projects",

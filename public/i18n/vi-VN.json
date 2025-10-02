@@ -13,6 +13,51 @@
       "fail": "Đọc dữ liệu thất bại!"
     }
   },
+  "home": {
+    "greeting": "Xin chào, tôi là",
+    "view_portfolio": "Xem Portfolio"
+  },
+  "skill": {
+    "title_prefix": "Kỹ năng",
+    "title_suffix": "Lập trình",
+    "description": "Tập hợp các công nghệ và công cụ mà tôi sử dụng để tạo ra các giải pháp phần mềm chất lượng cao.",
+    "subtitle": "Công nghệ và công cụ chuyên nghiệp",
+    "core": {
+      "title": "CORE COMPETENCIES",
+      "subtitle": "Những kỹ năng chính và chuyên sâu",
+      "backend": "Backend Development",
+      "frontend": "Frontend Development", 
+      "database": "Database Management"
+    },
+    "support": {
+      "title": "Supporting Technologies"
+    },
+    "categories": {
+      "backend": "Backend Technologies",
+      "frontend": "Frontend Technologies",
+      "database": "Database Systems",
+      "architecture": "Architecture & APIs",
+      "tools": "Advanced Tools"
+    },
+    "summary": {
+      "title": "Tóm tắt trình độ kỹ thuật",
+      "experience": "2.5+ Năm",
+      "title_detail": "Kinh nghiệm Full-Stack Development",
+      "focus": "Trọng tâm chính",
+      "focus_detail": "Enterprise Backend (.NET & Laravel)",
+      "specialties": "Chuyên môn",
+      "specialties_detail": "Clean Architecture, Microservices, Database Optimization",
+      "latest": "Mới nhất",
+      "latest_detail": "AI Integration, Power BI, Advanced Data Systems"
+    },
+    "descriptions": {
+      "backend": "Giải pháp Backend doanh nghiệp",
+      "frontend": "Ứng dụng Web hiện đại",
+      "database": "Hệ thống quản lý dữ liệu",
+      "architecture": "Thiết kế hệ thống mở rộng",
+      "tools": "Công cụ phát triển chuyên nghiệp"
+    }
+  },
   "modules": {
     "skill": "Kỹ năng",
     "project": "Dự án",

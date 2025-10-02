@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { GroupedSkill, SkillService } from './../../../services/skill.service';
+import { GroupedSkill, SkillService, Skill } from './../../../services/skill.service';
 
 @Component({
   selector: 'app-skill',
