@@ -160,31 +160,11 @@
     color: #ff6b35;
   }
   
-  // Category-specific icon colors
-  .backend & { 
-    background: rgba(220, 38, 38, 0.1);
-    i { color: #dc2626; }
-  }
-  
-  .frontend & { 
-    background: rgba(37, 99, 235, 0.1);
-    i { color: #2563eb; }
-  }
-  
-  .database & { 
-    background: rgba(245, 158, 11, 0.1);
-    i { color: #f59e0b; }
-  }
-  
-  .architecture & { 
-    background: rgba(16, 185, 129, 0.1);
-    i { color: #10b981; }
-  }
-  
-  .tools & { 
-    background: rgba(139, 92, 246, 0.1);
-    i { color: #8b5cf6; }
-  }
+  .backend & { background: rgba(220, 38, 38, 0.1); i { color: #dc2626; } }
+  .frontend & { background: rgba(37, 99, 235, 0.1); i { color: #2563eb; } }
+  .database & { background: rgba(245, 158, 11, 0.1); i { color: #f59e0b; } }
+  .architecture & { background: rgba(16, 185, 129, 0.1); i { color: #10b981; } }
+  .tools & { background: rgba(139, 92, 246, 0.1); i { color: #8b5cf6; } }
 }
 
 // Skill Name
@@ -226,36 +206,11 @@
   font-weight: 500;
   border: 1px solid var(--main-close);
   
-  // Category-specific tag colors
-  .backend & {
-    background: rgba(220, 38, 38, 0.2);
-    color: #ffffff;
-    border-color: rgba(220, 38, 38, 0.3);
-  }
-    
-  .frontend & {
-    background: rgba(37, 99, 235, 0.2);
-    color: #ffffff;
-    border-color: rgba(37, 99, 235, 0.3);
-  }
-    
-  .database & {
-    background: rgba(245, 158, 11, 0.2);
-    color: #ffffff;
-    border-color: rgba(245, 158, 11, 0.3);
-  }
-    
-  .architecture & {
-    background: rgba(16, 185, 129, 0.2);
-    color: #ffffff;
-    border-color: rgba(16, 185, 129, 0.3);
-  }
-    
-  .tools & {
-    background: rgba(139, 92, 246, 0.2);
-    color: #ffffff;
-    border-color: rgba(139, 92, 246, 0.3);
-  }
+  .backend & { background: rgba(220, 38, 38, 0.2); color: #ffffff; border-color: rgba(220, 38, 38, 0.3); }
+  .frontend & { background: rgba(37, 99, 235, 0.2); color: #ffffff; border-color: rgba(37, 99, 235, 0.3); }
+  .database & { background: rgba(245, 158, 11, 0.2); color: #ffffff; border-color: rgba(245, 158, 11, 0.3); }
+  .architecture & { background: rgba(16, 185, 129, 0.2); color: #ffffff; border-color: rgba(16, 185, 129, 0.3); }
+  .tools & { background: rgba(139, 92, 246, 0.2); color: #ffffff; border-color: rgba(139, 92, 246, 0.3); }
 }
 
 // Progress Bar
