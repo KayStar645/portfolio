@@ -65,5 +65,44 @@
     "education": "Education",
     "achievement": "Achievement",
     "resume": "Resume"
+  },
+  "education": {
+    "placeholder": "Updating...",
+    "title_prefix": "My Academic",
+    "title_suffix": "Profession",
+    "subtitle": "My educational journey and professional development",
+    "master": {
+      "label": "master's",
+      "name": "Master of Information Technology",
+      "specialization": "Application-Oriented",
+      "university": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+      "time": "01/2025 - Present",
+      "scholarship": "50% Scholarship",
+      "gpa": "Excellent GPA"
+    },
+    "language": {
+      "label": "Bachelor of Language",
+      "name": "Bachelor of English Language",
+      "specialization": "Business English Specialization",
+      "university": "University of Economics Ho Chi Minh City (UEH)",
+      "time": "10/2025 - Present",
+      "focus": "Business English"
+    },
+    "engineer": {
+      "label": "Engineer",
+      "name": "Bachelor of Information Technology",
+      "specialization": "Software Technology Specialization",
+      "university": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+      "time": "01/2024 - 06/2024",
+      "gpa": "Graduated with Good Honours"
+    },
+    "bachelor": {
+      "label": "Bachelor",
+      "name": "Bachelor of Information Technology",
+      "specialization": "Software Technology Specialization",
+      "university": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+      "time": "09/2020 - 12/2023",
+      "gpa": "Graduated with Good Honours"
+    }
   }
 }

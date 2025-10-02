@@ -1,16 +1,378 @@
-.zoom-effect {
-  cursor: zoom-in;
-  transition: transform 0.3s ease-in-out;
+// Modern Education Design
+.education-modern {
+  background: var(--bg-color);
+  min-height: auto;
+  padding: 3rem 0;
 }
 
-.zoom-effect:hover {
-  transform: scale(4);
-  z-index: 9999999999999;
+// Header Section
+.education-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  
+  .education-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    
+    .title-text {
+      color: var(--text-color);
+    }
+    
+    .title-highlight {
+      color: #ff6b35;
+      text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+    }
+  }
+  
+  .education-subtitle {
+    color: var(--tertiary-text);
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// Education Timeline
+.education-timeline {
   position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  
+  // Timeline line
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(
+      to bottom,
+      var(--primary) 0%,
+      var(--secondary) 50%,
+      var(--primary) 100%
+    );
+    transform: translateX(-50%);
+    border-radius: 2px;
+    opacity: 0.7;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--main-close);
+    transform: translateX(-50%);
+    opacity: 0.3;
+  }
 }
 
-@media (max-width: 767px) {
-  .zoom-effect:hover {
-    transform: scale(2) !important;
+// Education Item
+.education-item {
+  position: relative;
+  margin-bottom: 3rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  // Timeline dot
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    width: 20px;
+    height: 20px;
+    background: var(--secondary);
+    border: 4px solid var(--bg-color);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    transition: all 0.3s ease;
+  }
+  
+  // Specific colors for different education types
+  &.master::before {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+  }
+  
+  &.language::before {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+  }
+  
+  &.engineer::before {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  }
+  
+  &.bachelor::before {
+    background: linear-gradient(135deg, #10b981, #34d399);
+  }
+  
+  // Item animation on scroll
+  &:hover::before {
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+
+// Education Card
+.education-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--secondary);
+  border: 1px solid var(--main-close);
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  backdrop-filter: blur(10px);
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
+  }
+}
+
+// Education Icon
+.education-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--primary);
+  
+  .master & {
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(239, 68, 68, 0.1));
+    color: #dc2626;
+  }
+  
+  .language & {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(59, 130, 246, 0.1));
+    color: #2563eb;
+    
+    .dark & {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(59, 130, 246, 0.2));
+    }
+  }
+  
+  .engineer & {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(251, 191, 36, 0.1));
+    color: #f59e0b;
+  }
+  
+  .bachelor & {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(52, 211, 153, 0.1));
+    color: #10b981;
+  }
+}
+
+// Education Content
+.education-content {
+  flex: 1;
+  
+  .education-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .education-type {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    
+    &.mister-badge {
+      background: rgba(220, 38, 38, 0.2);
+      color: #dc2626;
+      border: 1px solid rgba(220, 38, 38, 0.3);
+    }
+    
+    &.tanguage-badge {
+      background: rgba(37, 99, 235, 0.2);
+      color: #2563eb;
+      border: 1px solid rgba(37, 99, 235, 0.3);
+    }
+    
+    &.engineer-badge {
+      background: rgba(245, 158, 11, 0.2);
+      color: #f59e0b;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    
+    &.bachelor-badge {
+      background: rgba(16, 185, 129, 0.2);
+      color: #10b981;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+  }
+  
+  .education-time {
+    color: var(--tertiary-text);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .education-title-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  
+  .education-specialization {
+    color: var(--tertiary-text);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .education-institution {
+    color: var(--secondary-text);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  .education-description {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+}
+
+// Achievement tags
+.achievement-tag, .focus-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  
+  i {
+    color: #f59e0b;
+  }
+}
+
+.focus-tag {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  border-color: rgba(37, 99, 235, 0.2);
+  
+  i {
+    color: #3b82f6;
+  }
+}
+
+.gpa-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 0.75rem;
+  
+  i {
+    color: #d97706;
+  }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .education-timeline {
+    &::before, &::after {
+      left: 30px;
+    }
+  }
+  
+  .education-item {
+    margin-left: 60px;
+    
+    &::before {
+      left: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .education-header {
+    .education-title {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .education-timeline {
+    &::before, &::after {
+      left: 20px;
+    }
+  }
+  
+  .education-item {
+    margin-left: 50px;
+  }
+  
+  .education-card {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .education-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .education-content {
+    .education-title-text {
+      font-size: 1.2rem;
+    }
+    
+    .education-meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .education-item {
+    margin-left: 40px;
+  }
+  
+  .education-card {
+    padding: 1rem;
+  }
+  
+  .education-content {
+    .education-title-text {
+      font-size: 1.1rem;
+    }
+    
+    .education-institution {
+      font-size: 0.9rem;
+    }
   }
 }

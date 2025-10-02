@@ -65,5 +65,44 @@
     "education": "Học vấn",
     "achievement": "Thành tích",
     "resume": "Tóm tắt"
+  },
+  "education": {
+    "placeholder": "Đang cập nhật...",
+    "title_prefix": "Học vấn",
+    "title_suffix": "Chuyên môn",
+    "subtitle": "Hành trình học vấn và phát triển chuyên môn của tôi",
+    "master": {
+      "label": "Thạc sĩ",
+      "name": "Thạc sĩ Công nghệ thông tin",
+      "specialization": "Định hướng Ứng dụng",
+      "university": "Trường Đại học Công Thương TP.HCM (HUIT)",
+      "time": "01/2025 - Nay",
+      "scholarship": "Học bổng 50%",
+      "gpa": "Điểm xuất sắc (Excellent)"
+    },
+    "language": {
+      "label": "Cử nhân ngôn ngữ",
+      "name": "Cử nhân Ngôn ngữ Anh",
+      "specialization": "Chuyên ngành Tiếng Anh thương mại",
+      "university": "Trường Đại học Kinh tế TP.HCM (UEH)",
+      "time": "10/2025 - Nay",
+      "focus": "Tiếng Anh thương mại"
+    },
+    "engineer": {
+      "label": "Kỹ sư",
+      "name": "Kỹ sư Công nghệ thông tin",
+      "specialization": "Chuyên ngành Công nghệ phần mềm",
+      "university": "Trường Đại học Công Thương TP.HCM (HUIT)",
+      "time": "01/2024 - 06/2024",
+      "gpa": "Tốt nghiệp loại Giỏi (Good)*"
+    },
+    "bachelor": {
+      "label": "Cử nhân",
+      "name": "Cử nhân Công nghệ thông tin",
+      "specialization": "Chuyên ngành Công nghệ phần mềm",
+      "university": "Trường Đại học Công Thương TP.HCM (HUIT)",
+      "time": "09/2020 - 12/2023",
+      "gpa": "Tốt nghiệp loại Giỏi (Good)*"
+    }
   }
 }
