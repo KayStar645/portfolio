@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "Developer – Chatbot",
+    "company": "TURBO Technology Solutions Corporation",
+    "time": "09/2025 – 10/2025",
+    "location": "Ho Chi Minh City",
+    "type": "contract",
+    "status": "completed",
+    "role": "Developer",
+    "description": "Develop marketing landing page and multi-channel integrated chatbot",
+    "responsibilities": [
+      "Develop marketing Landing Page",
+      "Build chat widget, integrate & operate Chatwoot (open source), connect Dify API (RAG demo)",
+      "Integrate multi-channel communication (Web, Zalo, Facebook, Instagram,...)",
+      "Deploy using Docker & CI/CD, deploy UAT and production versions"
+    ],
+    "technologies": ["React", "Chatwoot", "Dify API", "Docker", "CI/CD", "Zalo", "Facebook", "Instagram"],
+    "links": {
+      "demo": "#",
+      "source": "#"
+    }
+  }
+]
