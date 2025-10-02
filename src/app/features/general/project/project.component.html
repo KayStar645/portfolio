@@ -1,11 +1,93 @@
-<div id="project" class="h-100">
-  <div class="container-lg">
+<div id="project" class="project-modern">
+  <div class="container-xl">
+    
+    <!-- Header -->
+    <div class="project-header text-center mb-5">
+      <h1 class="project-title">
+        <span class="title-text">{{ 'project.title_prefix' | translate }}</span>
+        <span class="title-highlight">{{ 'project.title_suffix' | translate }}</span>
+      </h1>
+      <p class="project-subtitle">{{ 'project.subtitle' | translate }}</p>
+    </div>
 
-    <h1 class="text-center"
-      style="font-size: 4.4rem; font-weight: 800">
-      {{ 'modules.project' | translate }}
-    </h1>
+    <!-- Project Timeline -->
+    <div class="project-timeline">
+      
+      <!-- Chatbot Project -->
+      <div class="project-item current-project">
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <div class="project-title">{{ 'project.chatbot.title' | translate }}</div>
+              <div class="project-timerange">
+                <i class="fas fa-calendar-alt me-2"></i>
+                {{ 'project.chatbot.time' | translate }}
+              </div>
+            </div>
+            <div class="company-name">{{ 'project.chatbot.company' | translate }}</div>
+            <div class="role-badge">
+              <i class="fas fa-user-tie me-1"></i>
+              {{ 'project.chatbot.role' | translate }}
+            </div>
+            
+            <div class="project-description">
+              <div class="description-section">
+                <h4 class="section-title">Landing Page & Marketing</h4>
+                <ul class="project-responsibilities">
+                  <li>{{ 'project.chatbot.responsibility1' | translate }}</li>
+                </ul>
+              </div>
+              
+              <div class="description-section">
+                <h4 class="section-title">Chatbot Integration</h4>
+                <ul class="project-responsibilities">
+                  <li>{{ 'project.chatbot.responsibility2' | translate }}</li>
+                  <li>{{ 'project.chatbot.responsibility3' | translate }}</li>
+                </ul>
+              </div>
+              
+              <div class="description-section">
+                <h4 class="section-title">Multi-Channel Communication</h4>
+                <ul class="project-responsibilities">
+                  <li>{{ 'project.chatbot.responsibility4' | translate }}</li>
+                </ul>
+              </div>
+              
+              <div class="description-section">
+                <h4 class="section-title">Deployment & DevOps</h4>
+                <ul class="project-responsibilities">
+                  <li>{{ 'project.chatbot.responsibility5' | translate }}</li>
+                </ul>
+              </div>
+            </div>
 
+            <!-- Technologies Used -->
+            <div class="technologies-section">
+              <h4 class="tech-title">Technologies:</h4>
+              <div class="tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Chatwoot</span>
+                <span class="tech-tag">Dify API</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">CI/CD</span>
+                <span class="tech-tag">Zalo</span>
+                <span class="tech-tag">Facebook</span>
+                <span class="tech-tag">Instagram</span>
+              </div>
+            </div>
+            
+            <div class="project-status completed">
+              <i class="fas fa-check-circle me-1"></i>
+              {{ 'project.status.completed' | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
   </div>
 </div>

@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "Lập trình viên – Chatbot",
+    "company": "Công ty Cổ phần Giải pháp Công nghệ TURBO",
+    "time": "09/2025 – 10/2025",
+    "location": "Hồ Chí Minh",
+    "type": "contract",
+    "status": "completed",
+    "role": "Developer",
+    "description": "Phát triển landing page marketing và chatbot tích hợp đa kênh",
+    "responsibilities": [
+      "Phát triển Landing Page marketing",
+      "Xây dựng widget chat, tích hợp & vận hành Chatwoot (mã nguồn mở), kết nối Dify API (RAG demo)",
+      "Tích hợp đa kênh giao tiếp (Web, Zalo, Facebook, Instagram,…)",
+      "Triển khai bằng Docker & CI/CD, deploy bản uat, production"
+    ],
+    "technologies": ["React", "Chatwoot", "Dify API", "Docker", "CI/CD", "Zalo", "Facebook", "Instagram"],
+    "links": {
+      "demo": "#",
+      "source": "#"
+    }
+  }
+]

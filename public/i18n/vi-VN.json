@@ -106,6 +106,27 @@
       "completed": "Đã hoàn thành"
     }
   },
+  "project": {
+    "title_prefix": "Dự án",
+    "title_suffix": "Thực tế",
+    "subtitle": "Các dự án cá nhân và phiên dịch kinh nghiệm thực tế",
+    "chatbot": {
+      "title": "Lập trình viên – Chatbot",
+      "company": "Công ty Cổ phần Giải pháp Công nghệ TURBO",
+      "time": "09/2025 – 10/2025",
+      "role": "Developer",
+      "responsibility1": "Phát triển Landing Page marketing",
+      "responsibility2": "Xây dựng widget chat, tích hợp & vận hành Chatwoot (mã nguồn mở), kết nối Dify API (RAG demo)",
+      "responsibility3": "Tích hợp chatbot với machine learning và natural language processing",
+      "responsibility4": "Tích hợp đa kênh giao tiếp (Web, Zalo, Facebook, Instagram,…)",
+      "responsibility5": "Triển khai bằng Docker & CI/CD, deploy bản uat, production"
+    },
+    "status": {
+      "completed": "Hoàn thành",
+      "in_progress": "Đang phát triển",
+      "planned": "Dự kiến"
+    }
+  },
   "experience": {
     "title_prefix": "Kinh nghiệm",
     "title_suffix": "Làm việc",

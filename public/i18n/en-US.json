@@ -148,6 +148,27 @@
       "completed": "Completed"
     }
   },
+  "project": {
+    "title_prefix": "Real-world",
+    "title_suffix": "Projects",
+    "subtitle": "Personal projects and real-world development experience",
+    "chatbot": {
+      "title": "Developer – Chatbot",
+      "company": "TURBO Technology Solutions Corporation",
+      "time": "09/2025 – 10/2025",
+      "role": "Developer",
+      "responsibility1": "Develop marketing Landing Page",
+      "responsibility2": "Build chat widget, integrate & operate Chatwoot (open source), connect Dify API (RAG demo)",
+      "responsibility3": "Integrate chatbot with machine learning and natural language processing",
+      "responsibility4": "Integrate multi-channel communication (Web, Zalo, Facebook, Instagram,...)",
+      "responsibility5": "Deploy using Docker & CI/CD, deploy UAT and production versions"
+    },
+    "status": {
+      "completed": "Completed",
+      "in_progress": "In Progress",
+      "planned": "Planned"
+    }
+  },
   "experience": {
     "title_prefix": "Work",
     "title_suffix": "Experience", 
