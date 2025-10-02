@@ -63,8 +63,90 @@
     "project": "Projects",
     "experience": "Experience",
     "education": "Education",
-    "achievement": "Achievement",
+    "achievement": "Achievements",
     "resume": "Resume"
+  },
+  "achievement": {
+    "title_prefix": "Research",
+    "title_suffix": "Achievements",
+    "subtitle": "Research projects and awards during my academic journey",
+    "research": {
+      "title": "Scientific Research Projects",
+      "subtitle": "University-level research projects and participation",
+      "project1": {
+        "name": "Mining High Utility Cross-Itemsets from Dynamic Transaction Databases with Negative Utility",
+        "description": "Research and develop algorithms for mining high utility cross-itemsets from dynamic transaction databases with negative utility.",
+        "role": "Project Leader",
+        "team_lead": "Pham Tan Thuan (Project Leader)",
+        "team_members": "Tran Duong Gia Bao, Tran Gia Bao",
+        "time": "07/2025 - 06/2026"
+      },
+      "project2": {
+          "name": "Building Aspect-based Sentiment Analysis System using Knowledge Graph",
+          "description": "Develop detailed sentiment analysis system from different aspects using Knowledge Graph.",
+          "role": "Core Member",
+          "team_lead": "Nguyen Thi Hong Quyen (Project Leader)",
+          "team_members": "Pham Tan Thuan, Doan Tan Minh Tan, Nguyen Huu Thang",
+          "time": "07/2025 - 06/2026"
+      },
+      "project3": {
+        "name": "Building Graduation Thesis Process Management System",
+        "description": "Develop system for managing and tracking graduation thesis progress for students.",
+        "role": "Project Leader",
+        "team_lead": "Pham Tan Thuan (Project Leader)",
+        "team_members": "Ngo Van Son, Vu Tran Minh Hoang, Nguyen Ngoc Thach",
+        "result": "80/100 - Good",
+        "time": "12/2022 - 06/2023"
+      }
+    },
+    "awards": {
+      "title": "Awards & Achievements",
+      "subtitle": "Awards from scientific research competitions",
+      "award1": {
+        "name": "University Student Science Research Competition",
+        "event": "Ho Chi Minh City University of Industry and Trade",
+        "role": "Team Leader",
+        "team_leader": "Pham Tan Thuan (Team Leader)",
+        "team_members": "Khuc Hong Nhung, Tran Nguyen Hieu Thao",
+        "time": "05/2024"
+      },
+      "award2": {
+        "name": "IT Faculty Science Research Competition",
+        "event": "Ho Chi Minh City University of Industry and Trade",
+        "role": "Team Leader",
+        "team_leader": "Pham Tan Thuan (Team Leader)",
+        "team_members": "Khuc Hong Nhung, Tran Nguyen Hieu Thao",
+        "time": "04/2024"
+      },
+      "award3": {
+        "name": "IT Faculty Science Research Competition (Previous)",
+        "event": "Ho Chi Minh City University of Industry and Trade",
+        "role": "Team Leader",
+        "team_leader": "Pham Tan Thuan (Team Leader)",
+        "team_members": "Pham Tan Thuan, Ngo Van Son, Vu Tran Minh Hoang, Nguyen Ngoc Thach",
+        "time": "04/2023"
+      },
+      "award4": {
+        "name": "IT Talent Search and Creative Products in Digital Age",
+        "event": "Ho Chi Minh City University of Industry and Trade",
+        "role": "Team Leader",
+        "team_leader": "Pham Tan Thuan (Team Leader)",
+        "team_members": "Pham Tan Thuan, Nguyen Nuong Hong Tham, Nguyen Tan Phat, Vu Tran Minh Hoang, Nguyen Ngoc Thach",
+        "time": "06/2022"
+      },
+      "award5": {
+        "name": "IT Talent Search Competition - Website",
+        "event": "Ho Chi Minh City University of Technology",
+        "role": "Team Leader",
+        "team_leader": "Pham Tan Thuan (Team Leader)",
+        "team_members": "Pham Tan Thuan, Ngo Van Son",
+        "time": "12/2023"
+      }
+    },
+    "status": {
+      "current": "In Progress",
+      "completed": "Completed"
+    }
   },
   "education": {
     "placeholder": "Updating...",

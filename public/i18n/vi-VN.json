@@ -1,58 +1,16 @@
 {
-  "common": {
-    "theme": {
-      "dark": "Chế độ tối",
-      "light": "Chế độ sáng"
-    },
-    "title": {
-      "main_tech": "CÔNG NGHỆ CHÍNH",
-      "prize": "🎖️ Giải thưởng",
-      "science": "📚 Công trình nghiên cứu"
-    },
-    "message": {
-      "fail": "Đọc dữ liệu thất bại!"
-    }
-  },
-  "home": {
-    "greeting": "Xin chào, tôi là",
-    "view_portfolio": "Xem Portfolio"
-  },
   "skill": {
     "title_prefix": "Kỹ năng",
-    "title_suffix": "Lập trình",
-    "description": "Tập hợp các công nghệ và công cụ mà tôi sử dụng để tạo ra các giải pháp phần mềm chất lượng cao.",
-    "subtitle": "Công nghệ và công cụ chuyên nghiệp",
-    "core": {
-      "title": "CORE COMPETENCIES",
-      "subtitle": "Những kỹ năng chính và chuyên sâu",
-      "backend": "Backend Development",
-      "frontend": "Frontend Development", 
-      "database": "Database Management"
-    },
-    "support": {
-      "title": "Supporting Technologies"
+    "title_suffix": "Chuyên môn",
+    "description": "Các công nghệ và kỹ năng mà tôi thành thạo trong phát triển phần mềm",
+    "expertise": {
+      "title": "Tôi thành thạo đa dạng công nghệ",
+      "backend": "Công nghệ Backend mạnh mẽ",
+      "frontend": "Giao diện người dùng hiện đại"
     },
     "categories": {
-      "backend": "Backend Technologies",
-      "frontend": "Frontend Technologies",
-      "database": "Database Systems",
-      "architecture": "Architecture & APIs",
-      "tools": "Advanced Tools"
-    },
-    "summary": {
-      "title": "Tóm tắt trình độ kỹ thuật",
-      "experience": "2.5+ Năm",
-      "title_detail": "Kinh nghiệm Full-Stack Development",
-      "focus": "Trọng tâm chính",
-      "focus_detail": "Enterprise Backend (.NET & Laravel)",
-      "specialties": "Chuyên môn",
-      "specialties_detail": "Clean Architecture, Microservices, Database Optimization",
-      "latest": "Mới nhất",
-      "latest_detail": "AI Integration, Power BI, Advanced Data Systems"
-    },
-    "descriptions": {
-      "backend": "Giải pháp Backend doanh nghiệp",
-      "frontend": "Ứng dụng Web hiện đại",
+      "backend": "Backend",
+      "frontend": "Frontend",
       "database": "Hệ thống quản lý dữ liệu",
       "architecture": "Thiết kế hệ thống mở rộng",
       "tools": "Công cụ phát triển chuyên nghiệp"
@@ -66,13 +24,95 @@
     "achievement": "Thành tích",
     "resume": "Tóm tắt"
   },
+  "achievement": {
+    "title_prefix": "Thành tựu",
+    "title_suffix": "Nghiên cứu",
+    "subtitle": "Các công trình nghiên cứu và giải thưởng trong quá trình học tập",
+    "research": {
+      "title": "Công trình nghiên cứu khoa học",
+      "subtitle": "Đề tài NCKH cấp trường và tham gia nghiên cứu",
+      "project1": {
+        "name": "Khai thác tập hữu ích cao chéo trên cơ sở dữ liệu giao dịch động có lợi ích âm",
+        "confidence": "Nghiên cứu phát triển thuật toán khai thác tập hữu ích cao chéo từ database giao dịch động với lợi ích âm.",
+        "role": "Chủ nhiệm đề tài",
+        "team_lead": "Phạm Tấn Thuận (Chủ nhiệm đề tài)",
+        "team_members": "Trần Dương Gia Bảo, Trần Gia Bảo",
+        "time": "07/2025 - 06/2026"
+      },
+      "project2": {
+        "name": "Xây dựng hệ thống phân tích cảm xúc theo khía cạnh sử dụng Knowledge Graph",
+        "confidence": "Phát triển hệ thống phân tích cảm xúc chi tiết từ các khía cạnh khác nhau bằng cách sử dụng Knowledge Graph.",
+        "role": "Thành viên chính",
+        "team_lead": "Nguyễn Thị Hồng Quyên (Chủ nhiệm đề tài)",
+        "team_members": "Phạm Tấn Thuận, Đoàn Tấn Minh Tân, Nguyễn Hữu Thắng",
+        "time": "07/2025 - 06/2026"
+      },
+      "project3": {
+        "name": "Xây dựng hệ thống xử lý tiến trình khóa luận tốt nghiệp",
+        "confidence": "Phát triển hệ thống quản lý và theo dõi tiến trình thực hiện khóa luận tốt nghiệp cho sinh viên.",
+        "role": "Chủ nhiệm đề tài",
+        "team_lead": "Phạm Tấn Thuận (Chủ nhiệm đề tài)",
+        "team_members": "Ngô Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
+        "result": "80/100 - Tốt",
+        "time": "12/2022 - 06/2023"
+      }
+    },
+    "awards": {
+      "title": "Giải thưởng & Thành tích",
+      "subtitle": "Các giải thưởng từ cuộc thi nghiên cứu khoa học",
+      "award1": {
+        "name": "Cuộc thi sinh viên NCKH cấp Trường",
+        "event": "Trường Đại học Công Thương TP.HCM",
+        "role": "Trưởng nhóm",
+        "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
+        "team_members": "Khúc Hồng Nhung, Trần Ngọc Hiếu Thảo",
+        "time": "05/2024"
+      },
+      "award2": {
+        "name": "Cuộc thi NCKH cấp Khoa CNTT",
+        "event": "Trường Đại học Công Thương TP.HCM",
+        "role": "Trưởng nhóm",
+        "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
+        "team_members": "Khúc Hồng Nhung, Trần Ngọc Hiếu Thảo",
+        "time": "04/2024"
+      },
+      "award3": {
+        "name": "Cuộc thi sinh viên NCKH cấp Khoa CNTT",
+        "event": "Trường Đại học Công Thương TP.HCM",
+        "role": "Trưởng nhóm",
+        "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
+        "team_members": "Phạm Tấn Thuận, Ngô Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
+        "time": "04/2023"
+      },
+      "award4": {
+        "name": "Tìm kiếm tài năng và sản phẩm sáng tạo CNTT trong kỷ nguyên số",
+        "event": "Trường Đại học Công Thương TP.HCM",
+        "role": "Trưởng nhóm",
+        "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
+        "team_members": "Phạm Tấn Thuận, Nguyễn Nương Hồng Thắm, Nguyễn Tấn Phát, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
+        "time": "06/2022"
+      },
+      "award5": {
+        "name": "Tìm kiếm tài năng CNTT - Website",
+        "event": "Trường Đại học Công Nghệ TP.HCM (HUTECH)",
+        "role": "Trưởng nhóm",
+        "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
+        "team_members": "Phạm Tấn Thuận, Ngô Văn Sơn",
+        "time": "12/2023"
+      }
+    },
+    "status": {
+      "current": "Đang thực hiện",
+      "completed": "Đã hoàn thành"
+    }
+  },
   "education": {
     "placeholder": "Đang cập nhật...",
     "title_prefix": "Học vấn",
     "title_suffix": "Chuyên môn",
     "subtitle": "Hành trình học vấn và phát triển chuyên môn của tôi",
     "master": {
-      "label": "Thạc sĩ",
+      "confidence": "Thạc sĩ",
       "name": "Thạc sĩ Công nghệ thông tin",
       "specialization": "Định hướng Ứng dụng",
       "university": "Trường Đại học Công Thương TP.HCM (HUIT)",
