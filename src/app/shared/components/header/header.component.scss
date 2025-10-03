@@ -87,6 +87,22 @@
       color: var(--primary-text);
       line-height: 1.2;
       margin-bottom: 2px;
+      
+      &.long-name {
+        font-size: 1.1rem;
+        
+        @media (max-width: 1399px) {
+          font-size: 0.95rem;
+          max-width: 140px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        
+        @media (max-width: 1199px) {
+          font-size: 0.85rem;
+          max-width: 110px;
+        }
+      }
     }
     
     .brand-title {
@@ -617,12 +633,15 @@
   .brand-section {
     .brand-text {
       .brand-name {
-        font-size: 1.1rem;
+        font-size: 1rem;
         white-space: nowrap;
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       
       .brand-title {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         white-space: nowrap;
       }
     }
@@ -655,12 +674,15 @@
   .brand-section {
     .brand-text {
       .brand-name {
-        font-size: 1rem;
+        font-size: 0.9rem;
         white-space: nowrap;
+        max-width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       
       .brand-title {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         white-space: nowrap;
       }
     }

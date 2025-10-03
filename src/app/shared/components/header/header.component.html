@@ -16,8 +16,8 @@
               <div class="avatar-glow"></div>
             </div>
             <div class="brand-text">
-              <span class="brand-name">{{ user?.name }}</span>
-              <span class="brand-title">Software Engineer</span>
+              <span class="brand-name" [class.long-name]="(user?.name?.length || 0) > 12">{{ user?.name }}</span>
+              <span class="brand-title">{{ 'header.job_title' | translate }}</span>
             </div>
           </a>
         </div>
@@ -101,7 +101,7 @@
       <img [src]="user?.avatar" class="mobile-avatar" alt="Profile">
       <div class="mobile-brand-text">
         <h4 class="mobile-name">{{ user?.name }}</h4>
-        <p class="mobile-title">Software Engineer</p>
+        <p class="mobile-title">{{ 'header.job_title' | translate }}</p>
       </div>
     </div>
   </div>
