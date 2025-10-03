@@ -557,25 +557,368 @@
 @keyframes fadeInUp { to { transform: translateY(0); opacity: 1; } }
 
 // ===== RESPONSIVE DESIGN =====
-@media (max-width: 1199px) {
+
+// Large Desktop (1400px+)
+@media (min-width: 1400px) {
+  .header-container {
+    .header-content {
+      padding: 0 2rem;
+    }
+  }
+  
+  .brand-section {
+    .brand-text {
+      .brand-name {
+        font-size: 1.4rem;
+      }
+      
+      .brand-title {
+        font-size: 0.95rem;
+      }
+    }
+  }
+  
   .desktop-nav {
-    display: none !important;
+    gap: 12px;
+    
+    .nav-item {
+      padding: 14px 24px;
+      
+      .nav-label {
+        font-size: 1rem;
+      }
+    }
   }
 }
 
-@media (max-width: 768px) {
-  .brand-text {
-    .brand-name {
-      font-size: 1.1rem;
+// Desktop Large (1200px - 1399px)
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .desktop-nav {
+    gap: 8px;
+    
+    .nav-item {
+      padding: 12px 18px;
+      
+      .nav-label {
+        font-size: 0.9rem;
+        white-space: nowrap;
+      }
+      
+      .nav-icon {
+        margin-right: 8px;
+        
+        i {
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+  
+  .brand-section {
+    .brand-text {
+      .brand-name {
+        font-size: 1.1rem;
+        white-space: nowrap;
+      }
+      
+      .brand-title {
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+// Tablet Landscape (992px - 1199px)
+@media (max-width: 1199px) and (min-width: 992px) {
+  .desktop-nav {
+    gap: 4px;
+    
+    .nav-item {
+      padding: 8px 12px;
+      
+      .nav-label {
+        font-size: 0.85rem;
+        white-space: nowrap;
+      }
+      
+      .nav-icon {
+        margin-right: 6px;
+        
+        i {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+  
+  .brand-section {
+    .brand-text {
+      .brand-name {
+        font-size: 1rem;
+        white-space: nowrap;
+      }
+      
+      .brand-title {
+        font-size: 0.75rem;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+// Tablet Portrait (768px - 991px)
+@media (max-width: 991px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .brand-section {
+    .brand-text {
+      .brand-name {
+        font-size: 1.2rem;
+      }
+      
+      .brand-title {
+        font-size: 0.85rem;
+      }
+    }
+  }
+  
+  .action-buttons {
+    gap: 8px;
+    
+    .action-btn {
+      width: 40px;
+      height: 40px;
+      
+      .btn-icon {
+        i {
+          font-size: 1rem;
+        }
+        
+        .flag-img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
+// Mobile Large (576px - 767px)
+@media (max-width: 767px) {
+  .header-container {
+    height: 70px;
+    
+    .header-content {
+      height: 70px;
+      padding: 0 1rem;
+    }
+  }
+  
+  .brand-section {
+    .avatar-container {
+      margin-right: 12px;
+      
+      .avatar-img {
+        width: 42px;
+        height: 42px;
+        border-width: 2px;
+      }
     }
     
-    .brand-title {
-      font-size: 0.8rem;
+    .brand-text {
+      .brand-name {
+        font-size: 1.1rem;
+      }
+      
+      .brand-title {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  
+  .action-buttons {
+    gap: 6px;
+    
+    .action-btn {
+      width: 38px;
+      height: 38px;
+      
+      .btn-icon {
+        i {
+          font-size: 0.95rem;
+        }
+        
+        .flag-img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+  
+  .mobile-menu-btn {
+    width: 38px;
+    height: 38px;
+    
+    .hamburger {
+      width: 20px;
+      height: 16px;
+      
+      span {
+        height: 1.5px;
+        
+        &:nth-child(2) { top: 7px; }
+        &:nth-child(3) { top: 14px; }
+      }
+    }
+    
+    &.active {
+      .hamburger span {
+        &:nth-child(1),
+        &:nth-child(3) {
+          top: 7px;
+        }
+      }
+    }
+  }
+}
+
+// Mobile Small (320px - 575px)
+@media (max-width: 575px) {
+  .header-container {
+    height: 65px;
+    
+    .header-content {
+      height: 65px;
+      padding: 0 0.75rem;
+    }
+  }
+  
+  .brand-section {
+    .avatar-container {
+      margin-right: 10px;
+      
+      .avatar-img {
+        width: 38px;
+        height: 38px;
+      }
+    }
+    
+    .brand-text {
+      .brand-name {
+        font-size: 1rem;
+      }
+      
+      .brand-title {
+        font-size: 0.75rem;
+      }
+    }
+  }
+  
+  .action-buttons {
+    gap: 4px;
+    
+    .action-btn {
+      width: 36px;
+      height: 36px;
+      
+      .btn-icon {
+        i {
+          font-size: 0.9rem;
+        }
+        
+        .flag-img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+  
+  .mobile-menu-btn {
+    width: 36px;
+    height: 36px;
+    
+    .hamburger {
+      width: 18px;
+      height: 14px;
     }
   }
   
   .mobile-menu {
     width: 100%;
-    max-width: 320px;
+    max-width: 100%;
+    
+    .mobile-menu-header {
+      padding: 20px 16px;
+      
+      .mobile-brand {
+        gap: 12px;
+        
+        .mobile-avatar {
+          width: 48px;
+          height: 48px;
+        }
+        
+        .mobile-brand-text {
+          .mobile-name {
+            font-size: 1.1rem;
+          }
+          
+          .mobile-title {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+    
+    .mobile-nav {
+      padding: 12px 0;
+      
+      .mobile-nav-item {
+        padding: 14px 16px;
+        
+        .mobile-nav-icon {
+          margin-right: 12px;
+          
+          i {
+            font-size: 1rem;
+          }
+        }
+        
+        .mobile-nav-label {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    
+    .mobile-actions {
+      padding: 12px 16px;
+      
+      .mobile-action-btn {
+        padding: 14px 16px;
+        margin-bottom: 10px;
+        
+        .mobile-action-icon {
+          margin-right: 12px;
+          
+          i {
+            font-size: 1rem;
+          }
+          
+          .mobile-flag-img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        
+        .mobile-action-label {
+          font-size: 0.9rem;
+        }
+      }
+    }
   }
 }

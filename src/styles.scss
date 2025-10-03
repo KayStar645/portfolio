@@ -7,23 +7,25 @@ body {
 
 /* Light mode */
 .light {
-  --bg-color: #ffffff;
-  --text-color: #000000;
+  --bg-color: #f8fafc;
+  --text-color: #1e293b;
+  --primary-text: #1e293b;
 
-  --secondary: #e1e1e1;
-  --secondary-text: #221f21;
+  --secondary: #f1f5f9;
+  --secondary-text: #475569;
 
-  --tertiary-text: #2e2e2e;
-  --main-close: #cacaca;
+  --tertiary-text: #64748b;
+  --main-close: #e2e8f0;
 
-  --from-bg-color: #fff;
-  --to-bg-color: #99cace;
+  --from-bg-color: #f8fafc;
+  --to-bg-color: #e2e8f0;
 }
 
 /* Dark mode */
 .dark {
   --bg-color: #000000;
   --text-color: #ffffff;
+  --primary-text: #ffffff;
 
   --secondary: #1e1e1e;
   --secondary-text: #ffeeee;
@@ -38,6 +40,80 @@ body {
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
+  line-height: 1.6;
+}
+
+// ===== RESPONSIVE TYPOGRAPHY =====
+
+// Base typography
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--primary-text);
+}
+
+h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+h2 { font-size: 2rem; margin-bottom: 0.875rem; }
+h3 { font-size: 1.75rem; margin-bottom: 0.75rem; }
+h4 { font-size: 1.5rem; margin-bottom: 0.625rem; }
+h5 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+h6 { font-size: 1.125rem; margin-bottom: 0.5rem; }
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+// Large Desktop (1200px+)
+@media (min-width: 1200px) {
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.5rem; }
+  h3 { font-size: 2rem; }
+  h4 { font-size: 1.75rem; }
+  h5 { font-size: 1.5rem; }
+  h6 { font-size: 1.25rem; }
+}
+
+// Tablet (768px - 1199px)
+@media (max-width: 1199px) and (min-width: 768px) {
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.875rem; }
+  h3 { font-size: 1.625rem; }
+  h4 { font-size: 1.375rem; }
+  h5 { font-size: 1.125rem; }
+  h6 { font-size: 1rem; }
+}
+
+// Mobile Large (576px - 767px)
+@media (max-width: 767px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+  h5 { font-size: 1.125rem; }
+  h6 { font-size: 1rem; }
+  
+  body {
+    font-size: 0.95rem;
+  }
+}
+
+// Mobile Small (320px - 575px)
+@media (max-width: 575px) {
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.375rem; }
+  h4 { font-size: 1.125rem; }
+  h5 { font-size: 1rem; }
+  h6 { font-size: 0.875rem; }
+  
+  body {
+    font-size: 0.9rem;
+  }
+  
+  p {
+    margin-bottom: 0.875rem;
+  }
 }
 
 /* Width Classes */

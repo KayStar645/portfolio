@@ -1,8 +1,30 @@
 // App Layout Styles
-main {
-  min-height: calc(100vh - 80px); // Ensure main takes full height minus header
+.main-content {
+  min-height: calc(100vh - 80px); // Default desktop
+  margin-top: 80px;
+  padding-top: 2rem;
   position: relative;
   z-index: 1;
+  
+  // Tablet
+  @media (max-width: 991px) {
+    margin-top: 80px;
+    padding-top: 1.5rem;
+  }
+  
+  // Mobile Large
+  @media (max-width: 767px) {
+    min-height: calc(100vh - 70px);
+    margin-top: 70px;
+    padding-top: 1rem;
+  }
+  
+  // Mobile Small
+  @media (max-width: 575px) {
+    min-height: calc(100vh - 65px);
+    margin-top: 65px;
+    padding-top: 0.75rem;
+  }
 }
 
 // Ensure header stays on top
