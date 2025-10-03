@@ -19,8 +19,8 @@
     "description": "Full-stack developer with 2+ years of experience building CRM, ERP systems and modern web applications. Passionate about technology and always seeking the most optimal solutions.",
     "view_portfolio": "View Portfolio",
     "download_cv": "Download CV",
-    "tech_title": "Technical Expertise",
-    "tech_subtitle": "Technologies and tools I use daily",
+    "tech_title": "Technologies I Work With",
+    "tech_subtitle": "Modern tools and frameworks for building exceptional digital experiences",
     "nav": {
       "skills": "Skills",
       "skills_desc": "Technologies and frameworks I master",
@@ -29,7 +29,9 @@
       "projects": "Projects",
       "projects_desc": "Real-world projects I've completed",
       "achievements": "Achievements",
-      "achievements_desc": "Awards and scientific research"
+      "achievements_desc": "Awards and scientific research",
+      "education": "Education",
+      "education_desc": "My academic background and qualifications"
       }
   },
   "skill": {
@@ -134,6 +136,14 @@
         "time": "04/2024"
       },
       "award3": {
+        "name": "IT Talent Search Competition - Website",
+        "event": "Ho Chi Minh City University of Technology",
+        "role": "Team Leader",
+        "team_leader": "Pham Tan Thuan (Team Leader)",
+        "team_members": "Pham Tan Thuan, Ngo Van Son",
+        "time": "12/2023"
+      },
+      "award4": {
         "name": "IT Faculty Science Research Competition (Previous)",
         "event": "Ho Chi Minh City University of Industry and Trade",
         "role": "Team Leader",
@@ -141,21 +151,13 @@
         "team_members": "Pham Tan Thuan, Ngo Van Son, Vu Tran Minh Hoang, Nguyen Ngoc Thach",
         "time": "04/2023"
       },
-      "award4": {
+      "award5": {
         "name": "IT Talent Search and Creative Products in Digital Age",
         "event": "Ho Chi Minh City University of Industry and Trade",
         "role": "Team Leader",
         "team_leader": "Pham Tan Thuan (Team Leader)",
         "team_members": "Pham Tan Thuan, Nguyen Nuong Hong Tham, Nguyen Tan Phat, Vu Tran Minh Hoang, Nguyen Ngoc Thach",
         "time": "06/2022"
-      },
-      "award5": {
-        "name": "IT Talent Search Competition - Website",
-        "event": "Ho Chi Minh City University of Technology",
-        "role": "Team Leader",
-        "team_leader": "Pham Tan Thuan (Team Leader)",
-        "team_members": "Pham Tan Thuan, Ngo Van Son",
-        "time": "12/2023"
       }
     },
     "status": {
@@ -226,7 +228,7 @@
     "title_suffix": "Profession",
     "subtitle": "My educational journey and professional development",
     "master": {
-      "label": "master's",
+      "label": "Master's",
       "name": "Master of Information Technology",
       "specialization": "Application-Oriented",
       "university": "Ho Chi Minh City University of Industry and Trade (HUIT)",

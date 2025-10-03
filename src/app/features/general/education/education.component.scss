@@ -20,8 +20,8 @@
     }
     
     .title-highlight {
-      color: #ff6b35;
-      text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+      color: #3b82f6;
+      text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
     }
   }
   
@@ -92,19 +92,19 @@
   
   // Specific colors for different education types
   &.master::before {
-    background: linear-gradient(135deg, #dc2626, #ef4444);
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
   }
   
   &.language::before {
-    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
   }
   
   &.engineer::before {
-    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
   }
   
   &.bachelor::before {
-    background: linear-gradient(135deg, #10b981, #34d399);
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
   }
   
   // Item animation on scroll
@@ -146,10 +146,10 @@
   font-size: 1.8rem;
   color: var(--primary);
   
-  .master & { background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(239, 68, 68, 0.1)); color: #dc2626; }
-  .language & { background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(59, 130, 246, 0.1)); color: #2563eb; .dark & { background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(59, 130, 246, 0.2)); } }
-  .engineer & { background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(251, 191, 36, 0.1)); color: #f59e0b; }
-  .bachelor & { background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(52, 211, 153, 0.1)); color: #10b981; }
+  .master & { background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(96, 165, 250, 0.1)); color: #3b82f6; }
+  .language & { background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(96, 165, 250, 0.1)); color: #3b82f6; .dark & { background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(96, 165, 250, 0.2)); } }
+  .engineer & { background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(96, 165, 250, 0.1)); color: #3b82f6; }
+  .bachelor & { background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(96, 165, 250, 0.1)); color: #3b82f6; }
 }
 
 // Education Content
@@ -169,28 +169,28 @@
     padding: 0.4rem 0.8rem;
     border-radius: 20px;
     
-    &.mister-badge {
-      background: rgba(220, 38, 38, 0.2);
-      color: #dc2626;
-      border: 1px solid rgba(220, 38, 38, 0.3);
+    &.master-badge {
+      background: rgba(59, 130, 246, 0.2);
+      color: #3b82f6;
+      border: 1px solid rgba(59, 130, 246, 0.3);
     }
     
-    &.tanguage-badge {
-      background: rgba(37, 99, 235, 0.2);
-      color: #2563eb;
-      border: 1px solid rgba(37, 99, 235, 0.3);
+    &.language-badge {
+      background: rgba(59, 130, 246, 0.2);
+      color: #3b82f6;
+      border: 1px solid rgba(59, 130, 246, 0.3);
     }
     
     &.engineer-badge {
-      background: rgba(245, 158, 11, 0.2);
-      color: #f59e0b;
-      border: 1px solid rgba(245, 158, 11, 0.3);
+      background: rgba(59, 130, 246, 0.2);
+      color: #3b82f6;
+      border: 1px solid rgba(59, 130, 246, 0.3);
     }
     
     &.bachelor-badge {
-      background: rgba(16, 185, 129, 0.2);
-      color: #10b981;
-      border: 1px solid rgba(16, 185, 129, 0.3);
+      background: rgba(59, 130, 246, 0.2);
+      color: #3b82f6;
+      border: 1px solid rgba(59, 130, 246, 0.3);
     }
   }
   
@@ -235,22 +235,22 @@
   display: inline-flex;
   align-items: center;
   padding: 0.4rem 0.8rem;
-  background: rgba(16, 185, 129, 0.1);
-  color: #10b981;
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: 12px;
   font-size: 0.8rem;
   font-weight: 600;
   
   i {
-    color: #f59e0b;
+    color: #3b82f6;
   }
 }
 
 .focus-tag {
-  background: rgba(37, 99, 235, 0.1);
-  color: #2563eb;
-  border-color: rgba(37, 99, 235, 0.2);
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border-color: rgba(59, 130, 246, 0.2);
   
   i {
     color: #3b82f6;
@@ -261,9 +261,9 @@
   display: inline-flex;
   align-items: center;
   padding: 0.4rem 0.8rem;
-  background: rgba(245, 158, 11, 0.1);
-  color: #f59e0b;
-  border: 1px solid rgba(245, 158, 11, 0.2);
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: 12px;
   font-size: 0.8rem;
   font-weight: 600;

@@ -19,8 +19,8 @@
   }
     
     .title-highlight {
-      color: #ff6b35;
-      text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+      color: #8b5cf6;
+      text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
     }
   }
   
@@ -121,7 +121,7 @@
   
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
     
     &.backend {
       border-color: #dc2626;
@@ -157,7 +157,7 @@
   
   i {
     font-size: 2rem;
-    color: #ff6b35;
+    color: #8b5cf6;
   }
   
   .backend & { background: rgba(220, 38, 38, 0.1); i { color: #dc2626; } }

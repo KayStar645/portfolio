@@ -1,4 +1,22 @@
 {
   "image": "assets/params/images/home/background.jpg",
-  "description": "Là một <span class='fs-6 rounded bg-primary p-2 fw-bold'>Kỹ sư phần mềm</span> với <span class='fs-6 rounded bg-primary p-2 fw-bold'>2.5 năm kinh nghiệm</span> phát triển nhiều hệ thống phần mềm từ ứng dụng doanh nghiệp đến công cụ nội bộ. Tham gia nghiên cứu <span class='fs-6 rounded bg-primary p-2 fw-bold'>Data Mining & AI</span>, đạt nhiều giải thưởng NCKH và chủ nhiệm đề tài cấp trường. Mục tiêu hướng tới trở thành chuyên gia xây dựng hệ thống thông minh, ứng dụng AI và khai thác dữ liệu để tối ưu quy trình, nâng cao hiệu quả và tạo giá trị bứt phá cho tổ chức."
+  "greeting": "Xin chào, tôi là",
+  "title": "Phạm Tấn Thuận",
+  "description": "Là một <span class='fs-6 rounded bg-primary p-2 fw-bold'>Kỹ sư phần mềm</span> với <span class='fs-6 rounded bg-primary p-2 fw-bold'>2.5 năm kinh nghiệm</span> phát triển nhiều hệ thống phần mềm từ ứng dụng doanh nghiệp đến công cụ nội bộ. Tham gia nghiên cứu <span class='fs-6 rounded bg-primary p-2 fw-bold'>Data Mining & AI</span>, đạt nhiều giải thưởng NCKH và chủ nhiệm đề tài cấp trường. Mục tiêu hướng tới trở thành chuyên gia xây dựng hệ thống thông minh, ứng dụng AI và khai thác dữ liệu để tối ưu quy trình, nâng cao hiệu quả và tạo giá trị bứt phá cho tổ chức.",
+  "view_portfolio": "Xem Portfolio",
+  "download_cv": "Tải CV",
+  "tech_title": "Công nghệ tôi sử dụng",
+  "tech_subtitle": "Những công cụ và framework hiện đại để xây dựng trải nghiệm số xuất sắc",
+  "nav": {
+    "skills": "Kỹ năng",
+    "skills_desc": "Các công nghệ và framework mà tôi thành thạo",
+    "experience": "Kinh nghiệm",
+    "experience_desc": "Hành trình phát triển nghề nghiệp của tôi",
+    "projects": "Dự án",
+    "projects_desc": "Các dự án thực tế đã thực hiện",
+    "achievements": "Thành tích",
+    "achievements_desc": "Giải thưởng và nghiên cứu khoa học",
+    "education": "Học vấn",
+    "education_desc": "Quá trình học tập và bằng cấp của tôi"
+  }
 }

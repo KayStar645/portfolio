@@ -1,106 +1,155 @@
+<!-- Modern Glassmorphism Header -->
 <div id="header">
-  <div
-    class="position-fixed top-0 start-0 end-0"
-    style="z-index: 99999;">
+  <div class="header-container">
+    <!-- Background blur effect -->
+    <div class="header-backdrop"></div>
+    
+    <!-- Main header content -->
+    <div class="header-content">
+      <div class="container-lg px-0 d-flex justify-content-between align-items-center">
+        
+        <!-- Logo/Brand Section -->
+        <div class="brand-section d-flex align-items-center">
+          <a routerLink="/" class="brand-link d-flex align-items-center text-decoration-none">
+            <div class="avatar-container">
+              <img [src]="user?.avatar" class="avatar-img" alt="Profile">
+              <div class="avatar-glow"></div>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">{{ user?.name }}</span>
+              <span class="brand-title">Software Engineer</span>
+            </div>
+          </a>
+        </div>
 
-    <div class="container-lg px-0 d-flex justify-content-between">
-      <div class="d-flex align-items-center">
-        <a routerLink="/"
-          class="nav-link d-flex align-items-center text-nowrap py-2 w-100 d-block">
-          <img [src]="user?.avatar" class="rounded-circle mx-2" width="36">
-          <span class="d-none d-md-flex fw-bold fs-5">{{ user?.name }}</span>
-        </a>
-        <div style="z-index: -1;"
-          class="d-inline-block d-md-none text-center text-nowrap fw-bold fs-5 position-absolute min-vw-100">
-          {{ user?.name }}
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav d-none d-lg-flex align-items-center">
+          <a *ngFor="let menu of menus; let i = index" 
+             [routerLink]="menu?.link"
+             class="nav-item d-flex align-items-center text-decoration-none"
+             [class.active]="isActiveRoute(menu?.link)"
+             [attr.data-index]="i">
+            <div class="nav-icon">
+              <i [class]="menu?.icon"></i>
+            </div>
+            <span class="nav-label">{{ menu?.label }}</span>
+            <div class="nav-indicator"></div>
+          </a>
+        </nav>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons d-flex align-items-center">
+          <!-- Language Switcher -->
+          <button class="action-btn language-btn" 
+                  (click)="switchLanguage()"
+                  [attr.aria-label]="currentLang === 'en-US' ? 'Switch to Vietnamese' : 'Switch to English'">
+            <div class="btn-icon">
+              <img class="flag-img"
+                   *ngIf="currentLang == 'en-US'"
+                   src="assets/params/images/lang/viet-nam.png" 
+                   alt="Vietnam Flag" />
+              <img class="flag-img"
+                   *ngIf="currentLang == 'vi-VN'"
+                   src="assets/params/images/lang/english.png" 
+                   alt="English Flag" />
+            </div>
+            <span class="btn-tooltip">{{ currentLang === 'en-US' ? 'Tiếng Việt' : 'English' }}</span>
+          </button>
+
+          <!-- Theme Toggle -->
+          <button class="action-btn theme-btn" 
+                  (click)="toggleTheme()"
+                  [attr.aria-label]="currentTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'">
+            <div class="btn-icon">
+              <i *ngIf="currentTheme == 'light'" class="far fa-moon"></i>
+              <i *ngIf="currentTheme == 'dark'" class="fas fa-sun"></i>
+            </div>
+            <span class="btn-tooltip">{{ currentTheme === 'light' ? 'Dark Mode' : 'Light Mode' }}</span>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="mobile-menu-btn d-flex d-lg-none" 
+                  (click)="isMenuVisible = !isMenuVisible"
+                  [class.active]="isMenuVisible"
+                  [attr.aria-label]="isMenuVisible ? 'Close Menu' : 'Open Menu'">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
-      <div class="d-none d-md-flex align-items-center">
-        <a *ngFor="let menu of menus" [routerLink]="menu?.link"
-          class="nav-link d-flex align-items-center text-decoration-none h-100 text-nowrap px-md-4 px-lg-2 px-xl-4">
-          <i [class]="menu?.icon + ' me-lg-2 me-md-0'"></i>
-          <span class="d-none d-lg-flex">{{ menu?.label }}</span>
-        </a>
-      </div>
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay" 
+     *ngIf="isMenuVisible" 
+     (click)="isMenuVisible = false">
+</div>
 
-      <div class="d-flex align-items-center">
-        <a href="javascript:void(0);"
-          (click)="switchLanguage()"
-          class="nav-link d-none d-md-flex align-items-center h-100 px-md-3 px-2 text-nowrap">
-          <img class="rounded-circle"
-            style="width:26px"
-            *ngIf="currentLang == 'en-US'"
-            src="assets/params/images/lang/viet-nam.png" />
-          <img class="rounded-circle"
-            style="width:26px"
-            *ngIf="currentLang == 'vi-VN'"
-            src="assets/params/images/lang/english.png" />
-        </a>
-
-        <a href="javascript:void(0);"
-          (click)="toggleTheme()"
-          class="nav-link d-none d-md-flex align-items-center h-100">
-          <i *ngIf="currentTheme == 'light'"
-            class="far fa-moon px-md-3 fa-lg"></i>
-          <i *ngIf="currentTheme == 'dark'"
-            class="fas fa-sun px-md-3 fa-lg"></i>
-        </a>
-
-        <a href="javascript:void(0);"
-          (click)="isMenuVisible = !isMenuVisible"
-          class="nav-link d-flex d-md-none align-items-center h-100 px-2">
-          <i *ngIf="!isMenuVisible" class="fas fa-bars px-sm-2 fa-lg"
-            style="width: 26px"></i>
-          <i *ngIf="isMenuVisible" class="fas fa-times px-sm-2 fa-lg"
-            style="width: 26px"></i>
-        </a>
+<!-- Mobile Menu -->
+<div class="mobile-menu" 
+     *ngIf="isMenuVisible"
+     [@slideInOut]>
+  
+  <!-- Menu Header -->
+  <div class="mobile-menu-header">
+    <div class="mobile-brand">
+      <img [src]="user?.avatar" class="mobile-avatar" alt="Profile">
+      <div class="mobile-brand-text">
+        <h4 class="mobile-name">{{ user?.name }}</h4>
+        <p class="mobile-title">Software Engineer</p>
       </div>
     </div>
   </div>
 
-</div>
-
-<div id="nav-menu-mobile" *ngIf="isMenuVisible"
-  style="margin-top: 1px; z-index: 999;"
-  class="position-fixed mt-5 pt-2 top-0 start-0 end-0 bottom-0">
-  <a *ngFor="let menu of menus" [routerLink]="menu?.link"
-    (click)="isMenuVisible = !isMenuVisible"
-    class="nav-link text-decoration-none px-4 py-3 text-nowrap">
-    <i [class]="menu?.icon + ' me-4'" style="width: 10px"></i>
-    <span>{{ menu?.label }}</span>
-  </a>
-
-  <div id="nav-other-mobile" class="mt-2">
-    <a href="javascript:void(0);"
-      (click)="switchLanguage()"
-      class="nav-link d-flex align-items-center text-decoration-none px-4 py-3 text-nowrap">
-      <ng-container *ngIf="currentLang == 'vi-VN'; else englishBlock">
-        <img class="rounded-circle"
-          style="width:26px"
-          src="assets/params/images/lang/english.png" />
-        <span class="ms-4">English</span>
-      </ng-container>
-
-      <ng-template #englishBlock>
-        <img class="rounded-circle"
-          style="width:26px"
-          src="assets/params/images/lang/viet-nam.png" />
-        <span class="ms-4">Tiếng Việt</span>
-      </ng-template>
+  <!-- Navigation Items -->
+  <nav class="mobile-nav">
+    <a *ngFor="let menu of menus; let i = index" 
+       [routerLink]="menu?.link"
+       (click)="isMenuVisible = false"
+       class="mobile-nav-item d-flex align-items-center text-decoration-none"
+       [class.active]="isActiveRoute(menu?.link)"
+       [@fadeInUp]="{ value: '', params: { delay: i * 100 } }">
+      <div class="mobile-nav-icon">
+        <i [class]="menu?.icon"></i>
+      </div>
+      <span class="mobile-nav-label">{{ menu?.label }}</span>
+      <div class="mobile-nav-indicator"></div>
     </a>
+  </nav>
 
-    <a href="javascript:void(0);"
-      (click)="toggleTheme()"
-      class="nav-link text-decoration-none px-4 py-3 text-nowrap">
-      <ng-container *ngIf="currentTheme == 'light'; else themeDark">
-        <i class="far fa-moon fa-lg"></i>
-        <span class="ms-4">{{ 'common.theme.dark' | translate }}</span>
-      </ng-container>
-      <ng-template #themeDark>
-        <i class="fas fa-sun fa-lg"></i>
-        <span class="ms-4">{{ 'common.theme.light' | translate }}</span>
-      </ng-template>
-    </a>
+  <!-- Action Buttons -->
+  <div class="mobile-actions">
+    <button class="mobile-action-btn" 
+            (click)="switchLanguage()">
+      <div class="mobile-action-icon">
+        <img class="mobile-flag-img"
+             *ngIf="currentLang == 'en-US'"
+             src="assets/params/images/lang/viet-nam.png" 
+             alt="Vietnam Flag" />
+        <img class="mobile-flag-img"
+             *ngIf="currentLang == 'vi-VN'"
+             src="assets/params/images/lang/english.png" 
+             alt="English Flag" />
+      </div>
+      <span class="mobile-action-label">
+        {{ currentLang === 'en-US' ? 'Tiếng Việt' : 'English' }}
+      </span>
+    </button>
+
+    <button class="mobile-action-btn" 
+            (click)="toggleTheme()">
+      <div class="mobile-action-icon">
+        <i *ngIf="currentTheme == 'light'" class="far fa-moon"></i>
+        <i *ngIf="currentTheme == 'dark'" class="fas fa-sun"></i>
+      </div>
+      <span class="mobile-action-label">
+        {{ currentTheme === 'light' ? 'Dark Mode' : 'Light Mode' }}
+      </span>
+    </button>
   </div>
 </div>

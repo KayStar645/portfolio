@@ -1,0 +1,22 @@
+// App Layout Styles
+main {
+  min-height: calc(100vh - 80px); // Ensure main takes full height minus header
+  position: relative;
+  z-index: 1;
+}
+
+// Ensure header stays on top
+app-header {
+  position: relative;
+  z-index: 99999;
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Prevent content from going under fixed header
+body {
+  padding-top: 0; // We handle spacing with main margin-top
+}

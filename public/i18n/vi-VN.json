@@ -15,7 +15,9 @@
       "projects": "Dự án",
       "projects_desc": "Các dự án thực tế đã thực hiện",
       "achievements": "Thành tích",
-      "achievements_desc": "Giải thưởng và nghiên cứu khoa học"
+      "achievements_desc": "Giải thưởng và nghiên cứu khoa học",
+      "education": "Học vấn",
+      "education_desc": "Quá trình học tập và bằng cấp của tôi"
     }
   },
   "skill": {
@@ -96,6 +98,14 @@
         "time": "04/2024"
       },
       "award3": {
+        "name": "Tìm kiếm tài năng CNTT - Website",
+        "event": "Trường Đại học Công Nghệ TP.HCM (HUTECH)",
+        "role": "Trưởng nhóm",
+        "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
+        "team_members": "Phạm Tấn Thuận, Ngô Văn Sơn",
+        "time": "12/2023"
+      },
+      "award4": {
         "name": "Cuộc thi sinh viên NCKH cấp Khoa CNTT",
         "event": "Trường Đại học Công Thương TP.HCM",
         "role": "Trưởng nhóm",
@@ -103,21 +113,13 @@
         "team_members": "Phạm Tấn Thuận, Ngô Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
         "time": "04/2023"
       },
-      "award4": {
+      "award5": {
         "name": "Tìm kiếm tài năng và sản phẩm sáng tạo CNTT trong kỷ nguyên số",
         "event": "Trường Đại học Công Thương TP.HCM",
         "role": "Trưởng nhóm",
         "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
         "team_members": "Phạm Tấn Thuận, Nguyễn Nương Hồng Thắm, Nguyễn Tấn Phát, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
         "time": "06/2022"
-      },
-      "award5": {
-        "name": "Tìm kiếm tài năng CNTT - Website",
-        "event": "Trường Đại học Công Nghệ TP.HCM (HUTECH)",
-        "role": "Trưởng nhóm",
-        "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
-        "team_members": "Phạm Tấn Thuận, Ngô Văn Sơn",
-        "time": "12/2023"
       }
     },
     "status": {
@@ -188,7 +190,7 @@
     "title_suffix": "Chuyên môn",
     "subtitle": "Hành trình học vấn và phát triển chuyên môn của tôi",
     "master": {
-      "confidence": "Thạc sĩ",
+      "label": "Thạc sĩ",
       "name": "Thạc sĩ Công nghệ thông tin",
       "specialization": "Định hướng Ứng dụng",
       "university": "Trường Đại học Công Thương TP.HCM (HUIT)",
