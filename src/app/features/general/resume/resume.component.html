@@ -6,7 +6,24 @@
       <h1 class="resume-title">{{ 'resume.title' | translate }}</h1>
       <p class="resume-subtitle">{{ 'resume.subtitle' | translate }}</p>
       
-      <!-- Download Button -->
+      <!-- View Mode Toggle -->
+      <div class="view-mode-toggle mb-3">
+        <button 
+          class="mode-btn" 
+          [class.active]="viewMode === 'web'"
+          (click)="setViewMode('web')">
+          <i class="fas fa-desktop me-2"></i>
+          Web View
+        </button>
+        <button 
+          class="mode-btn" 
+          [class.active]="viewMode === 'pdf'"
+          (click)="setViewMode('pdf')">
+          <i class="fas fa-file-pdf me-2"></i>
+          PDF Preview
+        </button>
+      </div>
+      
       <button class="download-btn" (click)="downloadPDF()">
         <i class="fas fa-download me-2"></i>
         {{ 'resume.download_pdf' | translate }}
@@ -14,260 +31,568 @@
     </div>
 
     <!-- Resume Content -->
-    <div class="resume-content" id="resume-content">
+    <div class="resume-content" [class.pdf-mode]="viewMode === 'pdf'" [class.web-mode]="viewMode === 'web'" id="resume-content">
       
-      <!-- Personal Info Section -->
-      <div class="resume-card personal-info-card">
-        <div class="row align-items-center">
-          <div class="col-md-3 text-center">
-            <img [src]="user?.avatar" alt="Profile" class="profile-photo">
-          </div>
-          <div class="col-md-9">
-            <h2 class="name">{{ user?.name }}</h2>
-            <p class="job-title">{{ 'header.job_title' | translate }}</p>
-            <div class="contact-info">
-              <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <span>thuanpt182&#64;gmail.com</span>
+
+      <!-- Web View Layout -->
+      <div class="web-layout" *ngIf="viewMode === 'web'">
+        <!-- Row 1: Combined Personal Info + About + Skills -->
+        <div class="layout-row full-width">
+          <div class="resume-card combined-card">
+            <!-- Top Section: Name/Photo (Left) + Contact Info (Right) -->
+            <div class="combined-top">
+              <div class="combined-left">
+                <div class="name-photo-section">
+                  <div class="profile-photo-section">
+                    <img [src]="user?.avatar || 'assets/params/images/info/avatar.jpg'" alt="Profile" class="profile-photo">
+                  </div>
+                  <h2 class="name">{{ user?.name || 'Phạm Tấn Thuận' }}</h2>
+                  <p class="job-title">{{ 'header.job_title' | translate }}</p>
+                </div>
               </div>
-              <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <span>0329641343</span>
+              
+              <div class="combined-right">
+                <div class="contact-info-section">
+                  <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>thuanpt182&#64;gmail.com</span>
+                  </div>
+                  <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>0329641343</span>
+                  </div>
+                  <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>19 Đ. Số 47-CL, Cát Lái, Thủ Đức, Hồ Chí Minh</span>
+                  </div>
+                </div>
               </div>
-              <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>19 Đ. Số 47-CL, Cát Lái, Thủ Đức, Hồ Chí Minh</span>
+            </div>
+            
+            <!-- Middle Section: About (Full Width) -->
+            <div class="combined-middle">
+              <div class="about-section">
+                <p class="about-text">{{ 'resume.about_description' | translate }}</p>
+              </div>
+            </div>
+            
+            <!-- Bottom Section: Skills (Full Width) -->
+            <div class="combined-bottom">
+              <div class="skills-grid">
+                <div class="skill-category">
+                  <h4>{{ 'resume.tech_stack' | translate }}</h4>
+                  <div class="skill-tags">
+                    <span class="skill-tag">.NET Core (AutoMapper, FluentValidation, MediatR, Sieve)</span>
+                    <span class="skill-tag">Laravel, React, Vue.js</span>
+                    <span class="skill-tag">SQL Server, MySQL, PostgreSQL</span>
+                    <span class="skill-tag">Clean/Onion Architecture, Microservices, CQRS, SOLID</span>
+                    <span class="skill-tag">Dependency Injection, CI/CD, Docker</span>
+                    <span class="skill-tag">RESTful API, gRPC</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- About Section -->
-      <div class="resume-card">
-        <h3 class="section-title">
-          <i class="fas fa-user"></i>
-          {{ 'resume.about' | translate }}
-        </h3>
-        <p class="about-text">{{ 'resume.about_description' | translate }}</p>
-      </div>
-
-      <!-- Skills Section -->
-      <div class="resume-card">
-        <h3 class="section-title">
-          <i class="fas fa-code"></i>
-          {{ 'resume.skills' | translate }}
-        </h3>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h4>{{ 'resume.tech_stack' | translate }}</h4>
-            <div class="skill-tags">
-              <span class="skill-tag">.NET Core (AutoMapper, FluentValidation, MediatR, Sieve)</span>
-              <span class="skill-tag">Laravel, React, Vue.js</span>
-              <span class="skill-tag">SQL Server, MySQL, PostgreSQL</span>
-              <span class="skill-tag">Clean/Onion Architecture, Microservices, CQRS, SOLID</span>
-              <span class="skill-tag">Dependency Injection, CI/CD, Docker</span>
-              <span class="skill-tag">RESTful API, gRPC</span>
+        <!-- Row 3: Experience (Full Width) -->
+        <div class="layout-row full-width">
+          <div class="resume-card">
+            <h3 class="section-title">
+              <i class="fas fa-briefcase"></i>
+              {{ 'resume.experience' | translate }}
+            </h3>
+            <div class="experience-item">
+              <div class="experience-header">
+                <h4>{{ 'resume.experience_current_title' | translate }}</h4>
+                <span class="experience-period">{{ 'resume.experience_current_time' | translate }}</span>
+              </div>
+              <p class="company">{{ 'resume.experience_current_company' | translate }}</p>
+              <ul class="experience-list">
+                <li>{{ 'resume.experience_current_1' | translate }}</li>
+                <li>{{ 'resume.experience_current_2' | translate }}</li>
+                <li>{{ 'resume.experience_current_3' | translate }}</li>
+                <li>{{ 'resume.experience_current_4' | translate }}</li>
+                <li>{{ 'resume.experience_current_5' | translate }}</li>
+              </ul>
+            </div>
+            
+            <div class="experience-item">
+              <div class="experience-header">
+                <h4>{{ 'resume.experience_previous_title' | translate }}</h4>
+                <span class="experience-period">{{ 'resume.experience_previous_time' | translate }}</span>
+              </div>
+              <p class="company">{{ 'resume.experience_previous_company' | translate }}</p>
+              <ul class="experience-list">
+                <li>{{ 'resume.experience_previous_1' | translate }}</li>
+                <li>{{ 'resume.experience_previous_2' | translate }}</li>
+                <li>{{ 'resume.experience_previous_3' | translate }}</li>
+                <li>{{ 'resume.experience_previous_4' | translate }}</li>
+              </ul>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Experience Section -->
-      <div class="resume-card">
-        <h3 class="section-title">
-          <i class="fas fa-briefcase"></i>
-          {{ 'resume.experience' | translate }}
-        </h3>
-        <div class="experience-item">
-          <div class="experience-header">
-            <h4>{{ 'resume.experience_current_title' | translate }}</h4>
-            <span class="experience-period">{{ 'resume.experience_current_time' | translate }}</span>
+        <!-- Row 4: Education (Left) + Certificates (Right) -->
+        <div class="layout-row">
+          <div class="layout-column left-column">
+            <!-- Education Section -->
+            <div class="resume-card">
+              <h3 class="section-title">
+                <i class="fas fa-graduation-cap"></i>
+                Học vấn
+              </h3>
+              
+              <!-- English Business Degree -->
+              <div class="education-item">
+                <div class="education-header">
+                  <h4>{{ 'education.language.name' | translate }}</h4>
+                  <span class="education-period">{{ 'education.language.time' | translate }}</span>
+                </div>
+                <p class="university">{{ 'education.language.university' | translate }}</p>
+                <p class="specialization">{{ 'education.language.specialization' | translate }}</p>
+              </div>
+              
+              <!-- Master's Degree -->
+              <div class="education-item">
+                <div class="education-header">
+                  <h4>{{ 'education.master.name' | translate }}</h4>
+                  <span class="education-period">{{ 'education.master.time' | translate }}</span>
+                </div>
+                <p class="university">{{ 'education.master.university' | translate }}</p>
+                <p class="specialization">{{ 'education.master.specialization' | translate }}</p>
+              </div>
+              
+              <!-- Engineering Degree -->
+              <div class="education-item">
+                <div class="education-header">
+                  <h4>{{ 'education.engineer.name' | translate }}</h4>
+                  <span class="education-period">{{ 'education.engineer.time' | translate }}</span>
+                </div>
+                <p class="university">{{ 'education.engineer.university' | translate }}</p>
+                <p class="specialization">{{ 'education.engineer.specialization' | translate }}</p>
+              </div>
+              
+              <!-- Bachelor's Degree -->
+              <div class="education-item">
+                <div class="education-header">
+                  <h4>{{ 'education.bachelor.name' | translate }}</h4>
+                  <span class="education-period">{{ 'education.bachelor.time' | translate }}</span>
+                </div>
+                <p class="university">{{ 'education.bachelor.university' | translate }}</p>
+                <p class="specialization">{{ 'education.bachelor.specialization' | translate }}</p>
+              </div>
+            </div>
           </div>
-          <p class="company">{{ 'resume.experience_current_company' | translate }}</p>
-          <ul class="experience-list">
-            <li>{{ 'resume.experience_current_1' | translate }}</li>
-            <li>{{ 'resume.experience_current_2' | translate }}</li>
-            <li>{{ 'resume.experience_current_3' | translate }}</li>
-            <li>{{ 'resume.experience_current_4' | translate }}</li>
-            <li>{{ 'resume.experience_current_5' | translate }}</li>
-          </ul>
-        </div>
-        
-        <div class="experience-item">
-          <div class="experience-header">
-            <h4>{{ 'resume.experience_previous_title' | translate }}</h4>
-            <span class="experience-period">{{ 'resume.experience_previous_time' | translate }}</span>
+          
+          <div class="layout-column right-column">
+            <!-- Certificates Section -->
+            <div class="resume-card">
+              <h3 class="section-title">
+                <i class="fas fa-certificate"></i>
+                {{ 'education.certificates.title' | translate }}
+              </h3>
+              
+              <div class="certificates-grid">
+                <!-- Pedagogy Certificate -->
+                <div class="certificate-item">
+                  <div class="certificate-header">
+                    <h4>{{ 'education.certificates.pedagogy.name' | translate }}</h4>
+                    <span class="certificate-period">{{ 'education.certificates.pedagogy.time' | translate }}</span>
+                  </div>
+                  <p class="certificate-institution">{{ 'education.certificates.pedagogy.university' | translate }}</p>
+                  <p class="certificate-grade">{{ 'education.certificates.pedagogy.grade' | translate }}</p>
+                </div>
+                
+                <!-- English Certificate -->
+                <div class="certificate-item">
+                  <div class="certificate-header">
+                    <h4>{{ 'education.certificates.english.name' | translate }}</h4>
+                    <span class="certificate-period">{{ 'education.certificates.english.time' | translate }}</span>
+                  </div>
+                  <p class="certificate-level">{{ 'education.certificates.english.level' | translate }}</p>
+                  <p class="certificate-framework">{{ 'education.certificates.english.framework' | translate }}</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <p class="company">{{ 'resume.experience_previous_company' | translate }}</p>
-          <ul class="experience-list">
-            <li>{{ 'resume.experience_previous_1' | translate }}</li>
-            <li>{{ 'resume.experience_previous_2' | translate }}</li>
-            <li>{{ 'resume.experience_previous_3' | translate }}</li>
-            <li>{{ 'resume.experience_previous_4' | translate }}</li>
-          </ul>
         </div>
-      </div>
 
-      <!-- Education Section -->
-      <div class="resume-card">
-        <h3 class="section-title">
-          <i class="fas fa-graduation-cap"></i>
-          {{ 'education.title_prefix' | translate }} {{ 'education.title_suffix' | translate }}
-        </h3>
-        
-        <!-- English Business Degree -->
-        <div class="education-item">
-          <div class="education-header">
-            <h4>{{ 'education.language.name' | translate }}</h4>
-            <span class="education-period">{{ 'education.language.time' | translate }}</span>
+        <!-- Row 5: Research (Full Width) -->
+        <div class="layout-row full-width">
+          <div class="resume-card">
+            <h3 class="section-title">
+              <i class="fas fa-microscope"></i>
+              Nghiên cứu khoa học
+            </h3>
+            
+            <div class="research-grid">
+              <div class="research-item">
+                <div class="research-header">
+                  <h4>Đang thực hiện</h4>
+                  <span class="research-period">07/2025 - 06/2026</span>
+                </div>
+                <p class="research-title">"Khai thác tập hữu ích cao chéo trên cơ sở dữ liệu giao dịch động có lợi ích âm"</p>
+                <p class="research-role">Vai trò: <strong>Chủ nhiệm đề tài</strong></p>
+                <p class="research-desc">Thành viên: Trần Dương Gia Bảo, Trần Gia Bảo</p>
+              </div>
+              
+              <div class="research-item">
+                <div class="research-header">
+                  <h4>Đang thực hiện</h4>
+                  <span class="research-period">07/2025 - 06/2026</span>
+                </div>
+                <p class="research-title">"Xây dựng hệ thống phân tích cảm xúc theo khía cạnh sử dụng Knowledge Graph"</p>
+                <p class="research-role">Vai trò: <strong>Thành viên chính</strong></p>
+                <p class="research-desc">Chủ nhiệm: Nguyễn Thị Hồng Quyên | Thành viên: Phạm Tấn Thuận, Đoàn Tấn Minh Tân, Nguyễn Hữu Thắng</p>
+              </div>
+              
+              <div class="research-item">
+                <div class="research-header">
+                  <h4>Đã hoàn thành</h4>
+                  <span class="research-period">12/2022 - 06/2023</span>
+                </div>
+                <p class="research-title">"Xây dựng hệ thống xử lý tiến trình khóa luận tốt nghiệp"</p>
+                <p class="research-role">Vai trò: <strong>Chủ nhiệm đề tài</strong></p>
+                <p class="research-desc">Điểm: 80/100 - Tốt | Thành viên: Ngô Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch</p>
+              </div>
+            </div>
           </div>
-          <p class="university">{{ 'education.language.university' | translate }}</p>
-          <p class="specialization">{{ 'education.language.specialization' | translate }}</p>
         </div>
-        
-        <!-- Master's Degree -->
-        <div class="education-item">
-          <div class="education-header">
-            <h4>{{ 'education.master.name' | translate }}</h4>
-            <span class="education-period">{{ 'education.master.time' | translate }}</span>
-          </div>
-          <p class="university">{{ 'education.master.university' | translate }}</p>
-          <p class="specialization">{{ 'education.master.specialization' | translate }}</p>
-        </div>
-        
-        <!-- Engineering Degree -->
-        <div class="education-item">
-          <div class="education-header">
-            <h4>{{ 'education.engineer.name' | translate }}</h4>
-            <span class="education-period">{{ 'education.engineer.time' | translate }}</span>
-          </div>
-          <p class="university">{{ 'education.engineer.university' | translate }}</p>
-          <p class="specialization">{{ 'education.engineer.specialization' | translate }}</p>
-        </div>
-        
-        <!-- Bachelor's Degree -->
-        <div class="education-item">
-          <div class="education-header">
-            <h4>{{ 'education.bachelor.name' | translate }}</h4>
-            <span class="education-period">{{ 'education.bachelor.time' | translate }}</span>
-          </div>
-          <p class="university">{{ 'education.bachelor.university' | translate }}</p>
-          <p class="specialization">{{ 'education.bachelor.specialization' | translate }}</p>
-        </div>
-      </div>
 
-      <!-- Certificates Section -->
-      <div class="resume-card">
-        <h3 class="section-title">
-          <i class="fas fa-certificate"></i>
-          {{ 'education.certificates.title' | translate }}
-        </h3>
-        
-        <!-- Pedagogy Certificate -->
-        <div class="education-item">
-          <div class="education-header">
-            <h4>{{ 'education.certificates.pedagogy.name' | translate }}</h4>
-            <span class="education-period">{{ 'education.certificates.pedagogy.time' | translate }}</span>
-          </div>
-          <p class="university">{{ 'education.certificates.pedagogy.university' | translate }}</p>
-          <p class="specialization">{{ 'education.certificates.pedagogy.grade' | translate }}</p>
-        </div>
-        
-        <!-- English Certificate -->
-        <div class="education-item">
-          <div class="education-header">
-            <h4>{{ 'education.certificates.english.name' | translate }}</h4>
-            <span class="education-period">{{ 'education.certificates.english.time' | translate }}</span>
-          </div>
-          <p class="university">{{ 'education.certificates.english.level' | translate }}</p>
-          <p class="specialization">{{ 'education.certificates.english.framework' | translate }}</p>
-        </div>
-      </div>
-
-      <!-- Achievements Section -->
-      <div class="resume-card">
-        <h3 class="section-title">
-          <i class="fas fa-trophy"></i>
-          {{ 'resume.achievements' | translate }}
-        </h3>
-        <div class="achievements-grid">
-          <!-- 2024 - Giải nhất NCKH cấp Trường -->
-          <div class="achievement-item">
-            <div class="achievement-icon first-place">
+        <!-- Row 6: Achievements (Full Width) -->
+        <div class="layout-row full-width">
+          <div class="resume-card">
+            <h3 class="section-title">
               <i class="fas fa-trophy"></i>
-            </div>
-            <div class="achievement-content">
-              <h4>{{ 'resume.achievement_1_title' | translate }}</h4>
-              <p>{{ 'resume.achievement_1_desc' | translate }}</p>
-              <span class="achievement-year">2024</span>
+              {{ 'resume.achievements' | translate }}
+            </h3>
+            <div class="achievements-grid">
+              <!-- 2024 - Giải nhất NCKH cấp Trường -->
+              <div class="achievement-item">
+                <div class="achievement-icon first-place">
+                  <i class="fas fa-trophy"></i>
+                </div>
+                <div class="achievement-content">
+                  <h4>{{ 'resume.achievement_1_title' | translate }}</h4>
+                  <p>{{ 'resume.achievement_1_desc' | translate }}</p>
+                  <span class="achievement-year">2024</span>
+                </div>
+              </div>
+              
+              <!-- 2024 - Giải nhì NCKH cấp Khoa -->
+              <div class="achievement-item">
+                <div class="achievement-icon second-place">
+                  <i class="fas fa-medal"></i>
+                </div>
+                <div class="achievement-content">
+                  <h4>{{ 'resume.achievement_2_title' | translate }}</h4>
+                  <p>{{ 'resume.achievement_2_desc' | translate }}</p>
+                  <span class="achievement-year">2024</span>
+                </div>
+              </div>
+              
+              <!-- 2023 - Giải nhất NCKH cấp Khoa -->
+              <div class="achievement-item">
+                <div class="achievement-icon first-place">
+                  <i class="fas fa-trophy"></i>
+                </div>
+                <div class="achievement-content">
+                  <h4>{{ 'resume.achievement_4_title' | translate }}</h4>
+                  <p>{{ 'resume.achievement_4_desc' | translate }}</p>
+                  <span class="achievement-year">2023</span>
+                </div>
+              </div>
+              
+              <!-- 2023 - Giải khuyến khích Tìm kiếm tài năng CNTT -->
+              <div class="achievement-item">
+                <div class="achievement-icon second-place">
+                  <i class="fas fa-medal"></i>
+                </div>
+                <div class="achievement-content">
+                  <h4>{{ 'resume.achievement_5_title' | translate }}</h4>
+                  <p>{{ 'resume.achievement_5_desc' | translate }}</p>
+                  <span class="achievement-year">2023</span>
+                </div>
+              </div>
+              
+              <!-- 2022 - Giải nhì Tìm kiếm tài năng CNTT -->
+              <div class="achievement-item">
+                <div class="achievement-icon second-place">
+                  <i class="fas fa-medal"></i>
+                </div>
+                <div class="achievement-content">
+                  <h4>{{ 'resume.achievement_3_title' | translate }}</h4>
+                  <p>{{ 'resume.achievement_3_desc' | translate }}</p>
+                  <span class="achievement-year">2022</span>
+                </div>
+              </div>
             </div>
           </div>
-          
-          <!-- 2024 - Giải nhì NCKH cấp Khoa -->
-          <div class="achievement-item">
-            <div class="achievement-icon second-place">
-              <i class="fas fa-medal"></i>
-            </div>
-            <div class="achievement-content">
-              <h4>{{ 'resume.achievement_2_title' | translate }}</h4>
-              <p>{{ 'resume.achievement_2_desc' | translate }}</p>
-              <span class="achievement-year">2024</span>
-            </div>
-          </div>
-          
-          <!-- 2023 - Giải nhất NCKH cấp Khoa -->
-          <div class="achievement-item">
-            <div class="achievement-icon first-place">
-              <i class="fas fa-trophy"></i>
-            </div>
-            <div class="achievement-content">
-              <h4>{{ 'resume.achievement_4_title' | translate }}</h4>
-              <p>{{ 'resume.achievement_4_desc' | translate }}</p>
-              <span class="achievement-year">2023</span>
-            </div>
-          </div>
-          
-          <!-- 2023 - Giải khuyến khích Tìm kiếm tài năng CNTT -->
-          <div class="achievement-item">
-            <div class="achievement-icon second-place">
-              <i class="fas fa-medal"></i>
-            </div>
-            <div class="achievement-content">
-              <h4>{{ 'resume.achievement_5_title' | translate }}</h4>
-              <p>{{ 'resume.achievement_5_desc' | translate }}</p>
-              <span class="achievement-year">2023</span>
-            </div>
-          </div>
-          
-          <!-- 2022 - Giải nhì Tìm kiếm tài năng CNTT -->
-          <div class="achievement-item">
-            <div class="achievement-icon second-place">
-              <i class="fas fa-medal"></i>
-            </div>
-            <div class="achievement-content">
-              <h4>{{ 'resume.achievement_3_title' | translate }}</h4>
-              <p>{{ 'resume.achievement_3_desc' | translate }}</p>
-              <span class="achievement-year">2022</span>
+        </div>
+
+        <!-- Row 7: Languages (Full Width) -->
+        <div class="layout-row full-width">
+          <div class="resume-card">
+            <h3 class="section-title">
+              <i class="fas fa-language"></i>
+              {{ 'resume.languages' | translate }}
+            </h3>
+            <div class="languages-grid">
+              <div class="language-item">
+                <span class="language-name">{{ 'resume.vietnamese' | translate }}</span>
+                <span class="language-level">{{ 'resume.native' | translate }}</span>
+              </div>
+              <div class="language-item">
+                <span class="language-name">{{ 'resume.english' | translate }}</span>
+                <span class="language-level">{{ 'resume.intermediate' | translate }}</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Languages Section -->
-      <div class="resume-card">
-        <h3 class="section-title">
-          <i class="fas fa-language"></i>
-          {{ 'resume.languages' | translate }}
-        </h3>
-        <div class="languages-grid">
-          <div class="language-item">
-            <span class="language-name">{{ 'resume.vietnamese' | translate }}</span>
-            <span class="language-level">{{ 'resume.native' | translate }}</span>
+      <!-- PDF Mode - Single Column Layout -->
+      <div class="pdf-layout" *ngIf="viewMode === 'pdf'">
+
+        <!-- PDF Mode Content - Single Column -->
+        <!-- About Section -->
+        <div class="resume-card">
+          <h3 class="section-title">
+            <i class="fas fa-user"></i>
+            {{ 'resume.about' | translate }}
+          </h3>
+          <p class="about-text">{{ 'resume.about_description' | translate }}</p>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="resume-card">
+          <h3 class="section-title">
+            <i class="fas fa-code"></i>
+            {{ 'resume.skills' | translate }}
+          </h3>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4>{{ 'resume.tech_stack' | translate }}</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">.NET Core (AutoMapper, FluentValidation, MediatR, Sieve)</span>
+                <span class="skill-tag">Laravel, React, Vue.js</span>
+                <span class="skill-tag">SQL Server, MySQL, PostgreSQL</span>
+                <span class="skill-tag">Clean/Onion Architecture, Microservices, CQRS, SOLID</span>
+                <span class="skill-tag">Dependency Injection, CI/CD, Docker</span>
+                <span class="skill-tag">RESTful API, gRPC</span>
+              </div>
+            </div>
           </div>
-          <div class="language-item">
-            <span class="language-name">{{ 'resume.english' | translate }}</span>
-            <span class="language-level">{{ 'resume.intermediate' | translate }}</span>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="resume-card">
+          <h3 class="section-title">
+            <i class="fas fa-briefcase"></i>
+            {{ 'resume.experience' | translate }}
+          </h3>
+          <div class="experience-item">
+            <div class="experience-header">
+              <h4>{{ 'resume.experience_current_title' | translate }}</h4>
+              <span class="experience-period">{{ 'resume.experience_current_time' | translate }}</span>
+            </div>
+            <p class="company">{{ 'resume.experience_current_company' | translate }}</p>
+            <ul class="experience-list">
+              <li>{{ 'resume.experience_current_1' | translate }}</li>
+              <li>{{ 'resume.experience_current_2' | translate }}</li>
+              <li>{{ 'resume.experience_current_3' | translate }}</li>
+              <li>{{ 'resume.experience_current_4' | translate }}</li>
+            </ul>
+          </div>
+          
+          <div class="experience-item">
+            <div class="experience-header">
+              <h4>{{ 'resume.experience_previous_title' | translate }}</h4>
+              <span class="experience-period">{{ 'resume.experience_previous_time' | translate }}</span>
+            </div>
+            <p class="company">{{ 'resume.experience_previous_company' | translate }}</p>
+            <ul class="experience-list">
+              <li>{{ 'resume.experience_previous_1' | translate }}</li>
+              <li>{{ 'resume.experience_previous_2' | translate }}</li>
+              <li>{{ 'resume.experience_previous_3' | translate }}</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="resume-card">
+          <h3 class="section-title">
+            <i class="fas fa-graduation-cap"></i>
+            {{ 'education.title_prefix' | translate }} {{ 'education.title_suffix' | translate }}
+          </h3>
+          
+          <!-- English Business Degree -->
+          <div class="education-item">
+            <div class="education-header">
+              <h4>{{ 'education.language.name' | translate }}</h4>
+              <span class="education-period">{{ 'education.language.time' | translate }}</span>
+            </div>
+            <p class="university">{{ 'education.language.university' | translate }}</p>
+            <p class="specialization">{{ 'education.language.specialization' | translate }}</p>
+          </div>
+          
+          <!-- Master's Degree -->
+          <div class="education-item">
+            <div class="education-header">
+              <h4>{{ 'education.master.name' | translate }}</h4>
+              <span class="education-period">{{ 'education.master.time' | translate }}</span>
+            </div>
+            <p class="university">{{ 'education.master.university' | translate }}</p>
+            <p class="specialization">{{ 'education.master.specialization' | translate }}</p>
+          </div>
+          
+          <!-- Engineering Degree -->
+          <div class="education-item">
+            <div class="education-header">
+              <h4>{{ 'education.engineer.name' | translate }}</h4>
+              <span class="education-period">{{ 'education.engineer.time' | translate }}</span>
+            </div>
+            <p class="university">{{ 'education.engineer.university' | translate }}</p>
+            <p class="specialization">{{ 'education.engineer.specialization' | translate }}</p>
+          </div>
+          
+          <!-- Bachelor's Degree -->
+          <div class="education-item">
+            <div class="education-header">
+              <h4>{{ 'education.bachelor.name' | translate }}</h4>
+              <span class="education-period">{{ 'education.bachelor.time' | translate }}</span>
+            </div>
+            <p class="university">{{ 'education.bachelor.university' | translate }}</p>
+            <p class="specialization">{{ 'education.bachelor.specialization' | translate }}</p>
+          </div>
+        </div>
+
+        <!-- Certificates Section -->
+        <div class="resume-card">
+          <h3 class="section-title">
+            <i class="fas fa-certificate"></i>
+            {{ 'education.certificates.title' | translate }}
+          </h3>
+          
+          <!-- Pedagogy Certificate -->
+          <div class="education-item">
+            <div class="education-header">
+              <h4>{{ 'education.certificates.pedagogy.name' | translate }}</h4>
+              <span class="education-period">{{ 'education.certificates.pedagogy.time' | translate }}</span>
+            </div>
+            <p class="university">{{ 'education.certificates.pedagogy.university' | translate }}</p>
+            <p class="specialization">{{ 'education.certificates.pedagogy.grade' | translate }}</p>
+          </div>
+          
+          <!-- English Certificate -->
+          <div class="education-item">
+            <div class="education-header">
+              <h4>{{ 'education.certificates.english.name' | translate }}</h4>
+              <span class="education-period">{{ 'education.certificates.english.time' | translate }}</span>
+            </div>
+            <p class="university">{{ 'education.certificates.english.level' | translate }}</p>
+            <p class="specialization">{{ 'education.certificates.english.framework' | translate }}</p>
+          </div>
+        </div>
+
+        <!-- Achievements Section -->
+        <div class="resume-card">
+          <h3 class="section-title">
+            <i class="fas fa-trophy"></i>
+            {{ 'resume.achievements' | translate }}
+          </h3>
+          <div class="achievements-grid">
+            <!-- 2024 - Giải nhất NCKH cấp Trường -->
+            <div class="achievement-item">
+              <div class="achievement-icon first-place">
+                <i class="fas fa-trophy"></i>
+              </div>
+              <div class="achievement-content">
+                <h4>{{ 'resume.achievement_1_title' | translate }}</h4>
+                <p>{{ 'resume.achievement_1_desc' | translate }}</p>
+                <span class="achievement-year">2024</span>
+              </div>
+            </div>
+            
+            <!-- 2023 - Giải nhất NCKH cấp Khoa -->
+            <div class="achievement-item">
+              <div class="achievement-icon first-place">
+                <i class="fas fa-trophy"></i>
+              </div>
+              <div class="achievement-content">
+                <h4>{{ 'resume.achievement_4_title' | translate }}</h4>
+                <p>{{ 'resume.achievement_4_desc' | translate }}</p>
+                <span class="achievement-year">2023</span>
+              </div>
+            </div>
+            
+            <!-- 2024 - Giải nhì NCKH cấp Khoa -->
+            <div class="achievement-item">
+              <div class="achievement-icon second-place">
+                <i class="fas fa-medal"></i>
+              </div>
+              <div class="achievement-content">
+                <h4>{{ 'resume.achievement_2_title' | translate }}</h4>
+                <p>{{ 'resume.achievement_2_desc' | translate }}</p>
+                <span class="achievement-year">2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research Section -->
+        <div class="resume-card">
+          <h3 class="section-title">
+            <i class="fas fa-microscope"></i>
+            Nghiên cứu khoa học
+          </h3>
+          
+          <div class="research-list">
+            <div class="research-item">
+              <div class="research-header">
+                <h4>Đang thực hiện</h4>
+                <span class="research-period">07/2025 - 06/2026</span>
+              </div>
+              <p class="research-title">"Khai thác tập hữu ích cao chéo trên cơ sở dữ liệu giao dịch động có lợi ích âm"</p>
+              <p class="research-role">Vai trò: <strong>Chủ nhiệm đề tài</strong></p>
+            </div>
+            
+            <div class="research-item">
+              <div class="research-header">
+                <h4>Đang thực hiện</h4>
+                <span class="research-period">07/2025 - 06/2026</span>
+              </div>
+              <p class="research-title">"Xây dựng hệ thống phân tích cảm xúc theo khía cạnh sử dụng Knowledge Graph"</p>
+              <p class="research-role">Vai trò: <strong>Thành viên chính</strong></p>
+            </div>
+            
+            <div class="research-item">
+              <div class="research-header">
+                <h4>Đã hoàn thành</h4>
+                <span class="research-period">12/2022 - 06/2023</span>
+              </div>
+              <p class="research-title">"Xây dựng hệ thống xử lý tiến trình khóa luận tốt nghiệp"</p>
+              <p class="research-role">Vai trò: <strong>Chủ nhiệm đề tài</strong> | Điểm: 80/100 - Tốt</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages Section -->
+        <div class="resume-card">
+          <h3 class="section-title">
+            <i class="fas fa-language"></i>
+            {{ 'resume.languages' | translate }}
+          </h3>
+          <div class="languages-grid">
+            <div class="language-item">
+              <span class="language-name">{{ 'resume.vietnamese' | translate }}</span>
+              <span class="language-level">{{ 'resume.native' | translate }}</span>
+            </div>
+            <div class="language-item">
+              <span class="language-name">{{ 'resume.english' | translate }}</span>
+              <span class="language-level">{{ 'resume.intermediate' | translate }}</span>
+            </div>
           </div>
         </div>
       </div>

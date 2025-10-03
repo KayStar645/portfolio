@@ -15,6 +15,7 @@ export class ResumeComponent implements OnInit {
   
   user: any = null;
   currentLang = 'vi-VN';
+  viewMode: 'web' | 'pdf' = 'web';
 
   ngOnInit() {
     this.userService.user$.subscribe(user => {
@@ -27,6 +28,10 @@ export class ResumeComponent implements OnInit {
     });
   }
 
+  setViewMode(mode: 'web' | 'pdf') {
+    this.viewMode = mode;
+  }
+
   downloadPDF() {
     // Create a new window for printing
     const printWindow = window.open('', '_blank');
@@ -36,9 +41,17 @@ export class ResumeComponent implements OnInit {
       return;
     }
 
-    // Get the resume content
-    const resumeContent = document.getElementById('resume-content');
-    if (!resumeContent) return;
+    // Temporarily switch to PDF mode to get the compact content
+    const originalMode = this.viewMode;
+    this.viewMode = 'pdf';
+    
+    // Wait for DOM to update
+    setTimeout(() => {
+      const resumeContent = document.getElementById('resume-content');
+      if (!resumeContent) {
+        this.viewMode = originalMode;
+        return;
+      }
 
     // Create the HTML content for printing
     const htmlContent = `
@@ -54,16 +67,21 @@ export class ResumeComponent implements OnInit {
               box-sizing: border-box;
             }
             
+            @page {
+              size: A4;
+              margin: 15mm;
+            }
+            
             body {
               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              line-height: 1.6;
+              line-height: 1.4;
               color: #333;
               background: white;
-              padding: 20px;
+              font-size: 12px;
             }
             
             .resume-content {
-              max-width: 800px;
+              max-width: 210mm;
               margin: 0 auto;
               background: white;
             }
@@ -71,68 +89,68 @@ export class ResumeComponent implements OnInit {
             .personal-info-card {
               display: flex;
               align-items: center;
-              gap: 20px;
-              padding: 20px;
-              border: 2px solid #8b5cf6;
-              border-radius: 10px;
-              margin-bottom: 20px;
+              gap: 15px;
+              padding: 15px;
+              border: 1px solid #8b5cf6;
+              border-radius: 8px;
+              margin-bottom: 15px;
               background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(255, 107, 53, 0.05));
             }
             
             .profile-photo {
-              width: 100px;
-              height: 100px;
+              width: 80px;
+              height: 80px;
               border-radius: 50%;
-              border: 3px solid #8b5cf6;
+              border: 2px solid #8b5cf6;
               object-fit: cover;
             }
             
             .name {
-              font-size: 24px;
+              font-size: 20px;
               font-weight: bold;
               color: #333;
-              margin-bottom: 5px;
+              margin-bottom: 3px;
             }
             
             .job-title {
-              font-size: 16px;
+              font-size: 14px;
               color: #8b5cf6;
               font-weight: 600;
-              margin-bottom: 15px;
+              margin-bottom: 10px;
             }
             
             .contact-info {
               display: flex;
               flex-direction: column;
-              gap: 5px;
+              gap: 3px;
             }
             
             .contact-item {
               display: flex;
               align-items: center;
-              gap: 8px;
-              font-size: 14px;
+              gap: 6px;
+              font-size: 11px;
               color: #666;
             }
             
             .resume-card {
-              margin-bottom: 20px;
-              padding: 20px;
+              margin-bottom: 15px;
+              padding: 15px;
               border: 1px solid #ddd;
-              border-radius: 8px;
+              border-radius: 6px;
               background: white;
             }
             
             .section-title {
-              font-size: 18px;
+              font-size: 16px;
               font-weight: bold;
               color: #333;
-              margin-bottom: 15px;
+              margin-bottom: 12px;
               display: flex;
               align-items: center;
-              gap: 8px;
+              gap: 6px;
               border-bottom: 2px solid #8b5cf6;
-              padding-bottom: 5px;
+              padding-bottom: 3px;
             }
             
             .skills-grid {
@@ -329,12 +347,15 @@ export class ResumeComponent implements OnInit {
     printWindow.document.write(htmlContent);
     printWindow.document.close();
 
-    // Wait for content to load then trigger print
-    printWindow.onload = () => {
-      setTimeout(() => {
-        printWindow.print();
-        printWindow.close();
-      }, 500);
-    };
-  }
+        // Wait for content to load then trigger print
+        printWindow.onload = () => {
+          setTimeout(() => {
+            printWindow.print();
+            printWindow.close();
+            // Restore original view mode
+            this.viewMode = originalMode;
+          }, 500);
+        };
+      }, 100);
+    }
 }
