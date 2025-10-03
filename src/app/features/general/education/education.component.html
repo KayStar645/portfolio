@@ -17,7 +17,7 @@
       <div class="education-item language">
         <div class="education-card">
           <div class="education-icon">
-            <i class="fas fa-language"></i>
+            <i class="fas fa-book"></i>
           </div>
           <div class="education-content">
             <div class="education-meta">
@@ -29,7 +29,7 @@
             </div>
             <h3 class="education-title-text">{{ 'education.language.name' | translate }}</h3>
             <p class="education-specialization">
-              <i class="fas fa-briefcase me-2"></i>
+              <i class="fas fa-code me-2"></i>
               {{ 'education.language.specialization' | translate }}
             </p>
             <p class="education-institution">
@@ -37,8 +37,8 @@
               {{ 'education.language.university' | translate }}
             </p>
             <div class="education-description">
-              <span class="focus-tag">
-                <i class="fas fa-briefcase me-1"></i>
+              <span class="gpa-tag">
+                <i class="fas fa-medal me-1"></i>
                 {{ 'education.language.focus' | translate }}
               </span>
             </div>
@@ -62,7 +62,7 @@
             </div>
             <h3 class="education-title-text">{{ 'education.master.name' | translate }}</h3>
             <p class="education-specialization">
-              <i class="fas fa-cog me-2"></i>
+              <i class="fas fa-code me-2"></i>
               {{ 'education.master.specialization' | translate }}
             </p>
             <p class="education-institution">
@@ -70,11 +70,10 @@
               {{ 'education.master.university' | translate }}
             </p>
             <div class="education-description">
-              <span class="achievement-tag">
-                <i class="fas fa-trophy me-1"></i>
-                {{ 'education.master.scholarship' | translate }}
+              <span class="gpa-tag">
+                <i class="fas fa-medal me-1"></i>
+                {{ 'education.master.gpa' | translate }}
               </span>
-              <span class="gpa-tag">{{ 'education.master.gpa' | translate }}</span>
             </div>
           </div>
         </div>
@@ -146,6 +145,74 @@
         </div>
       </div>
 
+    </div>
+
+    <!-- Certificates Section -->
+    <div class="certificates-section mt-5">
+      <div class="section-header text-center mb-4">
+        <h2 class="section-title">{{ 'education.certificates.title' | translate }}</h2>
+        <p class="section-subtitle">{{ 'education.certificates.subtitle' | translate }}</p>
+      </div>
+      
+      <div class="certificates-grid">
+        <!-- Pedagogy Certificate - First (10/2025) -->
+        <div class="certificate-item">
+          <div class="certificate-card">
+            <div class="certificate-icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <div class="certificate-content">
+              <div class="certificate-meta">
+                <span class="certificate-type badge pedagogy-badge">{{ 'education.certificates.pedagogy.type' | translate }}</span>
+                <span class="certificate-time">
+                  <i class="fas fa-calendar-alt me-1"></i>
+                  {{ 'education.certificates.pedagogy.time' | translate }}
+                </span>
+              </div>
+              <h3 class="certificate-title">{{ 'education.certificates.pedagogy.name' | translate }}</h3>
+              <p class="certificate-institution">
+                <i class="fas fa-university me-2"></i>
+                {{ 'education.certificates.pedagogy.university' | translate }}
+              </p>
+              <div class="certificate-description">
+                <span class="grade-tag">
+                  <i class="fas fa-trophy me-1"></i>
+                  {{ 'education.certificates.pedagogy.grade' | translate }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- English Certificate - Second (03/2025) -->
+        <div class="certificate-item">
+          <div class="certificate-card">
+            <div class="certificate-icon">
+              <i class="fas fa-language"></i>
+            </div>
+            <div class="certificate-content">
+              <div class="certificate-meta">
+                <span class="certificate-type badge english-badge">{{ 'education.certificates.english.type' | translate }}</span>
+                <span class="certificate-time">
+                  <i class="fas fa-calendar-alt me-1"></i>
+                  {{ 'education.certificates.english.time' | translate }}
+                </span>
+              </div>
+              <h3 class="certificate-title">{{ 'education.certificates.english.name' | translate }}</h3>
+              <p class="certificate-level">
+                <i class="fas fa-star me-2"></i>
+                {{ 'education.certificates.english.level' | translate }}
+              </p>
+              <div class="certificate-description">
+                <span class="level-tag">
+                  <i class="fas fa-award me-1"></i>
+                  {{ 'education.certificates.english.framework' | translate }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>

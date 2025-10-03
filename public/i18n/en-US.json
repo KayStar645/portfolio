@@ -1,4 +1,63 @@
 {
+  "header": {
+    "job_title": "Software Engineer"
+  },
+  "resume": {
+    "title": "Resume",
+    "subtitle": "Professional experience and technical skills summary",
+    "download_pdf": "Download PDF",
+    "about": "About",
+    "about_description": "Software Engineer with 2.5 years of experience developing various software systems from enterprise applications to internal tools. Engaged in Data Mining & AI research, achieved multiple scientific research awards and led university-level projects. Goal oriented towards becoming an expert in building intelligent systems, applying AI and data mining to optimize processes, enhance efficiency and create breakthrough value for organizations.",
+    "skills": "Skills",
+    "tech_stack": "Technologies",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "system_integration": "System & Integration",
+    "experience": "Experience",
+    "experience_current_title": "Developer",
+    "experience_current_time": "03/2025 – Present",
+    "experience_current_company": "COGAIN Corporation",
+    "experience_current_1": "Lead development of CRM, ERP systems (R&D, Purchasing, Warehouse, Production, Sales)",
+    "experience_current_2": "Data integration between systems and design Database, API",
+    "experience_current_3": "Support UI/UX on Figma and develop internal systems",
+    "experience_current_4": "Integrate Power BI, OpenAI and write SQL Server stored procedures",
+    "experience_current_5": "Refactor code (BaseController, BaseService, base components)",
+    "experience_previous_title": "Developer",
+    "experience_previous_time": "04/2023 – 03/2025",
+    "experience_previous_company": "GOSOFT Technology Company Limited",
+    "experience_previous_1": "Develop e-commerce and ERP systems (warehouse, master data, purchasing): design Database, API and build web admin",
+    "experience_previous_2": "Develop API for mobile apps in social network field",
+    "experience_previous_3": "Build reusable Menu package, base components and upgrade code generator",
+    "experience_previous_4": "Supervise, guide and review code for new team members, work with Agile/Scrum and Jira",
+    "education": "Education",
+    "master_degree": "Master of Information Technology",
+    "bachelor_degree": "Bachelor of Information Technology",
+    "huit": "Ho Chi Minh City University of Industry and Trade",
+    "it_specialization": "Specialization: Information Technology",
+    "certificates": "Certificates & Certifications",
+    "english_certificate": "English B1 Certificate",
+    "pedagogy_certificate": "Pedagogical Training Certificate",
+    "certificate_period": "2024",
+    "english_level": "B1 Level - European Framework of Reference",
+    "pedagogy_level": "Excellent Grade - For University and College Lecturers",
+    "pedagogy_university": "Hanoi Pedagogical University 2",
+    "achievements": "Achievements",
+    "achievement_1_title": "1st Prize - University Research Competition",
+    "achievement_1_desc": "Research on AI applications in data management - Team Leader",
+    "achievement_2_title": "2nd Prize - Faculty Research Competition",
+    "achievement_2_desc": "Research on system performance optimization - Team Leader",
+    "achievement_3_title": "2nd Prize - IT Talent Search",
+    "achievement_3_desc": "Creative IT competition in digital era - Team Leader",
+    "achievement_4_title": "1st Prize - Faculty Research Competition",
+    "achievement_4_desc": "Information technology research project - Team Leader",
+    "achievement_5_title": "Encouragement Prize - IT Talent Search",
+    "achievement_5_desc": "Creative Website competition - Team Leader",
+    "languages": "Languages",
+    "vietnamese": "Vietnamese",
+    "english": "English",
+    "native": "Native",
+    "intermediate": "Intermediate"
+  },
   "common": {
     "theme": {
       "dark": "Theme Dark",
@@ -19,8 +78,8 @@
     "description": "Full-stack developer with 2+ years of experience building CRM, ERP systems and modern web applications. Passionate about technology and always seeking the most optimal solutions.",
     "view_portfolio": "View Portfolio",
     "download_cv": "Download CV",
-    "tech_title": "Technical Expertise",
-    "tech_subtitle": "Technologies and tools I use daily",
+    "tech_title": "Technologies I Work With",
+    "tech_subtitle": "Modern tools and frameworks for building exceptional digital experiences",
     "nav": {
       "skills": "Skills",
       "skills_desc": "Technologies and frameworks I master",
@@ -29,7 +88,9 @@
       "projects": "Projects",
       "projects_desc": "Real-world projects I've completed",
       "achievements": "Achievements",
-      "achievements_desc": "Awards and scientific research"
+      "achievements_desc": "Awards and scientific research",
+      "education": "Education",
+      "education_desc": "My academic background and qualifications"
       }
   },
   "skill": {
@@ -134,6 +195,14 @@
         "time": "04/2024"
       },
       "award3": {
+        "name": "IT Talent Search Competition - Website",
+        "event": "Ho Chi Minh City University of Technology",
+        "role": "Team Leader",
+        "team_leader": "Pham Tan Thuan (Team Leader)",
+        "team_members": "Pham Tan Thuan, Ngo Van Son",
+        "time": "12/2023"
+      },
+      "award4": {
         "name": "IT Faculty Science Research Competition (Previous)",
         "event": "Ho Chi Minh City University of Industry and Trade",
         "role": "Team Leader",
@@ -141,21 +210,13 @@
         "team_members": "Pham Tan Thuan, Ngo Van Son, Vu Tran Minh Hoang, Nguyen Ngoc Thach",
         "time": "04/2023"
       },
-      "award4": {
+      "award5": {
         "name": "IT Talent Search and Creative Products in Digital Age",
         "event": "Ho Chi Minh City University of Industry and Trade",
         "role": "Team Leader",
         "team_leader": "Pham Tan Thuan (Team Leader)",
         "team_members": "Pham Tan Thuan, Nguyen Nuong Hong Tham, Nguyen Tan Phat, Vu Tran Minh Hoang, Nguyen Ngoc Thach",
         "time": "06/2022"
-      },
-      "award5": {
-        "name": "IT Talent Search Competition - Website",
-        "event": "Ho Chi Minh City University of Technology",
-        "role": "Team Leader",
-        "team_leader": "Pham Tan Thuan (Team Leader)",
-        "team_members": "Pham Tan Thuan, Ngo Van Son",
-        "time": "12/2023"
       }
     },
     "status": {
@@ -226,7 +287,7 @@
     "title_suffix": "Profession",
     "subtitle": "My educational journey and professional development",
     "master": {
-      "label": "master's",
+      "label": "Master's",
       "name": "Master of Information Technology",
       "specialization": "Application-Oriented",
       "university": "Ho Chi Minh City University of Industry and Trade (HUIT)",
@@ -257,6 +318,24 @@
       "university": "Ho Chi Minh City University of Industry and Trade (HUIT)",
       "time": "09/2020 - 12/2023",
       "gpa": "Graduated with Good Honours"
+    },
+    "certificates": {
+      "title": "Certificates & Certifications",
+      "subtitle": "Professional certificates and credentials",
+      "english": {
+        "type": "English Certificate",
+        "name": "English B1 Certificate",
+        "time": "03/2025",
+        "level": "B1 Level",
+        "framework": "European Framework of Reference"
+      },
+      "pedagogy": {
+        "type": "Pedagogy Certificate",
+        "name": "Pedagogical Training Certificate for University and College Lecturers",
+        "time": "10/2025",
+        "university": "Hanoi Pedagogical University 2",
+        "grade": "Excellent Grade"
+      }
     }
   }
 }

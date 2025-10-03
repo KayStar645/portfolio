@@ -11,14 +11,31 @@
       <div class="profile-card">
         <div class="profile-image">
           <img src="assets/params/images/info/avatar.jpg" alt="Phạm Tấn Thuận" class="avatar">
-          <div class="profile-badge">
-            <i class="fas fa-code"></i>
-          </div>
         </div>
         <div class="profile-info">
           <h1 class="profile-name">{{ 'home.greeting' | translate }}</h1>
           <h2 class="profile-title">{{ 'home.title' | translate }}</h2>
           <p class="profile-description">{{ 'home.description' | translate }}</p>
+          
+          <!-- Mobile Skills Tags -->
+          <div class="mobile-skills">
+            <div class="skill-tag">
+              <i class="fas fa-cogs"></i>
+              <span>DevOps</span>
+            </div>
+            <div class="skill-tag">
+              <i class="fab fa-microsoft"></i>
+              <span>.NET Core</span>
+            </div>
+            <div class="skill-tag">
+              <i class="fas fa-sitemap"></i>
+              <span>Architecture</span>
+            </div>
+            <div class="skill-tag">
+              <i class="fas fa-robot"></i>
+              <span>AI Integration</span>
+            </div>
+          </div>
           
           <!-- Action Buttons -->
           <div class="action-buttons">
@@ -68,11 +85,6 @@
 <!-- Tech Strip Section -->
 <section class="tech-strip-section">
   <div class="container-xl">
-    <div class="tech-strip-header">
-      <h3 class="tech-title">{{ 'home.tech_title' | translate }}</h3>
-      <p class="tech-subtitle">{{ 'home.tech_subtitle' | translate }}</p>
-    </div>
-    
     <div class="tech-strip">
       <div class="tech-strip-content">
         <!-- Technology Icons -->
@@ -149,6 +161,14 @@
         </div>
         <h4>{{ 'home.nav.achievements' | translate }}</h4>
         <p>{{ 'home.nav.achievements_desc' | translate }}</p>
+      </a>
+      
+      <a [routerLink]="['/education']" class="nav-card education-nav">
+        <div class="nav-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h4>{{ 'home.nav.education' | translate }}</h4>
+        <p>{{ 'home.nav.education_desc' | translate }}</p>
       </a>
     </div>
   </div>
