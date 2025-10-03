@@ -1,8 +1,13 @@
 [
   {
     "label": "Kỹ năng",
-    "icon": "fas fa-book-dead",
+    "icon": "fas fa-code",
     "link": "/skill"
+  },
+  {
+    "label": "Kinh nghiệm",
+    "icon": "fas fa-briefcase",
+    "link": "/experience"
   },
   {
     "label": "Dự án",
@@ -10,19 +15,14 @@
     "link": "/project"
   },
   {
-    "label": "Kinh nghiệm",
-    "icon": "fas fa-tasks",
-    "link": "/experience"
-  },
-  {
-    "label": "Học vấn",
-    "icon": "fas fa-university",
-    "link": "/education"
-  },
-  {
     "label": "Thành tích",
     "icon": "fas fa-trophy",
     "link": "/achievement"
+  },
+  {
+    "label": "Học vấn",
+    "icon": "fas fa-graduation-cap",
+    "link": "/education"
   },
   {
     "label": "Tóm tắt",

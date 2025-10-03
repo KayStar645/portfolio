@@ -1,4 +1,65 @@
 {
+  "header": {
+    "job_title": "Lập trình viên"
+  },
+  "resume": {
+    "title": "Sơ Yếu Lý Lịch",
+    "subtitle": "Tóm tắt kinh nghiệm và kỹ năng chuyên môn",
+    "download_pdf": "Tải PDF",
+    "about": "Giới thiệu",
+    "about_description": "Kỹ sư phần mềm với 2.5 năm kinh nghiệm phát triển nhiều hệ thống phần mềm từ ứng dụng doanh nghiệp đến công cụ nội bộ. Tham gia nghiên cứu Data Mining & AI, đạt nhiều giải thưởng NCKH và chủ nhiệm đề tài cấp trường. Mục tiêu hướng tới trở thành chuyên gia xây dựng hệ thống thông minh, ứng dụng AI và khai thác dữ liệu để tối ưu quy trình, nâng cao hiệu quả và tạo giá trị bứt phá cho tổ chức.",
+    "skills": "Kỹ năng",
+    "tech_stack": "Công nghệ",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "system_integration": "Hệ thống & Tích hợp",
+    "experience": "Kinh nghiệm",
+    "experience_current_title": "Lập trình viên",
+    "experience_current_time": "03/2025 – Hiện tại",
+    "experience_current_company": "Công ty Cổ phần COGAIN",
+    "experience_current_1": "Phát triển hệ thống CRM, ERP (R&D, Mua hàng, Kho, Sản xuất, Bán hàng)",
+    "experience_current_2": "Liên kết dữ liệu giữa 2 hệ thống và thiết kế Database, API",
+    "experience_current_3": "Hỗ trợ UI/UX trên Figma và phát triển hệ thống nội bộ",
+    "experience_current_4": "Tích hợp Power BI, OpenAI và viết stored procedures SQL Server",
+    "experience_current_5": "Tái cấu trúc mã nguồn (BaseController, BaseService, base components)",
+    "experience_previous_title": "Lập trình viên",
+    "experience_previous_time": "04/2023 – 03/2025",
+    "experience_previous_company": "Công ty TNHH Công nghệ GOSOFT",
+    "experience_previous_1": "Phát triển hệ thống e-commerce và ERP (kho, master data, mua hàng): thiết kế Database, API và xây dựng web admin",
+    "experience_previous_2": "Phát triển API cho mobile app social network",
+    "experience_previous_3": "Xây dựng package Menu, base components và nâng cấp code generator",
+    "experience_previous_4": "Giám sát hướng dẫn và review code cho nhân sự mới, làm việc theo Agile/Scrum với Jira",
+    "education": "Học vấn",
+    "master_degree": "Thạc sĩ Công nghệ thông tin",
+    "bachelor_degree": "Cử nhân Công nghệ thông tin",
+    "huit": "Trường Đại học Công Thương TP.HCM",
+    "it_specialization": "Chuyên ngành: Công nghệ thông tin",
+    "certificates": "Chứng chỉ & Chứng nhận",
+    "english_certificate": "Chứng chỉ Anh văn B1",
+    "pedagogy_certificate": "Chứng nhận Bồi dưỡng Nghiệp vụ Sư phạm",
+    "certificate_period": "2024",
+    "english_certificate_time": "03/2025",
+    "pedagogy_certificate_time": "10/2025",
+    "english_level": "Trình độ B1 - Khung tham chiếu Châu Âu",
+    "pedagogy_level": "Loại Giỏi - Dành cho giảng viên Đại học, Cao đẳng",
+    "pedagogy_university": "Trường Đại học Sư phạm Hà Nội 2",
+    "achievements": "Thành tích",
+    "achievement_1_title": "Giải nhất NCKH cấp Trường",
+    "achievement_1_desc": "Đề tài nghiên cứu về ứng dụng AI trong quản lý dữ liệu - Trưởng nhóm",
+    "achievement_2_title": "Giải nhì NCKH cấp Khoa",
+    "achievement_2_desc": "Nghiên cứu về tối ưu hóa hiệu suất hệ thống - Trưởng nhóm",
+    "achievement_3_title": "Giải nhì Tìm kiếm tài năng CNTT",
+    "achievement_3_desc": "Cuộc thi sáng tạo CNTT trong kỷ nguyên số - Trưởng nhóm",
+    "achievement_4_title": "Giải nhất NCKH cấp Khoa",
+    "achievement_4_desc": "Đề tài nghiên cứu khoa học về công nghệ thông tin - Trưởng nhóm",
+    "achievement_5_title": "Giải khuyến khích Tìm kiếm tài năng CNTT",
+    "achievement_5_desc": "Cuộc thi Website sáng tạo - Trưởng nhóm",
+    "languages": "Ngôn ngữ",
+    "vietnamese": "Tiếng Việt",
+    "english": "Tiếng Anh",
+    "native": "Bản ngữ",
+    "intermediate": "Trung bình"
+  },
   "home": {
     "greeting": "Xin chào, tôi là",
     "title": "Phạm Tấn Thuận",
@@ -15,7 +76,9 @@
       "projects": "Dự án",
       "projects_desc": "Các dự án thực tế đã thực hiện",
       "achievements": "Thành tích",
-      "achievements_desc": "Giải thưởng và nghiên cứu khoa học"
+      "achievements_desc": "Giải thưởng và nghiên cứu khoa học",
+      "education": "Học vấn",
+      "education_desc": "Quá trình học tập và bằng cấp của tôi"
     }
   },
   "skill": {
@@ -96,6 +159,14 @@
         "time": "04/2024"
       },
       "award3": {
+        "name": "Tìm kiếm tài năng CNTT - Website",
+        "event": "Trường Đại học Công Nghệ TP.HCM (HUTECH)",
+        "role": "Trưởng nhóm",
+        "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
+        "team_members": "Phạm Tấn Thuận, Ngô Văn Sơn",
+        "time": "12/2023"
+      },
+      "award4": {
         "name": "Cuộc thi sinh viên NCKH cấp Khoa CNTT",
         "event": "Trường Đại học Công Thương TP.HCM",
         "role": "Trưởng nhóm",
@@ -103,21 +174,13 @@
         "team_members": "Phạm Tấn Thuận, Ngô Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
         "time": "04/2023"
       },
-      "award4": {
+      "award5": {
         "name": "Tìm kiếm tài năng và sản phẩm sáng tạo CNTT trong kỷ nguyên số",
         "event": "Trường Đại học Công Thương TP.HCM",
         "role": "Trưởng nhóm",
         "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
         "team_members": "Phạm Tấn Thuận, Nguyễn Nương Hồng Thắm, Nguyễn Tấn Phát, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
         "time": "06/2022"
-      },
-      "award5": {
-        "name": "Tìm kiếm tài năng CNTT - Website",
-        "event": "Trường Đại học Công Nghệ TP.HCM (HUTECH)",
-        "role": "Trưởng nhóm",
-        "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
-        "team_members": "Phạm Tấn Thuận, Ngô Văn Sơn",
-        "time": "12/2023"
       }
     },
     "status": {
@@ -188,7 +251,7 @@
     "title_suffix": "Chuyên môn",
     "subtitle": "Hành trình học vấn và phát triển chuyên môn của tôi",
     "master": {
-      "confidence": "Thạc sĩ",
+      "label": "Thạc sĩ",
       "name": "Thạc sĩ Công nghệ thông tin",
       "specialization": "Định hướng Ứng dụng",
       "university": "Trường Đại học Công Thương TP.HCM (HUIT)",
@@ -219,6 +282,24 @@
       "university": "Trường Đại học Công Thương TP.HCM (HUIT)",
       "time": "09/2020 - 12/2023",
       "gpa": "Tốt nghiệp loại Giỏi (Good)*"
+    },
+    "certificates": {
+      "title": "Chứng chỉ & Chứng nhận",
+      "subtitle": "Các chứng chỉ chuyên môn và nghiệp vụ",
+      "english": {
+        "type": "Chứng chỉ Anh văn",
+        "name": "Chứng chỉ Anh văn B1",
+        "time": "03/2025",
+        "level": "Trình độ B1",
+        "framework": "Khung tham chiếu Châu Âu"
+      },
+      "pedagogy": {
+        "type": "Chứng nhận Sư phạm",
+        "name": "Chứng nhận Bồi dưỡng Nghiệp vụ Sư phạm cho Giảng viên Đại học, Cao đẳng",
+        "time": "10/2025",
+        "university": "Trường Đại học Sư phạm Hà Nội 2",
+        "grade": "Loại Giỏi"
+      }
     }
   }
 }

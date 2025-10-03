@@ -1,4 +1,22 @@
 {
   "image": "assets/params/images/home/background.jpg",
-  "description": "As a <span class='fs-6 rounded bg-primary p-2 fw-bold'>Software Engineer</span> with <span class='fs-6 rounded bg-primary p-2 fw-bold'>2.5 years of experience</span> developing various software systems from enterprise applications to internal tools. Participating in <span class='fs-6 rounded bg-primary p-2 fw-bold'>Data Mining & AI</span> research, achieving multiple research awards and leading university-level projects. Aiming to become an expert in building intelligent systems, applying AI and data mining to optimize processes, improve efficiency and create breakthrough value for organizations."
+  "greeting": "Hello, I'm",
+  "title": "Phạm Tấn Thuận",
+  "description": "As a <span class='fs-6 rounded bg-primary p-2 fw-bold'>Software Engineer</span> with <span class='fs-6 rounded bg-primary p-2 fw-bold'>2.5 years of experience</span> developing various software systems from enterprise applications to internal tools. Participating in <span class='fs-6 rounded bg-primary p-2 fw-bold'>Data Mining & AI</span> research, achieving multiple research awards and leading university-level projects. Aiming to become an expert in building intelligent systems, applying AI and data mining to optimize processes, improve efficiency and create breakthrough value for organizations.",
+  "view_portfolio": "View Portfolio",
+  "download_cv": "Download CV",
+  "tech_title": "Technologies I Work With",
+  "tech_subtitle": "Modern tools and frameworks for building exceptional digital experiences",
+  "nav": {
+    "skills": "Skills",
+    "skills_desc": "Technologies and frameworks I'm proficient in",
+    "experience": "Experience",
+    "experience_desc": "My professional development journey",
+    "projects": "Projects",
+    "projects_desc": "Real projects I've implemented",
+    "achievements": "Achievements",
+    "achievements_desc": "Awards and scientific research",
+    "education": "Education",
+    "education_desc": "My academic background and qualifications"
+  }
 }
