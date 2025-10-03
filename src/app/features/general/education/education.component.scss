@@ -351,3 +351,226 @@
     }
   }
 }
+
+// Certificates Section
+.certificates-section {
+  margin-top: 4rem;
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-color);
+      margin-bottom: 1rem;
+      
+      &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(135deg, #3b82f6, #60a5fa);
+        margin: 1rem auto 0;
+        border-radius: 2px;
+      }
+    }
+    
+    .section-subtitle {
+      color: var(--tertiary-text);
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.certificate-item {
+  position: relative;
+  display: flex;
+}
+
+.certificate-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--secondary);
+  border: 1px solid var(--main-close);
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
+  }
+}
+
+.certificate-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--primary);
+  align-self: flex-start;
+}
+
+.certificate-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  .certificate-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .certificate-type {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    
+    &.english-badge {
+      background: rgba(34, 197, 94, 0.2);
+      color: #22c55e;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+    
+    &.pedagogy-badge {
+      background: rgba(168, 85, 247, 0.2);
+      color: #a855f7;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+  }
+  
+  .certificate-time {
+    color: var(--tertiary-text);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .certificate-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  
+  .certificate-level,
+  .certificate-institution {
+    color: var(--secondary-text);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  .certificate-description {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+}
+
+.level-tag,
+.grade-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  
+  &.level-tag {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    
+    i {
+      color: #22c55e;
+    }
+  }
+  
+  &.grade-tag {
+    background: rgba(168, 85, 247, 0.1);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    
+    i {
+      color: #fbbf24;
+    }
+  }
+}
+
+// Responsive for certificates
+@media (max-width: 768px) {
+  .certificates-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .certificate-card {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .certificate-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .certificate-content {
+    .certificate-title {
+      font-size: 1.2rem;
+    }
+    
+    .certificate-meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate-card {
+    padding: 1rem;
+  }
+  
+  .certificate-content {
+    .certificate-title {
+      font-size: 1.1rem;
+    }
+    
+    .certificate-level,
+    .certificate-institution {
+      font-size: 0.9rem;
+    }
+  }
+}
