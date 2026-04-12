@@ -7,6 +7,7 @@
     "build": "ng build && mv ./dist/portfolio/browser/* ./dist/portfolio/ && rm -rf ./dist/portfolio/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "resume:pdf": "node scripts/generate-resume-pdfs.js",
     "test:ci": "ng test --no-watch --no-progress --browsers=ChromeHeadless"
   },
   "private": true,

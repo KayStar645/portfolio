@@ -82,10 +82,13 @@ export class ResumeService {
 
   getPdfLink(lang = this.langService.getLang()): ResumePdfLink {
     const normalizedLang = this.normalizeLang(lang);
-    const fileName = `resume-${normalizedLang}.pdf`;
+    const assetFileName = `resume-${normalizedLang}.pdf`;
+    const fileName = normalizedLang === 'vi-VN'
+      ? 'Phạm Tấn Thuận-vi-VN.pdf'
+      : 'Pham Tan Thuan-en-US.pdf';
 
     return {
-      href: `assets/files/${fileName}`,
+      href: `assets/files/${assetFileName}`,
       fileName,
     };
   }

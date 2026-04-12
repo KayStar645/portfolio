@@ -51,10 +51,13 @@ class ResumeServiceStub {
   readonly resume$ = of(resumeContent);
 
   getPdfLink(lang: string) {
-    const fileName = `resume-${lang}.pdf`;
+    const assetFileName = `resume-${lang}.pdf`;
+    const fileName = lang === 'vi-VN'
+      ? 'Phạm Tấn Thuận-vi-VN.pdf'
+      : 'Pham Tan Thuan-en-US.pdf';
 
     return {
-      href: `assets/files/${fileName}`,
+      href: `assets/files/${assetFileName}`,
       fileName,
     };
   }
@@ -90,7 +93,7 @@ describe('ResumeComponent', () => {
     const link = fixture.nativeElement.querySelector('.download-btn') as HTMLAnchorElement;
 
     expect(link.getAttribute('href')).toBe('assets/files/resume-vi-VN.pdf');
-    expect(link.getAttribute('download')).toBe('resume-vi-VN.pdf');
+    expect(link.getAttribute('download')).toBe('Phạm Tấn Thuận-vi-VN.pdf');
     expect((fixture.componentInstance as unknown as { downloadPDF?: unknown }).downloadPDF).toBeUndefined();
   });
 
@@ -104,6 +107,6 @@ describe('ResumeComponent', () => {
     const link = fixture.nativeElement.querySelector('.download-btn') as HTMLAnchorElement;
 
     expect(link.getAttribute('href')).toBe('assets/files/resume-en-US.pdf');
-    expect(link.getAttribute('download')).toBe('resume-en-US.pdf');
+    expect(link.getAttribute('download')).toBe('Pham Tan Thuan-en-US.pdf');
   });
 });
