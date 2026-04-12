@@ -1,409 +1,257 @@
-// Modern Achievement Design
 .achievement-modern {
   background: var(--bg-color);
-  min-height: auto;
-  padding: 3rem 0;
 }
 
-// Header Section
 .achievement-header {
-  text-align: center;
-  margin-bottom: 4rem;
-  
-  .achievement-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    
-    .title-text {
-      color: var(--text-color);
-    }
-    
-    .title-highlight {
-      color: #f59e0b;
-      text-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
-    }
-  }
-  
-  .achievement-subtitle {
-    color: var(--tertiary-text);
-    font-size: 1.125rem;
-    max-width: 600px;
-    margin: 0 auto;
-  }
+  margin-bottom: 2.5rem;
 }
 
-// Achievement Sections Container
-.achievement-sections {
-  max-width: 1200px;
+.achievement-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.title-text {
+  color: var(--primary-text);
+}
+
+.title-highlight {
+  color: var(--primary);
+}
+
+.achievement-subtitle {
+  color: var(--tertiary-text);
+  font-size: 1rem;
+  max-width: 42rem;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
 }
 
-// Individual Achievement Section
+.achievement-sections {
+  display: grid;
+  gap: 2rem;
+}
+
 .achievement-section {
-  .section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    
-    .section-icon {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 1rem;
-      background: linear-gradient(135deg, #f59e0b, #fbbf24);
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      color: white;
-      box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
-    }
-    
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--text-color);
-      margin-bottom: 0.5rem;
-    }
-    
-    .section-subtitle {
-      color: var(--tertiary-text);
-      font-size: 1rem;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-  }
+  display: grid;
+  gap: 1.25rem;
 }
 
-// Research Timeline
 .achievement-timeline {
   position: relative;
-  max-width: 900px;
+  max-width: 58rem;
   margin: 0 auto;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    left: 30px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, #f59e0b, #fbbf24, #10b981);
-    border-radius: 2px;
-    opacity: 0.7;
-  }
+  padding-left: 2.6rem;
 }
 
-// Achievement Item
+.achievement-timeline::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  border-radius: 999px;
+  background: var(--main-close);
+}
+
 .achievement-item {
   position: relative;
-  margin-bottom: 2rem;
-  
-  &:last-child {
-    margin-bottom: 0;
-  }
-  
-  // Timeline dots
-  &::before {
-    content: '';
-    position: absolute;
-    left: 18px;
-    top: 30px;
-    width: 24px;
-    height: 24px;
-    border: 4px solid var(--bg-color);
-    border-radius: 50%;
-    z-index: 2;
-  }
-  
-  &.research-current::before {
-    background: #10b981;
-  }
-  
-  &.research-completed::before {
-    background: #6b7280;
-  }
-  
-  padding-left: 80px;
+  margin-bottom: 1rem;
 }
 
-// Achievement Card
+.achievement-item::before {
+  content: "";
+  position: absolute;
+  left: -0.45rem;
+  top: 1.35rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid var(--bg-color);
+  background: var(--primary);
+}
+
 .achievement-card {
+  padding: 1.25rem;
+  border-radius: 8px;
   background: var(--secondary);
   border: 1px solid var(--main-close);
-  border-radius: 16px;
-  padding: 2rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(10px);
-  
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  }
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.05);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
-// Achievement Badge
-.achievement-badge {
+.achievement-card:hover,
+.award-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.08);
+}
+
+.achievement-badge,
+.award-rank {
   display: inline-flex;
   align-items: center;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  
-  &.current-badge { background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2); }
-  &.completed-badge { background: rgba(107, 114, 128, 0.1); color: #6b7280; border: 1px solid rgba(107, 114, 128, 0.2); }
+  gap: 0.35rem;
+  min-height: 30px;
+  padding: 0.25rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid var(--main-close);
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
-// Achievement Content
+.current-badge {
+  background: rgba(15, 118, 110, 0.08);
+  color: var(--primary);
+}
+
+.completed-badge {
+  background: rgba(107, 114, 128, 0.08);
+  color: var(--secondary-text);
+}
+
 .achievement-content {
-  .achievement-name {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--text-color);
-    margin-bottom: 0.75rem;
-    line-height: 1.3;
-  }
-  
-  .achievement-description {
-    color: var(--tertiary-text);
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-  
-  .achievement-result {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.4rem 0.8rem;
-    background: rgba(245, 158, 11, 0.1);
-    color: #f59e0b;
-    border: 1px solid rgba(245, 158, 11, 0.2);
-    border-radius: 12px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-  }
-  
-  .achievement-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    
-    .role-info, .team-info, .team-lead-info, .time-info {
-      display: flex;
-      align-items: center;
-      color: var(--secondary-text);
-      font-size: 0.95rem;
-      
-      i {
-        color: #f59e0b;
-        width: 20px;
-      }
-    }
-    
-    .team-lead-info {
-      i {
-        color: #f59e0b; // Gold color for team leader
-      }
-    }
-  }
+  margin-top: 0.8rem;
 }
 
-// Awards Grid
+.achievement-name {
+  font-size: 1.15rem;
+  color: var(--primary-text);
+  margin-bottom: 0.8rem;
+}
+
+.achievement-result {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.9rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid rgba(217, 119, 6, 0.16);
+  background: rgba(217, 119, 6, 0.08);
+  color: #b45309;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.achievement-meta,
+.award-meta {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.role-info,
+.team-info,
+.team-lead-info,
+.time-info,
+.award-event {
+  color: var(--secondary-text);
+}
+
+.role-info,
+.team-info,
+.team-lead-info,
+.time-info {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.role-info i,
+.team-info i,
+.team-lead-info i,
+.time-info i {
+  color: var(--primary);
+  width: 1rem;
+}
+
 .awards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
-  max-width: 1400px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 66rem;
   margin: 0 auto;
 }
 
-// Award Card
 .award-card {
+  min-width: 0;
+  height: 100%;
+  padding: 1.25rem;
+  border-radius: 8px;
   background: var(--secondary);
   border: 1px solid var(--main-close);
-  border-radius: 20px;
-  padding: 2rem;
-  text-align: center;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(10px);
-  position: relative;
-  overflow: hidden;
-  
-  // Hover effects
-  &:hover {
-    transform: translateY(-8px);
-    
-    &.first-place:hover {
-      box-shadow: 0 25px 50px rgba(255, 215, 0, 0.3);
-    }
-    
-    &.second-place:hover {
-      box-shadow: 0 25px 50px rgba(192, 192, 192, 0.3);
-    }
-    
-    &.third-place:hover {
-      box-shadow: 0 25px 50px rgba(205, 127, 50, 0.3);
-    }
-  }
-  
-  &.first-place {
-    border-color: rgba(255, 215, 0, 0.3);
-    .award-icon { background: linear-gradient(135deg, #ffd700, #ffed4e); color: #b8860b; }
-    .award-rank { color: #ffd700; }
-  }
-  &.second-place {
-    border-color: rgba(192, 192, 192, 0.3);
-    .award-icon { background: linear-gradient(135deg, #c0c0c0, #e5e5e5); color: #696969; }
-    .award-rank { color: #c0c0c0; }
-  }
-  &.third-place {
-    border-color: rgba(205, 127, 50, 0.3);
-    .award-icon { background: linear-gradient(135deg, #cd7f32, #daa256); color: #8b4513; }
-    .award-rank { color: #cd7f32; }
-  }
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.05);
 }
 
-// Award Icon
+.award-card.first-place { border-top: 2px solid rgba(217, 119, 6, 0.3); }
+.award-card.second-place { border-top: 2px solid rgba(100, 116, 139, 0.3); }
+.award-card.third-place { border-top: 2px solid rgba(156, 163, 175, 0.3); }
+
 .award-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1.5rem;
-  border-radius: 20px;
-  display: flex;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 0.85rem;
+  border-radius: 8px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: var(--soft-accent);
+  color: var(--primary);
 }
 
-// Award Content
+.award-icon i {
+  font-size: 1.35rem;
+}
+
 .award-content {
-  .award-rank {
-    font-size: 0.9rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  
-  .award-name {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
-    line-height: 1.3;
-  }
-  
-  .award-event {
-    color: var(--secondary-text);
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.4;
-  }
-  
-  .award-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    
-    .team-info, .time-info {
-      display: flex;
-      align-items: center;
-      color: var(--tertiary-text);
-      font-size: 0.9rem;
-      
-      i {
-        color: #f59e0b;
-        width: 16px;
-      }
-    }
-  }
+  display: grid;
+  gap: 0.55rem;
 }
 
-// Responsive Design
-@media (max-width: 1024px) {
-  .achievement-timeline {
-    &::before {
-      left: 20px;
-    }
-  }
-  
-  .achievement-item {
-    padding-left: 60px;
-    
-    &::before {
-      left: 8px;
-    }
-  }
+.award-rank {
+  width: fit-content;
+  background: rgba(15, 118, 110, 0.08);
+  color: var(--primary);
 }
 
-@media (max-width: 768px) {
-  .achievement-header {
-    .achievement-title {
-      font-size: 2.5rem;
-    }
-  }
-  
-  .achievement-sections {
-    gap: 3rem;
-  }
-  
-  .section-header {
-    .section-icon {
-      width: 60px;
-      height: 60px;
-      font-size: 1.5rem;
-    }
-    
-    .section-title {
-      font-size: 2rem;
-    }
-  }
-  
+.award-name {
+  margin: 0;
+  color: var(--primary-text);
+  font-size: 1.05rem;
+}
+
+.award-event {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 991px) {
   .achievement-timeline {
-    &::before {
-      left: 15px;
-    }
+    padding-left: 2.2rem;
   }
-  
-  .achievement-item {
-    padding-left: 50px;
-    
-    &::before {
-      left: 3px;
-      width: 20px;
-      height: 20px;
-    }
-  }
-  
-  .achievement-card, .award-card {
-    padding: 1.5rem;
-  }
-  
+
   .awards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 480px) {
-  .achievement-item {
-    padding-left: 40px;
-    
-    &::before {
-      left: 0;
-      width: 16px;
-      height: 16px;
-    }
+@media (max-width: 767px) {
+  .achievement-title {
+    font-size: 2rem;
   }
-  
-  .achievement-card, .award-card {
-    padding: 1rem;
+
+  .achievement-timeline {
+    padding-left: 0;
+  }
+
+  .achievement-timeline::before,
+  .achievement-item::before {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .awards-grid {
+    grid-template-columns: 1fr;
   }
 }

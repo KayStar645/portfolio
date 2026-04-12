@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { environment } from '../environments/environment';
-import { BehaviorSubject } from 'rxjs';
-import { LangService } from '../shared/services/lang.service';
+import { DestroyRef, Injectable, inject } from '@angular/core';
+import { BehaviorSubject, distinctUntilChanged, skip } from 'rxjs';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ToastrService } from 'ngx-toastr';
-import { firstValueFrom } from 'rxjs';
+
+import { LangService } from '../shared/services/lang.service';
+
+import { ContentLoaderService } from './content-loader.service';
 
 export interface User {
   name: string;
@@ -16,38 +17,39 @@ export interface User {
   providedIn: 'root',
 })
 export class UserService {
-  private jsonUrl: string = environment.config.jsonUrl;
-  private fileName: string = 'user.json';
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly fileName = 'user.json';
 
-  private userSubject = new BehaviorSubject<User | null>(null);
+  private readonly userSubject = new BehaviorSubject<User | null>(null);
   public user$ = this.userSubject.asObservable();
 
   constructor(
-    private http: HttpClient,
-    private langService: LangService,
-    private toast: ToastrService,
+    private readonly contentLoader: ContentLoaderService,
+    private readonly langService: LangService,
+    private readonly toast: ToastrService,
   ) {
-    this.langService.langChanged$.subscribe(() => {
-      this.reloadUser();
-    });
+    this.langService.langChanged$
+      .pipe(skip(1), distinctUntilChanged(), takeUntilDestroyed(this.destroyRef))
+      .subscribe(() => {
+        void this.reloadUser();
+      });
 
-    this.reloadUser();
+    void this.reloadUser();
   }
 
   private async reloadUser(): Promise<void> {
     try {
       const lang = this.langService.getLang();
-      const url = `${this.jsonUrl}/${lang}/${this.fileName}`;
-      const user = await firstValueFrom(this.http.get<User>(url));
+      const user = await this.contentLoader.loadJson<User>(lang, this.fileName);
 
       if (user) {
         this.userSubject.next(user);
       } else {
-        this.toast.error('Đọc dữ liệu thất bại!', 'User');
+        this.toast.error('Failed to load user data.', 'User');
         this.userSubject.next(null);
       }
-    } catch (error) {
-      this.toast.error('Đọc dữ liệu thất bại!', 'User');
+    } catch {
+      this.toast.error('Failed to load user data.', 'User');
       this.userSubject.next(null);
     }
   }

@@ -1,576 +1,260 @@
-// Modern Education Design
 .education-modern {
   background: var(--bg-color);
-  min-height: auto;
-  padding: 3rem 0;
 }
 
-// Header Section
 .education-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  
-  .education-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    
-    .title-text {
-      color: var(--text-color);
-    }
-    
-    .title-highlight {
-      color: #3b82f6;
-      text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-    }
-  }
-  
-  .education-subtitle {
-    color: var(--tertiary-text);
-    font-size: 1.125rem;
-    max-width: 600px;
-    margin: 0 auto;
-  }
+  margin-bottom: 2.5rem;
 }
 
-// Education Timeline
+.education-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.title-text {
+  color: var(--primary-text);
+}
+
+.title-highlight {
+  color: var(--primary);
+}
+
+.education-subtitle {
+  color: var(--tertiary-text);
+  font-size: 1rem;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
 .education-timeline {
   position: relative;
-  max-width: 900px;
+  max-width: 58rem;
   margin: 0 auto;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: linear-gradient(to bottom, var(--primary) 0%, var(--secondary) 50%, var(--primary) 100%);
-    transform: translateX(-50%);
-    border-radius: 2px;
-    opacity: 0.7;
-  }
-  
-  &::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background: var(--main-close);
-    transform: translateX(-50%);
-    opacity: 0.3;
-  }
+  padding-left: 3.25rem;
 }
 
-// Education Item
+.education-timeline::before {
+  content: "";
+  position: absolute;
+  left: 1.1rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  border-radius: 999px;
+  background: var(--main-close);
+}
+
 .education-item {
   position: relative;
-  margin-bottom: 3rem;
-  
-  &:last-child {
-    margin-bottom: 0;
-  }
-  
-  // Timeline dot
-  &::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50px;
-    width: 20px;
-    height: 20px;
-    background: var(--secondary);
-    border: 4px solid var(--bg-color);
-    border-radius: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    transition: all 0.3s ease;
-  }
-  
-  // Specific colors for different education types
-  &.master::before {
-    background: linear-gradient(135deg, #3b82f6, #60a5fa);
-  }
-  
-  &.language::before {
-    background: linear-gradient(135deg, #3b82f6, #60a5fa);
-  }
-  
-  &.engineer::before {
-    background: linear-gradient(135deg, #3b82f6, #60a5fa);
-  }
-  
-  &.bachelor::before {
-    background: linear-gradient(135deg, #3b82f6, #60a5fa);
-  }
-  
-  // Item animation on scroll
-  &:hover::before {
-    transform: translateX(-50%) scale(1.2);
-  }
+  margin-bottom: 1rem;
 }
 
-// Education Card
-.education-card {
+.education-item::before {
+  content: "";
+  position: absolute;
+  left: -0.45rem;
+  top: 1.35rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid var(--bg-color);
+  background: var(--primary);
+}
+
+.education-card,
+.certificate-card {
   display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  padding: 2rem;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 8px;
   background: var(--secondary);
   border: 1px solid var(--main-close);
-  border-radius: 16px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  backdrop-filter: blur(10px);
-  
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    border-color: var(--primary);
-  }
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.05);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
-// Education Icon
-.education-icon {
-  flex-shrink: 0;
-  width: 60px;
-  height: 60px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.1);
-  display: flex;
+.education-card:hover,
+.certificate-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(15, 118, 110, 0.22);
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.08);
+}
+
+.education-icon,
+.certificate-icon {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
+  background: var(--soft-accent);
   color: var(--primary);
-  
-  .master & { background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(96, 165, 250, 0.1)); color: #3b82f6; }
-  .language & { background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(96, 165, 250, 0.1)); color: #3b82f6; .dark & { background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(96, 165, 250, 0.2)); } }
-  .engineer & { background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(96, 165, 250, 0.1)); color: #3b82f6; }
-  .bachelor & { background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(96, 165, 250, 0.1)); color: #3b82f6; }
 }
 
-// Education Content
-.education-content {
+.education-icon i,
+.certificate-icon i {
+  font-size: 1.35rem;
+}
+
+.education-content,
+.certificate-content {
+  min-width: 0;
   flex: 1;
-  
-  .education-meta {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.75rem;
-  }
-  
-  .education-type {
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
-    
-    &.master-badge {
-      background: rgba(59, 130, 246, 0.2);
-      color: #3b82f6;
-      border: 1px solid rgba(59, 130, 246, 0.3);
-    }
-    
-    &.language-badge {
-      background: rgba(59, 130, 246, 0.2);
-      color: #3b82f6;
-      border: 1px solid rgba(59, 130, 246, 0.3);
-    }
-    
-    &.engineer-badge {
-      background: rgba(59, 130, 246, 0.2);
-      color: #3b82f6;
-      border: 1px solid rgba(59, 130, 246, 0.3);
-    }
-    
-    &.bachelor-badge {
-      background: rgba(59, 130, 246, 0.2);
-      color: #3b82f6;
-      border: 1px solid rgba(59, 130, 246, 0.3);
-    }
-  }
-  
-  .education-time {
-    color: var(--tertiary-text);
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-  
-  .education-title-text {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
-    line-height: 1.3;
-  }
-  
-  .education-specialization {
-    color: var(--tertiary-text);
-    font-size: 0.95rem;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .education-institution {
-    color: var(--secondary-text);
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-  }
-  
-  .education-description {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
 }
 
-// Achievement tags
-.achievement-tag, .focus-tag {
+.education-meta,
+.certificate-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.education-type,
+.certificate-type {
   display: inline-flex;
   align-items: center;
-  padding: 0.4rem 0.8rem;
-  background: rgba(59, 130, 246, 0.1);
-  color: #3b82f6;
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: 12px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  
-  i {
-    color: #3b82f6;
-  }
+  min-height: 30px;
+  padding: 0.25rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid var(--main-close);
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
-.focus-tag {
-  background: rgba(59, 130, 246, 0.1);
-  color: #3b82f6;
-  border-color: rgba(59, 130, 246, 0.2);
-  
-  i {
-    color: #3b82f6;
-  }
+.education-type.master-badge,
+.education-type.engineer-badge,
+.education-type.bachelor-badge {
+  background: rgba(15, 118, 110, 0.08);
+  color: var(--primary);
 }
 
-.gpa-tag {
+.certificate-type.english-badge {
+  background: rgba(37, 99, 235, 0.08);
+  color: #2563eb;
+}
+
+.certificate-type.pedagogy-badge {
+  background: rgba(217, 119, 6, 0.08);
+  color: #b45309;
+}
+
+.education-time,
+.certificate-time {
+  color: var(--tertiary-text);
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.education-title-text,
+.certificate-title {
+  margin-bottom: 0.45rem;
+  color: var(--primary-text);
+  font-size: 1.15rem;
+}
+
+.education-specialization,
+.education-institution,
+.certificate-level,
+.certificate-institution {
+  margin-bottom: 0.55rem;
+  color: var(--secondary-text);
+  font-size: 0.94rem;
+}
+
+.education-description,
+.certificate-description {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.gpa-tag,
+.focus-tag,
+.grade-tag,
+.level-tag {
   display: inline-flex;
   align-items: center;
-  padding: 0.4rem 0.8rem;
-  background: rgba(59, 130, 246, 0.1);
-  color: #3b82f6;
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: 12px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-left: 0.75rem;
-  
-  i {
-    color: #d97706;
-  }
+  gap: 0.35rem;
+  min-height: 30px;
+  padding: 0.25rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid var(--main-close);
+  background: var(--surface-elevated);
+  color: var(--secondary-text);
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
-// Responsive Design
-@media (max-width: 1024px) {
-  .education-timeline {
-    &::before, &::after {
-      left: 30px;
-    }
-  }
-  
-  .education-item {
-    margin-left: 60px;
-    
-    &::before {
-      left: 0;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .education-header {
-    .education-title {
-      font-size: 2.5rem;
-    }
-  }
-  
-  .education-timeline {
-    &::before, &::after {
-      left: 20px;
-    }
-  }
-  
-  .education-item {
-    margin-left: 50px;
-  }
-  
-  .education-card {
-    padding: 1.5rem;
-    gap: 1rem;
-  }
-  
-  .education-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-  }
-  
-  .education-content {
-    .education-title-text {
-      font-size: 1.2rem;
-    }
-    
-    .education-meta {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .education-item {
-    margin-left: 40px;
-  }
-  
-  .education-card {
-    padding: 1rem;
-  }
-  
-  .education-content {
-    .education-title-text {
-      font-size: 1.1rem;
-    }
-    
-    .education-institution {
-      font-size: 0.9rem;
-    }
-  }
-}
-
-// Certificates Section
 .certificates-section {
-  margin-top: 4rem;
-  
-  .section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--text-color);
-      margin-bottom: 1rem;
-      
-      &::after {
-        content: '';
-        display: block;
-        width: 60px;
-        height: 3px;
-        background: linear-gradient(135deg, #3b82f6, #60a5fa);
-        margin: 1rem auto 0;
-        border-radius: 2px;
-      }
-    }
-    
-    .section-subtitle {
-      color: var(--tertiary-text);
-      font-size: 1.125rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-  }
+  margin-top: 2.5rem;
+}
+
+.certificates-section .section-title {
+  margin-bottom: 0.4rem;
+  color: var(--primary-text);
+  font-size: 1.9rem;
+}
+
+.certificates-section .section-subtitle {
+  color: var(--tertiary-text);
 }
 
 .certificates-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  align-items: stretch;
-}
-
-.certificate-item {
-  position: relative;
-  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
 }
 
 .certificate-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.5rem;
-  padding: 2rem;
-  background: var(--secondary);
-  border: 1px solid var(--main-close);
-  border-radius: 16px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  backdrop-filter: blur(10px);
-  width: 100%;
   height: 100%;
-  
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    border-color: var(--primary);
-  }
-}
-
-.certificate-icon {
-  flex-shrink: 0;
-  width: 60px;
-  height: 60px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8rem;
-  color: var(--primary);
-  align-self: flex-start;
 }
 
 .certificate-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  
-  .certificate-meta {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.75rem;
-  }
-  
-  .certificate-type {
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
-    
-    &.english-badge {
-      background: rgba(34, 197, 94, 0.2);
-      color: #22c55e;
-      border: 1px solid rgba(34, 197, 94, 0.3);
-    }
-    
-    &.pedagogy-badge {
-      background: rgba(168, 85, 247, 0.2);
-      color: #a855f7;
-      border: 1px solid rgba(168, 85, 247, 0.3);
-    }
-  }
-  
-  .certificate-time {
-    color: var(--tertiary-text);
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-  
-  .certificate-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
-    line-height: 1.3;
-  }
-  
-  .certificate-level,
-  .certificate-institution {
-    color: var(--secondary-text);
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-  }
-  
-  .certificate-description {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
+  display: grid;
+  gap: 0.55rem;
 }
 
-.level-tag,
+.level-tag {
+  background: rgba(37, 99, 235, 0.08);
+  color: #2563eb;
+}
+
 .grade-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.4rem 0.8rem;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  
-  &.level-tag {
-    background: rgba(34, 197, 94, 0.1);
-    color: #22c55e;
-    border: 1px solid rgba(34, 197, 94, 0.2);
-    
-    i {
-      color: #22c55e;
-    }
-  }
-  
-  &.grade-tag {
-    background: rgba(168, 85, 247, 0.1);
-    color: #a855f7;
-    border: 1px solid rgba(168, 85, 247, 0.2);
-    
-    i {
-      color: #fbbf24;
-    }
+  background: rgba(217, 119, 6, 0.08);
+  color: #b45309;
+}
+
+@media (max-width: 991px) {
+  .education-timeline {
+    padding-left: 2.5rem;
   }
 }
 
-// Responsive for certificates
-@media (max-width: 768px) {
-  .certificates-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+@media (max-width: 767px) {
+  .education-title {
+    font-size: 2rem;
   }
-  
-  .certificate-card {
-    padding: 1.5rem;
-    gap: 1rem;
-  }
-  
-  .certificate-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-  }
-  
-  .certificate-content {
-    .certificate-title {
-      font-size: 1.2rem;
-    }
-    
-    .certificate-meta {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-  }
-}
 
-@media (max-width: 480px) {
-  .certificate-card {
-    padding: 1rem;
+  .education-timeline {
+    padding-left: 0;
   }
-  
-  .certificate-content {
-    .certificate-title {
-      font-size: 1.1rem;
-    }
-    
-    .certificate-level,
-    .certificate-institution {
-      font-size: 0.9rem;
-    }
+
+  .education-timeline::before,
+  .education-item::before {
+    display: none;
+  }
+
+  .education-card,
+  .certificate-card {
+    flex-direction: column;
+  }
+
+  .education-meta,
+  .certificate-meta {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

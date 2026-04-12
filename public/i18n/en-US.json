@@ -1,13 +1,15 @@
 {
   "header": {
-    "job_title": "Software Engineer"
+    "job_title": "Full-Stack Developer | MSc Student | System Architecture Enthusiast"
   },
   "resume": {
     "title": "Resume",
-    "subtitle": "Professional experience and technical skills summary",
+    "subtitle": "Full-stack engineering, applied IT research, and enterprise architecture focus",
     "download_pdf": "Download PDF",
+    "contact": "Contact",
+    "research": "Research & Interests",
     "about": "About",
-    "about_description": "Software Engineer with 2.5 years of experience developing various software systems from enterprise applications to internal tools. Engaged in Data Mining & AI research, achieved multiple scientific research awards and led university-level projects. Goal oriented towards becoming an expert in building intelligent systems, applying AI and data mining to optimize processes, enhance efficiency and create breakthrough value for organizations.",
+    "about_description": "Full-stack developer with 3+ years of professional experience delivering ERP platforms, e-commerce solutions, social network systems, and DPM software.",
     "skills": "Skills",
     "tech_stack": "Technologies",
     "backend": "Backend",
@@ -15,20 +17,20 @@
     "system_integration": "System & Integration",
     "experience": "Experience",
     "experience_current_title": "Developer",
-    "experience_current_time": "03/2025 – Present",
-    "experience_current_company": "COGAIN Corporation",
-    "experience_current_1": "Lead development of CRM, ERP systems (R&D, Purchasing, Warehouse, Production, Sales)",
-    "experience_current_2": "Data integration between systems and design Database, API",
-    "experience_current_3": "Support UI/UX on Figma and develop internal systems",
-    "experience_current_4": "Integrate Power BI, OpenAI and write SQL Server stored procedures",
-    "experience_current_5": "Refactor code (BaseController, BaseService, base components)",
+    "experience_current_time": "01/2026 - Present",
+    "experience_current_company": "Vu Thao Technology",
+    "experience_current_1": "Migrate the legacy DPM system from SharePoint to a new .NET + React platform",
+    "experience_current_2": "Move process flows, approvals and business data into the new architecture",
+    "experience_current_3": "Implement backend/frontend features with .NET and React",
+    "experience_current_4": "Coordinate testing, business validation and bug fixing during migration",
+    "experience_current_5": "Improve maintainability after moving away from the SharePoint platform",
     "experience_previous_title": "Developer",
-    "experience_previous_time": "04/2023 – 03/2025",
-    "experience_previous_company": "GOSOFT Technology Company Limited",
-    "experience_previous_1": "Develop e-commerce and ERP systems (warehouse, master data, purchasing): design Database, API and build web admin",
-    "experience_previous_2": "Develop API for mobile apps in social network field",
-    "experience_previous_3": "Build reusable Menu package, base components and upgrade code generator",
-    "experience_previous_4": "Supervise, guide and review code for new team members, work with Agile/Scrum and Jira",
+    "experience_previous_time": "03/2025 - 12/2025",
+    "experience_previous_company": "COGAIN Corporation",
+    "experience_previous_1": "Develop CRM, ERP systems (R&D, Purchasing, Warehouse, Production, Sales)",
+    "experience_previous_2": "Integrate data between systems and design Database, API",
+    "experience_previous_3": "Support UI/UX on Figma and develop internal systems",
+    "experience_previous_4": "Integrate Power BI, OpenAI and write SQL Server stored procedures",
     "education": "Education",
     "master_degree": "Master of Information Technology",
     "bachelor_degree": "Bachelor of Information Technology",
@@ -41,7 +43,7 @@
     "english_level": "B1 Level - European Framework of Reference",
     "pedagogy_level": "Excellent Grade - For University and College Lecturers",
     "pedagogy_university": "Hanoi Pedagogical University 2",
-    "achievements": "Achievements",
+    "achievements": "Professional Highlights",
     "achievement_1_title": "1st Prize - University Research Competition",
     "achievement_1_desc": "Research on AI applications in data management - Team Leader",
     "achievement_2_title": "2nd Prize - Faculty Research Competition",
@@ -74,35 +76,35 @@
   },
   "home": {
     "greeting": "Hello, I'm",
-    "title": "Pham Tan Thuan",
-    "description": "Full-stack developer with 2+ years of experience building CRM, ERP systems and modern web applications. Passionate about technology and always seeking the most optimal solutions.",
+    "title": "Thuan | KayStar",
+    "description": "I build enterprise-grade software with a strong emphasis on scalable architecture, maintainability, and technically disciplined execution.",
     "view_portfolio": "View Portfolio",
     "download_cv": "Download CV",
-    "tech_title": "Technologies I Work With",
-    "tech_subtitle": "Modern tools and frameworks for building exceptional digital experiences",
+    "tech_title": "Enterprise Systems & Architecture",
+    "tech_subtitle": "Current core stack: .NET, React, SQL Server, Azure DevOps, with practical work across distributed systems and AI-assisted workflows.",
     "nav": {
       "skills": "Skills",
-      "skills_desc": "Technologies and frameworks I master",
+      "skills_desc": "Core stack, architecture practice, infrastructure and productivity workflows",
       "experience": "Experience",
-      "experience_desc": "My professional development journey",
+      "experience_desc": "3+ years delivering ERP, e-commerce, social platforms and DPM software",
       "projects": "Projects",
-      "projects_desc": "Real-world projects I've completed",
+      "projects_desc": "Architecture-heavy product work and reusable engineering components",
       "achievements": "Achievements",
-      "achievements_desc": "Awards and scientific research",
+      "achievements_desc": "Research interests, awards and data or AI-driven exploration",
       "education": "Education",
       "education_desc": "My academic background and qualifications"
-      }
+    }
   },
   "skill": {
     "title_prefix": "My Work",
     "title_suffix": "Skills",
-    "description": "The technologies and tools I use to create high-quality software solutions.",
+    "description": "Core stack, architecture patterns, infrastructure tools, library development, and AI-assisted engineering workflows.",
     "subtitle": "Professional technologies and tools",
     "core": {
       "title": "CORE COMPETENCIES",
       "subtitle": "Primary and specialized skills",
       "backend": "Backend Development",
-      "frontend": "Frontend Development", 
+      "frontend": "Frontend Development",
       "database": "Database Management"
     },
     "support": {
@@ -117,14 +119,14 @@
     },
     "summary": {
       "title": "Technical Summary",
-      "experience": "2.5+ Years",
-      "title_detail": "Full-Stack Development Experience",
+      "experience": "3+ Years",
+      "title_detail": "Professional Full-Stack Experience",
       "focus": "Primary Focus",
-      "focus_detail": "Enterprise Backend (.NET & Laravel)",
+      "focus_detail": "Enterprise Systems & Architecture",
       "specialties": "Specialties",
-      "specialties_detail": "Clean Architecture, Microservices, Database Optimization",
+      "specialties_detail": "Clean Architecture, DDD, CQRS, Microservices",
       "latest": "Latest",
-      "latest_detail": "AI Integration, Power BI, Advanced Data Systems"
+      "latest_detail": "AI-assisted development, reusable libraries, distributed integrations"
     },
     "descriptions": {
       "backend": "Enterprise Backend Solutions",
@@ -158,12 +160,12 @@
         "time": "07/2025 - 06/2026"
       },
       "project2": {
-          "name": "Building Aspect-based Sentiment Analysis System using Knowledge Graph",
-          "description": "Develop detailed sentiment analysis system from different aspects using Knowledge Graph.",
-          "role": "Core Member",
-          "team_lead": "Nguyen Thi Hong Quyen (Project Leader)",
-          "team_members": "Pham Tan Thuan, Doan Tan Minh Tan, Nguyen Huu Thang",
-          "time": "07/2025 - 06/2026"
+        "name": "Building Aspect-based Sentiment Analysis System using Knowledge Graph",
+        "description": "Develop detailed sentiment analysis system from different aspects using Knowledge Graph.",
+        "role": "Core Member",
+        "team_lead": "Nguyen Thi Hong Quyen (Project Leader)",
+        "team_members": "Pham Tan Thuan, Doan Tan Minh Tan, Nguyen Huu Thang",
+        "time": "07/2025 - 06/2026"
       },
       "project3": {
         "name": "Building Graduation Thesis Process Management System",
@@ -178,6 +180,11 @@
     "awards": {
       "title": "Awards & Achievements",
       "subtitle": "Awards from scientific research competitions",
+      "rank": {
+        "first": "First Place",
+        "second": "Second Place",
+        "encouragement": "Encouragement Award"
+      },
       "award1": {
         "name": "University Student Science Research Competition",
         "event": "Ho Chi Minh City University of Industry and Trade",
@@ -186,6 +193,14 @@
         "team_members": "Khuc Hong Nhung, Tran Nguyen Hieu Thao",
         "time": "05/2024"
       },
+    "award6": {
+      "name": "IT Faculty Scientific Research Competition",
+      "event": "Ho Chi Minh City University of Industry and Trade",
+      "role": "Student Co-supervisor",
+      "team_leader": "Pham Tan Thuan (Co-supervisor)",
+      "team_members": "Tran Duong Gia Bao, Tran Gia Bao",
+      "time": "04/2026"
+    },
       "award2": {
         "name": "IT Faculty Science Research Competition",
         "event": "Ho Chi Minh City University of Industry and Trade",
@@ -199,7 +214,7 @@
         "event": "Ho Chi Minh City University of Technology",
         "role": "Team Leader",
         "team_leader": "Pham Tan Thuan (Team Leader)",
-        "team_members": "Pham Tan Thuan, Ngo Van Son",
+        "team_members": "Ngo Van Son",
         "time": "12/2023"
       },
       "award4": {
@@ -207,7 +222,7 @@
         "event": "Ho Chi Minh City University of Industry and Trade",
         "role": "Team Leader",
         "team_leader": "Pham Tan Thuan (Team Leader)",
-        "team_members": "Pham Tan Thuan, Ngo Van Son, Vu Tran Minh Hoang, Nguyen Ngoc Thach",
+        "team_members": "Ngo Van Son, Vu Tran Minh Hoang, Nguyen Ngoc Thach",
         "time": "04/2023"
       },
       "award5": {
@@ -215,7 +230,7 @@
         "event": "Ho Chi Minh City University of Industry and Trade",
         "role": "Team Leader",
         "team_leader": "Pham Tan Thuan (Team Leader)",
-        "team_members": "Pham Tan Thuan, Nguyen Nuong Hong Tham, Nguyen Tan Phat, Vu Tran Minh Hoang, Nguyen Ngoc Thach",
+        "team_members": "Nguyen Nuong Hong Tham, Nguyen Tan Phat, Vu Tran Minh Hoang, Nguyen Ngoc Thach",
         "time": "06/2022"
       }
     },
@@ -243,42 +258,81 @@
       "completed": "Completed",
       "in_progress": "In Progress",
       "planned": "Planned"
+    },
+    "sections": {
+      "landing": "Landing Page & Marketing",
+      "chatbot": "Chatbot Integration",
+      "multichannel": "Multi-Channel Communication",
+      "deployment": "Deployment & DevOps",
+      "technologies": "Technologies:"
     }
   },
   "experience": {
     "title_prefix": "Work",
-    "title_suffix": "Experience", 
+    "title_suffix": "Experience",
     "subtitle": "Professional journey and contributions to various projects",
     "job1": {
       "title": "Developer",
-      "company": "COGAIN Corporation",
-      "time": "03/2025 – Present",
-      "responsibility1": "Lead development of CRM, ERP systems (R&D, Purchasing, Warehouse, Production, Sales) with data integration between 2 systems, building features for both Backend and Frontend",
-      "responsibility2": "Design Database structure and API for complex business modules",
-      "responsibility3": "Build authorization features and automated approval workflow",
-      "responsibility4": "Support UI/UX design on Figma based on described business requirements",
-      "responsibility5": "Develop leave management and attendance systems with Power BI report integration via API",
-      "responsibility6": "Develop issue/problem management system with internal chat and OpenAI integration",
-      "responsibility7": "Implement data crawling for analysis and automated processing support",
-      "responsibility8": "Write SQL Server stored procedures for complex business logic and query performance optimization",
-      "responsibility9": "Backend: build BaseController, BaseService standardized CRUD, approval, routing and reusability",
-      "responsibility10": "Frontend: build base component library (Input, Select, Compact, DatePicker...) for reuse and interface standardization"
+      "company": "Vu Thao Technology",
+      "time": "01/2026 - Present",
+      "responsibility1": "Migrate the legacy DPM (Digital Process Management) system from SharePoint to a new .NET + React platform.",
+      "responsibility2": "Analyze existing process flows, approvals, forms and business data on SharePoint for migration into the new system.",
+      "responsibility3": "Implement backend/frontend features with .NET and React based on migrated business logic.",
+      "responsibility4": "Rebuild the business UI in React to replace the legacy SharePoint experience.",
+      "responsibility5": "Move operation modules, process states and related data into the new structure.",
+      "responsibility6": "Coordinate testing, business validation and bug fixing during migration.",
+      "responsibility7": "Track usage feedback to stabilize business workflows after migration.",
+      "responsibility8": "Work with data and queries for migration, validation and process operation.",
+      "responsibility9": "Keep code aligned with the new .NET/React system patterns for maintainability.",
+      "responsibility10": "Standardize shared frontend/backend pieces when needed to reduce duplication and improve stability."
     },
     "job2": {
       "title": "Developer",
-      "company": "GOSOFT Technology Company Limited", 
-      "time": "04/2023 – 03/2025",
-      "responsibility1": "Develop e-commerce systems: design Database and API, build web admin, handle commercial product and training course data flow",
-      "responsibility3": "Develop API for mobile apps in social network field (social interaction, data management)",
-      "responsibility4": "Build ERP modules: purchasing, warehouse and master data",
-      "responsibility5": "Develop reusable Menu package for all new and existing projects",
-      "responsibility6": "Develop additional base Frontend components for company library (Select, Price, TreeViewTable...), reuse and standardize interface",
-      "responsibility7": "Upgrade and develop internal code generator tools (console mode to pre-generate code), optimize to reduce development time",
-      "responsibility8": "Work with Agile/Scrum methodology, use Jira for task management and team coordination"
+      "company": "COGAIN Corporation",
+      "time": "03/2025 - 12/2025",
+      "responsibility1": "Developed CRM, ERP systems (R&D, Purchasing, Warehouse, Production, Sales) with data integration between 2 systems.",
+      "responsibility2": "Designed database structures and APIs for complex business modules.",
+      "responsibility3": "Built authorization features and automated approval workflows.",
+      "responsibility4": "Supported UI/UX design on Figma based on described business requirements.",
+      "responsibility5": "Supported development of leave management and attendance systems with Power BI report integration via API.",
+      "responsibility6": "Developed issue/problem management system with internal chat and OpenAI integration.",
+      "responsibility7": "Implemented data crawling for analysis and automated processing support.",
+      "responsibility8": "Wrote SQL Server stored procedures for complex business logic and query performance optimization.",
+      "responsibility9": "Backend: built BaseController, BaseService patterns for standardized CRUD, approval, routing and reuse.",
+      "responsibility10": "Frontend: built base components for reuse and interface standardization."
     },
     "status": {
       "current": "Currently Working",
       "completed": "Completed"
+    },
+    "sections": {
+      "crm_erp": "DPM & Business Processes",
+      "ui_ux": "Business UI",
+      "internal_systems": "System Features",
+      "database": "Data & Queries",
+      "refactor": "Code Quality",
+      "ecommerce": "E-commerce Development",
+      "api": "API Development",
+      "erp": "ERP Modules",
+      "package": "Package Development",
+      "frontend_components": "Frontend Components",
+      "tools": "Tools & Methodology",
+      "cogain_systems": "CRM, ERP & Data Integration",
+      "cogain_ui": "UI/UX & Internal Systems",
+      "cogain_data": "Database & Automation",
+      "cogain_refactor": "Code Refactoring"
+    },
+    "job3": {
+      "title": "Developer",
+      "company": "GOSOFT Technology Company Limited",
+      "time": "04/2023 - 03/2025",
+      "responsibility1": "Developed e-commerce systems: designed Database and API, built web admin, handled commercial product and training course data flow.",
+      "responsibility3": "Developed API for mobile apps in the social network domain.",
+      "responsibility4": "Built ERP modules: purchasing, warehouse and master data.",
+      "responsibility5": "Developed reusable Menu package for all new and existing projects.",
+      "responsibility6": "Developed additional base Frontend components for the company library.",
+      "responsibility7": "Upgraded and developed internal code generator tools to reduce development time.",
+      "responsibility8": "Worked with Agile/Scrum methodology, using Jira for task management and team coordination."
     }
   },
   "education": {
@@ -294,14 +348,6 @@
       "time": "01/2025 - Present",
       "scholarship": "50% Scholarship",
       "gpa": "Excellent GPA"
-    },
-    "language": {
-      "label": "Bachelor of Language",
-      "name": "Bachelor of English Language",
-      "specialization": "Business English Specialization",
-      "university": "University of Economics Ho Chi Minh City (UEH)",
-      "time": "10/2025 - Present",
-      "focus": "Business English"
     },
     "engineer": {
       "label": "Engineer",

@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { environment } from '../environments/environment';
-import { BehaviorSubject } from 'rxjs';
-import { LangService } from '../shared/services/lang.service';
+import { DestroyRef, Injectable, inject } from '@angular/core';
+import { BehaviorSubject, distinctUntilChanged, skip } from 'rxjs';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ToastrService } from 'ngx-toastr';
-import { firstValueFrom } from 'rxjs';
+
+import { LangService } from '../shared/services/lang.service';
+
+import { ContentLoaderService } from './content-loader.service';
 
 export interface Skill {
   group_id: number;
@@ -26,38 +27,41 @@ export interface GroupedSkill {
   providedIn: 'root',
 })
 export class SkillService {
-  private jsonUrl: string = environment.config.jsonUrl;
-  private fileName: string = 'skill.json';
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly fileName = 'skill.json';
 
-  private skillsSubject = new BehaviorSubject<Skill[]>([]);
+  private readonly skillsSubject = new BehaviorSubject<Skill[]>([]);
   public skills$ = this.skillsSubject.asObservable();
 
   constructor(
-    private http: HttpClient,
-    private langService: LangService,
-    private toast: ToastrService,
+    private readonly contentLoader: ContentLoaderService,
+    private readonly langService: LangService,
+    private readonly toast: ToastrService,
   ) {
-    this.langService.langChanged$.subscribe(() => {
-      this.reloadSkills();
-    });
+    this.langService.langChanged$
+      .pipe(skip(1), distinctUntilChanged(), takeUntilDestroyed(this.destroyRef))
+      .subscribe(() => {
+        void this.reloadSkills();
+      });
 
-    this.reloadSkills();
+    void this.reloadSkills();
   }
 
   async getItems(is_main: boolean = false): Promise<Skill[]> {
     const lang = this.langService.getLang();
-    const url = `${this.jsonUrl}/${lang}/${this.fileName}`;
-    let skills = await firstValueFrom(this.http.get<Skill[]>(url));
+    const skills = await this.contentLoader.loadJson<Skill[]>(lang, this.fileName);
 
     if (!skills || !Array.isArray(skills)) {
-      this.toast.error('Đọc dữ liệu thất bại!', 'Skill');
+      this.toast.error('Failed to load skill data.', 'Skill');
       return [];
     }
 
-    if (is_main)
-      skills = skills.filter(item => item.is_main === is_main);
-    skills = skills.filter(item => item.is_hidden === false);
-    return skills;
+    let filteredSkills = skills.filter(item => item.is_hidden === false);
+    if (is_main) {
+      filteredSkills = filteredSkills.filter(item => item.is_main === is_main);
+    }
+
+    return filteredSkills;
   }
 
   async getGroupedItems(is_main: boolean = false): Promise<GroupedSkill[]> {
@@ -67,9 +71,10 @@ export class SkillService {
         acc[skill.group_id] = {
           group_id: skill.group_id,
           group_name: skill.group_name,
-          items: []
+          items: [],
         };
       }
+
       acc[skill.group_id].items.push(skill);
       return acc;
     }, {} as Record<number, GroupedSkill>);
@@ -80,17 +85,16 @@ export class SkillService {
   private async reloadSkills(): Promise<void> {
     try {
       const lang = this.langService.getLang();
-      const url = `${this.jsonUrl}/${lang}/${this.fileName}`;
-      const skills = await firstValueFrom(this.http.get<Skill[]>(url));
+      const skills = await this.contentLoader.loadJson<Skill[]>(lang, this.fileName);
 
       if (skills && Array.isArray(skills)) {
         this.skillsSubject.next(skills);
       } else {
-        this.toast.error('Đọc dữ liệu thất bại!', 'Skill');
+        this.toast.error('Failed to load skill data.', 'Skill');
         this.skillsSubject.next([]);
       }
-    } catch (error) {
-      this.toast.error('Đọc dữ liệu thất bại!', 'Skill');
+    } catch {
+      this.toast.error('Failed to load skill data.', 'Skill');
       this.skillsSubject.next([]);
     }
   }

@@ -1,30 +1,23 @@
-<!-- Modern Glassmorphism Header -->
+<ng-container *ngIf="{ user: user$ | async, menus: menus$ | async } as vm">
 <div id="header">
   <div class="header-container">
-    <!-- Background blur effect -->
     <div class="header-backdrop"></div>
-    
-    <!-- Main header content -->
     <div class="header-content">
       <div class="container-lg px-0 d-flex justify-content-between align-items-center">
-        
-        <!-- Logo/Brand Section -->
         <div class="brand-section d-flex align-items-center">
           <a routerLink="/" class="brand-link d-flex align-items-center text-decoration-none">
             <div class="avatar-container">
-              <img [src]="user?.avatar" class="avatar-img" alt="Profile">
-              <div class="avatar-glow"></div>
+              <img [src]="vm.user?.avatar" class="avatar-img" alt="Profile">
             </div>
             <div class="brand-text">
-              <span class="brand-name" [class.long-name]="(user?.name?.length || 0) > 12">{{ user?.name }}</span>
+              <span class="brand-name" [class.long-name]="(vm.user?.name?.length || 0) > 12">{{ vm.user?.name }}</span>
               <span class="brand-title">{{ 'header.job_title' | translate }}</span>
             </div>
           </a>
         </div>
 
-        <!-- Desktop Navigation -->
         <nav class="desktop-nav d-none d-lg-flex align-items-center">
-          <a *ngFor="let menu of menus; let i = index" 
+          <a *ngFor="let menu of vm.menus || []; let i = index"
              [routerLink]="menu?.link"
              class="nav-item d-flex align-items-center text-decoration-none"
              [class.active]="isActiveRoute(menu?.link)"
@@ -37,27 +30,26 @@
           </a>
         </nav>
 
-        <!-- Action Buttons -->
         <div class="action-buttons d-flex align-items-center">
-          <!-- Language Switcher -->
-          <button class="action-btn language-btn" 
+          <button type="button"
+                  class="action-btn language-btn"
                   (click)="switchLanguage()"
                   [attr.aria-label]="currentLang === 'en-US' ? 'Switch to Vietnamese' : 'Switch to English'">
             <div class="btn-icon">
               <img class="flag-img"
                    *ngIf="currentLang == 'en-US'"
-                   src="assets/params/images/lang/viet-nam.png" 
+                   src="assets/params/images/lang/viet-nam.png"
                    alt="Vietnam Flag" />
               <img class="flag-img"
                    *ngIf="currentLang == 'vi-VN'"
-                   src="assets/params/images/lang/english.png" 
+                   src="assets/params/images/lang/english.png"
                    alt="English Flag" />
             </div>
             <span class="btn-tooltip">{{ currentLang === 'en-US' ? 'Tiếng Việt' : 'English' }}</span>
           </button>
 
-          <!-- Theme Toggle -->
-          <button class="action-btn theme-btn" 
+          <button type="button"
+                  class="action-btn theme-btn"
                   (click)="toggleTheme()"
                   [attr.aria-label]="currentTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'">
             <div class="btn-icon">
@@ -67,8 +59,8 @@
             <span class="btn-tooltip">{{ currentTheme === 'light' ? 'Dark Mode' : 'Light Mode' }}</span>
           </button>
 
-          <!-- Mobile Menu Toggle -->
-          <button class="mobile-menu-btn d-flex d-lg-none" 
+          <button type="button"
+                  class="mobile-menu-btn d-flex d-lg-none"
                   (click)="isMenuVisible = !isMenuVisible"
                   [class.active]="isMenuVisible"
                   [attr.aria-label]="isMenuVisible ? 'Close Menu' : 'Open Menu'">
@@ -84,31 +76,26 @@
   </div>
 </div>
 
-<!-- Mobile Menu Overlay -->
-<div class="mobile-menu-overlay" 
-     *ngIf="isMenuVisible" 
+<div class="mobile-menu-overlay"
+     *ngIf="isMenuVisible"
      (click)="isMenuVisible = false">
 </div>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" 
+<div class="mobile-menu"
      *ngIf="isMenuVisible"
      [@slideInOut]>
-  
-  <!-- Menu Header -->
   <div class="mobile-menu-header">
     <div class="mobile-brand">
-      <img [src]="user?.avatar" class="mobile-avatar" alt="Profile">
+      <img [src]="vm.user?.avatar" class="mobile-avatar" alt="Profile">
       <div class="mobile-brand-text">
-        <h4 class="mobile-name">{{ user?.name }}</h4>
+        <h4 class="mobile-name">{{ vm.user?.name }}</h4>
         <p class="mobile-title">{{ 'header.job_title' | translate }}</p>
       </div>
     </div>
   </div>
 
-  <!-- Navigation Items -->
   <nav class="mobile-nav">
-    <a *ngFor="let menu of menus; let i = index" 
+    <a *ngFor="let menu of vm.menus || []; let i = index"
        [routerLink]="menu?.link"
        (click)="isMenuVisible = false"
        class="mobile-nav-item d-flex align-items-center text-decoration-none"
@@ -122,18 +109,18 @@
     </a>
   </nav>
 
-  <!-- Action Buttons -->
   <div class="mobile-actions">
-    <button class="mobile-action-btn" 
+    <button type="button"
+            class="mobile-action-btn"
             (click)="switchLanguage()">
       <div class="mobile-action-icon">
         <img class="mobile-flag-img"
              *ngIf="currentLang == 'en-US'"
-             src="assets/params/images/lang/viet-nam.png" 
+             src="assets/params/images/lang/viet-nam.png"
              alt="Vietnam Flag" />
         <img class="mobile-flag-img"
              *ngIf="currentLang == 'vi-VN'"
-             src="assets/params/images/lang/english.png" 
+             src="assets/params/images/lang/english.png"
              alt="English Flag" />
       </div>
       <span class="mobile-action-label">
@@ -141,7 +128,8 @@
       </span>
     </button>
 
-    <button class="mobile-action-btn" 
+    <button type="button"
+            class="mobile-action-btn"
             (click)="toggleTheme()">
       <div class="mobile-action-icon">
         <i *ngIf="currentTheme == 'light'" class="far fa-moon"></i>
@@ -153,3 +141,4 @@
     </button>
   </div>
 </div>
+</ng-container>

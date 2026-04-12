@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { environment } from '../environments/environment';
-import { BehaviorSubject } from 'rxjs';
-import { LangService } from '../shared/services/lang.service';
+import { DestroyRef, Injectable, inject } from '@angular/core';
+import { BehaviorSubject, distinctUntilChanged, skip } from 'rxjs';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ToastrService } from 'ngx-toastr';
-import { firstValueFrom } from 'rxjs';
+
+import { LangService } from '../shared/services/lang.service';
+
+import { ContentLoaderService } from './content-loader.service';
 
 export interface Achievement {
   label: string;
@@ -22,38 +23,39 @@ export interface Achievement {
   providedIn: 'root',
 })
 export class AchievementsService {
-  private jsonUrl: string = environment.config.jsonUrl;
-  private fileName: string = 'achievement.json';
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly fileName = 'achievement.json';
 
-  private achievementsSubject = new BehaviorSubject<Achievement[]>([]);
+  private readonly achievementsSubject = new BehaviorSubject<Achievement[]>([]);
   public achievements$ = this.achievementsSubject.asObservable();
 
   constructor(
-    private http: HttpClient,
-    private langService: LangService,
-    private toast: ToastrService,
+    private readonly contentLoader: ContentLoaderService,
+    private readonly langService: LangService,
+    private readonly toast: ToastrService,
   ) {
-    this.langService.langChanged$.subscribe(() => {
-      this.reloadAchievements();
-    });
+    this.langService.langChanged$
+      .pipe(skip(1), distinctUntilChanged(), takeUntilDestroyed(this.destroyRef))
+      .subscribe(() => {
+        void this.reloadAchievements();
+      });
 
-    this.reloadAchievements();
+    void this.reloadAchievements();
   }
 
   private async reloadAchievements(): Promise<void> {
     try {
       const lang = this.langService.getLang();
-      const url = `${this.jsonUrl}/${lang}/${this.fileName}`;
-      const achievements = await firstValueFrom(this.http.get<Achievement[]>(url));
+      const achievements = await this.contentLoader.loadJson<Achievement[]>(lang, this.fileName);
 
       if (achievements && Array.isArray(achievements)) {
         this.achievementsSubject.next(achievements);
       } else {
-        this.toast.error('Đọc dữ liệu thất bại!', 'Achievement');
+        this.toast.error('Failed to load achievement data.', 'Achievement');
         this.achievementsSubject.next([]);
       }
-    } catch (error) {
-      this.toast.error('Đọc dữ liệu thất bại!', 'Achievement');
+    } catch {
+      this.toast.error('Failed to load achievement data.', 'Achievement');
       this.achievementsSubject.next([]);
     }
   }

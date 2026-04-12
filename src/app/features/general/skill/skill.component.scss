@@ -1,310 +1,164 @@
-// Modern Skills Design - Card Grid Layout
 .skills-modern {
   background: var(--bg-color);
-  min-height: auto;
-  padding: 2rem 0 3rem;
 }
 
-// Header Section
 .skills-header {
-  margin-bottom: 3rem;
-  
-  .skills-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    
-  .title-text {
-    color: var(--text-color);
-  }
-    
-    .title-highlight {
-      color: #8b5cf6;
-      text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
-    }
-  }
-  
-  .skills-description {
-    color: var(--tertiary-text);
-    font-size: 1.125rem;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-}
-
-// Skill Rows Layout
-.skill-row {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
   margin-bottom: 2rem;
-  
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
-// Backend Row - 2 columns
+.skills-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.title-text {
+  color: var(--primary-text);
+}
+
+.title-highlight {
+  color: var(--primary);
+}
+
+.skills-description {
+  color: var(--tertiary-text);
+  font-size: 1rem;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.skill-row {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
 .backend-row {
-  .skill-card {
-    flex: 1;
-    max-width: 450px;
-    min-width: 350px;
-  }
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-// Frontend Row - 3 columns equally spaced
 .frontend-row {
-  .skill-card {
-    flex: 1;
-    max-width: 280px;
-    min-width: 240px;
-  }
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-// Tools Row - 4 columns
 .tools-row {
-  .skill-card {
-    flex: 1;
-    max-width: 220px;
-    min-width: 180px;
-  }
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-// Responsive adjustments
-@media (max-width: 1400px) {
-  .tools-row {
-    flex-wrap: wrap;
-    gap: 1rem;
-    .skill-card {
-      max-width: none;
-      min-width: 200px;
-      flex: calc(25% - 0.75rem);
-    }
-  }
-}
-
-@media (max-width: 1200px) {
-  .skill-row {
-    flex-wrap: wrap;
-  }
-  
-  .backend-row .skill-card,
-  .frontend-row .skill-card {
-    max-width: none;
-    min-width: 280px;
-  }
-  
-  .tools-row .skill-card {
-    max-width: none;
-    min-width: 250px;
-    flex: calc(50% - 0.75rem);
-  }
-}
-
-@media (max-width: 768px) {
-  .tools-row .skill-card {
-    flex: 100%;
-    min-width: auto;
-  }
-}
-
-// Skill Card
 .skill-card {
+  padding: 1.25rem;
+  border-radius: 8px;
   background: var(--secondary);
   border: 1px solid var(--main-close);
-  border-radius: 12px;
-  padding: 1.25rem;
-  text-align: center;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(10px);
-  
-  &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
-    
-    &.backend {
-      border-color: #dc2626;
-    }
-    
-    &.frontend {
-      border-color: #2563eb;
-    }
-    
-    &.database {
-      border-color: #f59e0b;
-    }
-    
-    &.architecture {
-      border-color: #10b981;
-    }
-    
-    &.tools {
-      border-color: #8b5cf6;
-    }
-  }
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.05);
+  text-align: left;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
-// Skill Icon
+.skill-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.08);
+  border-color: rgba(15, 118, 110, 0.22);
+}
+
 .skill-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 1rem;
-  display: flex;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 0.9rem;
+  border-radius: 8px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
-  
-  i {
-    font-size: 2rem;
-    color: #8b5cf6;
-  }
-  
-  .backend & { background: rgba(220, 38, 38, 0.1); i { color: #dc2626; } }
-  .frontend & { background: rgba(37, 99, 235, 0.1); i { color: #2563eb; } }
-  .database & { background: rgba(245, 158, 11, 0.1); i { color: #f59e0b; } }
-  .architecture & { background: rgba(16, 185, 129, 0.1); i { color: #10b981; } }
-  .tools & { background: rgba(139, 92, 246, 0.1); i { color: #8b5cf6; } }
+  background: var(--soft-accent);
+  color: var(--primary);
 }
 
-// Skill Name
+.skill-icon i {
+  font-size: 1.4rem;
+}
+
 .skill-name {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: var(--text-color);
+  margin-bottom: 0.9rem;
+  font-size: 1.05rem;
+  color: var(--primary-text);
 }
 
-// Skill Content for detailed cards
 .skill-content {
-  text-align: center;
-  
-  .tech-section {
-    margin-bottom: 0.75rem;
-    
-    &:last-child {
-      margin-bottom: 0;
-    }
-    
-    h5 {
-      font-size: 0.875rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-      color: var(--tertiary-text);
-    }
-  }
+  display: grid;
+  gap: 0.8rem;
+}
+
+.tech-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
 }
 
 .tech-tag {
-  display: inline-block;
-  padding: 0.2rem 0.6rem;
-  margin: 0.05rem 0.15rem;
-  background: var(--secondary);
-  color: var(--text-color);
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0.25rem 0.65rem;
   border-radius: 8px;
-  font-size: 0.7rem;
-  font-weight: 500;
   border: 1px solid var(--main-close);
-  
-  .backend & { background: rgba(220, 38, 38, 0.2); color: #ffffff; border-color: rgba(220, 38, 38, 0.3); }
-  .frontend & { background: rgba(37, 99, 235, 0.2); color: #ffffff; border-color: rgba(37, 99, 235, 0.3); }
-  .database & { background: rgba(245, 158, 11, 0.2); color: #ffffff; border-color: rgba(245, 158, 11, 0.3); }
-  .architecture & { background: rgba(16, 185, 129, 0.2); color: #ffffff; border-color: rgba(16, 185, 129, 0.3); }
-  .tools & { background: rgba(139, 92, 246, 0.2); color: #ffffff; border-color: rgba(139, 92, 246, 0.3); }
+  background: var(--surface-elevated);
+  color: var(--secondary-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
 }
 
-// Progress Bar
 .progress-bar {
   width: 100%;
   height: 8px;
-  background: var(--secondary);
-  border-radius: 4px;
   overflow: hidden;
+  border-radius: 8px;
+  background: var(--main-close);
 }
 
 .progress-fill {
-  height: 100%;
-  border-radius: 4px;
   position: relative;
-  transition: width 0.8s ease-out;
-  animation: progressFill 2s ease-out;
-  
-  .progress-text {
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  }
+  height: 100%;
+  border-radius: 8px;
 }
 
-// Progress Bar Colors
-.backend-progress {
-  background: linear-gradient(90deg, #dc2626, #ef4444);
+.progress-text {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
 }
 
-.frontend-progress {
-  background: linear-gradient(90deg, #2563eb, #3b82f6);
-}
-
-.database-progress {
-  background: linear-gradient(90deg, #f59e0b, #fbbf24);
-}
-
-.architecture-progress {
-  background: linear-gradient(90deg, #10b981, #34d399);
-}
-
+.backend-progress,
+.frontend-progress,
+.database-progress,
+.architecture-progress,
 .tools-progress {
-  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+  background: var(--primary);
 }
 
-// Animations
-@keyframes progressFill {
-  0% { width: 0%; }
-  100% { width: var(--progress-width, 0%); }
+@media (max-width: 1199px) {
+  .backend-row,
+  .frontend-row,
+  .tools-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-// Responsive Design
-@media (max-width: 768px) {
-  .skills-modern {
-    padding: 2rem 0;
+@media (max-width: 767px) {
+  .skills-title {
+    font-size: 2rem;
   }
-  
-  .skills-header {
-    .skills-title {
-      font-size: 2.5rem;
-      margin-bottom: 0.75rem;
-    }
-    
-    .skills-description {
-      font-size: 1rem;
-    }
-  }
-  
-  .skills-grid {
+
+  .backend-row,
+  .frontend-row,
+  .tools-row {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 0;
   }
-  
+
   .skill-card {
-    padding: 1.5rem;
-  }
-  
-  .skill-icon {
-    width: 50px;
-    height: 50px;
-    
-    i {
-      font-size: 1.5rem;
-    }
-  }
-  
-  .skill-name {
-    font-size: 1.125rem;
+    padding: 1rem;
   }
 }

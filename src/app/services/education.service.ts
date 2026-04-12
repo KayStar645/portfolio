@@ -1,13 +1,14 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { environment } from '../environments/environment';
-import { BehaviorSubject } from 'rxjs';
-import { LangService } from '../shared/services/lang.service';
+import { DestroyRef, Injectable, inject } from '@angular/core';
+import { BehaviorSubject, distinctUntilChanged, skip } from 'rxjs';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ToastrService } from 'ngx-toastr';
-import { firstValueFrom } from 'rxjs';
+
+import { LangService } from '../shared/services/lang.service';
+
+import { ContentLoaderService } from './content-loader.service';
 
 export interface Education {
-  label: string,
+  label: string;
   name: string;
   address: string;
   time: string;
@@ -18,38 +19,39 @@ export interface Education {
   providedIn: 'root',
 })
 export class EducationsService {
-  private jsonUrl: string = environment.config.jsonUrl;
-  private fileName: string = 'education.json';
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly fileName = 'education.json';
 
-  private educationsSubject = new BehaviorSubject<Education[]>([]);
+  private readonly educationsSubject = new BehaviorSubject<Education[]>([]);
   public educations$ = this.educationsSubject.asObservable();
 
   constructor(
-    private http: HttpClient,
-    private langService: LangService,
-    private toast: ToastrService,
+    private readonly contentLoader: ContentLoaderService,
+    private readonly langService: LangService,
+    private readonly toast: ToastrService,
   ) {
-    this.langService.langChanged$.subscribe(() => {
-      this.reloadEducations();
-    });
+    this.langService.langChanged$
+      .pipe(skip(1), distinctUntilChanged(), takeUntilDestroyed(this.destroyRef))
+      .subscribe(() => {
+        void this.reloadEducations();
+      });
 
-    this.reloadEducations();
+    void this.reloadEducations();
   }
 
   private async reloadEducations(): Promise<void> {
     try {
       const lang = this.langService.getLang();
-      const url = `${this.jsonUrl}/${lang}/${this.fileName}`;
-      const educations = await firstValueFrom(this.http.get<Education[]>(url));
+      const educations = await this.contentLoader.loadJson<Education[]>(lang, this.fileName);
 
       if (educations && Array.isArray(educations)) {
         this.educationsSubject.next(educations);
       } else {
-        this.toast.error('Đọc dữ liệu thất bại!', 'Education');
+        this.toast.error('Failed to load education data.', 'Education');
         this.educationsSubject.next([]);
       }
-    } catch (error) {
-      this.toast.error('Đọc dữ liệu thất bại!', 'Education');
+    } catch {
+      this.toast.error('Failed to load education data.', 'Education');
       this.educationsSubject.next([]);
     }
   }
