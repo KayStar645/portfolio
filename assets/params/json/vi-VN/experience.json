@@ -2,11 +2,34 @@
   {
     "id": 1,
     "title": "Lập trình viên",
-    "company": "CÔNG TY CỔ PHẦN COGAIN",
-    "time": "03/2025 – Hiện tại",
+    "company": "CÔNG TY CỔ PHẦN CÔNG NGHỆ VŨ THẢO",
+    "time": "01/2026 - Hiện tại",
     "location": "Hồ Chí Minh",
     "type": "full-time",
     "status": "current",
+    "description": "Migrate hệ thống DPM cũ từ SharePoint sang nền tảng mới .NET + React",
+    "responsibilities": [
+      "Migrate hệ thống DPM (Digital Process Management) cũ từ SharePoint sang nền tảng mới .NET + React",
+      "Phân tích luồng quy trình, phê duyệt, biểu mẫu và dữ liệu SharePoint để chuyển đổi sang hệ thống mới",
+      "Triển khai tính năng backend/frontend bằng .NET và React theo logic nghiệp vụ đã được migration",
+      "Phối hợp kiểm thử, đối soát nghiệp vụ và sửa lỗi trong quá trình migration",
+      "Cải thiện khả năng bảo trì sau khi chuyển đổi khỏi nền tảng SharePoint"
+    ],
+    "technologies": [
+      "DPM",
+      "SharePoint Migration",
+      ".NET",
+      "React"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Lập trình viên",
+    "company": "CÔNG TY CỔ PHẦN COGAIN",
+    "time": "03/2025 - 12/2025",
+    "location": "Hồ Chí Minh",
+    "type": "full-time",
+    "status": "completed",
     "description": "Tham gia phát triển hệ thống CRM, ERP và các phần mềm nội bộ",
     "responsibilities": [
       "Tham gia phát triển và chịu trách nhiệm chính hệ thống CRM, ERP",
@@ -15,13 +38,20 @@
       "Viết stored procedures trên SQL Server",
       "Tái cấu trúc mã nguồn Backend và Frontend"
     ],
-    "technologies": ["ASP.NET Core", "Laravel", "React", "SQL Server", "Power BI", "OpenAI API"]
+    "technologies": [
+      "ASP.NET Core",
+      "Laravel",
+      "React",
+      "SQL Server",
+      "Power BI",
+      "OpenAI API"
+    ]
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Lập trình viên",
     "company": "CÔNG TY TNHH CÔNG NGHỆ GOSOFT",
-    "time": "04/2023 – 03/2025",
+    "time": "04/2023 - 03/2025",
     "location": "Hồ Chí Minh",
     "type": "full-time",
     "status": "completed",
@@ -35,6 +65,14 @@
       "Nâng cấp công cụ code generator",
       "Làm việc theo Agile/Scrum với Jira"
     ],
-    "technologies": ["PHP", "Laravel", "MySQL", "React", "JavaScript", "Agile", "Jira"]
+    "technologies": [
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "React",
+      "JavaScript",
+      "Agile",
+      "Jira"
+    ]
   }
 ]

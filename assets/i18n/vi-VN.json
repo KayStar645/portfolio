@@ -1,13 +1,15 @@
 {
   "header": {
-    "job_title": "Lập trình viên"
+    "job_title": "Full-Stack Developer | Học viên cao học | Đam mê kiến trúc hệ thống"
   },
   "resume": {
     "title": "Sơ Yếu Lý Lịch",
-    "subtitle": "Tóm tắt kinh nghiệm và kỹ năng chuyên môn",
+    "subtitle": "Kỹ thuật full-stack, nghiên cứu CNTT ứng dụng và định hướng kiến trúc hệ thống",
     "download_pdf": "Tải PDF",
+    "contact": "Liên hệ",
+    "research": "Nghiên cứu & mối quan tâm",
     "about": "Giới thiệu",
-    "about_description": "Kỹ sư phần mềm với 2.5 năm kinh nghiệm phát triển nhiều hệ thống phần mềm từ ứng dụng doanh nghiệp đến công cụ nội bộ. Tham gia nghiên cứu Data Mining & AI, đạt nhiều giải thưởng NCKH và chủ nhiệm đề tài cấp trường. Mục tiêu hướng tới trở thành chuyên gia xây dựng hệ thống thông minh, ứng dụng AI và khai thác dữ liệu để tối ưu quy trình, nâng cao hiệu quả và tạo giá trị bứt phá cho tổ chức.",
+    "about_description": "Lập trình viên full-stack với hơn 3 năm kinh nghiệm thực tế trong các hệ thống ERP, thương mại điện tử, mạng xã hội và phần mềm DPM.",
     "skills": "Kỹ năng",
     "tech_stack": "Công nghệ",
     "backend": "Backend",
@@ -15,20 +17,20 @@
     "system_integration": "Hệ thống & Tích hợp",
     "experience": "Kinh nghiệm",
     "experience_current_title": "Lập trình viên",
-    "experience_current_time": "03/2025 – Hiện tại",
-    "experience_current_company": "Công ty Cổ phần COGAIN",
-    "experience_current_1": "Phát triển hệ thống CRM, ERP (R&D, Mua hàng, Kho, Sản xuất, Bán hàng)",
-    "experience_current_2": "Liên kết dữ liệu giữa 2 hệ thống và thiết kế Database, API",
-    "experience_current_3": "Hỗ trợ UI/UX trên Figma và phát triển hệ thống nội bộ",
-    "experience_current_4": "Tích hợp Power BI, OpenAI và viết stored procedures SQL Server",
-    "experience_current_5": "Tái cấu trúc mã nguồn (BaseController, BaseService, base components)",
+    "experience_current_time": "01/2026 - Hiện tại",
+    "experience_current_company": "Công ty Cổ phần Công nghệ Vũ Thảo",
+    "experience_current_1": "Migrate hệ thống DPM cũ từ SharePoint sang nền tảng mới .NET + React",
+    "experience_current_2": "Chuyển đổi các luồng quy trình, phê duyệt và dữ liệu nghiệp vụ sang kiến trúc mới",
+    "experience_current_3": "Triển khai tính năng backend/frontend trên .NET và React",
+    "experience_current_4": "Phối hợp kiểm thử, đối soát nghiệp vụ và sửa lỗi trong quá trình migration",
+    "experience_current_5": "Cải thiện khả năng bảo trì sau khi chuyển đổi khỏi nền tảng SharePoint",
     "experience_previous_title": "Lập trình viên",
-    "experience_previous_time": "04/2023 – 03/2025",
-    "experience_previous_company": "Công ty TNHH Công nghệ GOSOFT",
-    "experience_previous_1": "Phát triển hệ thống e-commerce và ERP (kho, master data, mua hàng): thiết kế Database, API và xây dựng web admin",
-    "experience_previous_2": "Phát triển API cho mobile app social network",
-    "experience_previous_3": "Xây dựng package Menu, base components và nâng cấp code generator",
-    "experience_previous_4": "Giám sát hướng dẫn và review code cho nhân sự mới, làm việc theo Agile/Scrum với Jira",
+    "experience_previous_time": "03/2025 - 12/2025",
+    "experience_previous_company": "Công ty Cổ phần COGAIN",
+    "experience_previous_1": "Phát triển hệ thống CRM, ERP (R&D, Mua hàng, Kho, Sản xuất, Bán hàng)",
+    "experience_previous_2": "Liên kết dữ liệu giữa 2 hệ thống và thiết kế Database, API",
+    "experience_previous_3": "Hỗ trợ UI/UX trên Figma và phát triển hệ thống nội bộ",
+    "experience_previous_4": "Tích hợp Power BI, OpenAI và viết stored procedures SQL Server",
     "education": "Học vấn",
     "master_degree": "Thạc sĩ Công nghệ thông tin",
     "bachelor_degree": "Cử nhân Công nghệ thông tin",
@@ -43,7 +45,7 @@
     "english_level": "Trình độ B1 - Khung tham chiếu Châu Âu",
     "pedagogy_level": "Loại Giỏi - Dành cho giảng viên Đại học, Cao đẳng",
     "pedagogy_university": "Trường Đại học Sư phạm Hà Nội 2",
-    "achievements": "Thành tích",
+    "achievements": "Điểm nổi bật chuyên môn",
     "achievement_1_title": "Giải nhất NCKH cấp Trường",
     "achievement_1_desc": "Đề tài nghiên cứu về ứng dụng AI trong quản lý dữ liệu - Trưởng nhóm",
     "achievement_2_title": "Giải nhì NCKH cấp Khoa",
@@ -62,21 +64,21 @@
   },
   "home": {
     "greeting": "Xin chào, tôi là",
-    "title": "Phạm Tấn Thuận",
-    "description": "Lập trình viên full-stack với 2+ năm kinh nghiệm phát triển hệ thống CRM, ERP và ứng dụng web hiện đại. Đam mê công nghệ và luôn tìm kiếm những giải pháp tối ưu nhất.",
+    "title": "Thuan | KayStar",
+    "description": "Tôi phát triển phần mềm doanh nghiệp với trọng tâm là kiến trúc có khả năng mở rộng, khả năng bảo trì lâu dài và chất lượng kỹ thuật vững chắc.",
     "view_portfolio": "Xem Portfolio",
     "download_cv": "Tải CV",
-    "tech_title": "Công nghệ chuyên môn",
-    "tech_subtitle": "Những công nghệ và công cụ mà tôi sử dụng hàng ngày",
+    "tech_title": "Hệ thống doanh nghiệp & kiến trúc phần mềm",
+    "tech_subtitle": "Công nghệ trọng tâm hiện tại: .NET, React, SQL Server, Azure DevOps, cùng kinh nghiệm thực tế với hệ thống phân tán và AI-assisted workflows.",
     "nav": {
       "skills": "Kỹ năng",
-      "skills_desc": "Các công nghệ và framework mà tôi thành thạo",
+      "skills_desc": "Core stack, kiến trúc, hạ tầng và quy trình tăng năng suất kỹ thuật",
       "experience": "Kinh nghiệm",
-      "experience_desc": "Hành trình phát triển nghề nghiệp của tôi",
+      "experience_desc": "Hơn 3 năm triển khai ERP, e-commerce, nền tảng xã hội và phần mềm DPM",
       "projects": "Dự án",
-      "projects_desc": "Các dự án thực tế đã thực hiện",
+      "projects_desc": "Sản phẩm thiên về kiến trúc và các thành phần kỹ thuật tái sử dụng",
       "achievements": "Thành tích",
-      "achievements_desc": "Giải thưởng và nghiên cứu khoa học",
+      "achievements_desc": "Mối quan tâm nghiên cứu, giải thưởng và hướng dữ liệu hoặc AI",
       "education": "Học vấn",
       "education_desc": "Quá trình học tập và bằng cấp của tôi"
     }
@@ -84,7 +86,7 @@
   "skill": {
     "title_prefix": "Kỹ năng",
     "title_suffix": "Chuyên môn",
-    "description": "Các công nghệ và kỹ năng mà tôi thành thạo trong phát triển phần mềm",
+    "description": "Core stack, mô hình kiến trúc, công cụ hạ tầng, phát triển thư viện và quy trình AI-assisted engineering.",
     "expertise": {
       "title": "Tôi thành thạo đa dạng công nghệ",
       "backend": "Công nghệ Backend mạnh mẽ",
@@ -96,6 +98,13 @@
       "database": "Hệ thống quản lý dữ liệu",
       "architecture": "Thiết kế hệ thống mở rộng",
       "tools": "Công cụ phát triển chuyên nghiệp"
+    },
+    "summary": {
+      "experience": "3+ năm",
+      "title_detail": "Kinh nghiệm Full-Stack thực tế",
+      "focus_detail": "Hệ thống doanh nghiệp & kiến trúc phần mềm",
+      "specialties_detail": "Clean Architecture, DDD, CQRS, Microservices",
+      "latest_detail": "AI-assisted development, thư viện tái sử dụng, tích hợp phân tán"
     }
   },
   "modules": {
@@ -142,6 +151,11 @@
     "awards": {
       "title": "Giải thưởng & Thành tích",
       "subtitle": "Các giải thưởng từ cuộc thi nghiên cứu khoa học",
+      "rank": {
+        "first": "Giải nhất",
+        "second": "Giải nhì",
+        "encouragement": "Giải khuyến khích"
+      },
       "award1": {
         "name": "Cuộc thi sinh viên NCKH cấp Trường",
         "event": "Trường Đại học Công Thương TP.HCM",
@@ -150,6 +164,14 @@
         "team_members": "Khúc Hồng Nhung, Trần Ngọc Hiếu Thảo",
         "time": "05/2024"
       },
+    "award6": {
+      "name": "Cuộc thi NCKH cấp Khoa CNTT",
+      "event": "Trường Đại học Công Thương TP.HCM",
+      "role": "Đồng hướng dẫn sinh viên",
+      "team_leader": "Phạm Tấn Thuận (Đồng hướng dẫn)",
+      "team_members": "Trần Dương Gia Bảo, Trần Gia Bảo",
+      "time": "04/2026"
+    },
       "award2": {
         "name": "Cuộc thi NCKH cấp Khoa CNTT",
         "event": "Trường Đại học Công Thương TP.HCM",
@@ -163,7 +185,7 @@
         "event": "Trường Đại học Công Nghệ TP.HCM (HUTECH)",
         "role": "Trưởng nhóm",
         "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
-        "team_members": "Phạm Tấn Thuận, Ngô Văn Sơn",
+        "team_members": "Phạm Tấn Thuận,  Văn Sơn",
         "time": "12/2023"
       },
       "award4": {
@@ -171,7 +193,7 @@
         "event": "Trường Đại học Công Thương TP.HCM",
         "role": "Trưởng nhóm",
         "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
-        "team_members": "Phạm Tấn Thuận, Ngô Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
+        "team_members": "Phạm Tấn Thuận,  Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
         "time": "04/2023"
       },
       "award5": {
@@ -179,7 +201,7 @@
         "event": "Trường Đại học Công Thương TP.HCM",
         "role": "Trưởng nhóm",
         "team_leader": "Phạm Tấn Thuận (Trưởng nhóm)",
-        "team_members": "Phạm Tấn Thuận, Nguyễn Nương Hồng Thắm, Nguyễn Tấn Phát, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
+        "team_members": "Phạm Tấn Thuận,  Nương Hồng Thắm, Nguyễn Tấn Phát, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
         "time": "06/2022"
       }
     },
@@ -207,6 +229,13 @@
       "completed": "Hoàn thành",
       "in_progress": "Đang phát triển",
       "planned": "Dự kiến"
+    },
+    "sections": {
+      "landing": "Landing Page & marketing",
+      "chatbot": "Tích hợp chatbot",
+      "multichannel": "Giao tiếp đa kênh",
+      "deployment": "Triển khai & DevOps",
+      "technologies": "Công nghệ:"
     }
   },
   "experience": {
@@ -215,34 +244,66 @@
     "subtitle": "Hành trình phát triển nghề nghiệp và đóng góp trong các dự án",
     "job1": {
       "title": "Lập trình viên",
-      "company": "Công ty Cổ phần COGAIN",
-      "time": "03/2025 – Hiện tại",
-      "responsibility1": "Tham gia phát triển và chịu trách nhiệm chính hệ thống CRM, ERP (R&D, Mua hàng, Kho, Sản xuất, Bán hàng) liên kết dữ liệu giữa 2 hệ thống, xây dựng tính năng cho cả Backend và Frontend",
-      "responsibility2": "Thiết kế cấu trúc Database và API cho các module nghiệp vụ phức tạp",
-      "responsibility3": "Xây dựng tính năng phân quyền và workflow phê duyệt tự động",
-      "responsibility4": "Tham gia hỗ trợ thiết kế UI/UX trên Figma dựa trên nghiệp vụ được mô tả",
-      "responsibility5": "Tham gia hỗ trợ phát triển hệ thống nghỉ phép, chấm công tích hợp báo cáo từ Power BI thông qua API",
-      "responsibility6": "Phát triển hệ thống quản lý sự cố/vấn đề có chat nội bộ với tích hợp OpenAI",
-      "responsibility7": "Thực hiện crawl data phục vụ phân tích và hỗ trợ xử lý tự động",
-      "responsibility8": "Thực hiện viết stored procedures trên SQL Server để xử lý nghiệp vụ phức tạp và tối ưu hiệu năng truy vấn dữ liệu",
-      "responsibility9": "Backend: xây dựng BaseController, BaseService chuẩn hóa CRUD, phê duyệt, điều hướng và tái sử dụng",
-      "responsibility10": "Frontend: xây dựng 1 bộ base components (Input, Select, Compact, DatePicker...) phục vụ tái sử dụng và chuẩn hóa giao diện"
+      "company": "Công ty Cổ phần Công nghệ Vũ Thảo",
+      "time": "01/2026 - Hiện tại",
+      "responsibility1": "Migrate hệ thống DPM (Digital Process Management) cũ từ SharePoint sang nền tảng mới .NET + React.",
+      "responsibility2": "Phân tích các luồng quy trình, phê duyệt, biểu mẫu và dữ liệu hiện có trên SharePoint để chuyển đổi sang hệ thống mới.",
+      "responsibility3": "Triển khai tính năng backend/frontend bằng .NET và React theo logic nghiệp vụ đã được migration.",
+      "responsibility4": "Xây dựng lại giao diện nghiệp vụ trên React để thay thế trải nghiệm cũ từ SharePoint.",
+      "responsibility5": "Chuyển đổi các module vận hành, trạng thái quy trình và dữ liệu liên quan sang cấu trúc mới.",
+      "responsibility6": "Phối hợp kiểm thử, đối soát nghiệp vụ và sửa lỗi phát sinh trong quá trình migration.",
+      "responsibility7": "Theo dõi phản hồi sử dụng để ổn định các luồng nghiệp vụ sau chuyển đổi.",
+      "responsibility8": "Làm việc với dữ liệu và truy vấn phục vụ chuyển đổi, kiểm tra và vận hành quy trình.",
+      "responsibility9": "Giữ code theo pattern .NET/React của hệ thống mới để dễ bảo trì.",
+      "responsibility10": "Chuẩn hóa các phần frontend/backend dùng chung khi cần để giảm lặp và tăng tính ổn định."
     },
     "job2": {
-      "title": "Lập trình viên", 
-      "company": "Công ty TNHH Công nghệ GOSOFT",
-      "time": "04/2023 – 03/2025",
-      "responsibility1": "Tham gia phát triển hệ thống e-commerce: thiết kế Database và API, xây dựng web admin, xử lý luồng dữ liệu sản phẩm thương mại và khóa học đào tạo",
-      "responsibility3": "Phát triển API cho mobile app trong lĩnh vực social network (tương tác xã hội, quản lý dữ liệu)",
-      "responsibility4": "Tham gia xây dựng phân hệ ERP: mua hàng, kho và master data",
-      "responsibility5": "Xây dựng package Menu để tái sử dụng cho tất cả các dự án mới và cũ",
-      "responsibility6": "Phát triển thêm vào thư viện công ty một số base components cho Frontend (Select, Price, TreeViewTable,…), tái sử dụng và chuẩn hóa giao diện",
-      "responsibility7": "Nâng cấp và phát triển công cụ code generator nội bộ (chạy console để sinh code sẵn), tối ưu để rút ngắn thời gian phát triển",
-      "responsibility8": "Làm việc theo Agile/Scrum, sử dụng Jira để quản lý công việc và phối hợp nhóm"
+      "title": "Lập trình viên",
+      "company": "Công ty Cổ phần COGAIN",
+      "time": "03/2025 - 12/2025",
+      "responsibility1": "Tham gia phát triển hệ thống CRM, ERP (R&D, Mua hàng, Kho, Sản xuất, Bán hàng) và liên kết dữ liệu giữa 2 hệ thống.",
+      "responsibility2": "Thiết kế cấu trúc Database và API cho các module nghiệp vụ phức tạp.",
+      "responsibility3": "Xây dựng tính năng phân quyền và workflow phê duyệt tự động.",
+      "responsibility4": "Tham gia hỗ trợ thiết kế UI/UX trên Figma dựa trên nghiệp vụ được mô tả.",
+      "responsibility5": "Tham gia hỗ trợ phát triển hệ thống nghỉ phép, chấm công tích hợp báo cáo từ Power BI thông qua API.",
+      "responsibility6": "Phát triển hệ thống quản lý sự cố/vấn đề có chat nội bộ với tích hợp OpenAI.",
+      "responsibility7": "Thực hiện crawl data phục vụ phân tích và hỗ trợ xử lý tự động.",
+      "responsibility8": "Thực hiện viết stored procedures trên SQL Server để xử lý nghiệp vụ phức tạp và tối ưu hiệu năng truy vấn dữ liệu.",
+      "responsibility9": "Backend: xây dựng BaseController, BaseService chuẩn hóa CRUD, phê duyệt, điều hướng và tái sử dụng.",
+      "responsibility10": "Frontend: xây dựng bộ base components phục vụ tái sử dụng và chuẩn hóa giao diện."
     },
     "status": {
       "current": "Đang làm việc",
       "completed": "Hoàn thành"
+    },
+    "sections": {
+      "crm_erp": "DPM & quy trình nghiệp vụ",
+      "ui_ux": "Giao diện nghiệp vụ",
+      "internal_systems": "Tính năng hệ thống",
+      "database": "Dữ liệu & truy vấn",
+      "refactor": "Chất lượng mã nguồn",
+      "ecommerce": "Phát triển e-commerce",
+      "api": "Phát triển API",
+      "erp": "Phân hệ ERP",
+      "package": "Phát triển package",
+      "frontend_components": "Base components Frontend",
+      "tools": "Công cụ & phương pháp",
+      "cogain_systems": "CRM, ERP & tích hợp dữ liệu",
+      "cogain_ui": "UI/UX & hệ thống nội bộ",
+      "cogain_data": "Database & tự động hóa",
+      "cogain_refactor": "Tái cấu trúc mã nguồn"
+    },
+    "job3": {
+      "title": "Lập trình viên",
+      "company": "Công ty TNHH Công nghệ GOSOFT",
+      "time": "04/2023 - 03/2025",
+      "responsibility1": "Tham gia phát triển hệ thống e-commerce: thiết kế Database và API, xây dựng web admin, xử lý luồng dữ liệu sản phẩm thương mại và khóa học đào tạo.",
+      "responsibility3": "Phát triển API cho mobile app trong lĩnh vực social network.",
+      "responsibility4": "Tham gia xây dựng phân hệ ERP: mua hàng, kho và master data.",
+      "responsibility5": "Xây dựng package Menu để tái sử dụng cho tất cả các dự án mới và cũ.",
+      "responsibility6": "Phát triển thêm vào thư viện công ty một số base components cho Frontend.",
+      "responsibility7": "Nâng cấp và phát triển công cụ code generator nội bộ để rút ngắn thời gian phát triển.",
+      "responsibility8": "Làm việc theo Agile/Scrum, sử dụng Jira để quản lý công việc và phối hợp nhóm."
     }
   },
   "education": {
@@ -258,14 +319,6 @@
       "time": "01/2025 - Nay",
       "scholarship": "Học bổng 50%",
       "gpa": "Điểm xuất sắc (Excellent)"
-    },
-    "language": {
-      "label": "Cử nhân ngôn ngữ",
-      "name": "Cử nhân Ngôn ngữ Anh",
-      "specialization": "Chuyên ngành Tiếng Anh thương mại",
-      "university": "Trường Đại học Kinh tế TP.HCM (UEH)",
-      "time": "10/2025 - Nay",
-      "focus": "Tiếng Anh thương mại"
     },
     "engineer": {
       "label": "Kỹ sư",

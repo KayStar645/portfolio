@@ -1,1 +1,234 @@
-[]
+{
+  "profile": {
+    "name": "Thuan | KayStar",
+    "title": "Full-Stack Developer | Học viên cao học | Đam mê kiến trúc hệ thống",
+    "avatar": "assets/params/images/info/avatar.jpg",
+    "location": "TP. Hồ Chí Minh, Việt Nam",
+    "contacts": [
+      {
+        "label": "Email",
+        "value": "thuanpt182@gmail.com",
+        "icon": "fas fa-envelope",
+        "href": "mailto:thuanpt182@gmail.com"
+      },
+      {
+        "label": "Portfolio",
+        "value": "Portfolio",
+        "icon": "fas fa-globe",
+        "href": "https://kaystar645.github.io/portfolio/"
+      },
+      {
+        "label": "GitHub",
+        "value": "KayStar645",
+        "icon": "fab fa-github",
+        "href": "https://github.com/KayStar645"
+      },
+    {
+      "label": "Facebook",
+      "value": "thuanpt182.2",
+      "icon": "fab fa-facebook",
+      "href": "https://www.facebook.com/thuanpt182.2"
+    }
+    ]
+  },
+  "summary": "Tôi là lập trình viên full-stack với hơn 3 năm kinh nghiệm thực tế trong các hệ thống ERP, thương mại điện tử, mạng xã hội và phần mềm DPM. Hiện tôi đang theo học chương trình Thạc sĩ Công nghệ Thông tin Ứng dụng tại Trường Đại học Công Thương TP.HCM (HUIT). Tôi yêu thích việc thiết kế hệ thống sạch, mô hình hóa domain rõ ràng và xây dựng sản phẩm có thể phát triển bền vững theo thời gian. Tôi cũng quan tâm mạnh đến AI-assisted development để tăng năng suất, rút ngắn thời gian triển khai và cải thiện chất lượng giải pháp.",
+  "skillGroups": [
+    {
+      "title": "Current Core Stack",
+      "items": [
+        ".NET",
+        "React",
+        "SQL Server",
+        "Azure DevOps"
+      ]
+    },
+    {
+      "title": "Backend",
+      "items": [
+        ".NET",
+        "Laravel",
+        "gRPC",
+        "Microservices"
+      ]
+    },
+    {
+      "title": "Frontend",
+      "items": [
+        "React",
+        "Angular",
+        "Vue.js",
+        "Bootstrap"
+      ]
+    },
+    {
+      "title": "Kiến trúc & Kỹ thuật",
+      "items": [
+        "Clean Architecture",
+        "Domain-Driven Design",
+        "CQRS",
+        "Microservices thinking"
+      ]
+    },
+    {
+      "title": "Hạ tầng & Công cụ",
+      "items": [
+        "RabbitMQ",
+        "Elasticsearch",
+        "Azure DevOps",
+        "Docker",
+        "CI/CD"
+      ]
+    },
+    {
+      "title": "Cơ sở dữ liệu",
+      "items": [
+        "SQL Server",
+        "PostgreSQL",
+        "MySQL"
+      ]
+    },
+    {
+      "title": "Phát triển thư viện",
+      "items": [
+        "Reusable .NET libraries",
+        "NuGet packages",
+        "Modular SDK-style components"
+      ]
+    },
+    {
+      "title": "AI & Năng suất",
+      "items": [
+        "AI-assisted development",
+        "AI integration in software",
+        "Productivity-oriented engineering workflows"
+      ]
+    },
+    {
+      "title": "Kinh nghiệm sản phẩm",
+      "items": [
+        "Hệ thống doanh nghiệp",
+        "ERP",
+        "Thương mại điện tử",
+        "Nền tảng xã hội",
+        "Phần mềm DPM"
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "title": "Lập trình viên",
+      "organization": "Công ty Cổ phần Công nghệ Vũ Thảo",
+      "period": "01/2026 - Hiện tại",
+      "details": [
+        "Migrate hệ thống DPM (Digital Process Management) cũ từ SharePoint sang nền tảng mới .NET + React.",
+        "Phân tích luồng quy trình, phê duyệt, biểu mẫu và dữ liệu SharePoint để chuyển đổi sang hệ thống mới.",
+        "Triển khai tính năng backend/frontend bằng .NET và React theo logic nghiệp vụ đã được migration.",
+        "Phối hợp kiểm thử, đối soát nghiệp vụ và sửa lỗi trong quá trình migration.",
+        "Cải thiện khả năng bảo trì sau khi chuyển đổi khỏi nền tảng SharePoint."
+      ]
+    },
+    {
+      "title": "Full-Stack Developer",
+      "organization": "Công ty Cổ phần COGAIN",
+      "period": "03/2025 - 12/2025",
+      "details": [
+        "Tham gia triển khai hệ thống doanh nghiệp xuyên suốt từ backend, frontend, cơ sở dữ liệu đến pipeline phát hành.",
+        "Ứng dụng Clean Architecture, domain modeling, CQRS và microservices thinking để tổ chức các sản phẩm nghiệp vụ phức tạp.",
+        "Làm việc với .NET, React, SQL Server và Azure DevOps trong các luồng phát triển sản phẩm.",
+        "Tích hợp Power BI, OpenAI và stored procedures SQL Server cho hệ thống nội bộ.",
+        "Xây dựng thành phần tái sử dụng và refactor nền tảng backend/frontend dùng chung."
+      ]
+    },
+    {
+      "title": "Full-Stack Developer",
+      "organization": "Công ty TNHH Công nghệ GOSOFT",
+      "period": "04/2023 - 03/2025",
+      "details": [
+        "Triển khai phần mềm e-commerce, ERP và nền tảng xã hội qua các lớp database, API và web admin.",
+        "Xây dựng package Menu, base components và công cụ code generator nội bộ.",
+        "Làm việc với các bài toán phần mềm doanh nghiệp yêu cầu khả năng bảo trì, mở rộng và rõ ràng nghiệp vụ.",
+        "Hướng dẫn nhân sự mới, review code và phối hợp theo Agile/Scrum."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "title": "Thạc sĩ Công nghệ Thông tin Ứng dụng",
+      "subtitle": "Trường Đại học Công Thương TP.HCM (HUIT)",
+      "period": "01/2025 - Nay",
+      "description": "Academic track: Công nghệ Thông tin Ứng dụng."
+    },
+    {
+      "title": "Kỹ sư Công nghệ thông tin",
+      "subtitle": "Trường Đại học Công Thương TP.HCM (HUIT)",
+      "period": "01/2024 - 06/2024",
+      "description": "Chuyên ngành Công nghệ phần mềm"
+    },
+    {
+      "title": "Cử nhân Công nghệ thông tin",
+      "subtitle": "Trường Đại học Công Thương TP.HCM (HUIT)",
+      "period": "09/2020 - 12/2023",
+      "description": "Chuyên ngành Công nghệ phần mềm"
+    }
+  ],
+  "certificates": [
+    {
+      "title": "Chứng chỉ Anh văn B1",
+      "subtitle": "Khung tham chiếu Châu Âu",
+      "period": "03/2025",
+      "description": "Trình độ B1"
+    },
+    {
+      "title": "Chứng nhận Bồi dưỡng Nghiệp vụ Sư phạm",
+      "subtitle": "Trường Đại học Sư phạm Hà Nội 2",
+      "period": "10/2025",
+      "description": "Loại Giỏi"
+    }
+  ],
+  "research": [
+    {
+      "title": "Kiến trúc phần mềm doanh nghiệp",
+      "description": "Clean Architecture, DDD, CQRS, microservices và các mô hình tích hợp phân tán cho hệ thống có khả năng bảo trì lâu dài."
+    },
+    {
+      "title": "Khai phá dữ liệu & phân tích hành vi người dùng",
+      "description": "Data Mining, ABSA và recommendation systems để khai thác insight từ dữ liệu sản phẩm và hành vi người dùng."
+    },
+    {
+      "title": "AI-assisted software engineering",
+      "description": "Tích hợp AI vào sản phẩm và quy trình phát triển để nâng cao năng lực phần mềm, tốc độ triển khai và chất lượng kỹ thuật."
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Triển khai hệ thống doanh nghiệp end-to-end",
+      "description": "Thiết kế và phát triển hệ thống nghiệp vụ từ backend, frontend, lưu trữ dữ liệu, messaging đến release workflows."
+    },
+    {
+      "title": "Kỷ luật kiến trúc",
+      "description": "Ứng dụng Clean Architecture, Domain-Driven Design, CQRS và microservices thinking để giữ sản phẩm phức tạp có cấu trúc rõ ràng."
+    },
+    {
+      "title": "Thành phần kỹ thuật tái sử dụng",
+      "description": "Xây dựng reusable .NET libraries, modular SDK-style components và NuGet packages để tăng tính nhất quán cho đội nhóm và sản phẩm."
+    },
+    {
+      "title": "Tư duy sản phẩm doanh nghiệp",
+      "description": "Có kinh nghiệm với các domain phần mềm yêu cầu cao về khả năng bảo trì, mở rộng và độ rõ ràng nghiệp vụ."
+    }
+  ],
+  "languages": [
+    {
+      "name": "Tiếng Việt",
+      "level": "Bản ngữ"
+    },
+    {
+      "name": "English",
+      "level": "Sử dụng trong công việc"
+    },
+    {
+      "name": "中文",
+      "level": "Đang học"
+    }
+  ]
+}

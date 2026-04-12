@@ -1,1 +1,234 @@
-[]
+{
+  "profile": {
+    "name": "Thuan | KayStar",
+    "title": "Full-Stack Developer | MSc Student | System Architecture Enthusiast",
+    "avatar": "assets/params/images/info/avatar.jpg",
+    "location": "Ho Chi Minh City, Vietnam",
+    "contacts": [
+      {
+        "label": "Email",
+        "value": "thuanpt182@gmail.com",
+        "icon": "fas fa-envelope",
+        "href": "mailto:thuanpt182@gmail.com"
+      },
+      {
+        "label": "Portfolio",
+        "value": "Portfolio",
+        "icon": "fas fa-globe",
+        "href": "https://kaystar645.github.io/portfolio/"
+      },
+      {
+        "label": "GitHub",
+        "value": "KayStar645",
+        "icon": "fab fa-github",
+        "href": "https://github.com/KayStar645"
+      },
+    {
+      "label": "Facebook",
+      "value": "thuanpt182.2",
+      "icon": "fab fa-facebook",
+      "href": "https://www.facebook.com/thuanpt182.2"
+    }
+    ]
+  },
+  "summary": "I am a full-stack developer with over 3 years of professional experience delivering ERP platforms, e-commerce solutions, social network systems, and DPM software. I am currently pursuing a Master's degree in Applied Information Technology at the University of Industry and Trade in Ho Chi Minh City (HUIT). My work is driven by clean system design, solid domain modeling, and a practical approach to building software that lasts. I actively explore AI-assisted development to improve engineering productivity, delivery speed, and solution quality.",
+  "skillGroups": [
+    {
+      "title": "Current Core Stack",
+      "items": [
+        ".NET",
+        "React",
+        "SQL Server",
+        "Azure DevOps"
+      ]
+    },
+    {
+      "title": "Backend",
+      "items": [
+        ".NET",
+        "Laravel",
+        "gRPC",
+        "Microservices"
+      ]
+    },
+    {
+      "title": "Frontend",
+      "items": [
+        "React",
+        "Angular",
+        "Vue.js",
+        "Bootstrap"
+      ]
+    },
+    {
+      "title": "Architecture & Engineering",
+      "items": [
+        "Clean Architecture",
+        "Domain-Driven Design",
+        "CQRS",
+        "Microservices thinking"
+      ]
+    },
+    {
+      "title": "Infrastructure & Tools",
+      "items": [
+        "RabbitMQ",
+        "Elasticsearch",
+        "Azure DevOps",
+        "Docker",
+        "CI/CD"
+      ]
+    },
+    {
+      "title": "Databases",
+      "items": [
+        "SQL Server",
+        "PostgreSQL",
+        "MySQL"
+      ]
+    },
+    {
+      "title": "Library Development",
+      "items": [
+        "Reusable .NET libraries",
+        "NuGet packages",
+        "Modular SDK-style components"
+      ]
+    },
+    {
+      "title": "AI & Productivity",
+      "items": [
+        "AI-assisted development",
+        "AI integration in software",
+        "Productivity-oriented engineering workflows"
+      ]
+    },
+    {
+      "title": "Software Experience",
+      "items": [
+        "Enterprise systems",
+        "ERP",
+        "E-commerce",
+        "Social platforms",
+        "DPM software"
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "title": "Developer",
+      "organization": "Vu Thao Technology",
+      "period": "01/2026 - Present",
+      "details": [
+        "Migrate the legacy DPM (Digital Process Management) system from SharePoint to a new .NET + React platform.",
+        "Analyze process flows, approvals, forms and SharePoint data for migration into the new system.",
+        "Implement backend/frontend features with .NET and React based on migrated business logic.",
+        "Coordinate testing, business validation and bug fixing during migration.",
+        "Improve maintainability after moving away from the SharePoint platform."
+      ]
+    },
+    {
+      "title": "Full-Stack Developer",
+      "organization": "COGAIN Corporation",
+      "period": "03/2025 - 12/2025",
+      "details": [
+        "Delivered enterprise business systems across backend services, frontend applications, data storage and release workflows.",
+        "Applied Clean Architecture, domain modeling, CQRS and microservices thinking to structure complex business products.",
+        "Worked with .NET, React, SQL Server and Azure DevOps across product development workflows.",
+        "Integrated Power BI, OpenAI and SQL Server stored procedures for internal business systems.",
+        "Built reusable components and refactored shared backend/frontend foundations for maintainability."
+      ]
+    },
+    {
+      "title": "Full-Stack Developer",
+      "organization": "GOSOFT Technology Company Limited",
+      "period": "04/2023 - 03/2025",
+      "details": [
+        "Delivered e-commerce, ERP and social network software across database, API and web admin layers.",
+        "Built reusable menu packages, base components and internal code-generation tooling.",
+        "Worked with maintainability-focused enterprise software domains where business clarity and extensibility mattered.",
+        "Guided new team members, reviewed code and collaborated through Agile/Scrum workflows."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "title": "MSc in Applied Information Technology",
+      "subtitle": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+      "period": "01/2025 - Present",
+      "description": "Academic track focused on applied information technology."
+    },
+    {
+      "title": "Information Technology Engineer",
+      "subtitle": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+      "period": "01/2024 - 06/2024",
+      "description": "Software Technology specialization"
+    },
+    {
+      "title": "Bachelor of Information Technology",
+      "subtitle": "Ho Chi Minh City University of Industry and Trade (HUIT)",
+      "period": "09/2020 - 12/2023",
+      "description": "Software Technology specialization"
+    }
+  ],
+  "certificates": [
+    {
+      "title": "English B1 Certificate",
+      "subtitle": "European Framework of Reference",
+      "period": "03/2025",
+      "description": "B1 level"
+    },
+    {
+      "title": "Pedagogical Training Certificate",
+      "subtitle": "Hanoi Pedagogical University 2",
+      "period": "10/2025",
+      "description": "Excellent grade"
+    }
+  ],
+  "research": [
+    {
+      "title": "Enterprise software architecture",
+      "description": "Clean Architecture, DDD, CQRS, microservices and distributed integration patterns for long-lived maintainable systems."
+    },
+    {
+      "title": "Data mining & user behavior analysis",
+      "description": "Data Mining, ABSA and recommendation systems for extracting product and user behavior insights."
+    },
+    {
+      "title": "AI-assisted software engineering",
+      "description": "AI integration in products and engineering workflows to improve software capability, delivery speed and technical quality."
+    }
+  ],
+  "achievements": [
+    {
+      "title": "End-to-end enterprise delivery",
+      "description": "Design and deliver business systems across backend services, frontend applications, data storage, messaging and release workflows."
+    },
+    {
+      "title": "Architecture discipline",
+      "description": "Apply Clean Architecture, Domain-Driven Design, CQRS and microservices thinking to keep complex products structured and scalable."
+    },
+    {
+      "title": "Reusable engineering components",
+      "description": "Build reusable .NET libraries, modular SDK-style components and NuGet packages to improve consistency across teams and products."
+    },
+    {
+      "title": "Enterprise product mindset",
+      "description": "Work comfortably across enterprise software domains where maintainability, extensibility and business clarity matter."
+    }
+  ],
+  "languages": [
+    {
+      "name": "Vietnamese",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "Professional working proficiency"
+    },
+    {
+      "name": "??",
+      "level": "Learning"
+    }
+  ]
+}

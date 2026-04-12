@@ -2,39 +2,77 @@
   {
     "id": 1,
     "title": "Developer",
-    "company": "COGAIN CORPORATION",
-    "time": "03/2025 – Present",
+    "company": "VU THAO TECHNOLOGY",
+    "time": "01/2026 - Present",
     "location": "Ho Chi Minh City",
     "type": "full-time",
     "status": "current",
-    "description": "Developing CRM, ERP systems and internal software applications",
+    "description": "Migrating the legacy DPM system from SharePoint to a new .NET + React platform",
     "responsibilities": [
-      "Lead development of CRM, ERP systems (R&D, Purchasing, Warehouse, Production, Sales) with data integration",
-      "Design UI/UX on Figma based on business requirements",
-      "Develop and maintain internal software systems with Power BI and OpenAI integration",
-      "Write SQL Server stored procedures for complex business logic and query optimization",
-      "Refactor source code including BaseController/BaseService and base Frontend components"
+      "Migrate the legacy DPM (Digital Process Management) system from SharePoint to a new .NET + React platform",
+      "Analyze process flows, approvals, forms and SharePoint data for migration into the new system",
+      "Implement backend/frontend features with .NET and React based on migrated business logic",
+      "Coordinate testing, business validation and bug fixing during migration",
+      "Improve maintainability after moving away from the SharePoint platform"
     ],
-    "technologies": ["ASP.NET Core", "Laravel", "React", "SQL Server", "Power BI", "OpenAI API"]
+    "technologies": [
+      "DPM",
+      "SharePoint Migration",
+      ".NET",
+      "React"
+    ]
   },
   {
     "id": 2,
     "title": "Developer",
+    "company": "COGAIN CORPORATION",
+    "time": "03/2025 - 12/2025",
+    "location": "Ho Chi Minh City",
+    "type": "full-time",
+    "status": "completed",
+    "description": "Developed CRM, ERP systems and internal software applications",
+    "responsibilities": [
+      "Led development of CRM, ERP systems with data integration",
+      "Designed UI/UX on Figma based on business requirements",
+      "Developed and maintained internal software systems with Power BI and OpenAI integration",
+      "Wrote SQL Server stored procedures for complex business logic and query optimization",
+      "Refactored source code including BaseController/BaseService and base Frontend components"
+    ],
+    "technologies": [
+      "ASP.NET Core",
+      "Laravel",
+      "React",
+      "SQL Server",
+      "Power BI",
+      "OpenAI API"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Developer",
     "company": "GOSOFT TECHNOLOGY COMPANY LIMITED",
-    "time": "04/2023 – 03/2025",
+    "time": "04/2023 - 03/2025",
     "location": "Ho Chi Minh City",
     "type": "full-time",
     "status": "completed",
     "description": "E-commerce development, mobile API and ERP modules",
     "responsibilities": [
-      "Develop e-commerce systems with Database and API design",
-      "Develop API for mobile social network apps",
-      "Build ERP modules for purchasing, warehouse and master data",
-      "Develop reusable Menu package for new and existing projects",
-      "Develop base Frontend components (Select, Price, TreeViewTable...)",
-      "Upgrade and develop internal code generator tools",
-      "Work with Agile/Scrum methodology using Jira for task management"
+      "Developed e-commerce systems with Database and API design",
+      "Developed API for mobile social network apps",
+      "Built ERP modules for purchasing, warehouse and master data",
+      "Developed reusable Menu package for new and existing projects",
+      "Developed base Frontend components",
+      "Upgraded and developed internal code generator tools",
+      "Worked with Agile/Scrum methodology using Jira for task management"
     ],
-    "technologies": ["PHP", "Laravel", "MySQL", "React", "JavaScript", "Agile", "Jira"]
+    "technologies": [
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "React",
+      "JavaScript",
+      "Agile",
+      "Jira"
+    ]
   }
 ]
