@@ -1,177 +1,28 @@
-<section class="resume-section">
-  <div class="container-xl">
-    <header class="resume-page-header">
-      <div>
-        <span class="eyebrow">{{ 'modules.resume' | translate }}</span>
-        <h1>{{ 'resume.title' | translate }}</h1>
-        <p>{{ 'resume.subtitle' | translate }}</p>
-      </div>
-
-      <ng-container *ngIf="pdfLink$ | async as pdfLink">
-        <a
-          class="download-btn"
-          [href]="pdfLink.href"
-          [attr.download]="pdfLink.fileName"
-          target="_blank"
-          rel="noopener"
-        >
-          <i class="fas fa-file-arrow-down" aria-hidden="true"></i>
-          {{ 'resume.download_pdf' | translate }}
-        </a>
-      </ng-container>
+<section class="resume-page">
+  <div class="container">
+    <header class="page-intro" appReveal>
+      <div><p class="eyebrow">{{ 'resume.eyebrow' | translate }}</p><h1>{{ 'resume.title' | translate }}</h1><p>{{ 'resume.subtitle' | translate }}</p></div>
+      <a *ngIf="pdfLink$ | async as pdfLink" class="button button--primary" [href]="pdfLink.href" [attr.download]="pdfLink.fileName" target="_blank" rel="noopener"><app-icon name="download" [size]="17" />{{ 'resume.download' | translate }}</a>
     </header>
 
-    <ng-container *ngIf="resume$ | async as resume; else resumeLoading">
-      <article class="resume-shell">
-        <aside class="resume-sidebar">
-          <div class="profile-block">
-            <img [src]="resume.profile.avatar" [alt]="resume.profile.name" class="profile-photo">
-            <div>
-              <h2>{{ resume.profile.name }}</h2>
-              <p>{{ resume.profile.title }}</p>
-            </div>
-          </div>
+    <article class="resume" *ngIf="resume$ | async as resume" appReveal>
+      <aside>
+        <img [src]="resume.profile.avatar" [alt]="resume.profile.name">
+        <h2>{{ resume.profile.name }}</h2><p class="profile-title">{{ resume.profile.title }}</p><p class="summary">{{ resume.summary }}</p>
+        <section><h3>{{ 'resume.contact' | translate }}</h3>
+          <a *ngFor="let contact of resume.profile.contacts; trackBy: trackByContact" [href]="contact.href || null" [attr.target]="contact.href ? '_blank' : null" [attr.rel]="contact.href ? 'noopener' : null"><app-icon [name]="contactIcon(contact.label)" [size]="15" /><span>{{ contact.value }}</span></a>
+          <p class="location">{{ resume.profile.location }}</p>
+        </section>
+      </aside>
 
-          <div class="sidebar-section">
-            <h3>{{ 'resume.about' | translate }}</h3>
-            <p>{{ resume.summary }}</p>
-          </div>
-
-          <div class="sidebar-section">
-            <h3>{{ 'resume.languages' | translate }}</h3>
-            <div class="language-list">
-              <div class="language-item" *ngFor="let language of resume.languages; trackBy: trackByLanguage">
-                <span>{{ language.name }}</span>
-                <strong>{{ language.level }}</strong>
-              </div>
-            </div>
-          </div>
-
-          <div class="sidebar-section">
-            <h3>{{ 'resume.contact' | translate }}</h3>
-            <a
-              *ngFor="let contact of resume.profile.contacts; trackBy: trackByContact"
-              class="contact-item"
-              [href]="contact.href || null"
-              [attr.target]="contact.href ? '_blank' : null"
-              [attr.rel]="contact.href ? 'noopener' : null"
-            >
-              <i [class]="contact.icon" aria-hidden="true"></i>
-              <span>{{ contact.value }}</span>
-            </a>
-            <div class="contact-item">
-              <i class="fas fa-location-dot" aria-hidden="true"></i>
-              <span>{{ resume.profile.location }}</span>
-            </div>
-          </div>
-        </aside>
-
-        <main class="resume-main">
-          <section class="resume-panel">
-            <div class="section-heading">
-              <span>{{ 'resume.skills' | translate }}</span>
-              <h2>{{ 'resume.tech_stack' | translate }}</h2>
-            </div>
-
-            <div class="skill-group-grid">
-              <div class="skill-group" *ngFor="let group of resume.skillGroups; trackBy: trackBySkillGroup">
-                <h3>{{ group.title }}</h3>
-                <div class="skill-tags">
-                  <span *ngFor="let item of group.items; trackBy: trackByString">{{ item }}</span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="resume-panel">
-            <div class="section-heading">
-              <span>{{ 'modules.experience' | translate }}</span>
-              <h2>{{ 'resume.experience' | translate }}</h2>
-            </div>
-
-            <div class="timeline">
-              <article class="timeline-item" *ngFor="let item of resume.experiences; trackBy: trackByTimelineItem">
-                <div class="timeline-meta">{{ item.period }}</div>
-                <div>
-                  <h3>{{ item.title }}</h3>
-                  <p class="organization">{{ item.organization }}</p>
-                  <p *ngIf="item.description">{{ item.description }}</p>
-                  <ul>
-                    <li *ngFor="let detail of item.details; trackBy: trackByString">{{ detail }}</li>
-                  </ul>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <div class="resume-grid">
-            <section class="resume-panel">
-              <div class="section-heading">
-                <span>{{ 'modules.education' | translate }}</span>
-                <h2>{{ 'resume.education' | translate }}</h2>
-              </div>
-
-              <article class="simple-item" *ngFor="let item of resume.education; trackBy: trackBySimpleItem">
-                <div class="item-period">{{ item.period }}</div>
-                <h3>{{ item.title }}</h3>
-                <p>{{ item.subtitle }}</p>
-                <small *ngIf="item.description">{{ item.description }}</small>
-              </article>
-            </section>
-
-            <section class="resume-panel">
-              <div class="section-heading">
-                <span>{{ 'education.certificates.title' | translate }}</span>
-                <h2>{{ 'resume.certificates' | translate }}</h2>
-              </div>
-
-              <article class="simple-item" *ngFor="let item of resume.certificates; trackBy: trackBySimpleItem">
-                <div class="item-period">{{ item.period }}</div>
-                <h3>{{ item.title }}</h3>
-                <p>{{ item.subtitle }}</p>
-                <small *ngIf="item.description">{{ item.description }}</small>
-              </article>
-            </section>
-          </div>
-
-          <section class="resume-panel">
-            <div class="section-heading">
-              <span>{{ 'modules.achievement' | translate }}</span>
-              <h2>{{ 'resume.achievements' | translate }}</h2>
-            </div>
-
-            <div class="highlight-grid">
-              <article class="highlight-item" *ngFor="let item of resume.achievements; trackBy: trackBySimpleItem">
-                <div class="highlight-meta">{{ item.period || item.meta }}</div>
-                <h3>{{ item.title }}</h3>
-                <p>{{ item.description }}</p>
-              </article>
-            </div>
-          </section>
-
-          <section class="resume-panel">
-            <div class="section-heading">
-              <span>{{ 'common.title.science' | translate }}</span>
-              <h2>{{ 'resume.research' | translate }}</h2>
-            </div>
-
-            <article class="research-item" *ngFor="let item of resume.research; trackBy: trackBySimpleItem">
-              <div>
-                <span *ngIf="item.period">{{ item.period }}</span>
-                <h3>{{ item.title }}</h3>
-              </div>
-              <p>{{ item.description }}</p>
-              <small *ngIf="item.meta">{{ item.meta }}</small>
-            </article>
-          </section>
-        </main>
-      </article>
-    </ng-container>
-
-    <ng-template #resumeLoading>
-      <div class="resume-empty">
-        {{ 'education.placeholder' | translate }}
-      </div>
-    </ng-template>
+      <main>
+        <section class="resume-section"><p class="section-label">01 / {{ 'resume.expertise' | translate }}</p><div class="skill-grid"><article *ngFor="let group of resume.skillGroups; trackBy: trackBySkillGroup"><h3>{{ group.title }}</h3><div><span *ngFor="let item of group.items; trackBy: trackByString">{{ item }}</span></div></article></div></section>
+        <section class="resume-section"><p class="section-label">02 / {{ 'resume.experience' | translate }}</p><div class="resume-timeline"><article *ngFor="let item of resume.experiences; trackBy: trackByTimelineItem"><div class="period">{{ item.period }}</div><div><h3>{{ item.title }}</h3><p class="organization">{{ item.organization }}</p><p *ngIf="item.description">{{ item.description }}</p><ul><li *ngFor="let detail of item.details; trackBy: trackByString">{{ detail }}</li></ul></div></article></div></section>
+        <section class="resume-section"><p class="section-label">03 / {{ 'resume.education' | translate }}</p><div class="two-column"><article class="simple" *ngFor="let item of resume.education; trackBy: trackBySimpleItem"><span>{{ item.period }}</span><h3>{{ item.title }}</h3><p>{{ item.subtitle }}</p><small>{{ item.description }}</small></article></div></section>
+        <section class="resume-section evidence-resume-section"><p class="section-label">04 / {{ 'resume.awards' | translate }}</p><article class="resume-evidence" *ngFor="let item of resume.awards; trackBy: trackByAchievement"><span>{{ item.time }}</span><div><h3>{{ item.name }}</h3><p>{{ item.result }} · {{ item.role }}</p><small>{{ item.address }}</small></div></article></section>
+        <section class="resume-section evidence-resume-section"><p class="section-label">05 / {{ 'resume.researchProjects' | translate }}</p><article class="resume-evidence" *ngFor="let item of resume.researchProjects; trackBy: trackByAchievement"><span>{{ item.time }}</span><div><h3>{{ item.name }}</h3><p>{{ item.result }} · {{ item.role }}</p><small>{{ item.address }}</small></div></article></section>
+        <section class="resume-section"><p class="section-label">06 / {{ 'resume.credentials' | translate }}</p><div class="credential-grid"><div><h3 class="subsection-title">{{ 'resume.certificates' | translate }}</h3><article class="simple" *ngFor="let item of resume.certificates; trackBy: trackBySimpleItem"><span>{{ item.period }}</span><h3>{{ item.title }}</h3><p>{{ item.subtitle }}</p><small>{{ item.description }}</small></article></div><div><h3 class="subsection-title">{{ 'resume.languages' | translate }}</h3><div class="languages" *ngFor="let language of resume.languages; trackBy: trackByLanguage"><span>{{ language.name }}</span><strong>{{ language.level }}</strong></div></div></div></section>
+      </main>
+    </article>
   </div>
 </section>

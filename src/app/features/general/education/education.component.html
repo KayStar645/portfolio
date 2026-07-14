@@ -1,186 +1,26 @@
-<div id="education" class="education-modern section-shell">
-  <div class="container-xl">
-    
-    <!-- Header -->
-    <div class="education-header text-center mb-5">
-      <h1 class="education-title">
-        <span class="title-text">{{ 'education.title_prefix' | translate }}</span>
-        <span class="title-highlight">{{ 'education.title_suffix' | translate }}</span>
-      </h1>
-      <p class="education-subtitle">{{ 'education.subtitle' | translate }}</p>
+<section class="section-page">
+  <div class="container" *ngIf="content$ | async as content">
+    <header class="page-intro" appReveal>
+      <p class="eyebrow">{{ 'education.eyebrow' | translate }}</p>
+      <h1>{{ 'education.title' | translate }}</h1>
+      <p>{{ 'education.intro' | translate }}</p>
+    </header>
+
+    <div class="degree-list">
+      <article *ngFor="let item of content.education; let index = index; trackBy: trackEducation" appReveal [revealDelay]="index * 70">
+        <div class="degree-year">{{ item.time }}</div>
+        <div><span class="degree-label">{{ item.label }}</span><h2>{{ item.name }}</h2><p>{{ item.address }}</p></div>
+        <app-icon name="education" [size]="28" aria-hidden="true" />
+      </article>
     </div>
 
-    <!-- Education Timeline -->
-    <div class="education-timeline">
-      
-      <!-- Master's Degree -->
-      <div class="education-item master">
-        <div class="education-card">
-          <div class="education-icon">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <div class="education-content">
-            <div class="education-meta">
-              <span class="education-type badge master-badge">{{ 'education.master.label' | translate }}</span>
-              <span class="education-time">
-                <i class="fas fa-calendar-alt me-1"></i>
-                {{ 'education.master.time' | translate }}
-              </span>
-            </div>
-            <h3 class="education-title-text">{{ 'education.master.name' | translate }}</h3>
-            <p class="education-specialization">
-              <i class="fas fa-code me-2"></i>
-              {{ 'education.master.specialization' | translate }}
-            </p>
-            <p class="education-institution">
-              <i class="fas fa-university me-2"></i>
-              {{ 'education.master.university' | translate }}
-            </p>
-            <div class="education-description">
-              <span class="gpa-tag">
-                <i class="fas fa-medal me-1"></i>
-                {{ 'education.master.gpa' | translate }}
-              </span>
-            </div>
-          </div>
-        </div>
+    <section class="certificates" appReveal>
+      <header><p class="eyebrow">{{ 'education.certificatesEyebrow' | translate }}</p><h2>{{ 'education.certificatesTitle' | translate }}</h2></header>
+      <div class="certificate-grid">
+        <article *ngFor="let item of content.certificates; trackBy: trackCertificate">
+          <app-icon name="award" [size]="20" /><span>{{ item.time }}</span><h3>{{ item.name }}</h3><p>{{ item.issuer }}</p><strong>{{ item.result }}</strong>
+        </article>
       </div>
-
-      <!-- Engineering -->
-      <div class="education-item engineer">
-        <div class="education-card">
-          <div class="education-icon">
-            <i class="fas fa-cogs"></i>
-          </div>
-          <div class="education-content">
-            <div class="education-meta">
-              <span class="education-type badge engineer-badge">{{ 'education.engineer.label' | translate }}</span>
-              <span class="education-time">
-                <i class="fas fa-calendar-alt me-1"></i>
-                {{ 'education.engineer.time' | translate }}
-              </span>
-            </div>
-            <h3 class="education-title-text">{{ 'education.engineer.name' | translate }}</h3>
-            <p class="education-specialization">
-              <i class="fas fa-code me-2"></i>
-              {{ 'education.engineer.specialization' | translate }}
-            </p>
-            <p class="education-institution">
-              <i class="fas fa-university me-2"></i>
-              {{ 'education.engineer.university' | translate }}
-            </p>
-            <div class="education-description">
-              <span class="gpa-tag">
-                <i class="fas fa-medal me-1"></i>
-                {{ 'education.engineer.gpa' | translate }}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bachelor's Degree -->
-      <div class="education-item bachelor">
-        <div class="education-card">
-          <div class="education-icon">
-            <i class="fas fa-book"></i>
-          </div>
-          <div class="education-content">
-            <div class="education-meta">
-              <span class="education-type badge bachelor-badge">{{ 'education.bachelor.label' | translate }}</span>
-              <span class="education-time">
-                <i class="fas fa-calendar-alt me-1"></i>
-                {{ 'education.bachelor.time' | translate }}
-              </span>
-            </div>
-            <h3 class="education-title-text">{{ 'education.bachelor.name' | translate }}</h3>
-            <p class="education-specialization">
-              <i class="fas fa-code me-2"></i>
-              {{ 'education.bachelor.specialization' | translate }}
-            </p>
-            <p class="education-institution">
-              <i class="fas fa-university me-2"></i>
-              {{ 'education.bachelor.university' | translate }}
-            </p>
-            <div class="education-description">
-              <span class="gpa-tag">
-                <i class="fas fa-medal me-1"></i>
-                {{ 'education.bachelor.gpa' | translate }}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Certificates Section -->
-    <div class="certificates-section mt-5">
-      <div class="section-header text-center mb-4">
-        <h2 class="section-title">{{ 'education.certificates.title' | translate }}</h2>
-        <p class="section-subtitle">{{ 'education.certificates.subtitle' | translate }}</p>
-      </div>
-      
-      <div class="certificates-grid">
-        <!-- Pedagogy Certificate - First (10/2025) -->
-        <div class="certificate-item">
-          <div class="certificate-card">
-            <div class="certificate-icon">
-              <i class="fas fa-chalkboard-teacher"></i>
-            </div>
-            <div class="certificate-content">
-              <div class="certificate-meta">
-                <span class="certificate-type badge pedagogy-badge">{{ 'education.certificates.pedagogy.type' | translate }}</span>
-                <span class="certificate-time">
-                  <i class="fas fa-calendar-alt me-1"></i>
-                  {{ 'education.certificates.pedagogy.time' | translate }}
-                </span>
-              </div>
-              <h3 class="certificate-title">{{ 'education.certificates.pedagogy.name' | translate }}</h3>
-              <p class="certificate-institution">
-                <i class="fas fa-university me-2"></i>
-                {{ 'education.certificates.pedagogy.university' | translate }}
-              </p>
-              <div class="certificate-description">
-                <span class="grade-tag">
-                  <i class="fas fa-trophy me-1"></i>
-                  {{ 'education.certificates.pedagogy.grade' | translate }}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- English Certificate - Second (03/2025) -->
-        <div class="certificate-item">
-          <div class="certificate-card">
-            <div class="certificate-icon">
-              <i class="fas fa-language"></i>
-            </div>
-            <div class="certificate-content">
-              <div class="certificate-meta">
-                <span class="certificate-type badge english-badge">{{ 'education.certificates.english.type' | translate }}</span>
-                <span class="certificate-time">
-                  <i class="fas fa-calendar-alt me-1"></i>
-                  {{ 'education.certificates.english.time' | translate }}
-                </span>
-              </div>
-              <h3 class="certificate-title">{{ 'education.certificates.english.name' | translate }}</h3>
-              <p class="certificate-level">
-                <i class="fas fa-star me-2"></i>
-                {{ 'education.certificates.english.level' | translate }}
-              </p>
-              <div class="certificate-description">
-                <span class="level-tag">
-                  <i class="fas fa-award me-1"></i>
-                  {{ 'education.certificates.english.framework' | translate }}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    </section>
   </div>
-</div>
+</section>

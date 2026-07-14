@@ -1,0 +1,80 @@
+<article class="case-study" *ngIf="project$ | async as project">
+  <header id="overview" class="case-hero">
+    <div class="container">
+      <a routerLink="/project" class="back-link mono"><app-icon name="arrow"></app-icon>{{ 'case.back' | translate }}</a>
+      <span class="eyebrow">{{ 'case.eyebrow' | translate }}</span>
+      <h1>{{ project.title }}</h1>
+      <p class="case-summary">{{ project.summary }}</p>
+      <dl class="fact-grid">
+        <div *ngFor="let fact of project.overviewFacts"><dt>{{ fact.label }}</dt><dd>{{ fact.value }}</dd></div>
+      </dl>
+    </div>
+    <div class="case-visual" aria-hidden="true">
+      <span *ngFor="let technology of project.technologies | slice:0:8">{{ technology }}</span>
+    </div>
+  </header>
+
+  <div class="container case-layout">
+    <aside class="case-nav">
+      <span class="mono">{{ 'case.contents' | translate }}</span>
+      <a *ngFor="let section of sections; let i = index" [href]="'#' + section"><b>0{{ i + 1 }}</b>{{ ('case.sections.' + section) | translate }}</a>
+    </aside>
+
+    <div class="case-content">
+      <section id="problem" class="case-section" appReveal>
+        <span class="section-index mono">01 / {{ 'case.sections.problem' | translate }}</span>
+        <h2>{{ project.problem.statement }}</h2>
+        <p class="lead">{{ project.problem.context }}</p>
+        <div class="constraint-list"><span *ngFor="let item of project.problem.constraints"><app-icon name="check"></app-icon>{{ item }}</span></div>
+      </section>
+
+      <section id="process" class="case-section" appReveal>
+        <span class="section-index mono">02 / {{ 'case.sections.process' | translate }}</span>
+        <h2>{{ 'case.processTitle' | translate }}</h2>
+        <div class="process-grid">
+          <article *ngFor="let step of project.process; let i = index; trackBy: trackByTitle">
+            <span class="mono">0{{ i + 1 }}</span><h3>{{ step.title }}</h3><p>{{ step.description }}</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="decisions" class="case-section" appReveal>
+        <span class="section-index mono">03 / {{ 'case.sections.decisions' | translate }}</span>
+        <h2>{{ 'case.decisionsTitle' | translate }}</h2>
+        <div class="decision-list">
+          <article *ngFor="let decision of project.decisions; trackBy: trackByTitle">
+            <h3>{{ decision.title }}</h3><p>{{ decision.rationale }}</p>
+            <div class="tradeoff"><strong>{{ 'case.tradeoff' | translate }}</strong>{{ decision.tradeOff }}</div>
+            <div class="chip-list"><span class="chip" *ngFor="let practice of decision.practices">{{ practice }}</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="solution" class="case-section" appReveal>
+        <span class="section-index mono">04 / {{ 'case.sections.solution' | translate }}</span>
+        <h2>{{ 'case.solutionTitle' | translate }}</h2>
+        <div class="capability-grid">
+          <article *ngFor="let group of project.solution; trackBy: trackByTitle">
+            <app-icon name="layers"></app-icon><h3>{{ group.title }}</h3><p>{{ group.description }}</p>
+            <ul><li *ngFor="let item of group.deliverables">{{ item }}</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="outcomes" class="case-section" appReveal>
+        <span class="section-index mono">05 / {{ 'case.sections.outcomes' | translate }}</span>
+        <h2>{{ 'case.outcomesTitle' | translate }}</h2>
+        <div class="outcome-list">
+          <article *ngFor="let outcome of project.outcomes; let i = index; trackBy: trackByTitle"><span class="mono">0{{ i + 1 }}</span><div><h3>{{ outcome.title }}</h3><p>{{ outcome.description }}</p></div></article>
+        </div>
+      </section>
+
+      <section id="learnings" class="case-section" appReveal>
+        <span class="section-index mono">06 / {{ 'case.sections.learnings' | translate }}</span>
+        <h2>{{ 'case.learningsTitle' | translate }}</h2>
+        <ul class="learning-list"><li *ngFor="let learning of project.learnings; trackBy: trackByText">{{ learning }}</li></ul>
+        <div class="technology-footer"><span class="chip" *ngFor="let technology of project.technologies">{{ technology }}</span></div>
+      </section>
+    </div>
+  </div>
+</article>

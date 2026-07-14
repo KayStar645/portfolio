@@ -1,130 +1,107 @@
 {
   "profile": {
     "name": "Thuan | KayStar",
-    "title": "Full-Stack Developer | MSc Student | System Architecture Enthusiast",
+    "title": "Software Engineer | Enterprise Platforms | System Architecture",
     "avatar": "assets/params/images/info/avatar.jpg",
     "location": "Ho Chi Minh City, Vietnam",
     "contacts": [
       {
         "label": "Email",
         "value": "thuanpt182@gmail.com",
-        "icon": "fas fa-envelope",
         "href": "mailto:thuanpt182@gmail.com"
       },
       {
         "label": "Portfolio",
         "value": "Portfolio",
-        "icon": "fas fa-globe",
         "href": "https://kaystar645.github.io/portfolio/"
       },
       {
         "label": "GitHub",
         "value": "KayStar645",
-        "icon": "fab fa-github",
         "href": "https://github.com/KayStar645"
       },
     {
       "label": "Facebook",
       "value": "thuanpt182.2",
-      "icon": "fab fa-facebook",
       "href": "https://www.facebook.com/thuanpt182.2"
     }
     ]
   },
-  "summary": "I am a full-stack developer with over 3 years of professional experience delivering ERP platforms, e-commerce solutions, social network systems, and DPM software. I am currently pursuing a Master's degree in Applied Information Technology at the University of Industry and Trade in Ho Chi Minh City (HUIT). My work is driven by clean system design, solid domain modeling, and a practical approach to building software that lasts. I actively explore AI-assisted development to improve engineering productivity, delivery speed, and solution quality.",
+  "summary": "Software Engineer with 3+ years of professional experience designing and delivering enterprise platforms, ERP, e-commerce and social applications. I design composable React frontends, owned .NET services and reliable asynchronous processing with an emphasis on explicit boundaries, reusable foundations and long-term maintainability. I am also pursuing a Master's degree in Applied Information Technology at HUIT.",
   "skillGroups": [
     {
-      "title": "Current Core Stack",
-      "items": [
-        ".NET",
-        "React",
-        "SQL Server",
-        "Azure DevOps"
-      ]
-    },
-    {
-      "title": "Backend",
-      "items": [
-        ".NET",
-        "Laravel",
-        "gRPC",
-        "Microservices"
-      ]
-    },
-    {
-      "title": "Frontend",
+      "title": "Frontend Architecture",
       "items": [
         "React",
-        "Angular",
-        "Vue.js",
-        "Bootstrap"
+        "TypeScript",
+        "Micro Frontend (MFE)",
+        "Feature-Sliced Design",
+        "Metadata-Driven UI"
       ]
     },
     {
-      "title": "Architecture & Engineering",
+      "title": "Backend Architecture",
       "items": [
+        ".NET Microservices",
         "Clean Architecture",
-        "Domain-Driven Design",
+        "DDD",
         "CQRS",
-        "Microservices thinking"
+        "API Gateway"
       ]
     },
     {
-      "title": "Infrastructure & Tools",
+      "title": "Service Boundaries",
+      "items": [
+        "Shared Contracts",
+        "Typed Service Clients",
+        "Shared Kernel",
+        "Service Ownership",
+        "Generated Contracts"
+      ]
+    },
+    {
+      "title": "Distributed & Platform",
       "items": [
         "RabbitMQ",
-        "Elasticsearch",
+        "Idempotent Workers",
+        "SQL Server Multi-Tenancy",
         "Azure DevOps",
-        "Docker",
         "CI/CD"
       ]
     },
     {
-      "title": "Databases",
+      "title": "Broader Engineering",
       "items": [
-        "SQL Server",
+        "Laravel",
+        "Angular",
+        "Vue.js",
+        "gRPC",
+        "RESTful API"
+      ]
+    },
+    {
+      "title": "Data, Delivery & AI",
+      "items": [
+        "Elasticsearch",
         "PostgreSQL",
-        "MySQL"
-      ]
-    },
-    {
-      "title": "Library Development",
-      "items": [
-        "Reusable .NET libraries",
-        "NuGet packages",
-        "Modular SDK-style components"
-      ]
-    },
-    {
-      "title": "AI & Productivity",
-      "items": [
-        "AI-assisted development",
-        "AI integration in software",
-        "Productivity-oriented engineering workflows"
-      ]
-    },
-    {
-      "title": "Software Experience",
-      "items": [
-        "Enterprise systems",
-        "ERP",
-        "E-commerce",
-        "Social platforms",
-        "DPM software"
+        "MySQL",
+        "Docker",
+        "AI-Assisted Development"
       ]
     }
   ],
   "experiences": [
     {
-      "title": "Developer",
+      "title": "Software Engineer",
       "organization": "Vu Thao Technology",
       "period": "01/2026 - Present",
       "details": [
-        "Migrate the legacy DPM (Digital Process Management) system from SharePoint to a new .NET + React platform.",
-        "Analyze process flows, approvals, forms and SharePoint data for migration into the new system.",
-        "Implement backend/frontend features with .NET and React based on migrated business logic.",
-        "Coordinate testing, business validation and bug fixing during migration.",
-        "Improve maintainability after moving away from the SharePoint platform."
+        "Design and build a modular enterprise platform around maintainable frontend, backend and distributed-processing boundaries.",
+        "Design the React frontend with Micro Frontend and Feature-Sliced Design, separating host, module, feature and shared-layer ownership.",
+        "Build metadata-driven routing, navigation, permissions and module registration with generated contracts to reduce configuration drift.",
+        "Structure .NET Microservices with Clean Architecture, DDD and CQRS across explicit Domain, Application, Infrastructure and API boundaries.",
+        "Standardize API Gateway, shared contracts, typed service clients and shared-kernel foundations to protect service ownership and prevent cross-service data access.",
+        "Build RabbitMQ workers for automation, document processing and notifications with idempotency, bounded concurrency and graceful shutdown; support SQL Server multi-tenancy and CI/CD quality gates."
       ]
     },
     {
@@ -183,38 +160,6 @@
       "subtitle": "Hanoi Pedagogical University 2",
       "period": "10/2025",
       "description": "Excellent grade"
-    }
-  ],
-  "research": [
-    {
-      "title": "Enterprise software architecture",
-      "description": "Clean Architecture, DDD, CQRS, microservices and distributed integration patterns for long-lived maintainable systems."
-    },
-    {
-      "title": "Data mining & user behavior analysis",
-      "description": "Data Mining, ABSA and recommendation systems for extracting product and user behavior insights."
-    },
-    {
-      "title": "AI-assisted software engineering",
-      "description": "AI integration in products and engineering workflows to improve software capability, delivery speed and technical quality."
-    }
-  ],
-  "achievements": [
-    {
-      "title": "End-to-end enterprise delivery",
-      "description": "Design and deliver business systems across backend services, frontend applications, data storage, messaging and release workflows."
-    },
-    {
-      "title": "Architecture discipline",
-      "description": "Apply Clean Architecture, Domain-Driven Design, CQRS and microservices thinking to keep complex products structured and scalable."
-    },
-    {
-      "title": "Reusable engineering components",
-      "description": "Build reusable .NET libraries, modular SDK-style components and NuGet packages to improve consistency across teams and products."
-    },
-    {
-      "title": "Enterprise product mindset",
-      "description": "Work comfortably across enterprise software domains where maintainability, extensibility and business clarity matter."
     }
   ],
   "languages": [

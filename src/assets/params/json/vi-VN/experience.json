@@ -1,47 +1,60 @@
 [
   {
     "id": 1,
-    "title": "Lập trình viên",
+    "title": "Kỹ sư phần mềm",
     "company": "CÔNG TY CỔ PHẦN CÔNG NGHỆ VŨ THẢO",
     "time": "01/2026 - Hiện tại",
-    "location": "Hồ Chí Minh",
-    "type": "full-time",
+    "location": "TP. Hồ Chí Minh",
+    "type": "toàn thời gian",
     "status": "current",
-    "description": "Migrate hệ thống DPM cũ từ SharePoint sang nền tảng mới .NET + React",
+    "description": "Thiết kế và xây dựng nền tảng doanh nghiệp dạng mô-đun với frontend có khả năng kết hợp, service có ownership rõ ràng và xử lý bất đồng bộ tin cậy.",
     "responsibilities": [
-      "Migrate hệ thống DPM (Digital Process Management) cũ từ SharePoint sang nền tảng mới .NET + React",
-      "Phân tích luồng quy trình, phê duyệt, biểu mẫu và dữ liệu SharePoint để chuyển đổi sang hệ thống mới",
-      "Triển khai tính năng backend/frontend bằng .NET và React theo logic nghiệp vụ đã được migration",
-      "Phối hợp kiểm thử, đối soát nghiệp vụ và sửa lỗi trong quá trình migration",
-      "Cải thiện khả năng bảo trì sau khi chuyển đổi khỏi nền tảng SharePoint"
+      "Thiết kế nền tảng React theo Micro Frontend và Feature-Sliced Design, xác lập ownership boundary giữa host, module, feature và shared layer.",
+      "Xây dựng route, navigation, permission và module registration theo metadata-driven architecture, sử dụng generated contracts để bảo đảm composition xác định và ngăn configuration drift.",
+      "Thiết kế .NET microservices theo Clean Architecture, DDD và CQRS, phân tách rõ Domain, Application, Infrastructure và API responsibilities.",
+      "Chuẩn hóa API Gateway, shared contracts, typed service clients và shared-kernel models để tránh direct service dependency và cross-service data access.",
+      "Xây dựng RabbitMQ workers cho automation, xử lý tài liệu và notification workflows với idempotency, bounded concurrency, cancellation và graceful shutdown.",
+      "Triển khai SQL Server multi-tenancy, reusable platform libraries và Azure DevOps CI/CD quality gates để phát hành nhất quán và dễ bảo trì dài hạn."
     ],
     "technologies": [
-      "DPM",
-      "SharePoint Migration",
       ".NET",
-      "React"
+      "React",
+      "TypeScript",
+      "Micro Frontend",
+      "Feature-Sliced Design",
+      "Metadata-Driven UI",
+      ".NET Microservices",
+      "Clean Architecture",
+      "Domain-Driven Design",
+      "CQRS",
+      "API Gateway",
+      "RabbitMQ",
+      "SQL Server",
+      "Multi-Tenancy",
+      "Azure DevOps",
+      "CI/CD"
     ]
   },
   {
     "id": 2,
-    "title": "Lập trình viên",
+    "title": "Lập trình viên Full-Stack",
     "company": "CÔNG TY CỔ PHẦN COGAIN",
     "time": "03/2025 - 12/2025",
-    "location": "Hồ Chí Minh",
-    "type": "full-time",
+    "location": "TP. Hồ Chí Minh",
+    "type": "toàn thời gian",
     "status": "completed",
-    "description": "Tham gia phát triển hệ thống CRM, ERP và các phần mềm nội bộ",
+    "description": "Triển khai CRM, ERP và các ứng dụng nội bộ xuyên suốt backend, frontend, dữ liệu và quy trình phát hành.",
     "responsibilities": [
-      "Tham gia phát triển và chịu trách nhiệm chính hệ thống CRM, ERP",
-      "Thiết kế UI/UX trên Figma",
-      "Phát triển các phần mềm nội bộ với Power BI và OpenAI",
-      "Viết stored procedures trên SQL Server",
-      "Tái cấu trúc mã nguồn Backend và Frontend"
+      "Chịu trách nhiệm chính trong phát triển các module CRM, ERP và tích hợp dữ liệu liên hệ thống.",
+      "Thiết kế cấu trúc database và API cho các luồng nghiệp vụ, phân quyền và phê duyệt tự động.",
+      "Hỗ trợ thiết kế UI/UX trên Figma và xây dựng nền tảng frontend tái sử dụng.",
+      "Tích hợp Power BI và OpenAI vào các ứng dụng nội bộ.",
+      "Xây dựng stored procedure SQL Server và refactor các backend service dùng chung để cải thiện khả năng bảo trì."
     ],
     "technologies": [
       "ASP.NET Core",
-      "Laravel",
       "React",
+      "Laravel",
       "SQL Server",
       "Power BI",
       "OpenAI API"
@@ -49,21 +62,19 @@
   },
   {
     "id": 3,
-    "title": "Lập trình viên",
+    "title": "Lập trình viên Full-Stack",
     "company": "CÔNG TY TNHH CÔNG NGHỆ GOSOFT",
     "time": "04/2023 - 03/2025",
-    "location": "Hồ Chí Minh",
-    "type": "full-time",
+    "location": "TP. Hồ Chí Minh",
+    "type": "toàn thời gian",
     "status": "completed",
-    "description": "Phát triển hệ thống e-commerce, API mobile và ERP modules",
+    "description": "Triển khai e-commerce, ERP và nền tảng xã hội trên các lớp database, API và web admin.",
     "responsibilities": [
-      "Phát triển hệ thống e-commerce với Database và API",
-      "Phát triển API cho mobile app social network",
-      "Xây dựng phân hệ ERP",
-      "Xây dựng package Menu để tái sử dụng",
-      "Phát triển base components Frontend",
-      "Nâng cấp công cụ code generator",
-      "Làm việc theo Agile/Scrum với Jira"
+      "Thiết kế database và API cho sản phẩm thương mại điện tử, nội dung đào tạo và ứng dụng mobile social network.",
+      "Xây dựng các phân hệ ERP mua hàng, kho và master data.",
+      "Phát triển package Menu và các frontend component dùng chung cho dự án mới lẫn hệ thống hiện hữu.",
+      "Mở rộng công cụ code generator nội bộ để rút ngắn các phần triển khai lặp lại.",
+      "Hướng dẫn nhân sự mới, review code và phối hợp theo quy trình Agile/Scrum."
     ],
     "technologies": [
       "PHP",

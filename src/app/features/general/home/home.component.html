@@ -1,164 +1,131 @@
-<section class="hero-section section-shell">
-  <div class="hero-background">
-    <div class="hero-particles"></div>
-    <div class="hero-gradient"></div>
-  </div>
-
-  <div class="container-xl">
-    <div class="hero-content">
-      <div class="profile-card">
-        <div class="profile-image">
-          <img src="assets/params/images/info/avatar.jpg" alt="Pham Tan Thuan" class="avatar">
-        </div>
-        <div class="profile-info">
-          <h1 class="profile-name">{{ 'home.greeting' | translate }}</h1>
-          <h2 class="profile-title">{{ 'home.title' | translate }}</h2>
-          <p class="profile-description">{{ 'home.description' | translate }}</p>
-
-          <div class="mobile-skills">
-            <div class="skill-tag">
-              <i class="fas fa-cogs"></i>
-              <span>Azure DevOps</span>
-            </div>
-            <div class="skill-tag">
-              <i class="fab fa-microsoft"></i>
-              <span>.NET</span>
-            </div>
-            <div class="skill-tag">
-              <i class="fas fa-database"></i>
-              <span>SQL Server</span>
-            </div>
-            <div class="skill-tag">
-              <i class="fas fa-robot"></i>
-              <span>AI Integration</span>
-            </div>
-          </div>
-
-          <div class="action-buttons">
-            <button type="button" class="btn-primary" [routerLink]="['/skill']">
-              <i class="fas fa-rocket me-2"></i>
-              {{ 'home.view_portfolio' | translate }}
-            </button>
-            <button type="button" class="btn-secondary" [routerLink]="['/resume']">
-              <i class="fas fa-download me-2"></i>
-              {{ 'home.download_cv' | translate }}
-            </button>
-          </div>
+<ng-container *ngIf="vm$ | async as vm">
+  <section class="hero">
+    <div class="container hero-layout">
+      <div class="hero-copy">
+        <span class="eyebrow hero-reveal">{{ 'home.heroEyebrow' | translate }}</span>
+        <h1 class="hero-reveal delay-1">{{ 'home.heroTitle' | translate }}</h1>
+        <p class="hero-lead hero-reveal delay-2">{{ 'home.heroDescription' | translate }}</p>
+        <div class="hero-actions hero-reveal delay-3">
+          <a routerLink="/project" class="button button--primary">{{ 'home.viewWork' | translate }}<app-icon name="arrow"></app-icon></a>
+          <a routerLink="/resume" class="button">{{ 'home.resume' | translate }}<app-icon name="download"></app-icon></a>
+          <a href="mailto:thuanpt182@gmail.com" class="button button--quiet">{{ 'home.contact' | translate }}<app-icon name="mail"></app-icon></a>
         </div>
       </div>
 
-      <div class="floating-elements">
-        <div class="floating-card skill-card">
-          <div class="card-icon">
-            <i class="fas fa-cogs"></i>
-          </div>
-          <div class="card-text">Azure DevOps</div>
-        </div>
-        <div class="floating-card skill-card">
-          <div class="card-icon">
-            <i class="fab fa-microsoft"></i>
-          </div>
-          <div class="card-text">.NET</div>
-        </div>
-        <div class="floating-card skill-card">
-          <div class="card-icon">
-            <i class="fas fa-sitemap"></i>
-          </div>
-          <div class="card-text">SQL Server</div>
-        </div>
-        <div class="floating-card skill-card">
-          <div class="card-icon">
-            <i class="fas fa-robot"></i>
-          </div>
-          <div class="card-text">AI Integration</div>
-        </div>
+      <div #architectureVisual class="architecture-visual hero-reveal delay-2" (pointermove)="moveVisual($event)" aria-hidden="true">
+        <div class="portrait-frame"><img src="assets/params/images/info/avatar.jpg" alt=""></div>
+        <div class="visual-axis axis-x"></div><div class="visual-axis axis-y"></div>
+        <span class="capability capability-a">MFE / FSD</span>
+        <span class="capability capability-b">.NET / DDD</span>
+        <span class="capability capability-c">EVENTS</span>
+        <div class="visual-caption mono">ARCHITECTURE / OWNERSHIP / DELIVERY</div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="tech-strip-section section-shell">
-  <div class="container-xl">
-    <div class="tech-strip">
-      <div class="tech-strip-content">
-        <div class="tech-item">.NET</div>
-        <div class="tech-item">React</div>
-        <div class="tech-item">SQL Server</div>
-        <div class="tech-item">Azure DevOps</div>
-        <div class="tech-item">Angular</div>
-        <div class="tech-item">Vue.js</div>
-        <div class="tech-item">TypeScript</div>
-        <div class="tech-item">Laravel</div>
-        <div class="tech-item">RabbitMQ</div>
-        <div class="tech-item">Elasticsearch</div>
-        <div class="tech-item">PostgreSQL</div>
-        <div class="tech-item">MySQL</div>
-        <div class="tech-item">Docker</div>
-        <div class="tech-item">CI/CD</div>
-        <div class="tech-item">Git</div>
+  <section class="proof-strip">
+    <div class="container proof-grid">
+      <article><strong>3+</strong><span>{{ 'home.proof.experience' | translate }}</span></article>
+      <article><strong>MSc</strong><span>{{ 'home.proof.education' | translate }}</span></article>
+      <article><strong>03</strong><span>{{ 'home.proof.pillars' | translate }}</span></article>
+      <article><strong>EN / VI</strong><span>{{ 'home.proof.languages' | translate }}</span></article>
+    </div>
+  </section>
 
-        <div class="tech-item">.NET</div>
-        <div class="tech-item">React</div>
-        <div class="tech-item">SQL Server</div>
-        <div class="tech-item">Azure DevOps</div>
-        <div class="tech-item">Angular</div>
-        <div class="tech-item">Vue.js</div>
-        <div class="tech-item">TypeScript</div>
-        <div class="tech-item">Laravel</div>
-        <div class="tech-item">RabbitMQ</div>
-        <div class="tech-item">Elasticsearch</div>
-        <div class="tech-item">PostgreSQL</div>
-        <div class="tech-item">MySQL</div>
-        <div class="tech-item">Docker</div>
-        <div class="tech-item">CI/CD</div>
-        <div class="tech-item">Git</div>
+  <section class="section expertise-section">
+    <div class="container">
+      <header class="section-head" appReveal>
+        <div><span class="eyebrow">{{ 'home.expertiseEyebrow' | translate }}</span><h2>{{ 'home.expertiseTitle' | translate }}</h2></div>
+        <p>{{ 'home.expertiseDescription' | translate }}</p>
+      </header>
+      <div class="expertise-grid">
+        <article *ngFor="let group of vm.expertise; let i = index" appReveal [revealDelay]="i * 100">
+          <div class="expertise-index mono">0{{ i + 1 }}</div>
+          <app-icon [name]="i === 0 ? 'layers' : i === 1 ? 'code' : 'briefcase'"></app-icon>
+          <h3>{{ group.group_name }}</h3>
+          <p>{{ ('skill.groupDescriptions.' + group.group_id) | translate }}</p>
+          <div class="expertise-list"><span *ngFor="let skill of group.items | slice:0:7">{{ skill.name }}</span></div>
+        </article>
+      </div>
+      <a routerLink="/skill" class="text-link">{{ 'home.allExpertise' | translate }}<app-icon name="arrow"></app-icon></a>
+    </div>
+  </section>
+
+  <section class="section selected-work">
+    <div class="container">
+      <header class="section-head" appReveal>
+        <div><span class="eyebrow">{{ 'home.workEyebrow' | translate }}</span><h2>{{ 'home.workTitle' | translate }}</h2></div>
+        <p>{{ 'home.workDescription' | translate }}</p>
+      </header>
+      <div class="selected-list">
+        <article *ngFor="let project of vm.projects; let i = index" appReveal [revealDelay]="i * 100">
+          <a [routerLink]="['/project', project.slug]">
+            <div class="project-index mono">CASE / 0{{ i + 1 }}</div>
+            <div class="project-main">
+              <div class="project-meta mono"><span>{{ project.type }}</span><span>{{ project.period }}</span></div>
+              <h3>{{ project.title }}</h3><p>{{ project.summary }}</p>
+              <div class="project-columns">
+                <div><b>{{ 'home.problemLabel' | translate }}</b><span>{{ project.problem.statement }}</span></div>
+                <div><b>{{ 'home.decisionLabel' | translate }}</b><span>{{ project.decisions[0].title }}</span></div>
+                <div><b>{{ 'home.outcomeLabel' | translate }}</b><span>{{ project.outcomes[0].title }}</span></div>
+              </div>
+            </div>
+            <app-icon name="arrow"></app-icon>
+          </a>
+        </article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="quick-nav-section section-shell">
-  <div class="container-xl">
-    <div class="quick-nav-grid">
-      <a [routerLink]="['/skill']" class="nav-card skill-nav">
-        <div class="nav-icon">
-          <i class="fas fa-code"></i>
-        </div>
-        <h4>{{ 'home.nav.skills' | translate }}</h4>
-        <p>{{ 'home.nav.skills_desc' | translate }}</p>
-      </a>
-
-      <a [routerLink]="['/experience']" class="nav-card experience-nav">
-        <div class="nav-icon">
-          <i class="fas fa-briefcase"></i>
-        </div>
-        <h4>{{ 'home.nav.experience' | translate }}</h4>
-        <p>{{ 'home.nav.experience_desc' | translate }}</p>
-      </a>
-
-      <a [routerLink]="['/project']" class="nav-card project-nav">
-        <div class="nav-icon">
-          <i class="fas fa-project-diagram"></i>
-        </div>
-        <h4>{{ 'home.nav.projects' | translate }}</h4>
-        <p>{{ 'home.nav.projects_desc' | translate }}</p>
-      </a>
-
-      <a [routerLink]="['/achievement']" class="nav-card achievement-nav">
-        <div class="nav-icon">
-          <i class="fas fa-trophy"></i>
-        </div>
-        <h4>{{ 'home.nav.achievements' | translate }}</h4>
-        <p>{{ 'home.nav.achievements_desc' | translate }}</p>
-      </a>
-
-      <a [routerLink]="['/education']" class="nav-card education-nav">
-        <div class="nav-icon">
-          <i class="fas fa-graduation-cap"></i>
-        </div>
-        <h4>{{ 'home.nav.education' | translate }}</h4>
-        <p>{{ 'home.nav.education_desc' | translate }}</p>
-      </a>
+  <section class="section experience-preview">
+    <div class="container preview-layout">
+      <header appReveal><span class="eyebrow">{{ 'home.experienceEyebrow' | translate }}</span><h2>{{ 'home.experienceTitle' | translate }}</h2><a routerLink="/experience" class="text-link">{{ 'home.fullTimeline' | translate }}<app-icon name="arrow"></app-icon></a></header>
+      <div class="mini-timeline">
+        <article *ngFor="let item of vm.experiences; let i = index" appReveal [revealDelay]="i * 80">
+          <span class="mono">{{ item.time }}</span><div><h3>{{ item.title }}</h3><b>{{ item.company }}</b><p>{{ item.description }}</p></div>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="section evidence-section">
+    <div class="container">
+      <header class="section-head" appReveal><div><span class="eyebrow">{{ 'home.evidenceEyebrow' | translate }}</span><h2>{{ 'home.evidenceTitle' | translate }}</h2></div><p>{{ 'home.evidenceDescription' | translate }}</p></header>
+      <div class="evidence-grid">
+        <a routerLink="/achievement" class="evidence-block" appReveal>
+          <div class="evidence-group-head"><app-icon name="award"></app-icon><span class="mono">{{ 'resume.awards' | translate }} / {{ vm.awards.length }}</span></div>
+          <div class="evidence-list">
+            <article class="evidence-item" *ngFor="let item of vm.awards">
+              <div><b>{{ item.result }}</b><small>{{ item.time }}</small></div><div><h3>{{ item.name }}</h3><p>{{ item.role }}</p></div>
+            </article>
+          </div>
+        </a>
+        <a routerLink="/achievement" class="evidence-block" appReveal [revealDelay]="100">
+          <div class="evidence-group-head"><app-icon name="education"></app-icon><span class="mono">{{ 'resume.researchProjects' | translate }} / {{ vm.researchProjects.length }}</span></div>
+          <div class="evidence-list">
+            <article class="evidence-item" *ngFor="let item of vm.researchProjects">
+              <div><b>{{ item.result }}</b><small>{{ item.time }}</small></div><div><h3>{{ item.name }}</h3><p>{{ item.role }}</p></div>
+            </article>
+          </div>
+        </a>
+        <a routerLink="/education" class="evidence-block education-block" appReveal [revealDelay]="150">
+          <div class="evidence-group-head"><app-icon name="education"></app-icon><span class="mono">{{ 'nav.education' | translate }}</span></div>
+          <ng-container *ngIf="vm.education"><b>{{ vm.education.label }}</b><h3>{{ vm.education.name }}</h3><p>{{ vm.education.address }}</p><small>{{ vm.education.time }}</small></ng-container>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-section">
+    <div class="container contact-inner" appReveal>
+      <span class="eyebrow">{{ 'home.contactEyebrow' | translate }}</span>
+      <h2>{{ 'home.contactTitle' | translate }}</h2>
+      <p>{{ 'home.contactDescription' | translate }}</p>
+      <div class="contact-links">
+        <a class="button button--primary" href="mailto:thuanpt182@gmail.com"><app-icon name="mail"></app-icon>Email</a>
+        <a class="button" href="https://github.com/KayStar645" target="_blank" rel="noreferrer"><app-icon name="github"></app-icon>GitHub</a>
+        <a class="button" href="https://www.facebook.com/thuanpt182.2" target="_blank" rel="noreferrer"><app-icon name="external"></app-icon>Facebook</a>
+      </div>
+    </div>
+  </section>
+</ng-container>

@@ -1,0 +1,26 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-positioning">
+      <span class="eyebrow">{{ 'footer.eyebrow' | translate }}</span>
+      <h2>{{ 'footer.title' | translate }}</h2>
+      <p>{{ 'footer.description' | translate }}</p>
+    </div>
+    <nav class="footer-links" [attr.aria-label]="'a11y.footerNav' | translate">
+      <a routerLink="/project">{{ 'nav.work' | translate }}</a>
+      <a routerLink="/experience">{{ 'nav.experience' | translate }}</a>
+      <a routerLink="/skill">{{ 'nav.expertise' | translate }}</a>
+      <a routerLink="/education">{{ 'nav.education' | translate }}</a>
+      <a routerLink="/achievement">{{ 'nav.achievements' | translate }}</a>
+      <a routerLink="/resume">{{ 'nav.resume' | translate }}</a>
+    </nav>
+    <div class="footer-contact">
+      <a href="mailto:thuanpt182@gmail.com"><app-icon name="mail"></app-icon>Email</a>
+      <a href="https://github.com/KayStar645" target="_blank" rel="noreferrer"><app-icon name="github"></app-icon>GitHub</a>
+      <a href="https://www.facebook.com/thuanpt182.2" target="_blank" rel="noreferrer"><app-icon name="external"></app-icon>Facebook</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© {{ year }} Thuan / KayStar</span>
+    <span class="mono">Software Engineer · Ho Chi Minh City</span>
+  </div>
+</footer>

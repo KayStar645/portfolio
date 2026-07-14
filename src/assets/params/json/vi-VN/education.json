@@ -1,23 +1,11 @@
-[
-  {
-    "label": "Học bổng 50%",
-    "name": "Thạc sĩ Công nghệ thông tin",
-    "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
-    "time": "01/2025 - Nay",
-    "image": "assets/params/images/educations/master.jpg"
-  },
-  {
-    "label": "Bằng Kỹ sư",
-    "name": "Kỹ sư Công nghệ thông tin",
-    "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
-    "time": "01/2024 - 06/2024",
-    "image": "assets/params/images/educations/engineer.jpg"
-  },
-  {
-    "label": "Bằng Cử nhân",
-    "name": "Cử nhân Công nghệ thông tin",
-    "address": "Trường Đại học Công Thương TP.HCM (HUIT)",
-    "time": "09/2020 - 12/2023",
-    "image": "assets/params/images/educations/bachelor.jpg"
-  }
-]
+{
+  "education": [
+    { "id": "msc", "label": "Học bổng 50%", "name": "Thạc sĩ Công nghệ thông tin ứng dụng", "address": "Trường Đại học Công Thương TP.HCM (HUIT)", "time": "01/2025–Nay", "image": "assets/params/images/educations/master.jpg" },
+    { "id": "engineer", "label": "Bằng Kỹ sư", "name": "Kỹ sư Công nghệ thông tin", "address": "Trường Đại học Công Thương TP.HCM (HUIT)", "time": "01/2024–06/2024", "image": "assets/params/images/educations/engineer.jpg" },
+    { "id": "bachelor", "label": "Bằng Cử nhân", "name": "Cử nhân Công nghệ thông tin", "address": "Trường Đại học Công Thương TP.HCM (HUIT)", "time": "09/2020–12/2023", "image": "assets/params/images/educations/bachelor.jpg" }
+  ],
+  "certificates": [
+    { "id": "pedagogy", "name": "Chứng chỉ Nghiệp vụ Sư phạm", "issuer": "Trường Đại học Sư phạm Hà Nội 2", "time": "10/2025", "result": "Xuất sắc" },
+    { "id": "english-b1", "name": "Chứng chỉ Tiếng Anh B1", "issuer": "Khung tham chiếu chung Châu Âu", "time": "03/2025", "result": "B1" }
+  ]
+}

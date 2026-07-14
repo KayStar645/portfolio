@@ -8,7 +8,7 @@ import { LangService } from '../shared/services/lang.service';
 import { ContentLoaderService } from './content-loader.service';
 
 export interface Achievement {
-  label: string;
+  id: string;
   name: string;
   role: string;
   team: string;

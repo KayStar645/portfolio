@@ -1,83 +1,11 @@
 [
-    {
-      "name": "IT Faculty Scientific Research Competition, Academic Year 2025 - 2026",
-      "role": "Student Co-supervisor",
-      "team": "Pham Tan Thuan (Co-supervisor); Tran Duong Gia Bao, Tran Gia Bao",
-      "result": "Encouragement Award",
-      "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
-      "time": "04/2026",
-      "image": "assets/params/images/achievements/science-1.jpg",
-      "type": "prize"
-    },
-    {
-      "name": "University-level Student Scientific Research Competition, Academic Year 2023 - 2024",
-      "role": "Team Leader",
-      "team": "Phạm Tấn Thuận, Khúc Hồng Nhung, Trần Ngọc Hiếu Thảo",
-      "result": "First Prize",
-      "address": "HCM.c University of Industry and Trade (HUIT)",
-      "time": "05/2024",
-      "image": "assets/params/images/achievements/prize-1.jpg",
-      "type": "prize"
-    },
-    {
-      "name": "Faculty-level Student Scientific Research Competition, Academic Year 2023 - 2024",
-      "role": "Team Leader",
-      "team": "Phạm Tấn Thuận, Khúc Hồng Nhung, Trần Ngọc Hiếu Thảo",
-      "result": "Second Prize",
-      "address": "HCM.c University of Industry and Trade (HUIT)",
-      "time": "04/2024",
-      "image": "assets/params/images/achievements/prize-2.jpg",
-      "type": "prize"
-    },
-    {
-      "name": "Information Technology Talent Search 2023 - Table C: Website Applications",
-      "role": "Team Leader",
-      "team": "Phạm Tấn Thuận, Ngô Văn Sơn",
-      "result": "Consolation Prize",
-      "address": "Ho Chi Minh City University of Technology (HUTECH)",
-      "time": "12/2023",
-      "image": "assets/params/images/achievements/prize-3.jpg",
-      "type": "prize"
-    },
-    {
-      "name": "Faculty-level Student Scientific Research Competition, Academic Year 2022 - 2023",
-      "role": "Team Leader",
-      "team": "Phạm Tấn Thuận, Ngô Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
-      "result": "First Prize",
-      "address": "HCM.c University of Industry and Trade (HUIT)",
-      "time": "04/2023",
-      "image": "assets/params/images/achievements/prize-4.jpg",
-      "type": "prize"
-    },
-    {
-      "name": "IT Innovation and Talent Search in the Digital Era",
-      "role": "Team Leader",
-      "team": "Phạm Tấn Thuận, Nguyễn Nương Hồng Thắm, Nguyễn Tấn Phát, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
-      "result": "Second Prize",
-      "address": "HCM.c University of Industry and Trade (HUIT)",
-      "time": "06/2022",
-      "image": "assets/params/images/achievements/prize-5.jpg",
-      "type": "prize"
-    },
-    {
-      "name": "University-level Research Project – CL-HUIM on Dynamic Transaction Databases with Negative Utility",
-      "role": "Principal Investigator",
-      "team": "Phạm Tấn Thuận",
-      "result": "In Progress",
-      "address": "HCM.c University of Industry and Trade (HUIT)",
-      "time": "07/2025 - 06/2026",
-      "image": "assets/params/images/achievements/science-1.jpg",
-      "type": "science"
-    },
-    {
-      "name": "University-level Research Project – Building a system to process graduation thesis progress",
-      "role": "Principal Investigator",
-      "team": "Phạm Tấn Thuận, Ngô Văn Sơn, Vũ Trần Minh Hoàng, Nguyễn Ngọc Thạch",
-      "result": "Score: 80/100 – Good",
-      "address": "HCM.c University of Industry and Trade (HUIT)",
-      "time": "12/2022 - 06/2023",
-      "image": "assets/params/images/achievements/science-2.jpg",
-      "type": "science"
-    }
-  ]
-  
+  { "id": "research-competition-2026", "name": "IT Faculty Scientific Research Competition, Academic Year 2025–2026", "role": "Student Co-supervisor", "team": "Pham Tan Thuan (Co-supervisor); Tran Duong Gia Bao, Tran Gia Bao", "result": "Encouragement Award", "address": "Ho Chi Minh City University of Industry and Trade (HUIT)", "time": "04/2026", "image": "assets/params/images/achievements/science-1.jpg", "type": "prize" },
+  { "id": "university-research-2024", "name": "University-level Student Scientific Research Competition, Academic Year 2023–2024", "role": "Team Leader", "team": "Pham Tan Thuan, Khuc Hong Nhung, Tran Ngoc Hieu Thao", "result": "First Prize", "address": "Ho Chi Minh City University of Industry and Trade (HUIT)", "time": "05/2024", "image": "assets/params/images/achievements/prize-1.jpg", "type": "prize" },
+  { "id": "faculty-research-2024", "name": "Faculty-level Student Scientific Research Competition, Academic Year 2023–2024", "role": "Team Leader", "team": "Pham Tan Thuan, Khuc Hong Nhung, Tran Ngoc Hieu Thao", "result": "Second Prize", "address": "Ho Chi Minh City University of Industry and Trade (HUIT)", "time": "04/2024", "image": "assets/params/images/achievements/prize-2.jpg", "type": "prize" },
+  { "id": "it-talent-2023", "name": "Information Technology Talent Search 2023 — Website Applications", "role": "Team Leader", "team": "Pham Tan Thuan, Ngo Van Son", "result": "Consolation Prize", "address": "Ho Chi Minh City University of Technology (HUTECH)", "time": "12/2023", "image": "assets/params/images/achievements/prize-3.jpg", "type": "prize" },
+  { "id": "faculty-research-2023", "name": "Faculty-level Student Scientific Research Competition, Academic Year 2022–2023", "role": "Team Leader", "team": "Pham Tan Thuan, Ngo Van Son, Vu Tran Minh Hoang, Nguyen Ngoc Thach", "result": "First Prize", "address": "Ho Chi Minh City University of Industry and Trade (HUIT)", "time": "04/2023", "image": "assets/params/images/achievements/prize-4.jpg", "type": "prize" },
+  { "id": "digital-innovation-2022", "name": "IT Innovation and Talent Search in the Digital Era", "role": "Team Leader", "team": "Pham Tan Thuan, Nguyen Nuong Hong Tham, Nguyen Tan Phat, Vu Tran Minh Hoang, Nguyen Ngoc Thach", "result": "Second Prize", "address": "Ho Chi Minh City University of Industry and Trade (HUIT)", "time": "06/2022", "image": "assets/params/images/achievements/prize-5.jpg", "type": "prize" },
+  { "id": "cl-huim-research", "name": "University Research Project — CL-HUIM on Dynamic Transaction Databases with Negative Utility", "role": "Principal Investigator", "team": "Pham Tan Thuan, Tran Duong Gia Bao, Tran Gia Bao", "result": "In Progress", "address": "Ho Chi Minh City University of Industry and Trade (HUIT)", "time": "07/2025–06/2026", "image": "assets/params/images/achievements/science-1.jpg", "type": "science" },
+  { "id": "absa-knowledge-graph", "name": "University Research Project — Aspect-based Sentiment Analysis with Knowledge Graphs", "role": "Core Member", "team": "Nguyen Thi Hong Quyen, Pham Tan Thuan, Doan Tan Minh Tan, Nguyen Huu Thang", "result": "In Progress", "address": "Ho Chi Minh City University of Industry and Trade (HUIT)", "time": "01/2025–12/2025", "image": "assets/params/images/achievements/science-3.jpg", "type": "science" },
+  { "id": "thesis-progress-research", "name": "University Research Project — Graduation Thesis Progress Management", "role": "Principal Investigator", "team": "Pham Tan Thuan, Ngo Van Son, Vu Tran Minh Hoang, Nguyen Ngoc Thach", "result": "Score: 80/100 — Good", "address": "Ho Chi Minh City University of Industry and Trade (HUIT)", "time": "12/2022–06/2023", "image": "assets/params/images/achievements/science-2.jpg", "type": "science" }
+]

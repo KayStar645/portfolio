@@ -1,134 +1,38 @@
-<div id="skill" class="skills-modern section-shell">
-  <div class="container-lg">
-    
-    <!-- Header -->
-    <div class="skills-header text-center mb-5">
-      <h1 class="skills-title">
-        <span class="title-text">{{ 'skill.title_prefix' | translate }}</span>
-        <span class="title-highlight">{{ 'skill.title_suffix' | translate }}</span>
-    </h1>
-      <p class="skills-description">{{ 'skill.description' | translate }}</p>
+<section class="section-page" id="skill">
+  <div class="container">
+    <header class="page-intro" appReveal>
+      <p class="eyebrow">{{ 'skill.eyebrow' | translate }}</p>
+      <h1>{{ 'skill.title' | translate }}</h1>
+      <p>{{ 'skill.description' | translate }}</p>
+    </header>
+
+    <div class="expertise-list" *ngIf="groupedSkills$ | async as groups">
+      <section
+        class="expertise-group"
+        *ngFor="let group of groups; let index = index; trackBy: trackByGroup"
+        appReveal
+        [revealDelay]="index * 70"
+      >
+        <div class="group-index">0{{ index + 1 }}</div>
+        <header>
+          <div class="group-icon" aria-hidden="true">
+            <app-icon [name]="groupIcon(group.group_id)" [size]="24" />
+          </div>
+          <div>
+            <h2>{{ group.group_name }}</h2>
+            <p>{{ ('skill.groupDescriptions.' + group.group_id) | translate }}</p>
+          </div>
+        </header>
+
+        <div class="skill-list">
+          <ng-container *ngFor="let skill of group.items; trackBy: trackBySkill">
+            <a *ngIf="skill.url; else plainSkill" [href]="skill.url" target="_blank" rel="noopener">
+              {{ skill.name }}<app-icon name="external" [size]="13" />
+            </a>
+            <ng-template #plainSkill><span>{{ skill.name }}</span></ng-template>
+          </ng-container>
+        </div>
+      </section>
     </div>
-
-    <!-- Backend Row -->
-    <div class="skill-row backend-row">
-      <div class="skill-card backend">
-        <div class="skill-icon">
-          <i class="fas fa-server"></i>
-        </div>
-        <h4 class="skill-name">.NET</h4>
-        <div class="skill-content">
-          <div class="tech-section">
-            <span class="tech-tag">Clean Architecture</span>
-            <span class="tech-tag">DDD</span>
-            <span class="tech-tag">CQRS</span>
-            <span class="tech-tag">gRPC</span>
-          </div>
-          <div class="tech-section">
-            <span class="tech-tag">SQL Server</span>
-            <span class="tech-tag">Azure DevOps</span>
-            <span class="tech-tag">PostgreSQL</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-card backend">
-        <div class="skill-icon">
-          <i class="fab fa-laravel"></i>
-        </div>
-        <h4 class="skill-name">Laravel</h4>
-        <div class="skill-content">
-          <div class="tech-section">
-            <span class="tech-tag">RESTful API</span>
-            <span class="tech-tag">MVC</span>
-            <span class="tech-tag">Package Architecture</span>
-          </div>
-          <div class="tech-section">
-            <span class="tech-tag">MySQL</span>
-            <span class="tech-tag">Eloquent</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Frontend Row -->
-    <div class="skill-row frontend-row">
-      <div class="skill-card frontend">
-        <div class="skill-icon">
-          <i class="fab fa-react"></i>
-        </div>
-        <h4 class="skill-name">React</h4>
-        <div class="skill-content">
-          <div class="tech-section">
-            <span class="tech-tag">Redux</span>
-            <span class="tech-tag">Hooks</span>
-            <span class="tech-tag">Enterprise UI</span>
-            <span class="tech-tag">Component Design</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-card frontend">
-        <div class="skill-icon">
-          <i class="fab fa-angular"></i>
-        </div>
-        <h4 class="skill-name">Angular</h4>
-        <div class="skill-content">
-          <div class="tech-section">
-            <span class="tech-tag">Services</span>
-            <span class="tech-tag">RxJS</span>
-            <span class="tech-tag">Modules</span>
-            <span class="tech-tag">Dependency Injection</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-card frontend">
-        <div class="skill-icon">
-          <i class="fab fa-vuejs"></i>
-        </div>
-        <h4 class="skill-name">Vue.js</h4>
-        <div class="skill-content">
-          <div class="tech-section">
-            <span class="tech-tag">Vuex</span>
-            <span class="tech-tag">Composition API</span>
-            <span class="tech-tag">Template</span>
-            <span class="tech-tag">Directives</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tools Row -->
-    <div class="skill-row tools-row">
-      <div class="skill-card tools">
-        <div class="skill-icon">
-          <i class="fab fa-git-alt"></i>
-        </div>
-        <h4 class="skill-name">Git & GitHub</h4>
-      </div>
-
-      <div class="skill-card tools">
-        <div class="skill-icon">
-          <i class="fas fa-code-branch"></i>
-        </div>
-        <h4 class="skill-name">Azure DevOps</h4>
-      </div>
-
-      <div class="skill-card tools">
-        <div class="skill-icon">
-          <i class="fas fa-project-diagram"></i>
-        </div>
-        <h4 class="skill-name">RabbitMQ</h4>
-      </div>
-
-      <div class="skill-card tools">
-        <div class="skill-icon">
-          <i class="fas fa-search"></i>
-        </div>
-        <h4 class="skill-name">Elasticsearch</h4>
-      </div>
-    </div>
-
   </div>
-</div>
+</section>

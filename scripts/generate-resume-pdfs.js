@@ -10,28 +10,30 @@ const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'portfolio-resume-'));
 const labels = {
   'vi-VN': {
     fileName: 'resume-vi-VN.pdf',
-    documentTitle: 'CV - Pham Tan Thuan - Full-stack .NET React Developer',
-    focus: 'Full-stack .NET/React Developer',
+    documentTitle: 'Software Engineer',
+    focus: 'Kỹ sư phần mềm',
     summary: 'Tóm tắt',
     coreSkills: 'Công nghệ chính',
     experience: 'Kinh nghiệm làm việc',
     education: 'Học vấn',
     certificates: 'Chứng chỉ',
-    research: 'Hướng nghiên cứu',
-    highlights: 'Điểm nổi bật chuyên môn',
+    awards: 'Giải thưởng & Cuộc thi',
+    researchProjects: 'Đề tài nghiên cứu',
+    credentials: 'Chứng chỉ & Ngôn ngữ',
     languages: 'Ngôn ngữ',
   },
   'en-US': {
     fileName: 'resume-en-US.pdf',
-    documentTitle: 'CV - Pham Tan Thuan - Full-stack .NET React Developer',
-    focus: 'Full-stack .NET/React Developer',
+    documentTitle: 'Software Engineer',
+    focus: 'Software Engineer',
     summary: 'Summary',
     coreSkills: 'Core Technologies',
     experience: 'Professional Experience',
     education: 'Education',
     certificates: 'Certificates',
-    research: 'Research Interests',
-    highlights: 'Professional Highlights',
+    awards: 'Awards & Competitions',
+    researchProjects: 'Research Projects',
+    credentials: 'Certificates & Languages',
     languages: 'Languages',
   },
 };
@@ -42,6 +44,7 @@ function readJson(filePath) {
 
 function escapeHtml(value = '') {
   return String(value)
+    .replace(/[\u2010-\u2015\u2212]/g, '-')
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -123,6 +126,20 @@ function simpleItems(items) {
     .join('');
 }
 
+function evidenceItems(items) {
+  return items
+    .map(item => `
+      <article class="evidence-item">
+        <div class="evidence-head">
+          <h3>${escapeHtml(item.name)}</h3>
+          <span>${escapeHtml(item.time)}</span>
+        </div>
+        <strong>${escapeHtml(item.result)} · ${escapeHtml(item.role)}</strong>
+        <p>${escapeHtml(item.address)}</p>
+      </article>`)
+    .join('');
+}
+
 function renderHtml(lang, resume) {
   const text = labels[lang];
 
@@ -173,7 +190,10 @@ function renderHtml(lang, resume) {
       margin-top: 5px;
       overflow-wrap: anywhere;
     }
-    .resume > section { margin-top: 9px; }
+    .resume > section {
+      margin-top: 9px;
+      break-inside: avoid;
+    }
     h2 {
       color: #0f766e;
       font-size: 12.5px;
@@ -230,9 +250,13 @@ function renderHtml(lang, resume) {
       font-size: 9.8px;
       margin-top: 1px;
     }
-    .two-col {
+    .second-page {
+      break-before: page;
+    }
+    .education-grid,
+    .credential-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 9px;
     }
     .simple-item {
@@ -243,6 +267,50 @@ function renderHtml(lang, resume) {
     .compact-list {
       display: grid;
       gap: 5px;
+    }
+    .evidence-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 5px 10px;
+    }
+    .evidence-item {
+      padding-bottom: 4px;
+      border-bottom: 1px solid #e5e7eb;
+      break-inside: avoid;
+    }
+    .evidence-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 7px;
+      align-items: flex-start;
+    }
+    .evidence-head h3 { font-size: 9.8px; }
+    .evidence-head span {
+      flex: 0 0 auto;
+      color: #64748b;
+      font-size: 8.6px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .evidence-item strong {
+      display: block;
+      margin-top: 2px;
+      color: #0f766e;
+      font-size: 8.9px;
+    }
+    .evidence-item p {
+      margin-top: 1px;
+      color: #64748b;
+      font-size: 8.4px;
+    }
+    .credential-grid {
+      grid-template-columns: 1.25fr .75fr;
+    }
+    .credential-grid h3.group-title {
+      margin-bottom: 4px;
+      color: #475569;
+      font-size: 9px;
+      text-transform: uppercase;
     }
     .language-list {
       display: grid;
@@ -288,37 +356,34 @@ function renderHtml(lang, resume) {
       ${resume.experiences.map(experienceItem).join('')}
     </section>
 
-    <div class="two-col">
-      <section>
-        <h2>${escapeHtml(text.education)}</h2>
-        ${simpleItems(resume.education)}
-      </section>
-      <section>
-        <h2>${escapeHtml(text.certificates)}</h2>
-        ${simpleItems(resume.certificates)}
-      </section>
-    </div>
-
-    <section>
-      <h2>${escapeHtml(text.highlights)}</h2>
-      <div class="compact-list">${simpleItems(resume.achievements)}</div>
+    <section class="second-page">
+      <h2>${escapeHtml(text.education)}</h2>
+      <div class="education-grid">${simpleItems(resume.education)}</div>
     </section>
 
     <section>
-      <h2>${escapeHtml(text.research)}</h2>
-      <div class="compact-list">${simpleItems(resume.research)}</div>
+      <h2>${escapeHtml(text.awards)}</h2>
+      <div class="evidence-list">${evidenceItems(resume.awards)}</div>
     </section>
 
     <section>
-      <h2>${escapeHtml(text.languages)}</h2>
-      <div class="language-list">
-        ${resume.languages
-          .map(language => `
-            <div class="language-item">
-              <strong>${escapeHtml(language.name)}</strong>
-              <span>${escapeHtml(language.level)}</span>
-            </div>`)
-          .join('')}
+      <h2>${escapeHtml(text.researchProjects)}</h2>
+      <div class="evidence-list">${evidenceItems(resume.researchProjects)}</div>
+    </section>
+
+    <section>
+      <h2>${escapeHtml(text.credentials)}</h2>
+      <div class="credential-grid">
+        <div><h3 class="group-title">${escapeHtml(text.certificates)}</h3>${simpleItems(resume.certificates)}</div>
+        <div><h3 class="group-title">${escapeHtml(text.languages)}</h3><div class="language-list">
+          ${resume.languages
+            .map(language => `
+              <div class="language-item">
+                <strong>${escapeHtml(language.name)}</strong>
+                <span>${escapeHtml(language.level)}</span>
+              </div>`)
+            .join('')}
+        </div></div>
       </div>
     </section>
   </main>
@@ -328,7 +393,14 @@ function renderHtml(lang, resume) {
 
 function generate(lang) {
   const resumePath = path.join(root, 'src', 'assets', 'params', 'json', lang, 'resume.json');
-  const resume = readJson(resumePath);
+  const achievementsPath = path.join(root, 'src', 'assets', 'params', 'json', lang, 'achievement.json');
+  const baseResume = readJson(resumePath);
+  const achievements = readJson(achievementsPath);
+  const resume = {
+    ...baseResume,
+    awards: achievements.filter(item => item.type === 'prize'),
+    researchProjects: achievements.filter(item => item.type === 'science'),
+  };
   const htmlPath = path.join(tempDir, `resume-${lang}.html`);
   const pdfPath = path.join(outputDir, labels[lang].fileName);
 

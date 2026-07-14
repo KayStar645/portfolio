@@ -5,6 +5,9 @@
 /tmp
 /out-tsc
 /bazel-out
+architecture
+KayStar645/
+.codex
 
 # Node
 /node_modules

@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && mv ./dist/portfolio/browser/* ./dist/portfolio/ && rm -rf ./dist/portfolio/browser",
+    "build": "ng build && node scripts/finalize-build.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "resume:pdf": "node scripts/generate-resume-pdfs.js",
+    "content:validate": "node scripts/validate-content.js",
     "test:ci": "ng test --no-watch --no-progress --browsers=ChromeHeadless"
   },
   "private": true,
@@ -20,12 +21,12 @@
     "@angular/platform-browser": "^19.0.0",
     "@angular/platform-browser-dynamic": "^19.0.0",
     "@angular/router": "^19.0.0",
+    "@fontsource/ibm-plex-mono": "^5.2.6",
+    "@fontsource/manrope": "^5.2.6",
     "@ngx-translate/core": "^16.0.4",
     "@ngx-translate/http-loader": "^16.0.1",
-    "bootstrap": "^5.3.3",
     "ngx-toastr": "^19.0.0",
     "rxjs": "~7.8.0",
-    "swiper": "^11.2.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },

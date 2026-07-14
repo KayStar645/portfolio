@@ -27,6 +27,11 @@ export const routes: Routes = [
       .then(mod => mod.ProjectComponent)
   },
   {
+    path: 'project/:slug',
+    loadComponent: () => import('./features/general/project-detail/project-detail.component')
+      .then(mod => mod.ProjectDetailComponent)
+  },
+  {
     path: 'skill',
     loadComponent: () => import('./features/general/skill/skill.component')
       .then(mod => mod.SkillComponent)

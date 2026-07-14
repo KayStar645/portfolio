@@ -1,24 +1,162 @@
 [
   {
     "id": 1,
-    "title": "Lập trình viên – Chatbot",
-    "company": "Công ty Cổ phần Giải pháp Công nghệ TURBO",
-    "time": "09/2025 – 10/2025",
-    "location": "Hồ Chí Minh",
-    "type": "contract",
-    "status": "completed",
-    "role": "Developer",
-    "description": "Phát triển landing page marketing và chatbot tích hợp đa kênh",
-    "responsibilities": [
-      "Phát triển Landing Page marketing",
-      "Xây dựng widget chat, tích hợp & vận hành Chatwoot (mã nguồn mở), kết nối Dify API (RAG demo)",
-      "Tích hợp đa kênh giao tiếp (Web, Zalo, Facebook, Instagram,…)",
-      "Triển khai bằng Docker & CI/CD, deploy bản uat, production"
+    "slug": "enterprise-platform-architecture",
+    "title": "Kiến trúc nền tảng doanh nghiệp",
+    "summary": "Thiết kế nền tảng doanh nghiệp có khả năng tổ hợp qua ownership của frontend capability, các backend service được cấu trúc độc lập và cơ chế xử lý bất đồng bộ tin cậy.",
+    "role": "Kỹ sư phần mềm",
+    "period": "01/2026 - Hiện tại",
+    "type": "Nền tảng doanh nghiệp",
+    "status": "current",
+    "featured": true,
+    "overviewFacts": [
+      { "label": "Vai trò", "value": "Kiến trúc & triển khai" },
+      { "label": "Trọng tâm", "value": "Phát triển theo module" },
+      { "label": "Phạm vi", "value": "Frontend, backend & nền tảng" }
     ],
-    "technologies": ["React", "Chatwoot", "Dify API", "Docker", "CI/CD", "Zalo", "Facebook", "Instagram"],
-    "links": {
-      "demo": "#",
-      "source": "#"
-    }
+    "problem": {
+      "context": "Một nền tảng quy trình có vòng đời dài cần hỗ trợ các business capability phát triển độc lập mà không khiến UI composition, service integration và background processing phụ thuộc chặt vào nhau.",
+      "statement": "Làm thế nào để nền tảng doanh nghiệp phát triển theo capability nhưng vẫn giữ ownership và dependency direction rõ ràng?",
+      "constraints": [
+        "Business capability phải độc lập, dễ hiểu và dễ bảo trì.",
+        "Frontend composition không được dựa vào cấu hình route, navigation hoặc permission trùng lặp.",
+        "Các service phải tích hợp mà không truy cập trực tiếp dữ liệu của service khác.",
+        "Background processing phải hỗ trợ retry và controlled shutdown."
+      ]
+    },
+    "process": [
+      { "title": "Xác lập capability boundary", "description": "Xác định nơi UI feature, business rule, persistence và trách nhiệm bất đồng bộ được sở hữu." },
+      { "title": "Định nghĩa dependency rule", "description": "Thiết lập hướng phụ thuộc rõ ràng giữa các frontend layer và Domain, Application, Infrastructure, API." },
+      { "title": "Chuẩn hóa nền tảng dùng chung", "description": "Chuyển integration, metadata và worker concerns lặp lại thành contracts và libraries tái sử dụng." }
+    ],
+    "decisions": [
+      {
+        "title": "Micro Frontend với Feature-Sliced Design",
+        "rationale": "Tổ chức React và TypeScript theo business capability, đồng thời làm rõ trách nhiệm của host, module, feature và shared layer trong codebase.",
+        "tradeOff": "Cần kỷ luật boundary và quản lý contract chặt hơn để đổi lại ownership rõ ràng và khả năng phát triển độc lập an toàn.",
+        "practices": ["MFE composition", "Feature-Sliced Design", "Dependency direction"]
+      },
+      {
+        "title": "Composition theo metadata",
+        "rationale": "Đặt route, navigation, permission và registration metadata cùng capability sở hữu, sau đó sinh shared contracts.",
+        "tradeOff": "Metadata schema phải chặt chẽ hơn nhưng giảm được cấu hình trùng lặp và composition drift.",
+        "practices": ["Generated contracts", "Typed metadata", "Deterministic registration"]
+      },
+      {
+        "title": ".NET Microservices với Clean Architecture",
+        "rationale": "Giữ business rules độc lập với transport và persistence, đồng thời giao mỗi service một capability boundary rõ ràng.",
+        "tradeOff": "Chấp nhận thêm layers và mapping để bảo vệ domain behavior và khả năng bảo trì dài hạn.",
+        "practices": ["DDD", "CQRS", "Domain/Application boundaries"]
+      },
+      {
+        "title": "Tích hợp service dựa trên contract",
+        "rationale": "Dùng API Gateway, shared contracts và typed clients để integration minh bạch mà không chia sẻ data access thuộc sở hữu service.",
+        "tradeOff": "Contract evolution cần version discipline nhưng coupling được giữ rõ ràng và có thể kiểm thử.",
+        "practices": ["API Gateway", "Typed clients", "Service ownership"]
+      },
+      {
+        "title": "RabbitMQ workers tin cậy",
+        "rationale": "Mô hình hóa automation, xử lý tài liệu và thông báo thành asynchronous handlers có execution policy rõ ràng.",
+        "tradeOff": "Eventual completion thay cho synchronous simplicity, đòi hỏi idempotency và worker behavior an toàn khi vận hành.",
+        "practices": ["Idempotency", "Bounded concurrency", "Graceful shutdown"]
+      }
+    ],
+    "solution": [
+      {
+        "title": "Kiến trúc Frontend",
+        "description": "Nền tảng React có khả năng tổ hợp, nơi capability sở hữu feature và metadata của mình.",
+        "deliverables": ["Host và module boundaries", "FSD layer rules", "Generated UI contracts"]
+      },
+      {
+        "title": "Kiến trúc Backend",
+        "description": "Các .NET service có ownership, được cấu trúc quanh domain behavior và application use cases rõ ràng.",
+        "deliverables": ["Clean Architecture foundations", "DDD và CQRS patterns", "Typed service clients"]
+      },
+      {
+        "title": "Kỹ thuật nền tảng",
+        "description": "Cơ chế tái sử dụng cho tenant-aware persistence, xử lý bất đồng bộ và phát hành lặp lại được.",
+        "deliverables": ["RabbitMQ worker foundations", "SQL Server multi-tenancy", "Azure DevOps quality gates"]
+      }
+    ],
+    "outcomes": [
+      { "title": "Ownership rõ ràng", "description": "Frontend capability và backend service có responsibility boundary cụ thể thay vì shared behavior ngầm." },
+      { "title": "Composition xác định", "description": "Generated metadata contracts giữ route, navigation, permission và module registration đồng bộ." },
+      { "title": "Nền tảng tái sử dụng", "description": "Typed clients, contracts và platform libraries chuẩn hóa quyết định kỹ thuật lặp lại mà không tập trung hóa business ownership." },
+      { "title": "Xử lý retry an toàn", "description": "Worker được thiết kế quanh idempotency, controlled concurrency, cancellation và graceful shutdown." }
+    ],
+    "learnings": [
+      "Shared foundation chỉ dễ bảo trì khi ownership và extension points của nó được xác định rõ.",
+      "Frontend modularity phụ thuộc vào dependency rules và metadata contracts, không chỉ cấu trúc thư mục.",
+      "Service boundary được bảo vệ bởi data-access rules nhiều như bởi API contracts.",
+      "Xử lý bất đồng bộ tin cậy bắt đầu từ execution semantics, không chỉ từ message transport."
+    ],
+    "technologies": ["React", "TypeScript", "Micro Frontend", "Feature-Sliced Design", "Metadata-Driven UI", ".NET Microservices", "Clean Architecture", "DDD", "CQRS", "API Gateway", "RabbitMQ", "SQL Server", "Multi-Tenancy", "Azure DevOps", "CI/CD"]
+  },
+  {
+    "id": 2,
+    "slug": "multi-channel-engagement-platform",
+    "title": "Nền tảng tương tác khách hàng đa kênh",
+    "summary": "Triển khai trải nghiệm giao tiếp khách hàng nhúng trên nhiều kênh với integration boundary rõ ràng và quy trình phát hành nhất quán giữa các môi trường.",
+    "role": "Lập trình viên",
+    "period": "09/2025 - 10/2025",
+    "type": "Tích hợp sản phẩm",
+    "status": "completed",
+    "featured": true,
+    "overviewFacts": [
+      { "label": "Vai trò", "value": "Tích hợp sản phẩm" },
+      { "label": "Trọng tâm", "value": "Giao tiếp nhúng" },
+      { "label": "Phát hành", "value": "UAT & production" }
+    ],
+    "problem": {
+      "context": "Một sản phẩm hướng khách hàng cần trải nghiệm chat nhúng, nhiều điểm giao tiếp và delivery path hoạt động nhất quán giữa các môi trường.",
+      "statement": "Làm thế nào để nhiều công cụ giao tiếp tạo thành một trải nghiệm thống nhất mà không làm integration coupling lan khắp sản phẩm?",
+      "constraints": [
+        "Trải nghiệm chat phải nhúng được vào marketing surface hiện có.",
+        "Năng lực third-party và open-source cần adapter boundary rõ ràng.",
+        "Channel-specific behavior không được lan ra toàn ứng dụng.",
+        "UAT và production phải dùng cùng containerized foundation."
+      ]
+    },
+    "process": [
+      { "title": "Tách product và integration concerns", "description": "Giữ landing experience và embedded widget độc lập với cấu hình riêng của provider." },
+      { "title": "Định nghĩa channel boundary", "description": "Xem Web và social channels như adapters có connection và delivery concerns riêng." },
+      { "title": "Lặp lại quy trình phát hành", "description": "Containerize sản phẩm và dùng CI/CD để promote cùng một foundation qua các môi trường." }
+    ],
+    "decisions": [
+      {
+        "title": "Embedded widget boundary",
+        "rationale": "Giữ customer communication có thể tái sử dụng và nhúng độc lập thay vì gắn chặt vào một page implementation.",
+        "tradeOff": "Widget cần integration contract ổn định nhưng các product surface trở nên dễ thay đổi hơn.",
+        "practices": ["React", "Embedded UI", "Reusable integration"]
+      },
+      {
+        "title": "Channel integration theo adapter",
+        "rationale": "Đóng gói Chatwoot, Dify/RAG và channel-specific concerns sau các integration points rõ ràng.",
+        "tradeOff": "Adapters tạo thêm mapping nhưng ngăn provider behavior lan qua sản phẩm.",
+        "practices": ["Chatwoot", "Dify API", "Channel adapters"]
+      },
+      {
+        "title": "Container-first delivery",
+        "rationale": "Dùng cùng Docker foundation và CI/CD workflow cho UAT và production releases.",
+        "tradeOff": "Delivery configuration trở thành một phần engineering ownership để tăng environment consistency.",
+        "practices": ["Docker", "CI/CD", "Environment parity"]
+      }
+    ],
+    "solution": [
+      { "title": "Trải nghiệm sản phẩm", "description": "Marketing surface tập trung với điểm truy cập chat được nhúng.", "deliverables": ["React landing page", "Reusable chat widget", "Responsive interaction"] },
+      { "title": "Lớp tích hợp", "description": "Adapters rõ ràng cho conversation tooling, assisted responses và customer channels.", "deliverables": ["Chatwoot integration", "Dify/RAG connection", "Web và social channels"] },
+      { "title": "Nền tảng phát hành", "description": "Quy trình lặp lại được từ integration work đến deployable environments.", "deliverables": ["Docker packaging", "CI/CD workflow", "UAT và production releases"] }
+    ],
+    "outcomes": [
+      { "title": "Điểm giao tiếp tái sử dụng", "description": "Embedded widget có thể tích hợp mà không gắn toàn bộ product surface với provider details." },
+      { "title": "Integration behavior được đóng gói", "description": "Channel và provider concerns nằm sau boundary rõ ràng và có thể phát triển độc lập." },
+      { "title": "Phát hành nhất quán", "description": "Containerization và CI/CD cung cấp cùng release foundation cho UAT và production." }
+    ],
+    "learnings": [
+      "Sản phẩm nhiều integration vẫn dễ hiểu khi provider behavior được xem là adapter concern.",
+      "Embedded UI cần contract có chủ đích để tái sử dụng qua nhiều product surface.",
+      "Environment consistency tốt hơn khi packaging và release workflow được thiết kế cùng feature."
+    ],
+    "technologies": ["React", "Chatwoot", "Dify API", "RAG", "Docker", "CI/CD", "Web", "Zalo", "Facebook", "Instagram"]
   }
 ]

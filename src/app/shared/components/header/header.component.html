@@ -1,144 +1,22 @@
-<ng-container *ngIf="{ user: user$ | async, menus: menus$ | async } as vm">
-<div id="header">
-  <div class="header-container">
-    <div class="header-backdrop"></div>
-    <div class="header-content">
-      <div class="container-lg px-0 d-flex justify-content-between align-items-center">
-        <div class="brand-section d-flex align-items-center">
-          <a routerLink="/" class="brand-link d-flex align-items-center text-decoration-none">
-            <div class="avatar-container">
-              <img [src]="vm.user?.avatar" class="avatar-img" alt="Profile">
-            </div>
-            <div class="brand-text">
-              <span class="brand-name" [class.long-name]="(vm.user?.name?.length || 0) > 12">{{ vm.user?.name }}</span>
-              <span class="brand-title">{{ 'header.job_title' | translate }}</span>
-            </div>
-          </a>
-        </div>
-
-        <nav class="desktop-nav d-none d-lg-flex align-items-center">
-          <a *ngFor="let menu of vm.menus || []; let i = index"
-             [routerLink]="menu?.link"
-             class="nav-item d-flex align-items-center text-decoration-none"
-             [class.active]="isActiveRoute(menu?.link)"
-             [attr.data-index]="i">
-            <div class="nav-icon">
-              <i [class]="menu?.icon"></i>
-            </div>
-            <span class="nav-label">{{ menu?.label }}</span>
-            <div class="nav-indicator"></div>
-          </a>
-        </nav>
-
-        <div class="action-buttons d-flex align-items-center">
-          <button type="button"
-                  class="action-btn language-btn"
-                  (click)="switchLanguage()"
-                  [attr.aria-label]="currentLang === 'en-US' ? 'Switch to Vietnamese' : 'Switch to English'">
-            <div class="btn-icon">
-              <img class="flag-img"
-                   *ngIf="currentLang == 'en-US'"
-                   src="assets/params/images/lang/viet-nam.png"
-                   alt="Vietnam Flag" />
-              <img class="flag-img"
-                   *ngIf="currentLang == 'vi-VN'"
-                   src="assets/params/images/lang/english.png"
-                   alt="English Flag" />
-            </div>
-            <span class="btn-tooltip">{{ currentLang === 'en-US' ? 'Tiếng Việt' : 'English' }}</span>
-          </button>
-
-          <button type="button"
-                  class="action-btn theme-btn"
-                  (click)="toggleTheme()"
-                  [attr.aria-label]="currentTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'">
-            <div class="btn-icon">
-              <i *ngIf="currentTheme == 'light'" class="far fa-moon"></i>
-              <i *ngIf="currentTheme == 'dark'" class="fas fa-sun"></i>
-            </div>
-            <span class="btn-tooltip">{{ currentTheme === 'light' ? 'Dark Mode' : 'Light Mode' }}</span>
-          </button>
-
-          <button type="button"
-                  class="mobile-menu-btn d-flex d-lg-none"
-                  (click)="isMenuVisible = !isMenuVisible"
-                  [class.active]="isMenuVisible"
-                  [attr.aria-label]="isMenuVisible ? 'Close Menu' : 'Open Menu'">
-            <div class="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </button>
-        </div>
-      </div>
+<a class="skip-link" href="#main-content">{{ 'a11y.skip' | translate }}</a>
+<header class="site-header">
+  <div class="reading-progress" [style.width.%]="readingProgress" aria-hidden="true"></div>
+  <div class="container header-inner" *ngIf="user$ | async as user">
+    <a routerLink="/" class="brand" aria-label="KayStar portfolio home"><img [src]="user.avatar" alt="" class="brand-avatar"><span><strong>Thuan <i>/</i> KayStar</strong><small>Software Engineer</small></span></a>
+    <nav class="desktop-nav" [attr.aria-label]="'a11y.primaryNav' | translate"><a *ngFor="let link of links" [routerLink]="link.route" routerLinkActive="active">{{ link.label | translate }}</a></nav>
+    <div class="header-actions">
+      <button class="icon-button language-button" type="button" (click)="switchLanguage()" [attr.aria-label]="currentLang === 'en-US' ? 'Chuyển sang Tiếng Việt' : 'Switch to English'"><app-icon name="language" /><span>{{ currentLang === 'en-US' ? 'VI' : 'EN' }}</span></button>
+      <button class="icon-button" type="button" (click)="toggleTheme()" [attr.aria-label]="currentTheme === 'dark' ? ('a11y.lightMode' | translate) : ('a11y.darkMode' | translate)"><app-icon [name]="currentTheme === 'dark' ? 'sun' : 'moon'" /></button>
+      <button #menuButton class="icon-button menu-button" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuVisible" aria-controls="mobile-navigation" [attr.aria-label]="isMenuVisible ? ('a11y.closeMenu' | translate) : ('a11y.openMenu' | translate)"><app-icon [name]="isMenuVisible ? 'close' : 'menu'" /></button>
     </div>
   </div>
-</div>
-
-<div class="mobile-menu-overlay"
-     *ngIf="isMenuVisible"
-     (click)="isMenuVisible = false">
-</div>
-
-<div class="mobile-menu"
-     *ngIf="isMenuVisible"
-     [@slideInOut]>
-  <div class="mobile-menu-header">
-    <div class="mobile-brand">
-      <img [src]="vm.user?.avatar" class="mobile-avatar" alt="Profile">
-      <div class="mobile-brand-text">
-        <h4 class="mobile-name">{{ vm.user?.name }}</h4>
-        <p class="mobile-title">{{ 'header.job_title' | translate }}</p>
-      </div>
-    </div>
-  </div>
-
-  <nav class="mobile-nav">
-    <a *ngFor="let menu of vm.menus || []; let i = index"
-       [routerLink]="menu?.link"
-       (click)="isMenuVisible = false"
-       class="mobile-nav-item d-flex align-items-center text-decoration-none"
-       [class.active]="isActiveRoute(menu?.link)"
-       [@fadeInUp]="{ value: '', params: { delay: i * 100 } }">
-      <div class="mobile-nav-icon">
-        <i [class]="menu?.icon"></i>
-      </div>
-      <span class="mobile-nav-label">{{ menu?.label }}</span>
-      <div class="mobile-nav-indicator"></div>
-    </a>
+</header>
+<div class="menu-backdrop" *ngIf="isMenuVisible" (click)="closeMenu(true)" aria-hidden="true"></div>
+<aside #mobileDrawer id="mobile-navigation" class="mobile-drawer" *ngIf="isMenuVisible" role="dialog" aria-modal="true" [attr.aria-label]="'a11y.mobileNav' | translate">
+  <div class="drawer-label mono">{{ 'header.navigation' | translate }}</div>
+  <nav>
+    <a *ngFor="let link of links; let i = index" [routerLink]="link.route" routerLinkActive="active"><span class="mono">0{{ i + 1 }}</span>{{ link.label | translate }}<app-icon name="arrow" /></a>
+    <a routerLink="/achievement"><span class="mono">05</span>{{ 'nav.achievements' | translate }}<app-icon name="arrow" /></a>
+    <a routerLink="/education"><span class="mono">06</span>{{ 'nav.education' | translate }}<app-icon name="arrow" /></a>
   </nav>
-
-  <div class="mobile-actions">
-    <button type="button"
-            class="mobile-action-btn"
-            (click)="switchLanguage()">
-      <div class="mobile-action-icon">
-        <img class="mobile-flag-img"
-             *ngIf="currentLang == 'en-US'"
-             src="assets/params/images/lang/viet-nam.png"
-             alt="Vietnam Flag" />
-        <img class="mobile-flag-img"
-             *ngIf="currentLang == 'vi-VN'"
-             src="assets/params/images/lang/english.png"
-             alt="English Flag" />
-      </div>
-      <span class="mobile-action-label">
-        {{ currentLang === 'en-US' ? 'Tiếng Việt' : 'English' }}
-      </span>
-    </button>
-
-    <button type="button"
-            class="mobile-action-btn"
-            (click)="toggleTheme()">
-      <div class="mobile-action-icon">
-        <i *ngIf="currentTheme == 'light'" class="far fa-moon"></i>
-        <i *ngIf="currentTheme == 'dark'" class="fas fa-sun"></i>
-      </div>
-      <span class="mobile-action-label">
-        {{ currentTheme === 'light' ? 'Dark Mode' : 'Light Mode' }}
-      </span>
-    </button>
-  </div>
-</div>
-</ng-container>
+</aside>

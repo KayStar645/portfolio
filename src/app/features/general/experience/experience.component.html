@@ -1,199 +1,51 @@
-<div id="experience" class="experience-modern section-shell">
-  <div class="container-xl">
-    <div class="experience-header text-center">
-      <h1 class="experience-title">
-        <span class="title-text">{{ 'experience.title_prefix' | translate }}</span>
-        <span class="title-highlight">{{ 'experience.title_suffix' | translate }}</span>
-      </h1>
-      <p class="experience-subtitle">{{ 'experience.subtitle' | translate }}</p>
-    </div>
+<section class="section-page" id="experience">
+  <div class="container">
+    <header class="page-intro" appReveal>
+      <p class="eyebrow">{{ 'experience.eyebrow' | translate }}</p>
+      <h1>{{ 'experience.title' | translate }}</h1>
+      <p class="page-lede">{{ 'experience.intro' | translate }}</p>
+    </header>
 
-    <div class="experience-timeline">
-      <div class="experience-item current-job">
-        <div class="experience-card">
-          <div class="company-logo">
-            <i class="fas fa-building"></i>
-          </div>
-          <div class="experience-content">
-            <div class="job-header">
-              <div class="job-title">{{ 'experience.job1.title' | translate }}</div>
-              <div class="job-timerange">
-                <i class="fas fa-calendar-alt"></i>
-                <span>{{ 'experience.job1.time' | translate }}</span>
-              </div>
+    <div class="timeline" *ngIf="experiences$ | async as experiences">
+      <article
+        class="timeline-entry"
+        *ngFor="let experience of experiences; let index = index; trackBy: trackByExperience"
+        appReveal
+        [revealDelay]="index * 70"
+      >
+        <div class="timeline-marker" aria-hidden="true">
+          <span>{{ (index + 1).toString().padStart(2, '0') }}</span>
+        </div>
+
+        <div class="timeline-content">
+          <header class="entry-header">
+            <div>
+              <p class="entry-period"><app-icon name="calendar" [size]="15" />{{ experience.time }}</p>
+              <h2>{{ experience.title }}</h2>
+              <p class="company">{{ experience.company }}</p>
             </div>
-            <div class="company-name">{{ 'experience.job1.company' | translate }}</div>
-            <div class="job-description">
-              <div class="description-section">
-                <h4 class="section-title">{{ 'experience.sections.crm_erp' | translate }}</h4>
-                <ul class="job-responsibilities">
-                  <li>{{ 'experience.job1.responsibility1' | translate }}</li>
-                  <li>{{ 'experience.job1.responsibility2' | translate }}</li>
-                  <li>{{ 'experience.job1.responsibility3' | translate }}</li>
-                </ul>
-              </div>
+            <span class="status" [class.current]="experience.status === 'current'">
+              {{ (experience.status === 'current' ? 'experience.status.current' : 'experience.status.completed') | translate }}
+            </span>
+          </header>
 
-              <div class="description-section">
-                <h4 class="section-title">{{ 'experience.sections.ui_ux' | translate }}</h4>
-                <ul class="job-responsibilities">
-                  <li>{{ 'experience.job1.responsibility4' | translate }}</li>
-                </ul>
-              </div>
+          <p class="entry-context">{{ experience.location }} · {{ experience.type }}</p>
+          <p class="entry-summary">{{ experience.description }}</p>
 
-              <div class="description-section">
-                <h4 class="section-title">{{ 'experience.sections.internal_systems' | translate }}</h4>
-                <ul class="job-responsibilities">
-                  <li>{{ 'experience.job1.responsibility5' | translate }}</li>
-                  <li>{{ 'experience.job1.responsibility6' | translate }}</li>
-                  <li>{{ 'experience.job1.responsibility7' | translate }}</li>
-                </ul>
-              </div>
+          <ul class="responsibilities">
+            <li *ngFor="let responsibility of experience.responsibilities; trackBy: trackByText">
+              <app-icon name="arrow" [size]="14" aria-hidden="true" />
+              <span>{{ responsibility }}</span>
+            </li>
+          </ul>
 
-              <div class="description-section">
-                <h4 class="section-title">{{ 'experience.sections.database' | translate }}</h4>
-                <ul class="job-responsibilities">
-                  <li>{{ 'experience.job1.responsibility8' | translate }}</li>
-                </ul>
-              </div>
-
-              <div class="description-section">
-                <h4 class="section-title">{{ 'experience.sections.refactor' | translate }}</h4>
-                <ul class="job-responsibilities">
-                  <li>{{ 'experience.job1.responsibility9' | translate }}</li>
-                  <li>{{ 'experience.job1.responsibility10' | translate }}</li>
-                </ul>
-              </div>
-            </div>
-            <div class="job-status current">
-              <i class="fas fa-handshake"></i>
-              <span>{{ 'experience.status.current' | translate }}</span>
-            </div>
+          <div class="technology-list" [attr.aria-label]="'experience.technologies' | translate">
+            <span class="chip" *ngFor="let technology of experience.technologies; trackBy: trackByText">
+              {{ technology }}
+            </span>
           </div>
         </div>
-      </div>
-
-      <div class="experience-item previous-job">
-        <div class="experience-card">
-          <div class="company-logo">
-            <i class="fas fa-code"></i>
-          </div>
-          <div class="experience-content">
-            <div class="job-header">
-              <div class="job-title">{{ 'experience.job2.title' | translate }}</div>
-              <div class="job-timerange">
-                <i class="fas fa-calendar-alt"></i>
-                <span>{{ 'experience.job2.time' | translate }}</span>
-              </div>
-            </div>
-            <div class="company-name">{{ 'experience.job2.company' | translate }}</div>
-            <div class="job-description">
-              <div class="description-section">
-                <h4 class="section-title">{{ 'experience.sections.cogain_systems' | translate }}</h4>
-                <ul class="job-responsibilities">
-                  <li>{{ 'experience.job2.responsibility1' | translate }}</li>
-                  <li>{{ 'experience.job2.responsibility2' | translate }}</li>
-                  <li>{{ 'experience.job2.responsibility3' | translate }}</li>
-                </ul>
-              </div>
-
-              <div class="description-section">
-                <h4 class="section-title">{{ 'experience.sections.cogain_ui' | translate }}</h4>
-                <ul class="job-responsibilities">
-                  <li>{{ 'experience.job2.responsibility4' | translate }}</li>
-                  <li>{{ 'experience.job2.responsibility5' | translate }}</li>
-                  <li>{{ 'experience.job2.responsibility6' | translate }}</li>
-                </ul>
-              </div>
-
-              <div class="description-section">
-                <h4 class="section-title">{{ 'experience.sections.cogain_data' | translate }}</h4>
-                <ul class="job-responsibilities">
-                  <li>{{ 'experience.job2.responsibility7' | translate }}</li>
-                  <li>{{ 'experience.job2.responsibility8' | translate }}</li>
-                </ul>
-              </div>
-
-              <div class="description-section">
-                <h4 class="section-title">{{ 'experience.sections.cogain_refactor' | translate }}</h4>
-                <ul class="job-responsibilities">
-                  <li>{{ 'experience.job2.responsibility9' | translate }}</li>
-                  <li>{{ 'experience.job2.responsibility10' | translate }}</li>
-                </ul>
-              </div>
-            </div>
-            <div class="job-status completed">
-              <i class="fas fa-check-circle"></i>
-              <span>{{ 'experience.status.completed' | translate }}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="experience-item previous-job">
-        <div class="experience-card">
-          <div class="company-logo">
-            <i class="fas fa-code"></i>
-          </div>
-          <div class="experience-content">
-            <div class="job-header">
-              <div class="job-title">{{ 'experience.job3.title' | translate }}</div>
-              <div class="job-timerange">
-                <i class="fas fa-calendar-alt"></i>
-                <span>{{ 'experience.job3.time' | translate }}</span>
-              </div>
-            </div>
-            <div class="company-name">{{ 'experience.job3.company' | translate }}</div>
-            <div class="job-description">
-              <div class="description-section">
-                <h4 class="section-title">{{ 'experience.sections.ecommerce' | translate }}</h4>
-                <ul class="job-responsibilities">
-                  <li>{{ 'experience.job3.responsibility1' | translate }}</li>
-                </ul>
-              </div>
-
-              <div class="description-section">
-                <h4 class="section-title">{{ 'experience.sections.api' | translate }}</h4>
-                <ul class="job-responsibilities">
-                  <li>{{ 'experience.job3.responsibility3' | translate }}</li>
-                </ul>
-              </div>
-
-              <div class="description-section">
-                <h4 class="section-title">{{ 'experience.sections.erp' | translate }}</h4>
-                <ul class="job-responsibilities">
-                  <li>{{ 'experience.job3.responsibility4' | translate }}</li>
-                </ul>
-              </div>
-
-              <div class="description-section">
-                <h4 class="section-title">{{ 'experience.sections.package' | translate }}</h4>
-                <ul class="job-responsibilities">
-                  <li>{{ 'experience.job3.responsibility5' | translate }}</li>
-                </ul>
-              </div>
-
-              <div class="description-section">
-                <h4 class="section-title">{{ 'experience.sections.frontend_components' | translate }}</h4>
-                <ul class="job-responsibilities">
-                  <li>{{ 'experience.job3.responsibility6' | translate }}</li>
-                </ul>
-              </div>
-
-              <div class="description-section">
-                <h4 class="section-title">{{ 'experience.sections.tools' | translate }}</h4>
-                <ul class="job-responsibilities">
-                  <li>{{ 'experience.job3.responsibility7' | translate }}</li>
-                  <li>{{ 'experience.job3.responsibility8' | translate }}</li>
-                </ul>
-              </div>
-            </div>
-            <div class="job-status completed">
-              <i class="fas fa-check-circle"></i>
-              <span>{{ 'experience.status.completed' | translate }}</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      </article>
     </div>
   </div>
-</div>
+</section>

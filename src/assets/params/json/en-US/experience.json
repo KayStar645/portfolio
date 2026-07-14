@@ -1,47 +1,60 @@
 [
   {
     "id": 1,
-    "title": "Developer",
+    "title": "Software Engineer",
     "company": "VU THAO TECHNOLOGY",
     "time": "01/2026 - Present",
     "location": "Ho Chi Minh City",
     "type": "full-time",
     "status": "current",
-    "description": "Migrating the legacy DPM system from SharePoint to a new .NET + React platform",
+    "description": "Designing and building a modular enterprise platform across composable frontends, independently owned services and reliable asynchronous processing.",
     "responsibilities": [
-      "Migrate the legacy DPM (Digital Process Management) system from SharePoint to a new .NET + React platform",
-      "Analyze process flows, approvals, forms and SharePoint data for migration into the new system",
-      "Implement backend/frontend features with .NET and React based on migrated business logic",
-      "Coordinate testing, business validation and bug fixing during migration",
-      "Improve maintainability after moving away from the SharePoint platform"
+      "Designed the React frontend platform with Micro Frontend and Feature-Sliced Design, defining host, module, feature and shared-layer ownership boundaries.",
+      "Built metadata-driven route, navigation, permission and module registration with generated contracts to keep composition deterministic and prevent configuration drift.",
+      "Designed .NET microservices around Clean Architecture, DDD and CQRS, separating Domain, Application, Infrastructure and API responsibilities.",
+      "Standardized API Gateway integration, shared contracts, typed service clients and shared-kernel models to prevent direct service dependencies and cross-service data access.",
+      "Built RabbitMQ workers for automation, document processing and notification workflows with idempotency, bounded concurrency, cancellation and graceful shutdown.",
+      "Implemented SQL Server multi-tenancy, reusable platform libraries and Azure DevOps CI/CD quality gates for consistent delivery and long-term maintainability."
     ],
     "technologies": [
-      "DPM",
-      "SharePoint Migration",
       ".NET",
-      "React"
+      "React",
+      "TypeScript",
+      "Micro Frontend",
+      "Feature-Sliced Design",
+      "Metadata-Driven UI",
+      ".NET Microservices",
+      "Clean Architecture",
+      "Domain-Driven Design",
+      "CQRS",
+      "API Gateway",
+      "RabbitMQ",
+      "SQL Server",
+      "Multi-Tenancy",
+      "Azure DevOps",
+      "CI/CD"
     ]
   },
   {
     "id": 2,
-    "title": "Developer",
+    "title": "Full-Stack Developer",
     "company": "COGAIN CORPORATION",
     "time": "03/2025 - 12/2025",
     "location": "Ho Chi Minh City",
     "type": "full-time",
     "status": "completed",
-    "description": "Developed CRM, ERP systems and internal software applications",
+    "description": "Delivered CRM, ERP and internal business applications across backend, frontend, data and release workflows.",
     "responsibilities": [
-      "Led development of CRM, ERP systems with data integration",
-      "Designed UI/UX on Figma based on business requirements",
-      "Developed and maintained internal software systems with Power BI and OpenAI integration",
-      "Wrote SQL Server stored procedures for complex business logic and query optimization",
-      "Refactored source code including BaseController/BaseService and base Frontend components"
+      "Led development of CRM and ERP modules with cross-system data integration.",
+      "Designed database structures and APIs for complex business workflows, authorization and automated approvals.",
+      "Supported UI/UX design in Figma and built reusable frontend foundations.",
+      "Integrated Power BI and OpenAI capabilities into internal applications.",
+      "Implemented SQL Server stored procedures and refactored shared backend services for maintainability."
     ],
     "technologies": [
       "ASP.NET Core",
-      "Laravel",
       "React",
+      "Laravel",
       "SQL Server",
       "Power BI",
       "OpenAI API"
@@ -49,21 +62,19 @@
   },
   {
     "id": 3,
-    "title": "Developer",
+    "title": "Full-Stack Developer",
     "company": "GOSOFT TECHNOLOGY COMPANY LIMITED",
     "time": "04/2023 - 03/2025",
     "location": "Ho Chi Minh City",
     "type": "full-time",
     "status": "completed",
-    "description": "E-commerce development, mobile API and ERP modules",
+    "description": "Delivered e-commerce, ERP and social platform capabilities across database, API and web administration layers.",
     "responsibilities": [
-      "Developed e-commerce systems with Database and API design",
-      "Developed API for mobile social network apps",
-      "Built ERP modules for purchasing, warehouse and master data",
-      "Developed reusable Menu package for new and existing projects",
-      "Developed base Frontend components",
-      "Upgraded and developed internal code generator tools",
-      "Worked with Agile/Scrum methodology using Jira for task management"
+      "Designed databases and APIs for e-commerce products, training content and mobile social applications.",
+      "Built purchasing, warehouse and master-data ERP modules.",
+      "Developed a reusable menu package and shared frontend components for new and existing projects.",
+      "Extended internal code-generation tooling to shorten repetitive implementation work.",
+      "Guided new team members, reviewed code and collaborated through Agile/Scrum workflows."
     ],
     "technologies": [
       "PHP",

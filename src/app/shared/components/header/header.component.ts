@@ -1,67 +1,53 @@
-import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Router, RouterLink } from '@angular/router';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { animate, style, transition, trigger } from '@angular/animations';
-import { MenusService } from '../../../services/menus.service';
+import { AsyncPipe, NgFor, NgIf } from '@angular/common';
+import { Component, DestroyRef, ElementRef, HostListener, ViewChild, inject } from '@angular/core';
+import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { TranslateModule } from '@ngx-translate/core';
+import { filter } from 'rxjs';
 import { UserService } from '../../../services/user.service';
+import { IconComponent } from '../icon/icon.component';
 import { LangService } from '../../services/lang.service';
 import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-header',
-  imports: [
-    RouterLink,
-    CommonModule,
-    TranslateModule,
-  ],
+  standalone: true,
+  imports: [AsyncPipe, NgFor, NgIf, RouterLink, RouterLinkActive, TranslateModule, IconComponent],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
-  animations: [
-    trigger('slideInOut', [
-      transition(':enter', [
-        style({ transform: 'translateX(100%)', opacity: 0 }),
-        animate(
-          '300ms cubic-bezier(0.4, 0, 0.2, 1)',
-          style({ transform: 'translateX(0)', opacity: 1 }),
-        ),
-      ]),
-      transition(':leave', [
-        animate(
-          '300ms cubic-bezier(0.4, 0, 0.2, 1)',
-          style({ transform: 'translateX(100%)', opacity: 0 }),
-        ),
-      ]),
-    ]),
-    trigger('fadeInUp', [
-      transition(':enter', [
-        style({ transform: 'translateY(20px)', opacity: 0 }),
-        animate(
-          '400ms cubic-bezier(0.4, 0, 0.2, 1)',
-          style({ transform: 'translateY(0)', opacity: 1 }),
-        ),
-      ]),
-    ]),
-  ],
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
   private readonly router = inject(Router);
+  private readonly destroyRef = inject(DestroyRef);
   private readonly langService = inject(LangService);
   private readonly themeService = inject(ThemeService);
-  private readonly menusService = inject(MenusService);
   private readonly userService = inject(UserService);
 
-  readonly translate = inject(TranslateService);
-  readonly user$ = this.userService.user$;
-  readonly menus$ = this.menusService.menus$;
+  @ViewChild('menuButton') menuButton?: ElementRef<HTMLButtonElement>;
+  @ViewChild('mobileDrawer') mobileDrawer?: ElementRef<HTMLElement>;
 
+  readonly user$ = this.userService.user$;
   currentLang = this.langService.getLang();
   currentTheme = this.themeService.getCurrentTheme();
   isMenuVisible = false;
+  readingProgress = 0;
+
+  constructor() {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd), takeUntilDestroyed(this.destroyRef))
+      .subscribe(() => this.closeMenu(false));
+    this.destroyRef.onDestroy(() => document.body.classList.remove('menu-open'));
+  }
+
+  readonly links = [
+    { label: 'nav.work', route: '/project' },
+    { label: 'nav.experience', route: '/experience' },
+    { label: 'nav.expertise', route: '/skill' },
+    { label: 'nav.resume', route: '/resume' },
+  ];
 
   switchLanguage(): void {
-    const lang = this.currentLang === 'en-US' ? 'vi-VN' : 'en-US';
-    this.langService.setLang(lang);
+    this.langService.setLang(this.currentLang === 'en-US' ? 'vi-VN' : 'en-US');
     this.currentLang = this.langService.getLang();
   }
 
@@ -70,8 +56,42 @@ export class HeaderComponent {
     this.currentTheme = this.themeService.getCurrentTheme();
   }
 
-  isActiveRoute(link: string | undefined): boolean {
-    if (!link) return false;
-    return this.router.url === link || this.router.url.startsWith(`${link}/`);
+  toggleMenu(): void {
+    this.isMenuVisible ? this.closeMenu(true) : this.openMenu();
+  }
+
+  openMenu(): void {
+    this.isMenuVisible = true;
+    document.body.classList.add('menu-open');
+    setTimeout(() => document.querySelector<HTMLElement>('#mobile-navigation a')?.focus());
+  }
+
+  closeMenu(restoreFocus = true): void {
+    if (!this.isMenuVisible) return;
+    this.isMenuVisible = false;
+    document.body.classList.remove('menu-open');
+    if (restoreFocus) queueMicrotask(() => this.menuButton?.nativeElement.focus());
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  onDocumentKeydown(event: KeyboardEvent): void {
+    if (event.key === 'Escape') { this.closeMenu(true); return; }
+    if (event.key !== 'Tab' || !this.isMenuVisible || !this.mobileDrawer) return;
+    const focusable = Array.from(this.mobileDrawer.nativeElement.querySelectorAll<HTMLElement>('a, button, [tabindex]:not([tabindex="-1"])'));
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+  }
+
+  @HostListener('window:scroll')
+  onScroll(): void {
+    if (!this.router.url.startsWith('/project/')) {
+      this.readingProgress = 0;
+      return;
+    }
+    const available = document.documentElement.scrollHeight - innerHeight;
+    this.readingProgress = available > 0 ? Math.min(100, Math.max(0, scrollY / available * 100)) : 0;
   }
 }

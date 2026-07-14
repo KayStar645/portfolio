@@ -1,155 +1,35 @@
 [
-  {
-    "group_id": 1,
-    "group_name": "Backend Technologies",
-    "name": ".NET Core",
-    "icon": "assets/params/images/skills/frameworks/net-core.png",
-    "url": "https://dotnet.microsoft.com/",
-    "is_main": true,
-    "is_hidden": false
-  },
-  {
-    "group_id": 1,
-    "group_name": "Backend Technologies",
-    "name": "Laravel",
-    "icon": "assets/params/images/skills/frameworks/laravel.png",
-    "url": "https://laravel.com/",
-    "is_main": true,
-    "is_hidden": false
-  },
-  {
-    "group_id": 2,
-    "group_name": "Frontend Technologies",
-    "name": "React",
-    "icon": "assets/params/images/skills/libraries/react.png",
-    "url": "https://react.dev/",
-    "is_main": true,
-    "is_hidden": false
-  },
-  {
-    "group_id": 2,
-    "group_name": "Frontend Technologies",
-    "name": "Vue.js",
-    "icon": "assets/params/images/skills/libraries/vue.png",
-    "url": "https://vuejs.org/",
-    "is_main": true,
-    "is_hidden": false
-  },
-  {
-    "group_id": 2,
-    "group_name": "Frontend Technologies",
-    "name": "Angular",
-    "icon": "assets/params/images/skills/libraries/angular.png",
-    "url": "https://angular.dev/",
-    "is_main": true,
-    "is_hidden": false
-  },
-  {
-    "group_id": 2,
-    "group_name": "Frontend Technologies",
-    "name": "Bootstrap",
-    "icon": "assets/params/images/skills/frameworks/bootstrap.png",
-    "url": "https://getbootstrap.com/",
-    "is_main": true,
-    "is_hidden": false
-  },
-  {
-    "group_id": 3,
-    "group_name": "Database Systems",
-    "name": "SQL Server",
-    "icon": "assets/params/images/skills/database/sql-server.png",
-    "url": "https://www.microsoft.com/en-us/sql-server",
-    "is_main": true,
-    "is_hidden": false
-  },
-  {
-    "group_id": 3,
-    "group_name": "Database Systems",
-    "name": "MySQL",
-    "icon": "assets/params/images/skills/database/my-sql.png",
-    "url": "https://www.mysql.com/",
-    "is_main": true,
-    "is_hidden": false
-  },
-  {
-    "group_id": 3,
-    "group_name": "Database Systems",
-    "name": "PostgreSQL",
-    "icon": "assets/params/images/skills/database/sql-server.png",
-    "url": "https://www.postgresql.org/",
-    "is_main": true,
-    "is_hidden": false
-  },
-  {
-    "group_id": 4,
-    "group_name": "Architecture & APIs",
-    "name": "Clean Architecture",
-    "icon": "assets/params/images/skills/frameworks/net-core.png",
-    "url": "",
-    "is_main": true,
-    "is_hidden": false
-  },
-  {
-    "group_id": 4,
-    "group_name": "Architecture & APIs",
-    "name": "Microservices",
-    "icon": "assets/params/images/skills/frameworks/net-core.png",
-    "url": "",
-    "is_main": true,
-    "is_hidden": false
-  },
-  {
-    "group_id": 4,
-    "group_name": "Architecture & APIs",
-    "name": "RESTful API",
-    "icon": "assets/params/images/skills/libraries/angular.png",
-    "url": "",
-    "is_main": true,
-    "is_hidden": false
-  },
-  {
-    "group_id": 4,
-    "group_name": "Architecture & APIs",
-    "name": "gRPC",
-    "icon": "assets/params/images/skills/frameworks/net-core.png",
-    "url": "https://grpc.io/",
-    "is_main": true,
-    "is_hidden": false
-  },
-  {
-    "group_id": 5,
-    "group_name": "Advanced Tools",
-    "name": "Power BI",
-    "icon": "assets/params/images/skills/tools/github.png",
-    "url": "https://powerbi.microsoft.com/",
-    "is_main": true,
-    "is_hidden": false
-  },
-  {
-    "group_id": 5,
-    "group_name": "Advanced Tools",
-    "name": "OpenAI Integration",
-    "icon": "assets/params/images/skills/tools/github.png",
-    "url": "https://openai.com/",
-    "is_main": true,
-    "is_hidden": false
-  },
-  {
-    "group_id": 5,
-    "group_name": "Advanced Tools",
-    "name": "Git",
-    "icon": "assets/params/images/skills/tools/git.png",
-    "url": "https://git-scm.com/",
-    "is_main": true,
-    "is_hidden": false
-  },
-  {
-    "group_id": 5,
-    "group_name": "Advanced Tools",
-    "name": "GitHub",
-    "icon": "assets/params/images/skills/tools/github.png",
-    "url": "https://github.com/KayStar645",
-    "is_main": true,
-    "is_hidden": false
-  }
+  { "group_id": 1, "group_name": "Kiến trúc Frontend", "name": "React", "icon": "", "url": "https://react.dev/", "is_main": true, "is_hidden": false },
+  { "group_id": 1, "group_name": "Kiến trúc Frontend", "name": "TypeScript", "icon": "", "url": "https://www.typescriptlang.org/", "is_main": true, "is_hidden": false },
+  { "group_id": 1, "group_name": "Kiến trúc Frontend", "name": "Micro Frontend (MFE)", "icon": "", "url": "", "is_main": true, "is_hidden": false },
+  { "group_id": 1, "group_name": "Kiến trúc Frontend", "name": "Feature-Sliced Design", "icon": "", "url": "https://feature-sliced.design/", "is_main": true, "is_hidden": false },
+  { "group_id": 1, "group_name": "Kiến trúc Frontend", "name": "Host / Module Composition", "icon": "", "url": "", "is_main": true, "is_hidden": false },
+  { "group_id": 1, "group_name": "Kiến trúc Frontend", "name": "Metadata-Driven UI", "icon": "", "url": "", "is_main": true, "is_hidden": false },
+  { "group_id": 1, "group_name": "Kiến trúc Frontend", "name": "Shared UI Contracts", "icon": "", "url": "", "is_main": true, "is_hidden": false },
+
+  { "group_id": 2, "group_name": "Kiến trúc Backend", "name": ".NET Microservices", "icon": "", "url": "https://dotnet.microsoft.com/", "is_main": true, "is_hidden": false },
+  { "group_id": 2, "group_name": "Kiến trúc Backend", "name": "Clean Architecture", "icon": "", "url": "", "is_main": true, "is_hidden": false },
+  { "group_id": 2, "group_name": "Kiến trúc Backend", "name": "Domain-Driven Design", "icon": "", "url": "", "is_main": true, "is_hidden": false },
+  { "group_id": 2, "group_name": "Kiến trúc Backend", "name": "CQRS", "icon": "", "url": "", "is_main": true, "is_hidden": false },
+  { "group_id": 2, "group_name": "Kiến trúc Backend", "name": "API Gateway", "icon": "", "url": "", "is_main": true, "is_hidden": false },
+  { "group_id": 2, "group_name": "Kiến trúc Backend", "name": "Typed Service Clients", "icon": "", "url": "", "is_main": true, "is_hidden": false },
+  { "group_id": 2, "group_name": "Kiến trúc Backend", "name": "Shared Contracts & Kernel", "icon": "", "url": "", "is_main": true, "is_hidden": false },
+
+  { "group_id": 3, "group_name": "Kỹ thuật hệ thống phân tán & nền tảng", "name": "RabbitMQ", "icon": "", "url": "https://www.rabbitmq.com/", "is_main": true, "is_hidden": false },
+  { "group_id": 3, "group_name": "Kỹ thuật hệ thống phân tán & nền tảng", "name": "Event-Driven Processing", "icon": "", "url": "", "is_main": true, "is_hidden": false },
+  { "group_id": 3, "group_name": "Kỹ thuật hệ thống phân tán & nền tảng", "name": "Idempotent Workers", "icon": "", "url": "", "is_main": true, "is_hidden": false },
+  { "group_id": 3, "group_name": "Kỹ thuật hệ thống phân tán & nền tảng", "name": "SQL Server Multi-Tenancy", "icon": "", "url": "https://www.microsoft.com/en-us/sql-server", "is_main": true, "is_hidden": false },
+  { "group_id": 3, "group_name": "Kỹ thuật hệ thống phân tán & nền tảng", "name": "Reusable Libraries", "icon": "", "url": "", "is_main": true, "is_hidden": false },
+  { "group_id": 3, "group_name": "Kỹ thuật hệ thống phân tán & nền tảng", "name": "Azure DevOps", "icon": "", "url": "https://azure.microsoft.com/en-us/products/devops", "is_main": true, "is_hidden": false },
+  { "group_id": 3, "group_name": "Kỹ thuật hệ thống phân tán & nền tảng", "name": "CI/CD", "icon": "", "url": "", "is_main": true, "is_hidden": false },
+
+  { "group_id": 4, "group_name": "Kinh nghiệm mở rộng", "name": "Laravel", "icon": "", "url": "https://laravel.com/", "is_main": false, "is_hidden": false },
+  { "group_id": 4, "group_name": "Kinh nghiệm mở rộng", "name": "Angular", "icon": "", "url": "https://angular.dev/", "is_main": false, "is_hidden": false },
+  { "group_id": 4, "group_name": "Kinh nghiệm mở rộng", "name": "Vue.js", "icon": "", "url": "https://vuejs.org/", "is_main": false, "is_hidden": false },
+  { "group_id": 4, "group_name": "Kinh nghiệm mở rộng", "name": "gRPC", "icon": "", "url": "https://grpc.io/", "is_main": false, "is_hidden": false },
+  { "group_id": 4, "group_name": "Kinh nghiệm mở rộng", "name": "Elasticsearch", "icon": "", "url": "https://www.elastic.co/elasticsearch", "is_main": false, "is_hidden": false },
+  { "group_id": 4, "group_name": "Kinh nghiệm mở rộng", "name": "PostgreSQL", "icon": "", "url": "https://www.postgresql.org/", "is_main": false, "is_hidden": false },
+  { "group_id": 4, "group_name": "Kinh nghiệm mở rộng", "name": "MySQL", "icon": "", "url": "https://www.mysql.com/", "is_main": false, "is_hidden": false },
+  { "group_id": 4, "group_name": "Kinh nghiệm mở rộng", "name": "Docker", "icon": "", "url": "https://www.docker.com/", "is_main": false, "is_hidden": false },
+  { "group_id": 4, "group_name": "Kinh nghiệm mở rộng", "name": "AI-Assisted Development", "icon": "", "url": "", "is_main": false, "is_hidden": false }
 ]

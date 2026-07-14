@@ -23,9 +23,9 @@ describe('ContentLoaderService', () => {
 
   it('loads JSON from the requested language folder', async () => {
     const payload = [{ label: 'Demo' }];
-    const promise = service.loadJson<typeof payload>('en-US', 'menu.json');
+    const promise = service.loadJson<typeof payload>('en-US', 'fixture.json');
 
-    const request = httpMock.expectOne('assets/params/json/en-US/menu.json');
+    const request = httpMock.expectOne('assets/params/json/en-US/fixture.json');
     expect(request.request.method).toBe('GET');
     request.flush(payload);
 
