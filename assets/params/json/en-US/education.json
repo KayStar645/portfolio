@@ -1,23 +1,11 @@
-[
-  {
-    "label": "50% Scholarship",
-    "name": "Master of Information Technology",
-    "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
-    "time": "01/2025 - Present",
-    "image": "assets/params/images/educations/master.jpg"
-  },
-  {
-    "label": "Engineering Degree",
-    "name": "Bachelor of Information Technology Engineering",
-    "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
-    "time": "01/2024 - 06/2024",
-    "image": "assets/params/images/educations/engineer.jpg"
-  },
-  {
-    "label": "Bachelor Degree",
-    "name": "Bachelor of Information Technology",
-    "address": "Ho Chi Minh City University of Industry and Trade (HUIT)",
-    "time": "09/2020 - 12/2023",
-    "image": "assets/params/images/educations/bachelor.jpg"
-  }
-]
+{
+  "education": [
+    { "id": "msc", "label": "50% Scholarship", "name": "MSc in Applied Information Technology", "address": "Ho Chi Minh City University of Industry and Trade (HUIT)", "time": "01/2025–Present", "image": "assets/params/images/educations/master.jpg" },
+    { "id": "engineer", "label": "Engineering Degree", "name": "Information Technology Engineer", "address": "Ho Chi Minh City University of Industry and Trade (HUIT)", "time": "01/2024–06/2024", "image": "assets/params/images/educations/engineer.jpg" },
+    { "id": "bachelor", "label": "Bachelor Degree", "name": "Bachelor of Information Technology", "address": "Ho Chi Minh City University of Industry and Trade (HUIT)", "time": "09/2020–12/2023", "image": "assets/params/images/educations/bachelor.jpg" }
+  ],
+  "certificates": [
+    { "id": "pedagogy", "name": "Pedagogical Training Certificate", "issuer": "Hanoi Pedagogical University 2", "time": "10/2025", "result": "Excellent" },
+    { "id": "english-b1", "name": "English B1 Certificate", "issuer": "Common European Framework of Reference", "time": "03/2025", "result": "B1" }
+  ]
+}

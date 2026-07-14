@@ -1,24 +1,162 @@
 [
   {
     "id": 1,
-    "title": "Developer – Chatbot",
-    "company": "TURBO Technology Solutions Corporation",
-    "time": "09/2025 – 10/2025",
-    "location": "Ho Chi Minh City",
-    "type": "contract",
-    "status": "completed",
-    "role": "Developer",
-    "description": "Develop marketing landing page and multi-channel integrated chatbot",
-    "responsibilities": [
-      "Develop marketing Landing Page",
-      "Build chat widget, integrate & operate Chatwoot (open source), connect Dify API (RAG demo)",
-      "Integrate multi-channel communication (Web, Zalo, Facebook, Instagram,...)",
-      "Deploy using Docker & CI/CD, deploy UAT and production versions"
+    "slug": "enterprise-platform-architecture",
+    "title": "Enterprise Platform Architecture",
+    "summary": "Architecting a composable enterprise platform across frontend capability ownership, independently structured backend services and reliable asynchronous processing.",
+    "role": "Software Engineer",
+    "period": "01/2026 - Present",
+    "type": "Enterprise Platform",
+    "status": "current",
+    "featured": true,
+    "overviewFacts": [
+      { "label": "Role", "value": "Architecture & implementation" },
+      { "label": "Focus", "value": "Modular evolution" },
+      { "label": "Delivery", "value": "Frontend, backend & platform" }
     ],
-    "technologies": ["React", "Chatwoot", "Dify API", "Docker", "CI/CD", "Zalo", "Facebook", "Instagram"],
-    "links": {
-      "demo": "#",
-      "source": "#"
-    }
+    "problem": {
+      "context": "A long-lived process platform needed to support independently evolving business capabilities without allowing UI composition, service integration and background processing to become tightly coupled.",
+      "statement": "How can an enterprise platform evolve by capability while keeping ownership and dependency direction explicit?",
+      "constraints": [
+        "Business capabilities must remain independently understandable and maintainable.",
+        "Frontend composition cannot rely on duplicated route, navigation or permission configuration.",
+        "Services must integrate without direct cross-service data access.",
+        "Background processing must tolerate retries and controlled shutdown."
+      ]
+    },
+    "process": [
+      { "title": "Map capability boundaries", "description": "Identify where UI features, business rules, persistence and asynchronous responsibilities should be owned." },
+      { "title": "Define dependency rules", "description": "Set explicit direction across frontend layers and Domain, Application, Infrastructure and API boundaries." },
+      { "title": "Standardize foundations", "description": "Turn recurring integration, metadata and worker concerns into reusable contracts and libraries." }
+    ],
+    "decisions": [
+      {
+        "title": "Micro Frontend with Feature-Sliced Design",
+        "rationale": "Organize React and TypeScript by business capability while keeping host, module, feature and shared responsibilities visible in the codebase.",
+        "tradeOff": "More boundary discipline and contract management in exchange for clearer ownership and safer independent evolution.",
+        "practices": ["MFE composition", "Feature-Sliced Design", "Dependency direction"]
+      },
+      {
+        "title": "Metadata-driven composition",
+        "rationale": "Co-locate route, navigation, permission and registration metadata with the capability that owns it, then generate shared contracts.",
+        "tradeOff": "A stricter metadata schema is required, but duplicated configuration and composition drift are reduced.",
+        "practices": ["Generated contracts", "Typed metadata", "Deterministic registration"]
+      },
+      {
+        "title": ".NET Microservices with Clean Architecture",
+        "rationale": "Keep business rules independent from transport and persistence while assigning each service a clear capability boundary.",
+        "tradeOff": "Additional layers and mapping are accepted to protect domain behavior and long-term maintainability.",
+        "practices": ["DDD", "CQRS", "Domain/Application boundaries"]
+      },
+      {
+        "title": "Contract-led service integration",
+        "rationale": "Use an API Gateway, shared contracts and typed clients so integrations remain explicit without sharing service-owned data access.",
+        "tradeOff": "Contract evolution needs version discipline, but coupling stays visible and testable.",
+        "practices": ["API Gateway", "Typed clients", "Service ownership"]
+      },
+      {
+        "title": "Reliable RabbitMQ workers",
+        "rationale": "Model automation, document processing and notification work as asynchronous handlers with explicit execution policies.",
+        "tradeOff": "Eventual completion replaces synchronous simplicity, requiring idempotency and operationally safe worker behavior.",
+        "practices": ["Idempotency", "Bounded concurrency", "Graceful shutdown"]
+      }
+    ],
+    "solution": [
+      {
+        "title": "Frontend Architecture",
+        "description": "A composable React platform where capabilities own their features and metadata.",
+        "deliverables": ["Host and module boundaries", "FSD layer rules", "Generated UI contracts"]
+      },
+      {
+        "title": "Backend Architecture",
+        "description": "Owned .NET services structured around domain behavior and explicit application use cases.",
+        "deliverables": ["Clean Architecture foundations", "DDD and CQRS patterns", "Typed service clients"]
+      },
+      {
+        "title": "Platform Engineering",
+        "description": "Reusable mechanisms for tenant-aware persistence, asynchronous work and repeatable delivery.",
+        "deliverables": ["RabbitMQ worker foundations", "SQL Server multi-tenancy", "Azure DevOps quality gates"]
+      }
+    ],
+    "outcomes": [
+      { "title": "Explicit ownership", "description": "Frontend capabilities and backend services have defined responsibility boundaries instead of implicit shared behavior." },
+      { "title": "Deterministic composition", "description": "Generated metadata contracts keep routes, navigation, permissions and module registration aligned." },
+      { "title": "Reusable foundations", "description": "Typed clients, contracts and platform libraries standardize recurring engineering decisions without centralizing business ownership." },
+      { "title": "Retry-safe processing", "description": "Workers are designed around idempotency, controlled concurrency, cancellation and graceful shutdown." }
+    ],
+    "learnings": [
+      "A shared foundation remains maintainable only when its ownership and extension points are explicit.",
+      "Frontend modularity depends on dependency rules and metadata contracts, not directory structure alone.",
+      "Service boundaries are protected as much by data-access rules as by API contracts.",
+      "Reliable asynchronous processing begins with execution semantics, not only message transport."
+    ],
+    "technologies": ["React", "TypeScript", "Micro Frontend", "Feature-Sliced Design", "Metadata-Driven UI", ".NET Microservices", "Clean Architecture", "DDD", "CQRS", "API Gateway", "RabbitMQ", "SQL Server", "Multi-Tenancy", "Azure DevOps", "CI/CD"]
+  },
+  {
+    "id": 2,
+    "slug": "multi-channel-engagement-platform",
+    "title": "Multi-channel Customer Engagement Platform",
+    "summary": "Delivering an embedded customer communication experience across multiple channels with clear integration boundaries and repeatable environment delivery.",
+    "role": "Developer",
+    "period": "09/2025 - 10/2025",
+    "type": "Product Integration",
+    "status": "completed",
+    "featured": true,
+    "overviewFacts": [
+      { "label": "Role", "value": "Product integration" },
+      { "label": "Focus", "value": "Embedded communication" },
+      { "label": "Delivery", "value": "UAT & production" }
+    ],
+    "problem": {
+      "context": "A customer-facing product needed an embedded chat experience, multiple communication entry points and a delivery path that behaved consistently across environments.",
+      "statement": "How can multiple communication tools feel like one product without turning integrations into product-wide coupling?",
+      "constraints": [
+        "The chat experience needed to remain embeddable in an existing marketing surface.",
+        "Third-party and open-source capabilities required explicit adapter boundaries.",
+        "Channel-specific behavior could not leak across the whole application.",
+        "UAT and production delivery needed the same containerized foundation."
+      ]
+    },
+    "process": [
+      { "title": "Separate product and integration concerns", "description": "Keep the landing experience and embedded widget independent from provider-specific configuration." },
+      { "title": "Define channel boundaries", "description": "Treat Web and social channels as adapters with their own connection and delivery concerns." },
+      { "title": "Make delivery repeatable", "description": "Containerize the product and use CI/CD to promote the same foundation across environments." }
+    ],
+    "decisions": [
+      {
+        "title": "Embedded widget boundary",
+        "rationale": "Keep customer communication reusable and independently embeddable instead of binding it to a single page implementation.",
+        "tradeOff": "The widget needs a stable integration contract, but product surfaces remain easier to change.",
+        "practices": ["React", "Embedded UI", "Reusable integration"]
+      },
+      {
+        "title": "Adapter-led channel integration",
+        "rationale": "Contain Chatwoot, Dify/RAG and channel-specific concerns behind explicit integration points.",
+        "tradeOff": "Adapters add mapping work while preventing provider behavior from spreading through the product.",
+        "practices": ["Chatwoot", "Dify API", "Channel adapters"]
+      },
+      {
+        "title": "Container-first delivery",
+        "rationale": "Use the same Docker foundation and CI/CD workflow for UAT and production releases.",
+        "tradeOff": "Delivery configuration becomes part of engineering ownership, improving environment consistency.",
+        "practices": ["Docker", "CI/CD", "Environment parity"]
+      }
+    ],
+    "solution": [
+      { "title": "Product Experience", "description": "A focused marketing surface with an embedded chat entry point.", "deliverables": ["React landing page", "Reusable chat widget", "Responsive interaction"] },
+      { "title": "Integration Layer", "description": "Explicit adapters for conversation tooling, assisted responses and customer channels.", "deliverables": ["Chatwoot integration", "Dify/RAG connection", "Web and social channels"] },
+      { "title": "Delivery Foundation", "description": "A repeatable path from integration work to deployable environments.", "deliverables": ["Docker packaging", "CI/CD workflow", "UAT and production releases"] }
+    ],
+    "outcomes": [
+      { "title": "Reusable communication entry point", "description": "The embedded widget can be integrated without coupling the entire product surface to provider details." },
+      { "title": "Contained integration behavior", "description": "Channel and provider concerns stay behind visible boundaries that can evolve independently." },
+      { "title": "Consistent delivery", "description": "Containerization and CI/CD provide the same release foundation for UAT and production." }
+    ],
+    "learnings": [
+      "Integration-heavy products stay understandable when provider behavior is treated as an adapter concern.",
+      "An embedded UI needs a deliberate contract to remain reusable across product surfaces.",
+      "Environment consistency improves when packaging and release workflows are designed with the feature."
+    ],
+    "technologies": ["React", "Chatwoot", "Dify API", "RAG", "Docker", "CI/CD", "Web", "Zalo", "Facebook", "Instagram"]
   }
 ]
