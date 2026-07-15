@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+      node-version: [20.x]
 
     steps:
     - uses: actions/checkout@v4
@@ -26,8 +26,17 @@ jobs:
 
     - run: npm ci
 
+    - name: Validate localized content
+      run: npm run content:validate
+
+    - name: Run unit tests
+      run: npm run test:ci
+
     - name: Build Angular App
       run: npm run build
+
+    - name: Validate production artifact
+      run: npm run build:validate
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4

@@ -35,4 +35,10 @@ describe('HomeComponent', () => {
     expect(fixture.nativeElement.textContent).toContain('Award 6');
     expect(fixture.nativeElement.textContent).toContain('Research 3');
   });
+
+  it('uses the capability visual without rendering the portrait hero', () => {
+    const fixture = TestBed.createComponent(HomeComponent); fixture.detectChanges();
+    expect(fixture.nativeElement.querySelectorAll('.capability-cluster').length).toBe(3);
+    expect(fixture.nativeElement.querySelector('.portrait-frame')).toBeNull();
+  });
 });

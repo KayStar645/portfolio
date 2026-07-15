@@ -13,7 +13,8 @@
     "workEyebrow": "Dự án chọn lọc", "workTitle": "Quyết định, đánh đổi và kết quả kỹ thuật.", "workDescription": "Hai case study ẩn danh tập trung vào cách hệ thống được định hình, không công khai topology vận hành nội bộ.", "problemLabel": "Bài toán", "decisionLabel": "Quyết định chính", "outcomeLabel": "Kết quả kỹ thuật",
     "experienceEyebrow": "Kinh nghiệm", "experienceTitle": "Xây dựng xuyên suốt ranh giới sản phẩm và nền tảng.", "fullTimeline": "Xem toàn bộ hành trình",
     "evidenceEyebrow": "Nền tảng", "evidenceTitle": "Thực hành kỹ thuật được củng cố bởi nghiên cứu và học tập liên tục.", "evidenceDescription": "Giải thưởng, đề tài nghiên cứu và học vấn bổ trợ cho kinh nghiệm triển khai nền tảng thực tế.",
-    "contactEyebrow": "Bắt đầu trao đổi", "contactTitle": "Bạn có một bài toán nền tảng cần tháo gỡ?", "contactDescription": "Tôi sẵn sàng trao đổi về phần mềm doanh nghiệp, thiết kế hệ thống và hợp tác kỹ thuật."
+    "contactEyebrow": "Bắt đầu trao đổi", "contactTitle": "Bạn có một bài toán nền tảng cần tháo gỡ?", "contactDescription": "Tôi sẵn sàng trao đổi về phần mềm doanh nghiệp, thiết kế hệ thống và hợp tác kỹ thuật.",
+    "architectureVisual": { "label": "Năng lực kiến trúc", "status": "03 hệ thống hoạt động", "capability": "Năng lực kỹ thuật", "frontend": "Kiến trúc Frontend", "backend": "Kiến trúc Dịch vụ", "distributed": "Nền tảng Phân tán", "discipline": "Trách nhiệm / Ranh giới / Triển khai" }
   },
   "work": { "eyebrow": "Case study", "title": "Dự án kỹ thuật chọn lọc", "intro": "Các case study ẩn danh về quyết định kiến trúc, ràng buộc và kết quả định tính; không công khai topology nội bộ hay metric chưa được xác nhận.", "readCase": "Đọc case study" },
   "case": {

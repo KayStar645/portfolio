@@ -46,9 +46,13 @@ export class HeaderComponent {
     { label: 'nav.resume', route: '/resume' },
   ];
 
-  switchLanguage(): void {
-    this.langService.setLang(this.currentLang === 'en-US' ? 'vi-VN' : 'en-US');
-    this.currentLang = this.langService.getLang();
+  async switchLanguage(): Promise<void> {
+    try {
+      await this.langService.setLang(this.currentLang === 'en-US' ? 'vi-VN' : 'en-US');
+      this.currentLang = this.langService.getLang();
+    } catch (error) {
+      console.error('Unable to switch portfolio language.', error);
+    }
   }
 
   toggleTheme(): void {

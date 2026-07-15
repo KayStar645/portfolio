@@ -1,0 +1,28 @@
+<div #system class="capability-system" (pointermove)="move($event)" (pointerleave)="reset()">
+  <div class="cosmic-nebula nebula-a" aria-hidden="true"></div>
+  <div class="cosmic-nebula nebula-b" aria-hidden="true"></div>
+  <div class="cosmic-nebula nebula-c" aria-hidden="true"></div>
+  <div class="visual-grid" aria-hidden="true"></div>
+  <div class="visual-scan" aria-hidden="true"></div>
+  <header class="visual-meta mono">
+    <span>{{ 'home.architectureVisual.label' | translate }}</span>
+    <span><i></i>{{ 'home.architectureVisual.status' | translate }}</span>
+  </header>
+
+  <div class="system-core" aria-hidden="true"><span>03</span><b>SYSTEMS</b></div>
+
+  <div class="capability-stage">
+    <article *ngFor="let cluster of clusters; trackBy: trackByCluster" class="capability-cluster" [class]="'cluster--' + cluster.id">
+      <header><span class="mono">{{ cluster.index }}</span><i></i></header>
+      <p class="cluster-type mono">{{ 'home.architectureVisual.capability' | translate }}</p>
+      <h2>{{ cluster.titleKey | translate }}</h2>
+      <div class="technology-list">
+        <span *ngFor="let technology of cluster.technologies; trackBy: trackByTechnology">{{ technology }}</span>
+      </div>
+    </article>
+  </div>
+
+  <div class="ambient-fragment fragment-a" aria-hidden="true"></div>
+  <div class="ambient-fragment fragment-b" aria-hidden="true"></div>
+  <footer class="visual-footer mono">{{ 'home.architectureVisual.discipline' | translate }}</footer>
+</div>

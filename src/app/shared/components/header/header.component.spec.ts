@@ -9,7 +9,7 @@ import { ThemeService } from '../../services/theme.service';
 import { HeaderComponent } from './header.component';
 
 @Component({ standalone: true, template: '' }) class RouteStub {}
-class LangStub { private lang = 'en-US'; readonly langChanged$ = of(this.lang); getLang(): string { return this.lang; } setLang(value: string): void { this.lang = value; } }
+class LangStub { private lang = 'en-US'; readonly langChanged$ = of(this.lang); getLang(): string { return this.lang; } async setLang(value: string): Promise<void> { this.lang = value; } }
 class ThemeStub { private theme = 'dark'; getCurrentTheme(): string { return this.theme; } toggleTheme(): void { this.theme = this.theme === 'dark' ? 'light' : 'dark'; } }
 
 describe('HeaderComponent', () => {
@@ -20,7 +20,7 @@ describe('HeaderComponent', () => {
   it('closes the mobile menu after navigation and keeps language/theme controls working', fakeAsync(() => {
     const fixture = TestBed.createComponent(HeaderComponent); fixture.detectChanges(); const component = fixture.componentInstance;
     component.openMenu(); expect(component.isMenuVisible).toBeTrue();
-    component.switchLanguage(); component.toggleTheme(); expect(component.currentLang).toBe('vi-VN'); expect(component.currentTheme).toBe('light');
+    void component.switchLanguage(); tick(); component.toggleTheme(); expect(component.currentLang).toBe('vi-VN'); expect(component.currentTheme).toBe('light');
     TestBed.inject(Router).navigateByUrl('/project'); tick(); fixture.detectChanges();
     expect(component.isMenuVisible).toBeFalse(); expect(document.body.classList.contains('menu-open')).toBeFalse();
   }));

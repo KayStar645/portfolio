@@ -1,5 +1,5 @@
 import { AsyncPipe, NgFor, NgIf, SlicePipe } from '@angular/common';
-import { ChangeDetectionStrategy, Component, ElementRef, ViewChild, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { combineLatest, map } from 'rxjs';
@@ -10,18 +10,17 @@ import { ProjectsService } from '../../../services/project.service';
 import { GroupedSkill, SkillService } from '../../../services/skill.service';
 import { IconComponent } from '../../../shared/components/icon/icon.component';
 import { RevealDirective } from '../../../shared/directives/reveal.directive';
+import { ArchitectureCapabilityVisualComponent } from '../../../shared/components/architecture-capability-visual/architecture-capability-visual.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AsyncPipe, NgFor, NgIf, SlicePipe, RouterLink, TranslateModule, IconComponent, RevealDirective],
+  imports: [AsyncPipe, NgFor, NgIf, SlicePipe, RouterLink, TranslateModule, IconComponent, RevealDirective, ArchitectureCapabilityVisualComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
-  @ViewChild('architectureVisual') architectureVisual?: ElementRef<HTMLElement>;
-
   private readonly projectsService = inject(ProjectsService);
   private readonly experiencesService = inject(ExperiencesService);
   private readonly skillService = inject(SkillService);
@@ -50,12 +49,4 @@ export class HomeComponent {
     };
   }));
 
-  moveVisual(event: PointerEvent): void {
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const target = this.architectureVisual?.nativeElement;
-    if (!target) return;
-    const bounds = target.getBoundingClientRect();
-    target.style.setProperty('--mx', `${(event.clientX - bounds.left) / bounds.width * 2 - 1}`);
-    target.style.setProperty('--my', `${(event.clientY - bounds.top) / bounds.height * 2 - 1}`);
-  }
 }

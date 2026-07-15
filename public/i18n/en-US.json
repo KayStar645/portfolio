@@ -13,7 +13,8 @@
     "workEyebrow": "Selected work", "workTitle": "Decisions, trade-offs and engineering outcomes.", "workDescription": "Two anonymized case studies that focus on how the systems were shaped—not confidential runtime topology.", "problemLabel": "Problem", "decisionLabel": "Key decision", "outcomeLabel": "Engineering outcome",
     "experienceEyebrow": "Experience", "experienceTitle": "Building across product and platform boundaries.", "fullTimeline": "View full timeline",
     "evidenceEyebrow": "Evidence", "evidenceTitle": "Engineering practice backed by research and continuous study.", "evidenceDescription": "Awards, research projects and education that complement hands-on platform delivery.",
-    "contactEyebrow": "Start a conversation", "contactTitle": "Have a platform problem worth untangling?", "contactDescription": "I am open to conversations about enterprise software, system design and engineering collaboration."
+    "contactEyebrow": "Start a conversation", "contactTitle": "Have a platform problem worth untangling?", "contactDescription": "I am open to conversations about enterprise software, system design and engineering collaboration.",
+    "architectureVisual": { "label": "Architecture capabilities", "status": "03 systems active", "capability": "Engineering capability", "frontend": "Frontend Composition", "backend": "Service Architecture", "distributed": "Distributed Platform", "discipline": "Ownership / Boundaries / Delivery" }
   },
   "work": { "eyebrow": "Case studies", "title": "Selected engineering work", "intro": "Anonymized studies of architecture decisions, constraints and qualitative outcomes. No internal topology or unsupported metrics.", "readCase": "Read case study" },
   "case": {

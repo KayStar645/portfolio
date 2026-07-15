@@ -12,14 +12,7 @@
         </div>
       </div>
 
-      <div #architectureVisual class="architecture-visual hero-reveal delay-2" (pointermove)="moveVisual($event)" aria-hidden="true">
-        <div class="portrait-frame"><img src="assets/params/images/info/avatar.jpg" alt=""></div>
-        <div class="visual-axis axis-x"></div><div class="visual-axis axis-y"></div>
-        <span class="capability capability-a">MFE / FSD</span>
-        <span class="capability capability-b">.NET / DDD</span>
-        <span class="capability capability-c">EVENTS</span>
-        <div class="visual-caption mono">ARCHITECTURE / OWNERSHIP / DELIVERY</div>
-      </div>
+      <app-architecture-capability-visual class="hero-reveal delay-2" />
     </div>
   </section>
 

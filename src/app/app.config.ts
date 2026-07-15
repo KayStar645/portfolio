@@ -1,4 +1,4 @@
-import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig, importProvidersFrom, inject, provideAppInitializer, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter, withHashLocation, withInMemoryScrolling } from '@angular/router';
 import { routes } from './app.routes';
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
@@ -6,9 +6,10 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { LangService } from './shared/services/lang.service';
 
 export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, new URL('assets/i18n/', document.baseURI).toString(), '.json');
 }
 
 export const appConfig: ApplicationConfig = {
@@ -34,5 +35,6 @@ export const appConfig: ApplicationConfig = {
         defaultLanguage: 'en-US',
       }),
     ]),
+    provideAppInitializer(() => inject(LangService).initialize()),
   ],
 };

@@ -5,6 +5,14 @@ const root = path.resolve(__dirname, '..');
 const readJson = (locale, file) => JSON.parse(fs.readFileSync(path.join(root, 'src', 'assets', 'params', 'json', locale, file), 'utf8'));
 const fail = message => { throw new Error(message); };
 const same = (label, left, right) => { if (JSON.stringify(left) !== JSON.stringify(right)) fail(`${label} locale parity failed`); };
+const flattenKeys = (value, prefix = '') => Object.entries(value).flatMap(([key, child]) => {
+  const pathKey = prefix ? `${prefix}.${key}` : key;
+  return child && typeof child === 'object' && !Array.isArray(child) ? flattenKeys(child, pathKey) : [pathKey];
+});
+
+const enUi = JSON.parse(fs.readFileSync(path.join(root, 'public', 'i18n', 'en-US.json'), 'utf8'));
+const viUi = JSON.parse(fs.readFileSync(path.join(root, 'public', 'i18n', 'vi-VN.json'), 'utf8'));
+same('UI translation keys', flattenKeys(enUi).sort(), flattenKeys(viUi).sort());
 
 const enProjects = readJson('en-US', 'project.json');
 const viProjects = readJson('vi-VN', 'project.json');
@@ -71,4 +79,4 @@ for (const term of ['MFE', 'Feature-Sliced Design', 'Microservices', 'Clean Arch
   if (!publicText.includes(term)) fail(`Required architecture term missing: ${term}`);
 }
 
-console.log(`Validated ${enProjects.length} projects, ${enExperience.length} experiences, ${enSkills.length} skills, ${enAchievements.length} achievements and ${enEducation.education.length} education records across EN/VI.`);
+console.log(`Validated ${flattenKeys(enUi).length} UI translations, ${enProjects.length} projects, ${enExperience.length} experiences, ${enSkills.length} skills, ${enAchievements.length} achievements and ${enEducation.education.length} education records across EN/VI.`);
